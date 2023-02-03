@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jinju's portfolio</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://kit.fontawesome.com/7783789018.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css" />
+    <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+    <script defer src="js/main.js"></script>
+</head>
+
+<body>
+    <header id="header">
+        <div class="bg"></div>
+        <div class="inner">
+            <h1><a href="index.html" class="logo">Lee<br>Jinju</a></h1>
+            <nav class="menuWeb">
+                <ul id="gnb">
+                    <li>
+                        <a href="brand.html">BRAND</a>
+                        <div class="sub_menu">
+                            <ul>
+                                <li><a href="#">ABOUT</a></li>
+                                <li><a href="#">HISTORY</a></li>
+                                <li><a href="#">ORGANIZATION</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="gallery.html">GALLERY</a>
+                        <div class="sub_menu">
+                            <ul>
+                                <li><a href="#">COMMUNITY</a></li>
+                                <li><a href="#">NEW ARRIVAL</a></li>
+                                <li><a href="#">POPULAR</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="myPage.html">MY PAGE</a>
+                        <div class="sub_menu">
+                            <ul>
+                                <li><a href="#">LOGIN</a></li>
+                                <li><a href="#">JOIN</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="notice.html">NOTICE</a>
+                        <div class="sub_menu">
+                            <ul>
+                                <li><a href="#">REQUEST</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="contactUs.html">CONTACT US</a>
+                        <div class="sub_menu">
+                            <ul>
+                                <li><a href="#">LOCATION</a></li>
+                                <li><a href="#">INQUIRY</a></li>
+                                <li><a href="#">SNS</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                </ul>
+            </nav>
+            <!-- mobile -->
+            <div class="quick_menu">
+                <a href="#" class="bars">
+                    <span></span>
+                </a>
+            </div>
+
+            <nav class="menuMo">
+                <div class="loginBox">
+                    <div class="joinBox">
+                        <a href="#" class="login">로그인</a>
+                        <a href="#" class="join">회원가입</a>
+                    </div>
+                    <div class="closeBox">
+                        <a href="#" class="close">
+                            <span></span>
+                        </a>
+                    </div>
+                </div>
+                <ul class="sub_menu">
+                    <li>
+                        <div class="tab">
+                            <input type="radio" name="cate" id="cate1">
+                            <label for="cate1">
+                                <h3>BRAND</h3>
+                                <a href="#" class="arrow">
+                                    <span class="hidden">브랜드</span>
+                                </a>
+                            </label>
+                            <ul class="inputUl">
+                                <li><a href="#">ABOUT</a></li>
+                                <li><a href="#">HISTORY</a></li>
+                                <li><a href="#">ORGANIZATION</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="tab">
+                            <input type="radio" name="cate" id="cate2">
+                            <label for="cate2">
+                                <h3>GALLERY</h3>
+                                <a href="#" class="arrow">
+                                    <span class="hidden">브랜드</span>
+                                </a>
+                            </label>
+                            <ul class="inputUl">
+                                <li><a href="#">COMMUNITY</a></li>
+                                <li><a href="#">NEW ARRIVAL</a></li>
+                                <li><a href="#">POPULAR</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="tab">
+                            <input type="radio" name="cate" id="cate3">
+                            <label for="cate3">
+                                <h3>MY PAGE</h3>
+                                <a href="#" class="arrow">
+                                    <span class="hidden">브랜드</span>
+                                </a>
+                            </label>
+                            <ul class="inputUl">
+                                <li><a href="#">LOGIN</a></li>
+                                <li><a href="#">JOIN</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="tab">
+                            <input type="radio" name="cate" id="cate4">
+                            <label for="cate4">
+                                <h3>NOTICE</h3>
+                                <a href="#" class="arrow">
+                                    <span class="hidden">브랜드</span>
+                                </a>
+                            </label>
+                            <ul class="inputUl">
+                                <li><a href="#">REQUEST</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="tab">
+                            <input type="radio" name="cate" id="cate5">
+                            <label for="cate5">
+                                <h3>CONTACT US</h3>
+                                <a href="#" class="arrow">
+                                    <span class="hidden">브랜드</span>
+                                </a>
+                            </label>
+                            <ul class="inputUl">
+                                <li><a href="#">LOCATION</a></li>
+                                <li><a href="#">INQUIRY</a></li>
+                                <li><a href="#">SNS</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <figure id="visual">
+        <div class=" inner">
+            <div class="title_txt">
+                <h1>LEEJINJU'S</h1>
+                <div class="introTxt">
+                    <span>P</span>
+                    <span>O</span>
+                    <span>R</span>
+                    <span>T</span>
+                    <span>F</span>
+                    <span>O</span>
+                    <span>L</span>
+                    <span>I</span>
+                    <span>O</span>
+                </div>
+            </div>
+        </div>
+    </figure>
+
+    <section id="list">
+        <div class="inner">
+            <div class="wrap">
+                <dl class="util">
+                    <dt class="on"><a href="#">PRODUCTS</a></dt>
+                    <dd class="on">
+                        <article>
+                            <a href="#" class="pic">
+                                <img src="img/list/products/products01.jpg" alt="소품">
+                            </a>
+                        </article>
+                        <article>
+                            <a href="#" class="pic">
+                                <img src="img/list/products/products02.jpg" alt="화병에 꽃혀있는식물">
+                            </a>
+                        </article>
+                        <article>
+                            <a href="#" class="pic">
+                                <img src="img/list/products/products03.jpg" alt="유리잔">
+                            </a>
+                        </article>
+                        <article>
+                            <a href="#" class="pic">
+                                <img src="img/list/products/products04.jpg" alt="화병들">
+                            </a>
+                        </article>
+                        <article>
+                            <a href="#" class="pic">
+                                <img src="img/list/products/products05.jpg" alt="선인장">
+                            </a>
+                        </article>
+                        <article>
+                            <a href="#" class="pic">
+                                <img src="img/list/products/products06.jpg" alt="벽시계와 스탠드조명">
+                            </a>
+                        </article>
+                        <article>
+                            <a href="#" class="pic">
+                                <img src="img/list/products/products07.jpg" alt="화병에 꽃혀있는식물">
+                            </a>
+                        </article>
+                    </dd>
+                    <dt><a href="#">LIVING</a></dt>
+                    <dd>
+                        <article>
+                            <a href="#" class="pic">
+                                <img src="img/list/living/living01.jpg" alt="꽃혀있는잡지들">
+                            </a>
+                        </article>
+                        <article>
+                            <a href="#" class="pic">
+                                <img src="img/list/living/living02.jpg" alt="">
+                            </a>
+                        </article>
+                        <article>
+                            <a href="#" class="pic">
+                                <img src="img/list/living/living03.jpg" alt="화분과 스피커">
+                            </a>
+                        </article>
+                        <article>
+                            <a href="#" class="pic">
+                                <img src="img/list/living/living04.jpg" alt="책상위 화분">
+                            </a>
+                        </article>
+                        <article>
+                            <a href="#" class="pic">
+                                <img src="img/list/living/living05.jpg" alt="거실소파">
+                            </a>
+                        </article>
+                        <article>
+                            <a href="#" class="pic">
+                                <img src="img/list/living/living06.jpg" alt="소파와테이블">
+                            </a>
+                        </article>
+                        <article>
+                            <a href="#" class="pic">
+                                <img src="img/list/living/living07.jpg" alt="스탠드조명">
+                            </a>
+                        </article>
+                    </dd>
+                    <dt><a href="#">MAGAZINE</a></dt>
+                    <dd>
+                        <article>
+                            <a href="#" class="pic">
+                                <img src="img/list/magazine/magazine01.jpg" alt="wekend잡지">
+                            </a>
+                        </article>
+                        <article>
+                            <a href="#" class="pic">
+                                <img src="img/list/magazine/magazine02.jpg" alt="MOCKUP잡지">
+                            </a>
+                        </article>
+                        <article>
+                            <a href="#" class="pic">
+                                <img src="img/list/magazine/magazine03.jpg" alt="펼쳐진잡지">
+                            </a>
+                        </article>
+                        <article>
+                            <a href="#" class="pic">
+                                <img src="img/list/magazine/magazine04.jpg" alt="잡지위에 커피잔">
+                            </a>
+                        </article>
+                        <article>
+                            <a href="#" class="pic">
+                                <img src="img/list/magazine/magazine05.jpg" alt="사다리위에 KINFOLK잡지">
+                            </a>
+                        </article>
+                        <article>
+                            <a href="#" class="pic">
+                                <img src="img/list/magazine/magazine06.jpg" alt="CEREAL잡지">
+                            </a>
+                        </article>
+                        <article>
+                            <a href="#" class="pic">
+                                <img src="img/list/magazine/magazine07.jpg" alt="펼쳐진잡지">
+                            </a>
+                        </article>
+                    </dd>
+                </dl>
+            </div>
+        </div>
+    </section>
+
+    <section id="banner">
+        <div class="inner">
+            <h1>Pick a Concept</h1>
+            <p>A course in art and design to design portfolio.<br>
+                a good ideas<br>
+                Pick a Concept. Concept!
+            </p>
+        </div>
+    </section>
+
+    <section id="content">
+        <div class="inner">
+            <div class="wrap">
+                <div class="swiper contSwiper">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <article>
+                                <div class="pic">
+                                    <img src="img/content/content01.jpg" alt="선글라스 두개">
+                                </div>
+                                <div class="pic_txt">
+                                    <h1>GLASS</h1>
+                                    <span>2023.03.20</span>
+                                    <p>Burning glass<br>
+                                        glasses to protect the eyes from the sun<br>
+                                        Make sure sunglass lenses.
+                                    </p>
+                                    <a href="javascript:void(0);" class="viewBtn">VIEW MORE</a>
+                                </div>
+                            </article>
+                        </div>
+                        <div class="swiper-slide">
+                            <article>
+                                <div class="pic">
+                                    <img src="img/content/content02.jpg" alt="CEREAL잡지">
+                                </div>
+                                <div class="pic_txt">
+                                    <h1>MAGAZINE</h1>
+                                    <span>2023.03.20</span>
+                                    <p>A weekly/monthly magazine!<br>
+                                        a well laid out magazine<br>
+                                        The magazine was all advertisements.
+                                    </p>
+                                    <a href="javascript:void(0);" class="viewBtn">VIEW MORE</a>
+                                </div>
+                            </article>
+                        </div>
+                        <div class="swiper-slide">
+                            <article>
+                                <div class="pic">
+                                    <img src="img/content/content03.jpg" alt="선글라스와 악세서리">
+                                </div>
+                                <div class="pic_txt">
+                                    <h1>ACCESSARY</h1>
+                                    <span>2023.03.20</span>
+                                    <p>"Is there any accessary you're obsessed with?"
+                                        fashion accessaries.
+                                        The accessary I love.
+                                        Is there any?<br>
+                                    </p>
+                                    <a href="javascript:void(0);" class="viewBtn">VIEW MORE</a>
+                                </div>
+                            </article>
+                        </div>
+                        <div class="swiper-slide">
+                            <article>
+                                <div class="pic">
+                                    <img src="img/content/content04.jpg" alt="CEREAL과 카메라">
+                                </div>
+                                <div class="pic_txt">
+                                    <h1>FILMS</h1>
+                                    <span>2023.03.20</span>
+                                    <p> A roll of film<br>
+                                        there’s a good film, Film me!<br>
+                                        They are filming in anything.<br>
+                                    </p>
+                                    <a href="javascript:void(0);" class="viewBtn">VIEW MORE</a>
+                                </div>
+                            </article>
+                        </div>
+                        <div class="swiper-slide">
+                            <article>
+                                <div class="pic">
+                                    <img src="img/content/content05.jpg" alt="선글라스 화장품들">
+                                </div>
+                                <div class="pic_txt">
+                                    <h1>BEAUTY</h1>
+                                    <span>2023.03.20</span>
+                                    <p> Beautifulness beauty<br>
+                                        beauty beautification beautifier<br>
+                                        A beautiful other creature or thing.
+                                    </p>
+                                    <a href="javascript:void(0);" class="viewBtn">VIEW MORE</a>
+                                </div>
+                            </article>
+                        </div>
+                        <div class="swiper-slide">
+                            <article>
+                                <div class="pic">
+                                    <img src="img/content/content06.jpg" alt="선글라스와 아이폰">
+                                </div>
+                                <div class="pic_txt">
+                                    <h1>OBJECTS</h1>
+                                    <span>2023.03.20</span>
+                                    <p> Is it an object? Object?<br>
+                                        That store only sells junk.<br>
+                                        everyday objects such as cups and items.
+                                    </p>
+                                    <a href="javascript:void(0);" class="viewBtn">VIEW MORE</a>
+                                </div>
+                            </article>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="btn">
+                <a href="#" class="prevBtn"></a>
+                <a href="#" class="nextBtn"></a>
+            </div>
+    </section>
+
+    <footer id="footer">
+        <div class="inner">
+            <div class="wrap">
+                <article class="map">
+                    <a href="contactUs.html">
+                        <i class="far fa-map"></i>
+                        <span>LOCATION</span>
+                    </a>
+                </article>
+                <article class="mail">
+                    <a href="javascript:void(0);" onclick="alert('준비중입니다.')">
+                        <i class="far fa-question-circle"></i>
+                        <span>INQUIRY</span>
+                    </a>
+                </article>
+                <article class="sns">
+                    <a href="javascript:void(0);" onclick="alert('준비중입니다.')">
+                        <i class="fab fa-instagram"></i>
+                        <span>SNS</span>
+                    </a>
+                </article>
+            </div>
+            <a href="#" class="top">
+                <i class="fas fa-solid fa-chevron-up"></i>
+            </a>
+        </div>
+        <div class="ft_txt">
+            <span>LJJSHLOVE@NAVER.COM</span>
+            <p>Copyrightⓒ 2023 All rights reserved</p>
+        </div>
+    </footer>
+</body>
+
+</html>
