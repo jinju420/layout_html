@@ -253,7 +253,7 @@ body.on #header .inner .menuWeb #gnb > li > a::after {
   margin-bottom: 100px;
 }
 .mypage .sub_Visual > .inner .visual_box {
-  background: url("../img/sub/mypage.jpg") no-repeat center/cover;
+  background: url("../img/gallery_visual.jpg") no-repeat center/cover;
 }
 .mypage .sub_con {
   background: #e7ded7;
@@ -311,7 +311,7 @@ body.on #header .inner .menuWeb #gnb > li > a::after {
 .contactUs .sub_Visual {
   width: 100%;
   height: 450px;
-  background: url("../img/sub/map.jpg") no-repeat center/cover;
+  background: url("../img/gallery_visual.jpg") no-repeat center/cover;
   filter: saturate(30%) brightness(90%);
   transition: 1s;
 }
