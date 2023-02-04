@@ -1,25 +1,5 @@
 .mypage {
-	//이미지 마우스 따라 움직이기
-	width: 100%;
-	position: relative;
-	background: #f8f5f0;
-	.sub_Visual {
-		width: 100%;
-		margin-bottom: 100px;
-		>.inner{
-			.visual_box {
-				background: url('../img/gallery_visual.jpg') no-repeat center/cover;
-			}
-		}
-	}
-	.sub_con {
-		background: $basicColor2;
-		> h1 {
-			padding-top: 50px;
-		}
-		>.inner {
-			@include innerWid;
-			@include subCon;
-		}
+	.visual_box {
+		background: url('../img/sub/gallery.jpg') no-repeat bottom/cover;
 	}
 }

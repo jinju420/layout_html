@@ -1,126 +1,17 @@
 .gallery {
 	//이미지 마우스 따라 움직이기
-	width: 100%;
-	position: relative;
-	background: #f8f5f0;
-	.sub_Visual {
-		width: 100%;
-		margin-bottom: 100px;
-		> .inner {
-			.visual_box {
-				background: url('../img/sub/issac.jpg') no-repeat center/cover;
-			}
-		}
-	}
-	.sub_con {
-		background: $basicColor2;
-		> h1 {
-			padding: 50px 150px 0;
-		}
-		> .inner {
-			@include innerWid;
-			@include subCon;
-			background: none;
-			opacity: 1;
-			article {
-				background: $mainBg;
-				width: calc((100% - 80px) / 3);
-				height: 100%;
-				margin-right: 40px;
-				border-radius: 200px 200px 15px 15px;
-				overflow: hidden;
-				box-shadow: rgba(255, 255, 255, 0.05) 0px 0px 2px 0px inset, rgba(0, 0, 0, 0.05) 0px 0px 2px 1px,
-					rgba(0, 0, 0, 0.11) 0px 4px 20px;
-				.pic {
-					height: 450px;
-					background: pink;
-					img {
-						@include imgFit;
-					}
-				}
-				.pic_txt {
-					padding: 30px;
-					height: auto;
-					color: $basicFontColor;
-					// height: 30vmin;
-					h1 {
-						// text-align: center;
-						font-size: 40px;
-						margin-bottom: 20px;
-					}
-					span {
-						line-height: 1.3;
-						position: relative;
-						display: inline-flex;
-						text-align: left;
-						// &::before {
-						// 	content: '';
-						// 	display: block;
-						// 	width: 30px;
-						// 	height: 1px;
-						// 	position: absolute;
-						// 	bottom:5px;
-						// 	left:-35px;
-						// 	background: #222;
-						// }
-						&::after {
-							content: '';
-							display: block;
-							width: 30px;
-							height: 1px;
-							position: absolute;
-							bottom:5px;
-							right:-35px;
-							background: #222;
-						}
-					}
-				}
-				&:nth-of-type(1) {
-					.pic_txt {
-					}
-				}
-				&:nth-of-type(2) {
-					margin-top: -100px;
-					.pic {
-						display: none;
-						width: 100%;
-						&.on {
-							display: block;
-						}
-						img {
-							@include imgFit;
-						}
-					}
-					.pic_txt {
-						// display: flex;
-						// align-items: flex-end;
-						// justify-content: right;
-						// height: 200px;
-						.colorBtn {
-							display: flex;
-							justify-content: flex-end;
-							margin-top: 30px;
-							a {
-								width: 20px;
-								height: 20px;
-								margin-right: 10px;
-								text-align: center;
-								border: 1px solid #777;
-								border-radius: 50%;
-								&.on {
-									border: 2px solid #000;
-								}
-							}
-						}
-						i {
-							cursor: pointer;
-						}
-					}
-				}
-				&:last-child {
-					margin-right: 0;
-				}
-			}
+	.visual_box {
+		position: relative;
+		background: url('../img/sub/gallery.jpg') no-repeat bottom/cover;
+		&::before {
+			content: '';
+			display: block;
+			width: 100%;
+			height: 100%;
+			background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.1));
+			position: absolute;
+			top: 0;
+			left: 0;
 		}
 	}
 }
