@@ -151,7 +151,7 @@
         </div>
         <div class="sub_con">
             <div class="inner">
-                <h1>Say Hello</h1>
+                <h1>Join Us</h1>
                 <form action="result.html" method="get" id="login">
                     <fieldset></fieldset>
                     <legend class="hide">회원가입을 위함 폼 입력 양식</legend>
@@ -188,16 +188,16 @@
                                 <td><input type="text" name="email" id="email" placeholder="이메일주소를 입력하세요"></td>
                             </tr>
 
-                            <!-- education -->
+                            <!-- age -->
                             <tr>
-                                <th scope="row">Education</th>
+                                <th scope="row">Age</th>
                                 <td>
-                                    <select name="edu" id="edu">
+                                    <select name="age" id="age">
                                         <option value="">선택하세요</option>
-                                        <option value="elementary school">초등학교 졸업</option>
-                                        <option value="middle school">중학교 졸업</option>
-                                        <option value="hight school">고등학교 졸업</option>
-                                        <option value="callege">대학교 졸업</option>
+                                        <option value="teenage">10대</option>
+                                        <option value="20s_30s">20~30대</option>
+                                        <option value="40s_50s">40~50대</option>
+                                        <option value="over_50s">50대 이상</option>
                                     </select>
                                 </td>
                             </tr>
@@ -235,7 +235,8 @@
                             <!-- comments -->
                             <tr>
                                 <th scope="row"><label for="comments">Comments</label></th>
-                                <td><textarea name="comments" id="commetns" placeholder="원하시는 컨셉을 남겨주세요"></textarea>
+                                <td><textarea name="comments" id="commetns"
+                                        placeholder="추가되었으면 하는 컨셉을 남겨주세요"></textarea>
                                 </td>
                             </tr>
 
@@ -290,6 +291,10 @@
         const myPage = document.querySelector('.mypage');
         const btnSubmit = myPage.querySelector('input[type=submit]');
 
+        window.addEventListener('load', () => {
+            myPage.querySelector('input[name=userId]').focus();
+        });
+
         btnSubmit.addEventListener('click', e => {
 
             if (!isTxt('userId')) e.preventDefault();
@@ -298,8 +303,8 @@
             if (!isCheck('gender')) e.preventDefault();
             if (!isCheck('style')) e.preventDefault();
 
-            if (!isSelect('edu')) e.preventDefault();
-            if (!isPwd('pwd1','pwd2')) e.preventDefault();
+            if (!isSelect('age')) e.preventDefault();
+            if (!isPwd('pwd1', 'pwd2')) e.preventDefault();
         });
 
         //유효성 검사

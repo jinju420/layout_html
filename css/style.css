@@ -674,8 +674,9 @@ fieldset {
   padding: 15px;
   outline: none;
   border: none;
-  font-size: 12px;
+  font-size: 14px;
   background: #f8f8f8;
+  font-family: "Montserrat";
 }
 .mypage .sub_con > .inner form table textarea {
   resize: none;
