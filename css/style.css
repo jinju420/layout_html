@@ -649,8 +649,10 @@ table {
 }
 .notice .sub_con > .inner {
   background: none;
-  padding: 0;
-  display: unset;
+  display: block;
+  width: 1180px;
+  margin: 0 auto;
+  padding: 30px 0 70px;
 }
 .notice .sub_con > .inner .wrap {
   position: relative;
@@ -675,8 +677,13 @@ table {
   border-bottom: 1px solid #111;
   font-size: 18px;
 }
+.notice .sub_con > .inner .wrap article table th:nth-of-type(1) {
+  width: 10%;
+}
+.notice .sub_con > .inner .wrap article table th:nth-of-type(3), .notice .sub_con > .inner .wrap article table th:nth-of-type(4) {
+  width: 15%;
+}
 .notice .sub_con > .inner .wrap article table td {
-  background: #fff;
   color: #666;
   border: none;
   padding: 20px;
@@ -703,22 +710,6 @@ table {
   font-weight: bold;
   font-size: 16px;
 }
-.notice .sub_con > .inner .wrap article table tbody tr:nth-of-type(2) td:first-child::after,
-.notice .sub_con > .inner .wrap article table tbody tr:nth-of-type(3) td:first-child::after,
-.notice .sub_con > .inner .wrap article table tbody tr:nth-of-type(4) td:first-child::after,
-.notice .sub_con > .inner .wrap article table tbody tr:nth-of-type(5) td:first-child::after,
-.notice .sub_con > .inner .wrap article table tbody tr:nth-of-type(6) td:first-child::after,
-.notice .sub_con > .inner .wrap article table tbody tr:nth-of-type(7) td:first-child::after {
-  content: "";
-  display: block;
-  width: 1px;
-  height: 40px;
-  background: #aaa;
-  position: absolute;
-  top: 50%;
-  right: 0;
-  margin-top: -20px;
-}
 .notice .sub_con > .inner .wrap article table tbody tr:nth-of-type(2) td:last-child,
 .notice .sub_con > .inner .wrap article table tbody tr:nth-of-type(3) td:last-child,
 .notice .sub_con > .inner .wrap article table tbody tr:nth-of-type(4) td:last-child,
@@ -731,6 +722,7 @@ table {
 .notice .sub_con > .inner .wrap article table tbody tr {
   border-collapse: separate;
   border-spacing: 0 10px;
+  background: #f8f8f8;
 }
 .notice .sub_con > .inner .wrap article table tbody tr:hover td:first-child {
   background: #a06138;
@@ -755,7 +747,7 @@ table {
   width: 100%;
 }
 .notice .sub_con > .inner .wrap .pagination i {
-  font-size: 30px;
+  font-size: 20px;
   border-width: 2px;
 }
 .notice .sub_con > .inner .wrap .pagination .num {

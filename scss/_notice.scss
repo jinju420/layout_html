@@ -5,8 +5,9 @@
 	.sub_con {
 		> .inner {
 			background: none;
-			padding: 0;
-			display: unset;
+			display: block;
+			@include innerWid;
+			padding: 30px 0 70px;
 			.wrap {
 				position: relative;
 				height: 600px;
@@ -26,21 +27,29 @@
 							padding: 10px;
 							border-bottom: 1px solid #111;
 							font-size: 18px;
+							&:nth-of-type(1) {
+								width: 10%;
+							}
+							&:nth-of-type(3),
+							&:nth-of-type(4) {
+								width: 15%;
+							}
 						}
 						td {
-							background: #fff;
+							// background: #fff;
 							color: $basicFontColor;
 							border: none;
 							padding: 20px;
 							cursor: pointer;
 							font-size: 14px;
+							// border-top: 1px solid #aaa;
+							// border-bottom: 1px solid #aaa;
 						}
 						tbody {
 							margin-top: 15px;
-							> tr{
+							> tr {
 								height: 20px;
 							}
-
 							tr:nth-of-type(2) td:first-child,
 							tr:nth-of-type(3) td:first-child,
 							tr:nth-of-type(4) td:first-child,
@@ -54,17 +63,18 @@
 								color: #222;
 								font-weight: bold;
 								font-size: 16px;
-								&::after {
-									content: '';
-									display: block;
-									width: 1px;
-									height: 40px;
-									background: #aaa;
-									position: absolute;
-									top: 50%;
-									right: 0;
-									margin-top: -20px;
-								}
+								// border-left: 1px solid #aaa;
+								// &::after {
+								// 	content: '';
+								// 	display: block;
+								// 	width: 1px;
+								// 	height: 40px;
+								// 	background: #aaa;
+								// 	position: absolute;
+								// 	top: 50%;
+								// 	right: 0;
+								// 	margin-top: -20px;
+								// }
 								// &:hover::after {
 								// 	background: none;
 								// }
@@ -81,6 +91,7 @@
 							tr {
 								border-collapse: separate;
 								border-spacing: 0 10px;
+								background: $mainBg;
 								&:hover td:first-child {
 									background: $strongColor;
 									color: #fff;
@@ -91,9 +102,13 @@
 									transition: 0.3s;
 								}
 							}
+							tr:nth-of-type(odd) {
+								// background: $basicColor2;
+								// background: #ddd;
+							}
 						}
 					}
-					&.on{
+					&.on {
 						display: block;
 					}
 				}
@@ -107,7 +122,7 @@
 					font-size: 0;
 					width: 100%;
 					i {
-						font-size: 30px;
+						font-size: 20px;
 						border-width: 2px;
 					}
 					.num {
