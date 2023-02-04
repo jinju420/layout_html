@@ -172,6 +172,7 @@ $mobile: 539px;
 							}
 						}
 						input[type='radio'] {
+							appearance: none;
 							&:checked ~ .inputUl {
 								max-height: 100vh;
 								padding: 20px 0 0 20px;

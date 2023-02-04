@@ -16,14 +16,11 @@ a {
   color: #666;
 }
 
-input[type=radio] {
-  appearance: none;
-}
-
 body {
   height: 100%;
   color: #666;
   width: 100%;
+  font-family: "Poppins";
 }
 body.hidden {
   overflow: hidden;
@@ -40,7 +37,7 @@ body.on #header .inner .menuWeb #gnb > li > a::after {
   background: #f8f8f8;
 }
 
-.hidden {
+.hide {
   position: absolute;
   top: -9999px;
   opacity: 0;
@@ -48,6 +45,10 @@ body.on #header .inner .menuWeb #gnb > li > a::after {
 
 table {
   border-collapse: collapse;
+}
+
+fieldset {
+  border: none;
 }
 
 .bg {
@@ -643,6 +644,105 @@ table {
 .mypage .visual_box {
   background: url("../img/sub/gallery.jpg") no-repeat bottom/cover;
 }
+.mypage .sub_con > .inner {
+  justify-content: space-around;
+  background: none;
+  color: #222;
+  padding: 30px 0 70px;
+}
+.mypage .sub_con > .inner h1 {
+  font-size: 50px;
+  margin-bottom: 30px;
+}
+.mypage .sub_con > .inner form {
+  background: rgba(160, 97, 56, 0.2);
+  padding: 50px;
+}
+.mypage .sub_con > .inner form table label {
+  font-family: "Montserrat";
+}
+.mypage .sub_con > .inner form table input::placeholder,
+.mypage .sub_con > .inner form table textarea::placeholder {
+  opacity: 0.6;
+  font-family: "Montserrat";
+}
+.mypage .sub_con > .inner form table input[type=text],
+.mypage .sub_con > .inner form table input[type=password],
+.mypage .sub_con > .inner form table select,
+.mypage .sub_con > .inner form table textarea {
+  width: 100%;
+  padding: 15px;
+  outline: none;
+  border: none;
+  font-size: 12px;
+  background: #f8f8f8;
+}
+.mypage .sub_con > .inner form table textarea {
+  resize: none;
+  height: 150px;
+}
+.mypage .sub_con > .inner form table input[type=radio],
+.mypage .sub_con > .inner form table input[type=checkbox] {
+  appearance: block;
+  vertical-align: middle;
+  width: 20px;
+  height: 20px;
+  background: #f8f8f8;
+  outline: none;
+  margin-right: 5px;
+  margin-left: 20px;
+  border: none;
+}
+.mypage .sub_con > .inner form table input[type=radio]:first-child,
+.mypage .sub_con > .inner form table input[type=checkbox]:first-child {
+  margin-left: 0;
+}
+.mypage .sub_con > .inner form table input[type=radio]:checked,
+.mypage .sub_con > .inner form table input[type=checkbox]:checked {
+  accent-color: #a06138;
+}
+.mypage .sub_con > .inner form table th {
+  font-size: 18px;
+  width: 20%;
+  white-space: nowrap;
+}
+.mypage .sub_con > .inner form table th:last-child {
+  padding: 50px 0 0;
+  text-align: right;
+}
+.mypage .sub_con > .inner form table th:last-child input[type=reset] {
+  margin-right: 17px;
+}
+.mypage .sub_con > .inner form table th,
+.mypage .sub_con > .inner form table td {
+  padding: 15px 0;
+}
+.mypage .sub_con > .inner form table td {
+  display: block;
+  margin-left: 55px;
+  border-bottom: 1px solid #222;
+}
+.mypage .sub_con > .inner form table input[type=reset],
+.mypage .sub_con > .inner form table input[type=submit] {
+  padding: 15px;
+  border: none;
+  cursor: pointer;
+  transition: 0.5s;
+  font-family: "Poppins";
+  font-size: 16px;
+  width: 33%;
+}
+.mypage .sub_con > .inner form table input[type=reset]:hover,
+.mypage .sub_con > .inner form table input[type=submit]:hover {
+  background: #a06138;
+  color: #fff;
+}
+.mypage .sub_con > .inner form table p {
+  font-size: 12px;
+  color: hotpink;
+  margin-top: 5px;
+  color: #ff1d5c;
+}
 
 .notice .visual_box {
   background: url("../img/sub/notice.jpg") no-repeat center/cover;
@@ -650,8 +750,6 @@ table {
 .notice .sub_con > .inner {
   background: none;
   display: block;
-  width: 1180px;
-  margin: 0 auto;
   padding: 30px 0 70px;
 }
 .notice .sub_con > .inner .wrap {
@@ -926,6 +1024,9 @@ table {
 }
 #header .inner .menuMo > ul.sub_menu > li .tab > ul li {
   margin-bottom: 20px;
+}
+#header .inner .menuMo > ul.sub_menu > li .tab input[type=radio] {
+  appearance: none;
 }
 #header .inner .menuMo > ul.sub_menu > li .tab input[type=radio]:checked ~ .inputUl {
   max-height: 100vh;
