@@ -1,6 +1,8 @@
 .mypage {
 	.visual_box {
-		background: url('../img/sub/gallery.jpg') no-repeat bottom/cover;
+		background: url('../img/sub/mypage.jpg') no-repeat;
+		background-size: cover;
+		background-position: center 73%;
 	}
 	.sub_con {
 		> .inner {

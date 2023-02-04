@@ -449,6 +449,7 @@ fieldset {
   padding-top: 50px;
   font-size: 50px;
   margin-bottom: 30px;
+  letter-spacing: 2px;
 }
 
 #sub_footer {
@@ -638,7 +639,7 @@ fieldset {
 }
 
 .brand .visual_box {
-  background: url("../img/sub/gallery.jpg") no-repeat bottom/cover;
+  background: url("../img/sub/brand.jpg") no-repeat bottom/cover;
 }
 .brand .sub_con .inner {
   display: block;
@@ -648,6 +649,7 @@ fieldset {
   padding-top: 0;
   text-align: center;
   margin-bottom: 70px;
+  opacity: 0.7;
 }
 .brand .sub_con .inner .member {
   display: flex;
@@ -691,7 +693,9 @@ fieldset {
 }
 
 .mypage .visual_box {
-  background: url("../img/sub/gallery.jpg") no-repeat bottom/cover;
+  background: url("../img/sub/mypage.jpg") no-repeat;
+  background-size: cover;
+  background-position: center 73%;
 }
 .mypage .sub_con > .inner {
   justify-content: space-around;
@@ -908,7 +912,10 @@ fieldset {
 }
 
 .contactUs .visual_box {
-  background: url("../img/sub/gallery.jpg") no-repeat bottom/cover;
+  background: url("../img/sub/contactUs.jpg") no-repeat center/cover;
+  filter: saturate(30%) brightness(90%);
+  transition: 1s;
+  margin-bottom: 0;
 }
 
 #header {
