@@ -48,6 +48,15 @@ body {
 		}
 	}
 }
+.hidden {
+	position: absolute;
+	top: -9999px;
+	opacity: 0;
+}
+table {
+	border-collapse: collapse;
+}
+
 .bg {
 	display: none;
 	position: absolute;
@@ -58,4 +67,3 @@ body {
 	transition: 1s;
 	background: rgba(0, 0, 0, 0.5);
 }
-
