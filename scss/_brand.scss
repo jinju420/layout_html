@@ -2,4 +2,53 @@
 	.visual_box {
 		background: url('../img/sub/gallery.jpg') no-repeat bottom/cover;
 	}
+	.sub_con {
+		.inner {
+			display: block;
+			opacity: 1;
+			> h1 {
+				padding-top: 0;
+				text-align: center;
+				margin-bottom: 70px;
+			}
+			.member {
+				display: flex;
+				article {
+					position: relative;
+					width: calc((100% - 90px) / 4);
+					margin-right: 30px;
+					&:last-child {
+						margin-right: 0;
+					}
+					.pic {
+						width: 100%;
+						height: 350px;
+						transition: 1s;
+						filter: saturate(30%) brightness(80%);
+						img {
+							@include imgFit;
+						}
+						&:hover{
+							filter: saturate(100%) brightness(100%);
+						}
+					}
+					.txt {
+						position: absolute;
+						bottom: 20px;
+						left: 20px;
+						letter-spacing: 1px;
+						color: #fff;
+						h2 {
+							line-height: 1.2;
+							text-shadow: 2px 5px 12px rgb(0 0 0 / 90%);
+						}
+						span {
+							font-size: 12px;
+							font-weight: 300;
+						}
+					}
+				}
+			}
+		}
+	}
 }
