@@ -99,10 +99,6 @@
 									transition: 0.3s;
 								}
 							}
-							tr:nth-of-type(odd) {
-								// background: $basicColor2;
-								// background: #ddd;
-							}
 						}
 					}
 					&.on {
@@ -121,6 +117,7 @@
 					i {
 						font-size: 20px;
 						border-width: 2px;
+						pointer-events: none;
 					}
 					.num {
 						cursor: pointer;

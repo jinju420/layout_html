@@ -142,9 +142,8 @@
             <div class="visual_box">
                 <div class="inner">
                     <div class="title_txt">
-                        <h1>MY PAGE</h1>
-                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.<br>
-                            voluptatem c a recusandae omnis.</p>
+                        <h1>Join</h1>
+                        <p>쇼핑몰의 회원이 되시면 다양한 혜택을 누리실 수 있습니다</p>
                     </div>
                 </div>
             </div>
@@ -158,7 +157,6 @@
 
                     <table>
                         <caption class="hide">회원가입을 위한 아이디, 비밀번호, 이메일, 나이 입력 테이블</caption>
-
                         <tbody>
                             <!-- id -->
                             <tr>
@@ -296,13 +294,14 @@
         const myPage = document.querySelector('.mypage');
         const btnSubmit = myPage.querySelector('input[type=submit]');
 
-        window.addEventListener('load', () => {
-            myPage.querySelector('input[name=userId]').focus();
-        });
+        // window.addEventListener('load', () => {
+        //     myPage.querySelector('input[name=userId]').focus();
+        // });
 
         btnSubmit.addEventListener('click', e => {
 
             if (!isTxt('userId')) e.preventDefault();
+            if (!isTxt('comments', 10)) e.preventDefault();
             if (!isEmail('email')) e.preventDefault();
 
             if (!isCheck('gender')) e.preventDefault();
