@@ -22,6 +22,14 @@ body {
   width: 100%;
   font-family: "Poppins";
 }
+body::after {
+  position: absolute;
+  width: 0;
+  height: 0;
+  overflow: hidden;
+  z-index: -1;
+  content: url("../img/sub/brand.jpg") url("../img/sub/contactUs.jpg") url("../img/sub/gallery.jpg") url("../img/sub/mypage.jpg") url("../img/sub/notice.jpg");
+}
 body.hidden {
   overflow: hidden;
 }
@@ -76,7 +84,6 @@ fieldset {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0 30px;
 }
 #sub_header .inner > h1 {
   font-family: "Poppins";
@@ -102,6 +109,25 @@ fieldset {
   line-height: 60px;
   margin-left: 40px;
 }
+#sub_header .inner .menuWeb #gnb > li:hover:nth-of-type(1) .sub_menu {
+  display: block;
+  padding-right: 290px;
+}
+#sub_header .inner .menuWeb #gnb > li:hover:nth-of-type(2) .sub_menu {
+  display: block;
+  padding-right: 135px;
+}
+#sub_header .inner .menuWeb #gnb > li:hover:nth-of-type(3) .sub_menu {
+  display: block;
+  padding-right: 246px;
+}
+#sub_header .inner .menuWeb #gnb > li:hover:nth-of-type(4) .sub_menu {
+  display: block;
+  padding-right: 157px;
+}
+#sub_header .inner .menuWeb #gnb > li:hover:nth-of-type(5) .sub_menu {
+  display: block;
+}
 #sub_header .inner .menuWeb #gnb > li > a {
   display: block;
   position: relative;
@@ -110,10 +136,6 @@ fieldset {
   letter-spacing: 1px;
   margin-left: 10px;
   text-align: center;
-  text-shadow: 4px 3px 5px rgba(0, 0, 0, 0.2);
-  opacity: 0.5;
-  transition: opacity 0.7s;
-  position: relative;
 }
 #sub_header .inner .menuWeb #gnb > li > a::after {
   content: "";
@@ -125,29 +147,39 @@ fieldset {
   height: 2px;
   transition: width 0.5s;
   background: #f8f8f8;
-  opacity: 0;
 }
-#sub_header .inner .menuWeb #gnb > li > a:hover {
-  opacity: 1;
-  font-weight: 500;
-  color: #fff;
-}
-#sub_header .inner .menuWeb #gnb > li > a.on {
-  opacity: 1;
-  font-weight: 500;
-  color: #fff;
-}
-#sub_header .inner .menuWeb #gnb > li > a.on::after {
-  content: "";
-  display: block;
-  position: absolute;
-  bottom: 0;
-  left: 0;
+#sub_header .inner .menuWeb #gnb > li > a:hover::after {
   width: 100%;
-  height: 2px;
-  transition: width 0.5s;
-  background: #f8f8f8;
-  opacity: 1;
+}
+#sub_header .inner .menuWeb #gnb > li > .sub_menu {
+  display: none;
+  position: absolute;
+  right: 0;
+}
+#sub_header .inner .menuWeb #gnb > li > .sub_menu:last-child > ul > li:last-child {
+  margin-right: 0;
+}
+#sub_header .inner .menuWeb #gnb > li > .sub_menu:last-child > ul > li:last-child a:last-child {
+  padding: 10px 0 10px;
+}
+#sub_header .inner .menuWeb #gnb > li > .sub_menu:hover {
+  display: block;
+}
+#sub_header .inner .menuWeb #gnb > li > .sub_menu > ul {
+  display: flex;
+}
+#sub_header .inner .menuWeb #gnb > li > .sub_menu > ul > li {
+  margin-right: 15px;
+}
+#sub_header .inner .menuWeb #gnb > li > .sub_menu > ul > li > a {
+  padding: 10px;
+  text-align: center;
+  letter-spacing: 1px;
+  color: #666;
+}
+#sub_header .inner .menuWeb #gnb > li > .sub_menu > ul > li > a:hover {
+  color: #a06138;
+  font-weight: 500;
 }
 #sub_header .inner .menuMo {
   display: none;
@@ -380,17 +412,33 @@ fieldset {
 
 .com {
   width: 100%;
-  position: relative;
+  min-width: 1180px;
   background: #f8f5f0;
 }
-.com .title_txt {
-  position: absolute;
-  top: 30%;
-  left: 10%;
+.com .sub_Visual {
+  position: relative;
+  width: 100%;
+}
+.com .sub_Visual .visual_box {
+  filter: saturate(30%) brightness(90%);
+  height: 550px;
+  padding: 190px 50px 50px 150px;
+  background-attachment: fixed;
+}
+.com .sub_Visual .visual_box:hover {
+  filter: saturate(100%) brightness(100%);
+  transition: 1s;
+}
+.com .sub_Visual .visual_box .inner {
+  width: 1180px;
+  margin: 0 auto;
+}
+.com .sub_Visual .visual_box .inner .title_txt {
+  margin-left: -47px;
   z-index: 1;
   color: #fff;
 }
-.com .title_txt h1 {
+.com .sub_Visual .visual_box .inner .title_txt h1 {
   font-size: 90px;
   line-height: 1;
   position: relative;
@@ -403,7 +451,7 @@ fieldset {
   font-family: "Poppins";
   text-shadow: 2px 5px 12px rgba(0, 0, 0, 0.9);
 }
-.com .title_txt h1::before {
+.com .sub_Visual .visual_box .inner .title_txt h1::before {
   content: "";
   display: block;
   position: absolute;
@@ -413,24 +461,11 @@ fieldset {
   height: 117px;
   background: #fff;
 }
-.com .title_txt p {
+.com .sub_Visual .visual_box .inner .title_txt p {
   color: #fff;
   font-size: 14px;
   font-family: "Montserrat";
   margin-left: 30px;
-}
-.com .sub_Visual {
-  width: 100%;
-}
-.com .sub_Visual .visual_box {
-  filter: saturate(30%) brightness(90%);
-  height: 550px;
-  padding: 190px 50px 50px 150px;
-  background-attachment: fixed;
-}
-.com .sub_Visual .visual_box:hover {
-  filter: saturate(100%) brightness(100%);
-  transition: 1s;
 }
 .com .sub_con {
   background: #e7ded7;
@@ -446,7 +481,6 @@ fieldset {
   color: #222;
 }
 .com .sub_con > .inner > h1 {
-  padding-top: 50px;
   font-size: 50px;
   margin-bottom: 30px;
   letter-spacing: 2px;
@@ -698,11 +732,60 @@ fieldset {
   background-position: center 73%;
 }
 .mypage .sub_con > .inner {
+  display: block;
   justify-content: space-around;
 }
 .mypage .sub_con > .inner form {
+  display: flex;
   background: rgba(160, 97, 56, 0.2);
   padding: 50px;
+}
+.mypage .sub_con > .inner form table {
+  width: 50%;
+  height: 400px;
+  margin-right: 50px;
+}
+.mypage .sub_con > .inner form table:first-child td {
+  width: 80%;
+}
+.mypage .sub_con > .inner form table:last-child {
+  margin-right: 0;
+}
+.mypage .sub_con > .inner form table:last-child label[for=simple],
+.mypage .sub_con > .inner form table:last-child label[for=mono],
+.mypage .sub_con > .inner form table:last-child label[for=fancy],
+.mypage .sub_con > .inner form table:last-child label[for=trendy] {
+  line-height: 2;
+}
+.mypage .sub_con > .inner form table:last-child tr:nth-of-type(3) td {
+  padding: 30px 0;
+}
+.mypage .sub_con > .inner form table:last-child tr:last-child th {
+  margin-top: 50px;
+}
+.mypage .sub_con > .inner form table th {
+  font-size: 18px;
+  width: 20%;
+  white-space: nowrap;
+}
+.mypage .sub_con > .inner form table th:last-child {
+  padding: 50px 0 0;
+  text-align: right;
+}
+.mypage .sub_con > .inner form table th:last-child input[type=reset] {
+  margin-right: 17px;
+}
+.mypage .sub_con > .inner form table th,
+.mypage .sub_con > .inner form table td {
+  padding: 15px 0;
+}
+.mypage .sub_con > .inner form table td {
+  display: block;
+  margin-left: 44px;
+  border-bottom: 1px solid #222;
+}
+.mypage .sub_con > .inner form table tr:nth-of-type(5) td {
+  border-bottom: 0;
 }
 .mypage .sub_con > .inner form table label {
   font-family: "Montserrat";
@@ -740,34 +823,25 @@ fieldset {
   margin-left: 20px;
   border: none;
 }
+.mypage .sub_con > .inner form table input[type=radio] td,
+.mypage .sub_con > .inner form table input[type=checkbox] td {
+  padding: 27px 0;
+}
 .mypage .sub_con > .inner form table input[type=radio]:first-child,
 .mypage .sub_con > .inner form table input[type=checkbox]:first-child {
   margin-left: 0;
 }
+.mypage .sub_con > .inner form table input[type=radio]:nth-of-type(3),
+.mypage .sub_con > .inner form table input[type=checkbox]:nth-of-type(3) {
+  margin-left: 0;
+}
+.mypage .sub_con > .inner form table input[type=radio]:nth-of-type(4),
+.mypage .sub_con > .inner form table input[type=checkbox]:nth-of-type(4) {
+  margin-left: 29px;
+}
 .mypage .sub_con > .inner form table input[type=radio]:checked,
 .mypage .sub_con > .inner form table input[type=checkbox]:checked {
   accent-color: #a06138;
-}
-.mypage .sub_con > .inner form table th {
-  font-size: 18px;
-  width: 20%;
-  white-space: nowrap;
-}
-.mypage .sub_con > .inner form table th:last-child {
-  padding: 50px 0 0;
-  text-align: right;
-}
-.mypage .sub_con > .inner form table th:last-child input[type=reset] {
-  margin-right: 17px;
-}
-.mypage .sub_con > .inner form table th,
-.mypage .sub_con > .inner form table td {
-  padding: 15px 0;
-}
-.mypage .sub_con > .inner form table td {
-  display: block;
-  margin-left: 55px;
-  border-bottom: 1px solid #222;
 }
 .mypage .sub_con > .inner form table input[type=reset],
 .mypage .sub_con > .inner form table input[type=submit] {
@@ -776,8 +850,9 @@ fieldset {
   cursor: pointer;
   transition: 0.5s;
   font-family: "Poppins";
-  font-size: 16px;
-  width: 33%;
+  font-size: 14px;
+  width: 152px;
+  box-shadow: 5px 3px 6px rgba(0, 0, 0, 0.2);
 }
 .mypage .sub_con > .inner form table input[type=reset]:hover,
 .mypage .sub_con > .inner form table input[type=submit]:hover {
@@ -786,9 +861,9 @@ fieldset {
 }
 .mypage .sub_con > .inner form table p {
   font-size: 12px;
-  color: hotpink;
   margin-top: 5px;
   color: #ff1d5c;
+  letter-spacing: -0.4px;
 }
 
 .notice .visual_box {
@@ -933,7 +1008,6 @@ fieldset {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0 30px;
 }
 #header .inner > h1 {
   font-family: "Poppins";
@@ -961,23 +1035,22 @@ fieldset {
 }
 #header .inner .menuWeb #gnb > li:hover:nth-of-type(1) .sub_menu {
   display: block;
-  padding-right: 311px;
+  padding-right: 290px;
 }
 #header .inner .menuWeb #gnb > li:hover:nth-of-type(2) .sub_menu {
   display: block;
-  padding-right: 155px;
+  padding-right: 135px;
 }
 #header .inner .menuWeb #gnb > li:hover:nth-of-type(3) .sub_menu {
   display: block;
-  padding-right: 250px;
+  padding-right: 246px;
 }
 #header .inner .menuWeb #gnb > li:hover:nth-of-type(4) .sub_menu {
   display: block;
-  padding-right: 165px;
+  padding-right: 157px;
 }
 #header .inner .menuWeb #gnb > li:hover:nth-of-type(5) .sub_menu {
   display: block;
-  padding-right: 5px;
 }
 #header .inner .menuWeb #gnb > li > a {
   display: block;
@@ -1006,6 +1079,12 @@ fieldset {
   display: none;
   position: absolute;
   right: 0;
+}
+#header .inner .menuWeb #gnb > li > .sub_menu:last-child > ul > li:last-child {
+  margin-right: 0;
+}
+#header .inner .menuWeb #gnb > li > .sub_menu:last-child > ul > li:last-child a:last-child {
+  padding: 10px 0 10px;
 }
 #header .inner .menuWeb #gnb > li > .sub_menu:hover {
   display: block;
@@ -1275,7 +1354,7 @@ fieldset {
   width: 1180px;
   margin: 0 auto;
   height: 100%;
-  padding: 180px 0 0 30px;
+  padding: 180px 0 0;
   color: #555;
 }
 #visual .inner .title_txt {

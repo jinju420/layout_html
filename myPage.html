@@ -139,8 +139,8 @@
 
     <section class="com mypage">
         <div class="sub_Visual">
-            <div class="inner">
-                <div class="visual_box">
+            <div class="visual_box">
+                <div class="inner">
                     <div class="title_txt">
                         <h1>MY PAGE</h1>
                         <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.<br>
@@ -157,7 +157,7 @@
                     <legend class="hide">회원가입을 위함 폼 입력 양식</legend>
 
                     <table>
-                        <caption class="hide">회원가입을 위한 아이디, 비밀번호, 이메일, 성별, 학력, 취미, 남기는 말 입력 테이블</caption>
+                        <caption class="hide">회원가입을 위한 아이디, 비밀번호, 이메일, 나이 입력 테이블</caption>
 
                         <tbody>
                             <!-- id -->
@@ -202,6 +202,12 @@
                                 </td>
                             </tr>
 
+                        </tbody>
+                    </table>
+
+                    <table>
+                        <caption class="hide">성별, 스타일, 남기는 말 입력 테이블</caption>
+                        <tbody>
                             <!-- gender -->
                             <tr>
                                 <th scope="row">Gender</th>
@@ -222,7 +228,7 @@
                                     <label for="simple">Simple</label>
 
                                     <input type="checkbox" name="style" id="mono" value="mono">
-                                    <label for="mono">Monotonous</label>
+                                    <label for="mono">Monotonous</label><br>
 
                                     <input type="checkbox" name="style" id="fancy">
                                     <label for="fancy">Fancy</label>
@@ -248,7 +254,6 @@
                                 </th>
                             </tr>
                         </tbody>
-
                     </table>
                 </form>
             </div>
@@ -331,7 +336,7 @@
             }
         }
 
-         //email
+        //email
         function isEmail(el, len) {
             let input = myPage.querySelector(`[name=${el}]`);
             let txt = input.value;

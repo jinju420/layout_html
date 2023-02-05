@@ -27,7 +27,6 @@ $mobile: 539px;
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
-		padding: 0 30px;
 		> h1 {
 			font-family: $titleFont;
 			height: 100%;
@@ -51,23 +50,22 @@ $mobile: 539px;
 					margin-left: 40px;
 					&:hover:nth-of-type(1) .sub_menu {
 						display: block;
-						padding-right: 311px;
+						padding-right: 290px;
 					}
 					&:hover:nth-of-type(2) .sub_menu {
 						display: block;
-						padding-right: 155px;
+						padding-right: 135px;
 					}
 					&:hover:nth-of-type(3) .sub_menu {
 						display: block;
-						padding-right: 250px;
+						padding-right: 246px;
 					}
 					&:hover:nth-of-type(4) .sub_menu {
 						display: block;
-						padding-right: 165px;
+						padding-right: 157px;
 					}
 					&:hover:nth-of-type(5) .sub_menu {
 						display: block;
-						padding-right: 5px;
 					}
 					> a {
 						display: block;
@@ -96,6 +94,16 @@ $mobile: 539px;
 						display: none;
 						position: absolute;
 						right: 0;
+						&:last-child {
+							> ul {
+								> li:last-child {
+									margin-right: 0;
+									a:last-child {
+										padding: 10px 0 10px;
+									}
+								}
+							}
+						}
 						&:hover {
 							display: block;
 						}
@@ -379,7 +387,7 @@ $mobile: 539px;
 	.inner {
 		@include innerWid;
 		height: 100%;
-		padding: 180px 0 0 30px;
+		padding: 180px 0 0;
 		color: #555;
 		.title_txt {
 			display: flex;
