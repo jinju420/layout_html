@@ -109,6 +109,25 @@ fieldset {
   line-height: 60px;
   margin-left: 40px;
 }
+#sub_header .inner .menuWeb #gnb > li:hover:nth-of-type(1) .sub_menu {
+  display: block;
+  padding-right: 350px;
+}
+#sub_header .inner .menuWeb #gnb > li:hover:nth-of-type(2) .sub_menu {
+  display: block;
+  padding-right: 135px;
+}
+#sub_header .inner .menuWeb #gnb > li:hover:nth-of-type(3) .sub_menu {
+  display: block;
+  padding-right: 246px;
+}
+#sub_header .inner .menuWeb #gnb > li:hover:nth-of-type(4) .sub_menu {
+  display: block;
+  padding-right: 157px;
+}
+#sub_header .inner .menuWeb #gnb > li:hover:nth-of-type(5) .sub_menu {
+  display: block;
+}
 #sub_header .inner .menuWeb #gnb > li > a {
   display: block;
   position: relative;
@@ -122,8 +141,22 @@ fieldset {
   transition: opacity 0.7s;
   position: relative;
 }
+#sub_header .inner .menuWeb #gnb > li > a::after {
+  content: "";
+  display: block;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0%;
+  height: 2px;
+  transition: width 0.5s;
+  background: #f8f8f8;
+}
 #sub_header .inner .menuWeb #gnb > li > a:hover {
   opacity: 1;
+}
+#sub_header .inner .menuWeb #gnb > li > a:hover::after {
+  width: 100%;
 }
 #sub_header .inner .menuWeb #gnb > li > a.on {
   opacity: 1;
@@ -166,11 +199,11 @@ fieldset {
   padding: 10px;
   text-align: center;
   letter-spacing: 1px;
-  color: #666;
+  color: #fff;
+  width: 150px;
 }
 #sub_header .inner .menuWeb #gnb > li > .sub_menu > ul > li > a:hover {
   color: #a06138;
-  font-weight: 500;
 }
 #sub_header .inner .menuMo {
   display: none;
@@ -218,6 +251,9 @@ fieldset {
 }
 #sub_header .inner .menuMo > ul.sub_menu > li .tab > ul li {
   margin-bottom: 20px;
+}
+#sub_header .inner .menuMo > ul.sub_menu > li .tab input[type=radio] {
+  appearance: none;
 }
 #sub_header .inner .menuMo > ul.sub_menu > li .tab input[type=radio]:checked ~ .inputUl {
   max-height: 100vh;
@@ -783,7 +819,8 @@ fieldset {
     justify-content: space-between;
   }
   .brand .sub_con .inner .member .member_wrap article {
-    width: 50%;
+    width: 49%;
+    margin-bottom: 20px;
     margin-right: 0;
   }
   .brand .sub_con .inner .member .member_wrap article img {
@@ -1049,7 +1086,7 @@ fieldset {
   }
 }
 .notice .visual_box {
-  background: url("../img/sub/notice.jpg") no-repeat center/cover;
+  background: url("../img/sub/notice.jpg") no-repeat bottom/cover;
 }
 .notice .sub_con {
   height: 1000px;

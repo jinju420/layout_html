@@ -27,7 +27,6 @@
 			.about {
 				font-size: 25px;
 				> h1 {
-					// font-size: 70px;
 					opacity: 1;
 					color: $strongColor;
 					span {
@@ -100,7 +99,9 @@
 						flex-wrap: wrap;
 						justify-content: space-between;
 						article {
-							width: calc(100% / 2);
+							// width: calc(100% / 2);
+							width: 49%;
+							margin-bottom: 20px;
 							margin-right: 0;
 							img {
 								object-position: top;
