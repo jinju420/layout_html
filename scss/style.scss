@@ -954,7 +954,7 @@ $mobile: 539px;
 					}
 					i {
 						// font-size: 30px;
-						font-size: 4vmin;
+						font-size: 6vmin;
 					}
 				}
 			}
@@ -1075,14 +1075,14 @@ $mobile: 539px;
 		.inner {
 			.wrap {
 				display: flex;
-				flex-wrap: wrap;
+				// flex-wrap: wrap;
 				article {
 					width: 100%;
 					margin-right: 0;
-					padding: 20px 30px;
-					margin-bottom: 20px;
+					// padding: 20px 30px;
+					// margin-bottom: 20px;
 					i {
-						font-size: 8vmin;
+						font-size: 7vmin;
 					}
 					a {
 						> span {

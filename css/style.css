@@ -666,7 +666,7 @@ fieldset {
     margin-right: 0;
   }
   #sub_footer .inner .wrap article i {
-    font-size: 4vmin;
+    font-size: 6vmin;
   }
 }
 @media screen and (max-width: 539px) {
@@ -695,16 +695,13 @@ fieldset {
   }
   #sub_footer .inner .wrap {
     display: flex;
-    flex-wrap: wrap;
   }
   #sub_footer .inner .wrap article {
     width: 100%;
     margin-right: 0;
-    padding: 20px 30px;
-    margin-bottom: 20px;
   }
   #sub_footer .inner .wrap article i {
-    font-size: 8vmin;
+    font-size: 7vmin;
   }
   #sub_footer .inner .wrap article a > span {
     font-size: 3vmin;
@@ -2213,7 +2210,7 @@ fieldset {
     margin-right: 0;
   }
   #footer .inner .wrap article i {
-    font-size: 4vmin;
+    font-size: 6vmin;
   }
 }
 @media screen and (max-width: 539px) {
@@ -2290,16 +2287,13 @@ fieldset {
   }
   #footer .inner .wrap {
     display: flex;
-    flex-wrap: wrap;
   }
   #footer .inner .wrap article {
     width: 100%;
     margin-right: 0;
-    padding: 20px 30px;
-    margin-bottom: 20px;
   }
   #footer .inner .wrap article i {
-    font-size: 8vmin;
+    font-size: 7vmin;
   }
   #footer .inner .wrap article a > span {
     font-size: 3vmin;
