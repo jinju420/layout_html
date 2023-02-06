@@ -422,6 +422,9 @@ fieldset {
 .com .sub_Visual .visual_box .inner {
   width: 1180px;
   margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
 }
 .com .sub_Visual .visual_box .inner .title_txt {
   z-index: 1;
@@ -592,6 +595,23 @@ fieldset {
   #sub_header .inner .quick_menu .bars {
     display: flex;
   }
+  .com {
+    width: 100%;
+  }
+  .com .sub_Visual .visual_box .inner {
+    width: 100%;
+    padding: 0 50px;
+  }
+  .com .sub_Visual .visual_box .inner .title_txt h1 {
+    font-size: 12vmin;
+  }
+  .com .sub_Visual .visual_box .inner .title_txt p {
+    font-size: 3vmin;
+  }
+  .com .sub_con > .inner {
+    width: 100%;
+    padding: 80px 50px;
+  }
   #sub_footer .inner {
     width: 100%;
   }
@@ -724,12 +744,60 @@ fieldset {
 .brand .sub_con .inner .member .member_wrap article .txt h2 {
   line-height: 1.2;
   text-shadow: 2px 5px 12px rgba(0, 0, 0, 0.9);
+  margin-bottom: 5px;
 }
 .brand .sub_con .inner .member .member_wrap article .txt span {
   font-size: 12px;
   font-weight: 300;
 }
 
+@media screen and (max-width: 1179px) {
+  .brand .sub_con .inner .member {
+    margin-top: 80px;
+  }
+  .brand .sub_con .inner .member .member_wrap {
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  .brand .sub_con .inner .member .member_wrap article {
+    width: 50%;
+    margin-right: 0;
+  }
+  .brand .sub_con .inner .member .member_wrap article img {
+    object-position: top;
+  }
+  .brand .sub_con .inner .member .member_wrap article .txt h2 {
+    font-size: 5vmax;
+  }
+  .brand .sub_con .inner .member .member_wrap article .txt span {
+    font-size: 2vw;
+    font-weight: 300;
+  }
+}
+@media screen and (max-width: 539px) {
+  .brand .sub_con .inner .about p {
+    text-align: center;
+    line-height: 1.7;
+  }
+  .brand .sub_con .inner .member {
+    margin-top: 50px;
+  }
+  .brand .sub_con .inner .member .member_wrap article {
+    width: 100%;
+    margin-bottom: 30px;
+  }
+  .brand .sub_con .inner .member .member_wrap article img {
+    object-position: top;
+  }
+  .brand .sub_con .inner .member .member_wrap article .txt h2 {
+    font-size: 5vmax;
+    line-height: 1.2;
+    text-shadow: 2px 5px 12px rgba(0, 0, 0, 0.9);
+  }
+  .brand .sub_con .inner .member .member_wrap article .txt span {
+    font-size: 3vw;
+  }
+}
 .mypage .visual_box {
   background: url("../img/sub/mypage.jpg") no-repeat;
   background-size: cover;

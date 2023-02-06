@@ -1,16 +1,15 @@
 .brand {
-	.sub_Visual{
+	.sub_Visual {
 		.visual_box {
 			background: url('../img/sub/brand.jpg') no-repeat bottom/cover;
-			.inner{
-				.title_txt{
-					h1{
+			.inner {
+				.title_txt {
+					h1 {
 						margin-bottom: 30px;
 					}
 				}
 			}
 		}
-
 	}
 	.sub_con {
 		.inner {
@@ -75,6 +74,7 @@
 							h2 {
 								line-height: 1.2;
 								text-shadow: 2px 5px 12px rgb(0 0 0 / 90%);
+								margin-bottom: 5px;
 							}
 							span {
 								font-size: 12px;
@@ -128,6 +128,77 @@
 			// 		}
 			// 	}
 			// }
+		}
+	}
+}
+
+//tablet
+@media screen and (max-width: $tablet) {
+	.brand {
+		.sub_con {
+			.inner {
+				.member {
+					margin-top: 80px;
+					.member_wrap {
+						flex-wrap: wrap;
+						justify-content: space-between;
+						article {
+							width: calc(100% / 2);
+							margin-right: 0;
+							img {
+								object-position: top;
+							}
+							.txt {
+								h2 {
+									font-size: 5vmax;
+								}
+								span {
+									font-size: 2vw;
+									font-weight: 300;
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+//mobile
+@media screen and (max-width: $mobile) {
+	.brand {
+		.sub_con {
+			.inner {
+				.about {
+					p {
+						text-align: center;
+						line-height: 1.7;
+					}
+				}
+				.member {
+					margin-top: 50px;
+					.member_wrap {
+						article {
+							width: 100%;
+							margin-bottom: 30px;
+							img {
+								object-position: top;
+							}
+							.txt {
+								h2 {
+									font-size: 5vmax;
+									line-height: 1.2;
+									text-shadow: 2px 5px 12px rgb(0 0 0 / 90%);
+								}
+								span {
+									font-size: 3vw;
+								}
+							}
+						}
+					}
+				}
+			}
 		}
 	}
 }
