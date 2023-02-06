@@ -122,19 +122,8 @@ fieldset {
   transition: opacity 0.7s;
   position: relative;
 }
-#sub_header .inner .menuWeb #gnb > li > a::after {
-  content: "";
-  display: block;
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 0%;
-  height: 2px;
-  transition: width 0.5s;
-  background: #f8f8f8;
-}
-#sub_header .inner .menuWeb #gnb > li > a:hover::after {
-  width: 100%;
+#sub_header .inner .menuWeb #gnb > li > a:hover {
+  opacity: 1;
 }
 #sub_header .inner .menuWeb #gnb > li > a.on {
   opacity: 1;
@@ -446,7 +435,6 @@ fieldset {
   font-weight: 400;
   text-align: left;
   margin-bottom: 10px;
-  padding-left: 30px;
   color: #fff;
   font-family: "Poppins";
   text-shadow: 2px 5px 12px rgba(0, 0, 0, 0.7);
@@ -456,7 +444,6 @@ fieldset {
   color: #fff;
   font-size: 20px;
   font-family: "Montserrat";
-  margin-left: 30px;
   text-shadow: 0px 2px 5px rgba(0, 0, 0, 0.7);
 }
 .com .sub_con {
