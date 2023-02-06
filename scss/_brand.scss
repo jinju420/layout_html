@@ -171,6 +171,9 @@
 		.sub_con {
 			.inner {
 				.about {
+					> h1 {
+						font-size: 14vmin;
+					}
 					p {
 						text-align: center;
 						line-height: 1.7;
@@ -178,6 +181,9 @@
 				}
 				.member {
 					margin-top: 50px;
+					h1{
+						text-align: center;
+					}
 					.member_wrap {
 						article {
 							width: 100%;
@@ -190,6 +196,7 @@
 									font-size: 5vmax;
 									line-height: 1.2;
 									text-shadow: 2px 5px 12px rgb(0 0 0 / 90%);
+
 								}
 								span {
 									font-size: 3vw;

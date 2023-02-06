@@ -129,9 +129,7 @@
 						font-family: $titleFont;
 						font-size: 14px;
 						width: 152px;
-						box-shadow: 5px 3px 6px rgba(0,0,0,.2);
-						// box-shadow: rgba(255, 255, 255, 0.05) 0px 0px 2px 0px inset, rgba(0, 0, 0, .2) 0px 0px 2px 1px,
-						// 	rgba(0, 0, 0, 0.11) 0px 4px 20px;
+						box-shadow: 5px 3px 6px rgba(0, 0, 0, 0.2);
 						&:hover {
 							background: $strongColor;
 							color: #fff;
@@ -142,6 +140,126 @@
 						margin-top: 5px;
 						color: #ff1d5c;
 						letter-spacing: -0.4px;
+					}
+				}
+			}
+		}
+	}
+}
+
+//tablet
+@media screen and (max-width: $tablet) {
+	.mypage {
+		.sub_con {
+			> .inner {
+				form {
+					display: block;
+					table {
+						width: 100%;
+						margin: 0 auto;
+						&:last-child {
+							margin: 0 auto;
+							td:last-child {
+								display: inline-block;
+								br {
+									// display: none;
+								}
+								input:nth-of-type(3) {
+									// margin-left: 20px;
+								}
+							}
+							tbody {
+								tr:last-child {
+									// position: relative;
+									// width: 50%;
+									// left: 30%;
+									// background: pink;
+								}
+							}
+						}
+						th {
+							font-size: 18px;
+							width: 150px;
+							&:last-child {
+								input[type='reset'] {
+									margin-right: 25px;
+								}
+							}
+						}
+						tr {
+							display: flex;
+							justify-content: space-around;
+							align-items: center;
+						}
+						td {
+							margin-left: 0;
+							width: 50%;
+						}
+						input[type='text'],
+						input[type='password'],
+						select,
+						textarea {
+							width: 100%;
+							padding: 15px;
+							font-size: 14px;
+						}
+						textarea {
+							height: 30vmin;
+						}
+						input[type='reset'],
+						input[type='submit'] {
+							font-size: 14px;
+							width: 19vw;
+						}
+						p {
+							font-size: 12px;
+						}
+					}
+				}
+			}
+		}
+	}
+}
+//mobile
+@media screen and (max-width: $mobile) {
+	.mypage {
+		.sub_con {
+			> .inner {
+				h1 {
+					text-align: center;
+				}
+				form {
+					table {
+						width: 100%;
+						&:last-child {
+							tr:last-child {
+								th {
+									width: 400px;
+								}
+							}
+						}
+						th {
+							text-align: left;
+							padding: 30px 0 15px;
+						}
+						tr {
+							display: block;
+						}
+						td {
+							width: 100%;
+							padding: 0 0 15px 0;
+						}
+						input[type='reset'],
+						input[type='submit'] {
+							// display: block;
+							// width: 100%;
+							width: 44%;
+							font-size: 14px;
+							margin-bottom: 20px;
+						}
+						p {
+							word-break: keep-all;
+						}
 					}
 				}
 			}
