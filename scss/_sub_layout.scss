@@ -365,8 +365,7 @@
 		width: 100%;
 		.visual_box {
 			filter: saturate(30%) brightness(90%);
-			height: 550px;
-			padding: 180px 0 0;
+			height: 600px;
 			background-attachment: fixed;
 			&:hover {
 				filter: saturate(100%) brightness(100%);
@@ -377,6 +376,7 @@
 				display: flex;
 				flex-direction: column;
 				align-items: flex-start;
+				padding: 180px 0 0 50px;
 				.title_txt {
 					z-index: 1;
 					color: #fff;
@@ -388,7 +388,6 @@
 						font-weight: 400;
 						text-align: left;
 						margin-bottom: 10px;
-						// padding-left: 30px;
 						color: #fff;
 						font-family: $titleFont;
 						text-shadow: 2px 5px 12px rgb(0,0,0,.7);
@@ -533,7 +532,7 @@
 				top: 20px;
 				left: 50px;
 				a {
-					color: rgba(0, 0, 0, 0.3);
+					color: #fff;
 				}
 			}
 			.menuWeb {
@@ -568,6 +567,10 @@
 				display: block;
 				.bars {
 					display: flex;
+					span{
+						background: #fff;
+					}
+					&::before,&::after{background: #fff;}
 				}
 			}
 		}
@@ -579,7 +582,6 @@
 			.visual_box {
 				.inner {
 					width: 100%;
-					padding: 0 50px;
 					.title_txt {
 						h1 {
 							font-size: 12vmin;
@@ -598,6 +600,7 @@
 			}
 		}
 	}
+
 	//footer
 	#sub_footer {
 		.inner {
@@ -636,33 +639,31 @@
 		}
 	}
 
-	// .com {
-	// 	width: 100%;
-	// 	.sub_Visual {
-	// 		.visual_box {
-	// 			.inner {
-	// 				width: 100%;
-	// 				padding: 0 50px;
-	// 				.title_txt {
-	// 					h1 {
-	// 						font-size: 12vmin;
-	// 						margin-bottom: 20px;
-	// 					}
-	// 					p {
-	// 						font-size: 3vmin;
-	// 					}
-	// 				}
-	// 			}
-	// 		}
-	// 	}
-	// 	.sub_con {
-	// 		> .inner {
-	// 			width: 100%;
-	// 			padding: 80px 50px;
-	// 		}
-	// 	}
-	// }
-
+	.com {
+		width: 100%;
+		.sub_Visual {
+			.visual_box {
+				.inner {
+					width: 100%;
+					padding: 260px 0 0 50px;
+					.title_txt {
+						h1 {
+							font-size: 12vmin;
+						}
+						p {
+							font-size: 3vmin;
+						}
+					}
+				}
+			}
+		}
+		.sub_con {
+			> .inner {
+				width: 100%;
+				padding: 80px 50px;
+			}
+		}
+	}
 
 	//footer
 	#sub_footer {

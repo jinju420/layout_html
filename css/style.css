@@ -411,8 +411,7 @@ fieldset {
 }
 .com .sub_Visual .visual_box {
   filter: saturate(30%) brightness(90%);
-  height: 550px;
-  padding: 180px 0 0;
+  height: 600px;
   background-attachment: fixed;
 }
 .com .sub_Visual .visual_box:hover {
@@ -425,6 +424,7 @@ fieldset {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+  padding: 180px 0 0 50px;
 }
 .com .sub_Visual .visual_box .inner .title_txt {
   z-index: 1;
@@ -565,7 +565,7 @@ fieldset {
     left: 50px;
   }
   #sub_header .inner > h1 a {
-    color: rgba(0, 0, 0, 0.3);
+    color: #fff;
   }
   #sub_header .inner .menuWeb {
     display: none;
@@ -595,12 +595,17 @@ fieldset {
   #sub_header .inner .quick_menu .bars {
     display: flex;
   }
+  #sub_header .inner .quick_menu .bars span {
+    background: #fff;
+  }
+  #sub_header .inner .quick_menu .bars::before, #sub_header .inner .quick_menu .bars::after {
+    background: #fff;
+  }
   .com {
     width: 100%;
   }
   .com .sub_Visual .visual_box .inner {
     width: 100%;
-    padding: 0 50px;
   }
   .com .sub_Visual .visual_box .inner .title_txt h1 {
     font-size: 12vmin;
@@ -634,6 +639,23 @@ fieldset {
   }
   #sub_header .inner .menuMo.on {
     width: 100%;
+  }
+  .com {
+    width: 100%;
+  }
+  .com .sub_Visual .visual_box .inner {
+    width: 100%;
+    padding: 260px 0 0 50px;
+  }
+  .com .sub_Visual .visual_box .inner .title_txt h1 {
+    font-size: 12vmin;
+  }
+  .com .sub_Visual .visual_box .inner .title_txt p {
+    font-size: 3vmin;
+  }
+  .com .sub_con > .inner {
+    width: 100%;
+    padding: 80px 50px;
   }
   #sub_footer .inner .wrap {
     display: flex;
@@ -739,6 +761,7 @@ fieldset {
   bottom: 20px;
   left: 20px;
   letter-spacing: 1px;
+  opacity: 0.8;
   color: #fff;
 }
 .brand .sub_con .inner .member .member_wrap article .txt h2 {
@@ -1052,24 +1075,6 @@ fieldset {
   border-spacing: 0 10px;
   text-align: center;
 }
-.notice .sub_con > .inner .wrap article table th {
-  padding: 10px;
-  border-bottom: 1px solid #111;
-  font-size: 18px;
-}
-.notice .sub_con > .inner .wrap article table th:nth-of-type(1) {
-  width: 10%;
-}
-.notice .sub_con > .inner .wrap article table th:nth-of-type(3), .notice .sub_con > .inner .wrap article table th:nth-of-type(4) {
-  width: 15%;
-}
-.notice .sub_con > .inner .wrap article table td {
-  color: #666;
-  border: none;
-  padding: 20px;
-  cursor: pointer;
-  font-size: 14px;
-}
 .notice .sub_con > .inner .wrap article table tbody {
   margin-top: 15px;
 }
@@ -1117,6 +1122,24 @@ fieldset {
   transform: scale(1.03);
   transition: 0.3s;
 }
+.notice .sub_con > .inner .wrap article table th {
+  padding: 10px;
+  border-bottom: 1px solid #111;
+  font-size: 18px;
+}
+.notice .sub_con > .inner .wrap article table th:nth-of-type(1) {
+  width: 10%;
+}
+.notice .sub_con > .inner .wrap article table th:nth-of-type(3), .notice .sub_con > .inner .wrap article table th:nth-of-type(4) {
+  width: 15%;
+}
+.notice .sub_con > .inner .wrap article table td {
+  color: #666;
+  border: none;
+  padding: 20px;
+  cursor: pointer;
+  font-size: 14px;
+}
 .notice .sub_con > .inner .wrap article.on {
   display: block;
 }
@@ -1157,11 +1180,6 @@ fieldset {
   .notice .sub_con > .inner .wrap article table {
     table-layout: fixed;
   }
-  .notice .sub_con > .inner .wrap article table td {
-    text-overflow: ellipsis;
-    white-space: nowrap;
-    overflow: hidden;
-  }
   .notice .sub_con > .inner .wrap article table tbody tr:nth-of-type(2) td:first-child,
   .notice .sub_con > .inner .wrap article table tbody tr:nth-of-type(3) td:first-child,
   .notice .sub_con > .inner .wrap article table tbody tr:nth-of-type(4) td:first-child,
@@ -1183,11 +1201,22 @@ fieldset {
     font-size: 12px;
     padding: 0 5px 0;
   }
+  .notice .sub_con > .inner .wrap article table td {
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+  }
+  .notice .sub_con > .inner .wrap article table th {
+    font-size: 3vmin;
+  }
   .notice .sub_con > .inner .wrap .pagination {
     align-items: center;
   }
 }
 @media screen and (max-width: 539px) {
+  .notice .sub_con > .inner .wrap article table tbody > tr {
+    height: 0;
+  }
   .notice .sub_con > .inner .wrap article table tbody tr:nth-of-type(2) td:first-child,
   .notice .sub_con > .inner .wrap article table tbody tr:nth-of-type(3) td:first-child,
   .notice .sub_con > .inner .wrap article table tbody tr:nth-of-type(4) td:first-child,
@@ -1197,17 +1226,6 @@ fieldset {
   .notice .sub_con > .inner .wrap article table tbody tr:nth-of-type(8) td:first-child,
   .notice .sub_con > .inner .wrap article table tbody tr:nth-of-type(9) td:first-child {
     font-size: 12px;
-  }
-  .notice .sub_con > .inner .wrap article table tbody tr:nth-of-type(2) td:last-child,
-  .notice .sub_con > .inner .wrap article table tbody tr:nth-of-type(3) td:last-child,
-  .notice .sub_con > .inner .wrap article table tbody tr:nth-of-type(4) td:last-child,
-  .notice .sub_con > .inner .wrap article table tbody tr:nth-of-type(5) td:last-child,
-  .notice .sub_con > .inner .wrap article table tbody tr:nth-of-type(6) td:last-child,
-  .notice .sub_con > .inner .wrap article table tbody tr:nth-of-type(7) td:last-child,
-  .notice .sub_con > .inner .wrap article table tbody tr:nth-of-type(8) td:last-child,
-  .notice .sub_con > .inner .wrap article table tbody tr:nth-of-type(9) td:last-child {
-    padding: 0 10px 0 0;
-    letter-spacing: -0.9px;
   }
   .notice .sub_con > .inner .wrap article table tbody tr:nth-of-type(2) td:nth-of-type(2),
   .notice .sub_con > .inner .wrap article table tbody tr:nth-of-type(3) td:nth-of-type(2),
@@ -1228,7 +1246,26 @@ fieldset {
   .notice .sub_con > .inner .wrap article table tbody tr:nth-of-type(8) td:nth-of-type(3),
   .notice .sub_con > .inner .wrap article table tbody tr:nth-of-type(9) td:nth-of-type(3) {
     padding: 0;
-    text-align: left;
+  }
+  .notice .sub_con > .inner .wrap article table tbody tr:nth-of-type(2) td:last-child,
+  .notice .sub_con > .inner .wrap article table tbody tr:nth-of-type(3) td:last-child,
+  .notice .sub_con > .inner .wrap article table tbody tr:nth-of-type(4) td:last-child,
+  .notice .sub_con > .inner .wrap article table tbody tr:nth-of-type(5) td:last-child,
+  .notice .sub_con > .inner .wrap article table tbody tr:nth-of-type(6) td:last-child,
+  .notice .sub_con > .inner .wrap article table tbody tr:nth-of-type(7) td:last-child,
+  .notice .sub_con > .inner .wrap article table tbody tr:nth-of-type(8) td:last-child,
+  .notice .sub_con > .inner .wrap article table tbody tr:nth-of-type(9) td:last-child {
+    padding: 0 10px;
+  }
+  .notice .sub_con > .inner .wrap article table th {
+    font-size: 15px;
+  }
+  .notice .sub_con > .inner .wrap article table th:nth-of-type(2) {
+    padding: 10px 0;
+    width: 26%;
+  }
+  .notice .sub_con > .inner .wrap article table th:nth-of-type(3), .notice .sub_con > .inner .wrap article table th:nth-of-type(4) {
+    width: 12%;
   }
 }
 .contactUs .visual_box {
