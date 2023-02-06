@@ -23,8 +23,8 @@ const contentBtn = content.querySelector('.inner .btn');
 
 //topbtn
 window.addEventListener('scroll', () => {
-    const scrollY = parseInt(this.scrollY);
-    if (scrollY > 200) {
+    const scroll = parseInt(window.scrollY || window.pageYOffset);
+    if (scroll > 200) {
         topBtn.classList.add('on');
     } else {
         topBtn.classList.remove('on');

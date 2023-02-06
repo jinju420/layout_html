@@ -414,7 +414,7 @@
 	}
 	.sub_con {
 		background: $basicColor2;
-		overflow: hidden;
+		// overflow: hidden;
 		> .inner {
 			@include innerWid;
 			display: flex;

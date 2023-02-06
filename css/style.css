@@ -448,7 +448,6 @@ fieldset {
 }
 .com .sub_con {
   background: #e7ded7;
-  overflow: hidden;
 }
 .com .sub_con > .inner {
   width: 1180px;
@@ -874,6 +873,9 @@ fieldset {
 .notice .visual_box {
   background: url("../img/sub/notice.jpg") no-repeat center/cover;
 }
+.notice .sub_con {
+  height: 1000px;
+}
 .notice .sub_con > .inner {
   display: block;
 }
@@ -924,7 +926,9 @@ fieldset {
 .notice .sub_con > .inner .wrap article table tbody tr:nth-of-type(4) td:first-child,
 .notice .sub_con > .inner .wrap article table tbody tr:nth-of-type(5) td:first-child,
 .notice .sub_con > .inner .wrap article table tbody tr:nth-of-type(6) td:first-child,
-.notice .sub_con > .inner .wrap article table tbody tr:nth-of-type(7) td:first-child {
+.notice .sub_con > .inner .wrap article table tbody tr:nth-of-type(7) td:first-child,
+.notice .sub_con > .inner .wrap article table tbody tr:nth-of-type(8) td:first-child,
+.notice .sub_con > .inner .wrap article table tbody tr:nth-of-type(9) td:first-child {
   border-top-left-radius: 10px;
   border-bottom-left-radius: 10px;
   background: #bbb;
@@ -964,7 +968,7 @@ fieldset {
   justify-content: space-between;
   text-align: center;
   position: absolute;
-  bottom: -20px;
+  bottom: 0;
   left: 0;
   font-size: 0;
   width: 100%;
