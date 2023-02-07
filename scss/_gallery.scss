@@ -1,7 +1,7 @@
 .gallery {
 	.visual_box {
 		position: relative;
-		background: url('../img/sub/gallery.jpg') no-repeat bottom/cover;
+		background: url('../img/sub/visual/gallery.jpg') no-repeat bottom/cover;
 		&::before {
 			content: '';
 			display: block;
@@ -48,7 +48,7 @@
 				article {
 					width: calc((100% - 40px) / 3);
 					margin-bottom: 25px;
-					border-radius: 50px 50px 15px 15px;
+					border-radius: 30px 30px 15px 15px;
 					background: $mainBg;
 					overflow: hidden;
 					.pic {
@@ -97,7 +97,6 @@
 			.new_arrival,
 			.popular {
 				.wrap {
-					padding-top: 50px;
 					display: flex;
 					flex-wrap: wrap;
 					justify-content: space-between;
@@ -106,8 +105,8 @@
 						background: $mainBg;
 						width: calc((100% - 40px) / 3);
 						height: 100%;
-						margin-bottom: 50px;
-						border-radius: 50px 50px 15px 15px;
+						margin-bottom: 25px;
+						border-radius: 30px 30px 15px 15px;
 						// border-radius: 200px 200px 15px 15px;
 						overflow: hidden;
 						box-shadow: rgba(255, 255, 255, 0.05) 0px 0px 2px 0px inset, rgba(0, 0, 0, 0.05) 0px 0px 2px 1px,
@@ -118,7 +117,7 @@
 							filter: saturate(100%) brightness(100%);
 						}
 						.pic {
-							height: 450px;
+							height: 380px;
 							background: pink;
 							img {
 								@include imgFit;
@@ -138,7 +137,6 @@
 							h1 {
 								font-size: 40px;
 								letter-spacing: 1px;
-								white-space: nowrap;
 							}
 							span {
 								line-height: 1.3;
@@ -172,17 +170,35 @@
 							.pic_txt {
 								.colorBtn {
 									display: flex;
-									justify-content: flex-end;
+									justify-content: center;
 									margin-top: 30px;
 									a {
 										width: 20px;
 										height: 20px;
 										margin-right: 10px;
 										text-align: center;
-										border: 1px solid #777;
+										// border: 1px solid #777;
 										border-radius: 50%;
 										&.on {
-											border: 2px solid #fff;
+											border: 2px solid #777;
+										}
+										&:nth-of-type(1) {
+											background: $strongColor;
+										}
+										&:nth-of-type(2) {
+											background: $mainBg;
+										}
+										&:nth-of-type(3) {
+											background: #ffadad;
+										}
+										&:nth-of-type(4) {
+											background: #5fb0fa;
+										}
+										&:nth-of-type(5) {
+											background: #696c70;
+										}
+										&:nth-of-type(6) {
+											background: #d8b28a;
 										}
 									}
 								}
@@ -216,10 +232,11 @@ figure.popup {
 	z-index: 2;
 	.closeBtn {
 		position: absolute;
-		top: 35px;
-		right: 35px;
+		top: 20px;
+		right: 20px;
 		cursor: pointer;
 		display: block;
+		opacity: 0.7;
 		i {
 			font-size: 35px;
 			color: #fff;
@@ -264,15 +281,14 @@ figure.popup {
 						}
 					}
 				}
-				.new_arrival {
+				.new_arrival,
+				.popular {
 					.wrap {
 						article {
 							width: calc((100% - 40px) / 2);
-
 							.pic_txt {
 								h1 {
 									font-size: 6vmin;
-									white-space: wrap;
 								}
 								span {
 									font-size: 3vmin;
@@ -282,6 +298,14 @@ figure.popup {
 					}
 				}
 			}
+		}
+	}
+
+	figure.popup {
+		padding: 9vw;
+		.closeBtn {
+			top: 35px;
+			right: 35px;
 		}
 	}
 }
@@ -332,6 +356,14 @@ figure.popup {
 					}
 				}
 			}
+		}
+	}
+
+	figure.popup {
+		padding: 40vw 9vw;
+		.closeBtn {
+			top: 80px;
+			right: 45%;
 		}
 	}
 }
