@@ -1,7 +1,7 @@
 const vids = document.querySelector('.vids');
 const key = 'AIzaSyBGee4MUXU3jusXj7YwDBzdXI5Sn3gAkIA';
 const playlistId = 'PLY0voYdGZtAgPCRyH8libB1_TbuzvCR_a';
-const num = 7;
+const num = 9;
 const url = `https://www.googleapis.com/youtube/v3/playlistItems?part=snippet&key=${key}&playlistId=${playlistId}&maxResults${num}`;
 
 
@@ -45,26 +45,29 @@ vids.addEventListener('click', e => {
     e.preventDefault();
 
 
-    const vidId = e.target.closest('a').getAttrubute('href');
-    let popup = document.createElement('figure');
+    if (!e.target.closest('a')) return;
+    const vidId = e.target.closest('a').getAttribute('href');
 
-    popup.classList.add('videoPop');
-    popup.innerHTML = `
-    <iframe src='https://www.youtube.com/embed/${vidId}' frameborder='0' width='100%' height='100%' allowfullscreen>
-    <span class="closeBtn">
-        <a href='#'>close</a>
+    const videoPop = document.createElement('figure');
+
+    videoPop.classList.add('popup');
+    videoPop.innerHTML = `
+    <iframe src='https://www.youtube.com/embed/${vidId}' frameborder='0' width='100%'
+    height='100%' allowfullscreen></iframe>
+    <span class='closeBtn'>
+        <i class="far fa-times-circle"></i>
     </span>
     `;
 
-    vids.append(popup);
+    vids.append(videoPop);
 })
 
 
 vids.addEventListener('click', e => {
-    const popClose = document.querySelector('.popup');
+    const pop = vids.querySelector('.popup');
 
-    if (popup) {
-        const close = popup.querySelector('.closeBtn');
-        if (e.target == close) popup.remove();
+    if (pop) {
+        const close = pop.querySelector('.closeBtn > i');
+        if (e.target == close) pop.remove();
     }
 })
