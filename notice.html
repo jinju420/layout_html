@@ -8,11 +8,12 @@
     <title>notice</title>
     <link rel="stylesheet" href="css/style.css">
     <script src="https://kit.fontawesome.com/7783789018.js" crossorigin="anonymous"></script>
-    <script defer src="js/subPage.js"></script>
+    <script defer src="js/common.js"></script>
+    <script defer src="js/notice.js"></script>
 </head>
 
 <body>
-    <header id="sub_header">
+    <header id="sub_header" class="header">
         <div class="bg"></div>
         <div class="inner">
             <h1><a href="index.html" class="logo">Lee<br>Jinju</a></h1>
@@ -182,6 +183,7 @@
         </div>
         <div class="sub_con">
             <div class="inner">
+                <h1>Notice</h1>
                 <div class="wrap">
                     <article class="on">
                         <table>
@@ -588,7 +590,7 @@
 
     </section>
 
-    <footer id="sub_footer">
+    <footer id="sub_footer" class="footer">
         <div class="inner">
             <div class="wrap">
                 <article class="map">
@@ -620,66 +622,6 @@
         </div>
     </footer>
 
-    <script>
-        const notice = document.querySelector('.notice');
-        const numBtn = notice.querySelectorAll('.pagination .num a');
-        const notiarti = notice.querySelectorAll('article');
-        const prev = notice.querySelector('.pagination .prev');
-        const next = notice.querySelector('.pagination .next');
-
-        numBtn.forEach((el, idx) => {
-            el.addEventListener('click', e => {
-                e.preventDefault();
-
-                atcive(numBtn, idx);
-                atcive(notiarti, idx);
-            })
-        })
-
-        //pagination active
-        function atcive(arr, idx) {
-            for (const el of arr) {
-                el.classList.remove('on');
-            }
-            arr[idx].classList.add('on');
-        }
-
-        prev.addEventListener('click', e => {
-            e.preventDefault();
-            console.log('prev');
-
-
-        })
-        let count = 0;
-        // next.addEventListener('click', e => {
-        //     e.preventDefault();
-        //     count++;
-        //     numBtn.forEach((el, idx) => {
-        //         count++;
-        //         el.classList.remove('on');
-        //     })
-        //     numBtn[idx].classList.add('on')
-        //     // for (const el of numBtn) {
-        //     //     el.classList.remove('on');
-        //     //     console.log(el);
-        //     // }
-        //     // numBtn[idx].classList.add('on');
-
-        //     console.log(count)
-
-        // })
-        // numBtn.forEach((el, idx) => {
-        //     next.addEventListener('click', e => {
-        //         count++;
-        //         e.preventDefault();
-
-        //         for (const el of numBtn) {
-        //             el.classList.remove('on');
-        //         }
-        //         count[idx].classList.add('on');
-        //     })
-        // })
-    </script>
 </body>
 
 </html>

@@ -1,6 +1,8 @@
-const header = document.querySelector('#sub_header');
+const header = document.querySelector('.header');
+const list = document.querySelector('#list');
+const content = document.querySelector('#content');
 const footerLink = document.querySelectorAll('#footer article a');
-const topBtn = document.querySelector('#sub_footer .top');
+const topBtn = document.querySelector('.footer .top');
 const hdInner = header.querySelector('.inner');
 const mo = header.querySelector('.menuMo');
 const bg = header.querySelector('.bg');
@@ -24,6 +26,22 @@ topBtn.addEventListener('click', e => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
 });
 
+//리사이즈시 
+const _mobile = 539;
+const _tablet = 1179;
+window.addEventListener('resize', () => {
+    wid = window.innerWidth;
+
+    //dark베경/스크롤막기
+    const bg = header.querySelector('.bg');
+    if (wid > _tablet) {
+        bg.style.display = 'none';
+        document.body.classList.remove('hidden');
+    } else if (mo.classList.contains('on')) {
+        bg.style.display = 'block';
+        document.body.classList.add('hidden');
+    }
+});
 
 //header bar이벤트
 bars.addEventListener('click', e => {
@@ -62,8 +80,17 @@ tab_h3.forEach((el, idx) => {
         activation(tab_h3, idx);
     })
 });
+tab_h3.forEach((el, idx) => {
+    el.addEventListener('click', (e) => {
 
-//함수
+        count++;
+        if (count > 1) inputChecked[idx].classList.remove('on');
+        activation(mo_arrow, idx);
+        activation(tab_h3, idx);
+    })
+});
+
+
 //탭 on
 function activation(arr, idx) {
     for (const el of arr) el.classList.remove('on');

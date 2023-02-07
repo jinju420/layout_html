@@ -415,7 +415,7 @@
 				display: flex;
 				flex-direction: column;
 				align-items: flex-start;
-				padding: 180px 0 0 50px;
+				padding: 180px 0 0;
 				.title_txt {
 					z-index: 1;
 					color: #fff;
@@ -624,6 +624,7 @@
 			.visual_box {
 				.inner {
 					width: 100%;
+					padding: 180px 0 0 50px;
 					.title_txt {
 						h1 {
 							font-size: 12vmin;
