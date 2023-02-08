@@ -803,6 +803,32 @@ fieldset {
   font-weight: bold;
   font-family: "Montserrat";
 }
+.gallery .sub_con .inner #gallery #wrap {
+  width: 100%;
+  padding: 50px;
+}
+.gallery .sub_con .inner #gallery #wrap #list {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  opacity: 0;
+  transition: 0.5s;
+}
+.gallery .sub_con .inner #gallery #wrap #list.on {
+  opacity: 1;
+}
+.gallery .sub_con .inner #gallery #wrap #list li {
+  width: 16.6666666667%;
+}
+.gallery .sub_con .inner #gallery #wrap #list li div {
+  width: 100%;
+  padding: 20px;
+  border-radius: 10px;
+}
+.gallery .sub_con .inner #gallery #wrap #list li div a > img {
+  width: 100%;
+}
 
 figure.popup {
   width: 100%;

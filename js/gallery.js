@@ -8,14 +8,24 @@ const gallery = document.querySelector('.gallery');
 const galleryImg = gallery.querySelectorAll('.second .pic');
 const colorBtn = gallery.querySelectorAll('.colorBtn a');
 
+//flickr
+const base = 'https://www.flickr.com/services/rest/?';
+const method = 'flickr.interestingness.getList';
+// const method = 'flickr.favorites.getList';
+const flickr_key = '8dfeab6f923483f4b3694e700652632a';
+const per_page = 6;
+const frame = document.querySelector('#list');
+const flickr_url = `${base}method=${method}&api_key=${flickr_key}&per_page=${per_page}&format=json&nojsoncallback=1`;
 
+
+//youtube
 fetch(url)
     .then((data) => {
         return data.json();
     })
     .then((json) => {
         let items = json.items;
-        console.log(items);
+        // console.log(items);
 
         let result = '';
 
@@ -82,6 +92,68 @@ vids.addEventListener('click', e => {
 
 
 
+//flickr
+fetch(flickr_url)
+    .then((data) => {
+        const result = data.json();
+        console.log(result);
+        return result;
+    })
+    .then((json) => {
+        //console.log(items);
+        const flickr_items = json.photos.photo;
+
+        createImgs(flickr_items);
+        Loading();
+    })
+
+
+//돔생성
+function createImgs(flickr_items) {
+    htmls = '';
+
+    flickr_items.map((item) => {
+        const imgSrcBig = `https://live.staticflickr.com/${item.server}/${item.id}_${item.secret}_m.jpg`;
+        const imgSrc = `https://live.staticflickr.com/${item.server}/${item.id}_${item.secret}_b.jpg`;
+
+        htmls += `
+            <li class="imgs">
+                <div>
+                    <a href=${imgSrcBig}>
+                        <img src=${imgSrc}>
+                    </a>
+                    <p>${item.title}<p/>
+                </div>
+            </li>
+        `;
+    })
+    frame.innerHTML = htmls;
+}
+
+//로딩
+function Loading() {
+    const imgs = frame.querySelectorAll('img');
+    const len = imgs.length;
+
+    let count = 0;
+    for (const el of imgs) {
+        el.addEventListener('load', () => {
+            if (count == len) isoLayout();
+        })
+    }
+}
+
+//istope함수
+function isoLayout() {
+    frame.classList.add('on');
+    new Isotope('#list', {
+        itemSelection: '.imgs',
+        columnWidth: '.imgs',
+        transitionDuration: '0.5s',
+    })
+}
+
+
 //리사이즈시 
 window.addEventListener('resize', () => {
     const pop = vids.querySelector('.popup');
@@ -107,4 +179,3 @@ function galleryActive(arr, idx) {
     }
     arr[idx].classList.add('on');
 };
-
