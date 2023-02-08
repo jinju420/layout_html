@@ -14,14 +14,16 @@ a {
 }
 input,
 textarea,
-button,
-select {
+button {
 	appearance: none;
 	-moz-appearance: none;
 	-webkit-appearance: none;
 	border-radius: 0;
 	-webkit-border-radius: 0;
 	-moz-border-radius: 0;
+}
+select{
+	
 }
 body {
 	height: 100%;
