@@ -16,6 +16,18 @@ a {
   color: #666;
 }
 
+input,
+textarea,
+button,
+select {
+  appearance: none;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  border-radius: 0;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+}
+
 body {
   height: 100%;
   color: #666;
@@ -932,7 +944,7 @@ figure.popup .closeBtn i {
     height: 25vw;
     transition: 0.5s;
     overflow: hidden;
-    filter: grayscale(100%);
+    filter: saturate(30%) brightness(90%);
   }
   .gallery .sub_con .inner #gallery #wrap #list li div a > img {
     width: 100%;
@@ -946,7 +958,7 @@ figure.popup .closeBtn i {
     transform: scale(1.07);
   }
   .gallery .sub_con .inner #gallery #wrap #list li div a:hover {
-    filter: grayscale(0%);
+    filter: saturate(100%) brightness(100%);
   }
   .gallery .sub_con .inner #gallery #wrap #list li div p {
     padding: 20px 20px 0;
