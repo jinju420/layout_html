@@ -746,6 +746,9 @@ fieldset {
 .gallery .sub_con .inner > h2 .new {
   margin-top: 30px;
 }
+.gallery .sub_con .inner h2.new {
+  margin-top: 50px;
+}
 .gallery .sub_con .inner .vids {
   width: 100%;
   display: flex;
@@ -805,29 +808,52 @@ fieldset {
 }
 .gallery .sub_con .inner #gallery #wrap {
   width: 100%;
-  padding: 50px;
 }
 .gallery .sub_con .inner #gallery #wrap #list {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
-  align-items: center;
   width: 100%;
-  opacity: 0;
+  opacity: 1;
   transition: 0.5s;
 }
 .gallery .sub_con .inner #gallery #wrap #list.on {
   opacity: 1;
 }
 .gallery .sub_con .inner #gallery #wrap #list li {
-  width: 16.6666666667%;
+  width: calc((100% - 40px) / 3);
 }
 .gallery .sub_con .inner #gallery #wrap #list li div {
   width: 100%;
-  padding: 20px;
   border-radius: 10px;
+}
+.gallery .sub_con .inner #gallery #wrap #list li div a {
+  display: block;
+  height: 200px;
+  transition: 0.5s;
+  filter: grayscale(70%);
+  padding: 20px 0;
+  background: pink;
 }
 .gallery .sub_con .inner #gallery #wrap #list li div a > img {
   width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.gallery .sub_con .inner #gallery #wrap #list li div a:hover {
+  filter: grayscale(0%);
+}
+.gallery .sub_con .inner #gallery #wrap #list li div p {
+  font: 16px/1.5 "arial";
+  color: #777;
+  margin-top: 10px;
+  margin-bottom: 20px;
+  word-break: keep-all;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
 }
 
 figure.popup {
@@ -883,6 +909,9 @@ figure.popup .closeBtn i {
   .gallery .sub_con .inner .vids article .con span {
     font-size: 16px;
   }
+  .gallery .sub_con .inner #gallery #wrap #list {
+    padding: 0;
+  }
   figure.popup {
     padding: 15vw 9vw;
   }
@@ -906,17 +935,34 @@ figure.popup .closeBtn i {
   .gallery .sub_con .inner .vids article .con span {
     font-size: 16px;
   }
-  .gallery .sub_con .inner .new_arrival .wrap article {
+  .gallery .sub_con .inner #gallery #wrap #list li div a {
+    display: block;
     width: 100%;
+    height: 100%;
+    transition: 0.5s;
+    filter: grayscale(70%);
+    padding: 20px 0;
+    background: pink;
   }
-  .gallery .sub_con .inner .new_arrival .wrap article .pic_txt h1 {
-    font-size: 9vmin;
+  .gallery .sub_con .inner #gallery #wrap #list li div a > img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
   }
-  .gallery .sub_con .inner .new_arrival .wrap article .pic_txt span {
-    font-size: 4vmin;
+  .gallery .sub_con .inner #gallery #wrap #list li div a:hover {
+    filter: grayscale(0%);
   }
-  .gallery .sub_con .inner .new_arrival .wrap article.second .pic_txt .colorBtn {
-    justify-content: center;
+  .gallery .sub_con .inner #gallery #wrap #list li div p {
+    font: 16px/1.5 "arial";
+    color: #777;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    word-break: keep-all;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
   }
   figure.popup {
     padding: 58% 9vw;

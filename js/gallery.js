@@ -10,12 +10,13 @@ const colorBtn = gallery.querySelectorAll('.colorBtn a');
 
 //flickr
 const base = 'https://www.flickr.com/services/rest/?';
-const method = 'flickr.interestingness.getList';
-// const method = 'flickr.favorites.getList';
+// const method = 'flickr.interestingness.getList';
+const method = 'flickr.favorites.getList';
 const flickr_key = '8dfeab6f923483f4b3694e700652632a';
+const user_id='195427004@N07';
 const per_page = 6;
 const frame = document.querySelector('#list');
-const flickr_url = `${base}method=${method}&api_key=${flickr_key}&per_page=${per_page}&format=json&nojsoncallback=1`;
+const flickr_url = `${base}method=${method}&api_key=${flickr_key}&per_page=${per_page}&format=json&nojsoncallback=1&user_id=${user_id}`;
 
 
 //youtube
@@ -25,7 +26,6 @@ fetch(url)
     })
     .then((json) => {
         let items = json.items;
-        // console.log(items);
 
         let result = '';
 
