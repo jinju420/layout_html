@@ -45,12 +45,18 @@
 				align-content: flex-start;
 				padding-bottom: 80px;
 				border-bottom: 1px dashed $basicFontColor;
+
 				article {
 					width: calc((100% - 40px) / 3);
 					margin-bottom: 25px;
-					border-radius: 30px 30px 15px 15px;
+					border-radius: 30px;
+					isolation: isolate;
 					background: $mainBg;
 					overflow: hidden;
+					-webkit-backface-visibility: hidden;
+					-moz-backface-visibility: hidden;
+					-webkit-transform: translate3d(0, 0, 0);
+					-moz-transform: translate3d(0, 0, 0);
 					.pic {
 						display: block;
 						width: 100%;
@@ -161,63 +167,36 @@
 	}
 }
 
-// figure {
-// 	position: relative;
-// 	top: 50%;
-// 	left: 50%;
-// 	transform: translate(-50%, -50%);
-// 	padding-bottom: 56.25%;
-// 	width: 100px;
-// 	height: 100%;
-// 	background: rgba(0, 0, 0, 0.8);
-// 	display: flex;
-// 	justify-content: center;
-// 	align-items: center;
-// 	overflow: hidden;
-// 	z-index: 2;
-// 	&.popup {
-// 	width: 100%;
-// 	height: 100vh;
-// 	position: fixed;
-// 	top: 0;
-// 	left: 0;
-// 	background: rgba(0, 0, 0, 0.8);
-// 	display: flex;
-// 	justify-content: center;
-// 	align-items: center;
-// 	padding: 5vw;
-// 	overflow: hidden;
-// 	z-index: 2;
-// 		.closeBtn {
-// 			top: 35px;
-// 			right: 35px;
-// 		}
-// 	}
-// 	iframe{
-// 		position: absolute;
-// 		top: 0;
-// 		left: 0;
-// 		width: 100%;
-// 		height: 100%;
-// 	}
-// }
 figure.popup {
-	width: 100%;
-	height: 100vh;
 	position: fixed;
 	top: 0;
 	left: 0;
+	width: 100%;
+	height: 100vh;
 	background: rgba(0, 0, 0, 0.8);
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	padding: 5vw;
+	transition: 0.5s;
 	overflow: hidden;
+	padding: 9vw;
 	z-index: 2;
+	.iframe {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		position: relative;
+		padding-bottom: 56.25%;
+		iframe {
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+		}
+	}
 	.closeBtn {
 		position: absolute;
-		top: 20px;
-		right: 20px;
+		top: -45px;
+		right: -45px;
 		cursor: pointer;
 		display: block;
 		opacity: 0.7;
@@ -236,6 +215,9 @@ figure.popup {
 					article {
 						width: calc((100% - 40px) / 2);
 						height: 100%;
+						.pic {
+							height: 27vmax;
+						}
 						.con {
 							h2 {
 								margin-bottom: 20px;
@@ -249,7 +231,7 @@ figure.popup {
 								-webkit-box-orient: vertical;
 							}
 							p {
-								font-size:16px;
+								font-size: 16px;
 								word-break: keep-all;
 
 								overflow: hidden;
@@ -318,14 +300,6 @@ figure.popup {
 			}
 		}
 	}
-
-	figure.popup {
-		padding: 15vw 9vw;
-		.closeBtn {
-			top: 35px;
-			right: 35px;
-		}
-	}
 }
 
 //mobile
@@ -337,6 +311,9 @@ figure.popup {
 					article {
 						width: 100%;
 						margin-bottom: 30px;
+						.pic {
+							height: 43vmax;
+						}
 						.con {
 							h2 {
 								font-size: 5vmin;
@@ -381,10 +358,12 @@ figure.popup {
 	}
 
 	figure.popup {
-		padding: 58% 9vw;
 		.closeBtn {
-			top: 120px;
+			top: -130px;
 			right: 45%;
+			i{
+				font-size: 50px;
+			}
 		}
 	}
 }

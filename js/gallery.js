@@ -36,7 +36,7 @@ fetch(url)
             let date = el.snippet.publishedAt;
 
             if (title.length > 30) title = title.substr(0, 20) + '...';
-            if (des.length > 100) des = des.substr(0, 35) + '...';
+            if (des.length > 100) des = des.substr(0, 40) + '...';
             date = date.split('T')[0];
 
             result += `
@@ -67,11 +67,13 @@ vids.addEventListener('click', e => {
 
     videoPop.classList.add('popup');
     videoPop.innerHTML = `
-    <iframe src='https://www.youtube.com/embed/${vidId}' frameborder='0' width='100%'
-    height='100%' allowfullscreen></iframe>
-    <span class='closeBtn'>
-        <i class="far fa-times-circle"></i>
-    </span>
+    <div class='iframe'>
+        <iframe src='https://www.youtube.com/embed/${vidId}' frameborder='0' width='100%'
+        height='100%' allowfullscreen></iframe>
+        <span class='closeBtn'>
+            <i class="far fa-times-circle"></i>
+        </span>
+    </div>
     `;
 
     vids.append(videoPop);

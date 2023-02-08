@@ -781,9 +781,14 @@ fieldset {
 .gallery .sub_con .inner .vids article {
   width: calc((100% - 40px) / 3);
   margin-bottom: 25px;
-  border-radius: 30px 30px 15px 15px;
+  border-radius: 30px;
+  isolation: isolate;
   background: #f8f8f8;
   overflow: hidden;
+  -webkit-backface-visibility: hidden;
+  -moz-backface-visibility: hidden;
+  -webkit-transform: translate3d(0, 0, 0);
+  -moz-transform: translate3d(0, 0, 0);
 }
 .gallery .sub_con .inner .vids article .pic {
   display: block;
@@ -887,23 +892,36 @@ fieldset {
 }
 
 figure.popup {
-  width: 100%;
-  height: 100vh;
   position: fixed;
   top: 0;
   left: 0;
+  width: 100%;
+  height: 100vh;
   background: rgba(0, 0, 0, 0.8);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 5vw;
+  transition: 0.5s;
   overflow: hidden;
+  padding: 9vw;
   z-index: 2;
+}
+figure.popup .iframe {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  position: relative;
+  padding-bottom: 56.25%;
+}
+figure.popup .iframe iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
 }
 figure.popup .closeBtn {
   position: absolute;
-  top: 20px;
-  right: 20px;
+  top: -45px;
+  right: -45px;
   cursor: pointer;
   display: block;
   opacity: 0.7;
@@ -917,6 +935,9 @@ figure.popup .closeBtn i {
   .gallery .sub_con .inner .vids article {
     width: calc((100% - 40px) / 2);
     height: 100%;
+  }
+  .gallery .sub_con .inner .vids article .pic {
+    height: 27vmax;
   }
   .gallery .sub_con .inner .vids article .con h2 {
     margin-bottom: 20px;
@@ -980,18 +1001,14 @@ figure.popup .closeBtn i {
     -webkit-line-clamp: 2;
     -webkit-box-orient: vertical;
   }
-  figure.popup {
-    padding: 15vw 9vw;
-  }
-  figure.popup .closeBtn {
-    top: 35px;
-    right: 35px;
-  }
 }
 @media screen and (max-width: 539px) {
   .gallery .sub_con .inner .vids article {
     width: 100%;
     margin-bottom: 30px;
+  }
+  .gallery .sub_con .inner .vids article .pic {
+    height: 43vmax;
   }
   .gallery .sub_con .inner .vids article .con h2 {
     font-size: 5vmin;
@@ -1024,12 +1041,12 @@ figure.popup .closeBtn i {
     -webkit-line-clamp: 1;
     padding: 0 0 0 20px;
   }
-  figure.popup {
-    padding: 58% 9vw;
-  }
   figure.popup .closeBtn {
-    top: 120px;
+    top: -130px;
     right: 45%;
+  }
+  figure.popup .closeBtn i {
+    font-size: 50px;
   }
 }
 .brand .sub_Visual .visual_box {
