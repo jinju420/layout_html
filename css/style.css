@@ -1015,7 +1015,6 @@ figure.popup .closeBtn i {
   }
   .gallery .sub_con .inner .vids article .con p {
     font-size: 17px;
-    -webkit-line-clamp: 2;
   }
   .gallery .sub_con .inner .vids article .con span {
     font-size: 16px;
@@ -1036,10 +1035,11 @@ figure.popup .closeBtn i {
     height: 100%;
   }
   .gallery .sub_con .inner #gallery #wrap #list li div p {
-    width: 200px;
+    width: 260px;
     font: 16px/1.5 "Montserrat";
-    -webkit-line-clamp: 1;
-    padding: 0 0 0 20px;
+    text-align: left;
+    -webkit-line-clamp: 3;
+    padding: 0 0 0 30px;
   }
   figure.popup .closeBtn {
     top: -130px;
