@@ -122,7 +122,7 @@ function createImgs(flickr_items) {
                     <a href=${imgSrcBig}>
                         <img src=${imgSrc}>
                     </a>
-                    <p>${item.title}<p/>
+                    <p>${item.title}</p>
                 </div>
             </li>
         `;

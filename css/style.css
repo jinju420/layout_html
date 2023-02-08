@@ -821,33 +821,43 @@ fieldset {
   opacity: 1;
 }
 .gallery .sub_con .inner #gallery #wrap #list li {
-  width: calc((100% - 40px) / 3);
+  width: calc((100% - 100px) / 6);
 }
 .gallery .sub_con .inner #gallery #wrap #list li div {
   width: 100%;
+  height: 100%;
   border-radius: 10px;
+  background: #fff;
+  margin-bottom: 20px;
+  overflow: hidden;
+  box-shadow: 1px 3px 8px rgba(0, 0, 0, 0.2);
 }
 .gallery .sub_con .inner #gallery #wrap #list li div a {
   display: block;
-  height: 200px;
+  height: 300px;
   transition: 0.5s;
-  filter: grayscale(70%);
-  padding: 20px 0;
-  background: pink;
+  overflow: hidden;
+  filter: grayscale(100%);
 }
 .gallery .sub_con .inner #gallery #wrap #list li div a > img {
   width: 100%;
   height: 100%;
+  transition: 1s;
   object-fit: cover;
+  overflow: hidden;
+}
+.gallery .sub_con .inner #gallery #wrap #list li div a > img:hover {
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
+  transform: scale(1.07);
 }
 .gallery .sub_con .inner #gallery #wrap #list li div a:hover {
   filter: grayscale(0%);
 }
 .gallery .sub_con .inner #gallery #wrap #list li div p {
-  font: 16px/1.5 "arial";
-  color: #777;
-  margin-top: 10px;
-  margin-bottom: 20px;
+  padding: 20px 20px 0;
+  color: #666;
+  text-align: center;
+  font: 16px/1.5 "Montserrat";
   word-break: keep-all;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -912,6 +922,44 @@ figure.popup .closeBtn i {
   .gallery .sub_con .inner #gallery #wrap #list {
     padding: 0;
   }
+  .gallery .sub_con .inner #gallery #wrap #list li {
+    width: calc((100% - 40px) / 3);
+    margin-bottom: 20px;
+  }
+  .gallery .sub_con .inner #gallery #wrap #list li div a {
+    display: block;
+    width: 30vw;
+    height: 25vw;
+    transition: 0.5s;
+    overflow: hidden;
+    filter: grayscale(100%);
+  }
+  .gallery .sub_con .inner #gallery #wrap #list li div a > img {
+    width: 100%;
+    height: 100%;
+    transition: 1s;
+    object-fit: cover;
+    overflow: hidden;
+  }
+  .gallery .sub_con .inner #gallery #wrap #list li div a > img:hover {
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
+    transform: scale(1.07);
+  }
+  .gallery .sub_con .inner #gallery #wrap #list li div a:hover {
+    filter: grayscale(0%);
+  }
+  .gallery .sub_con .inner #gallery #wrap #list li div p {
+    padding: 20px 20px 0;
+    color: #666;
+    text-align: center;
+    font: 16px/1.5 "Montserrat";
+    word-break: keep-all;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+  }
   figure.popup {
     padding: 15vw 9vw;
   }
@@ -935,34 +983,26 @@ figure.popup .closeBtn i {
   .gallery .sub_con .inner .vids article .con span {
     font-size: 16px;
   }
+  .gallery .sub_con .inner #gallery #wrap #list {
+    padding: 0;
+  }
+  .gallery .sub_con .inner #gallery #wrap #list li {
+    width: 100%;
+    margin-bottom: 0;
+  }
+  .gallery .sub_con .inner #gallery #wrap #list li div {
+    display: flex;
+    align-items: center;
+    height: 28vmin;
+  }
   .gallery .sub_con .inner #gallery #wrap #list li div a {
-    display: block;
-    width: 100%;
     height: 100%;
-    transition: 0.5s;
-    filter: grayscale(70%);
-    padding: 20px 0;
-    background: pink;
-  }
-  .gallery .sub_con .inner #gallery #wrap #list li div a > img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-  }
-  .gallery .sub_con .inner #gallery #wrap #list li div a:hover {
-    filter: grayscale(0%);
   }
   .gallery .sub_con .inner #gallery #wrap #list li div p {
-    font: 16px/1.5 "arial";
-    color: #777;
-    margin-top: 10px;
-    margin-bottom: 20px;
-    word-break: keep-all;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    display: -webkit-box;
-    -webkit-line-clamp: 2;
-    -webkit-box-orient: vertical;
+    width: 200px;
+    font: 16px/1.5 "Montserrat";
+    -webkit-line-clamp: 1;
+    padding: 0 0 0 20px;
   }
   figure.popup {
     padding: 58% 9vw;
