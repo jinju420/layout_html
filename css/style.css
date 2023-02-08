@@ -1035,15 +1035,15 @@ figure.popup .closeBtn i {
     height: 100%;
   }
   .gallery .sub_con .inner #gallery #wrap #list li div p {
-    width: 260px;
+    width: 250px;
     font: 16px/1.5 "Montserrat";
     text-align: left;
     -webkit-line-clamp: 3;
-    padding: 0 0 0 30px;
+    padding: 0 10px 0 30px;
   }
   figure.popup .closeBtn {
     top: -130px;
-    right: 45%;
+    right: 44%;
   }
   figure.popup .closeBtn i {
     font-size: 50px;

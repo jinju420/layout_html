@@ -342,11 +342,11 @@ figure.popup {
 										height: 100%;
 									}
 									p {
-										width: 260px;
+										width: 250px;
 										font: 16px/1.5 $contentFont;
 										text-align: left;
 										-webkit-line-clamp: 3;
-										padding: 0 0 0 30px;
+										padding: 0 10px 0 30px;
 									}
 								}
 							}
@@ -360,7 +360,7 @@ figure.popup {
 	figure.popup {
 		.closeBtn {
 			top: -130px;
-			right: 45%;
+			right: 44%;
 			i {
 				font-size: 50px;
 			}
