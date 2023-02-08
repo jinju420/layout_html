@@ -1,7 +1,7 @@
 .brand {
 	.sub_Visual {
 		.visual_box {
-			background: url('../img/sub/visual/brand.jpg') no-repeat bottom/cover;
+			background: url('../img/sub/visual/brand.jpg') no-repeat center bottom/cover;
 			.inner {
 				.title_txt {
 					h1 {
@@ -139,7 +139,7 @@
 				}
 				.member {
 					margin-top: 50px;
-					h1{
+					h1 {
 						text-align: center;
 					}
 					.member_wrap {
@@ -154,7 +154,6 @@
 									font-size: 5vmax;
 									line-height: 1.2;
 									text-shadow: 2px 5px 12px rgb(0 0 0 / 90%);
-
 								}
 								span {
 									font-size: 3vw;

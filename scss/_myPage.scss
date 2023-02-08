@@ -87,6 +87,12 @@
 						background: $mainBg;
 						font-family: $contentFont;
 					}
+					select {
+						background: url('../img/arrow.png') no-repeat 96% 50% #fff;
+						width: 100%;
+						height: 100%;
+						background-size: 10px 7px;
+					}
 					textarea {
 						resize: none;
 						height: 150px;
@@ -160,21 +166,9 @@
 						margin: 0 auto;
 						&:last-child {
 							margin: 0 auto;
-							td:last-child {
-								display: inline-block;
-								br {
-									// display: none;
-								}
-								input:nth-of-type(3) {
-									// margin-left: 20px;
-								}
-							}
-							tbody {
-								tr:last-child {
-									// position: relative;
-									// width: 50%;
-									// left: 30%;
-									// background: pink;
+							tr:last-child {
+								th {
+									margin-top: 0;
 								}
 							}
 						}

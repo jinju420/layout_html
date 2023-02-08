@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Alegreya+Sans+SC:wght@100&family=El+Messiri&family=Montserrat:wght@400;500;600&family=Noto+Sans+KR:wght@300;400;500&family=Poppins:wght@300;500&family=Raleway:wght@300;400;600&display=swap");
 * {
   margin: 0;
@@ -14,6 +15,22 @@ li {
 a {
   text-decoration: none;
   color: #666;
+}
+
+input,
+textarea,
+button,
+select {
+  appearance: none;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  border-radius: 0;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+}
+
+select::-ms-expand {
+  display: none; /* 화살표 없애기 for IE10, 11*/
 }
 
 body {
@@ -713,7 +730,7 @@ fieldset {
 }
 .gallery .visual_box {
   position: relative;
-  background: url("../img/sub/visual/gallery.jpg") no-repeat bottom/cover;
+  background: url("../img/sub/visual/gallery.jpg") no-repeat center bottom/cover;
 }
 .gallery .visual_box::before {
   content: "";
@@ -1013,7 +1030,7 @@ figure.popup .closeBtn i {
   }
 }
 .brand .sub_Visual .visual_box {
-  background: url("../img/sub/visual/brand.jpg") no-repeat bottom/cover;
+  background: url("../img/sub/visual/brand.jpg") no-repeat center bottom/cover;
 }
 .brand .sub_Visual .visual_box .inner .title_txt h1 {
   margin-bottom: 30px;
@@ -1229,6 +1246,12 @@ figure.popup .closeBtn i {
   background: #f8f8f8;
   font-family: "Montserrat";
 }
+.mypage .sub_con > .inner form table select {
+  background: url("../img/arrow.png") no-repeat 96% 50% #fff;
+  width: 100%;
+  height: 100%;
+  background-size: 10px 7px;
+}
 .mypage .sub_con > .inner form table textarea {
   resize: none;
   height: 150px;
@@ -1300,8 +1323,8 @@ figure.popup .closeBtn i {
   .mypage .sub_con > .inner form table:last-child {
     margin: 0 auto;
   }
-  .mypage .sub_con > .inner form table:last-child td:last-child {
-    display: inline-block;
+  .mypage .sub_con > .inner form table:last-child tr:last-child th {
+    margin-top: 0;
   }
   .mypage .sub_con > .inner form table th {
     font-size: 18px;
@@ -1371,7 +1394,7 @@ figure.popup .closeBtn i {
   }
 }
 .notice .visual_box {
-  background: url("../img/sub/visual/notice.jpg") no-repeat bottom/cover;
+  background: url("../img/sub/visual/notice.jpg") no-repeat center bottom/cover;
 }
 .notice .sub_con {
   height: 1150px;
