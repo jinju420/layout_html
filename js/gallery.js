@@ -108,7 +108,7 @@ fetch(flickr_url)
     })
 
 
-//돔생성
+//반복문
 function createImgs(flickr_items) {
     htmls = '';
 

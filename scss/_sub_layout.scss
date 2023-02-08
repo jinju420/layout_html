@@ -604,6 +604,7 @@
 			}
 			.quick_menu {
 				display: block;
+				right: 55px;
 				.bars {
 					display: flex;
 					span {
@@ -651,13 +652,11 @@
 			.wrap {
 				padding: 50px;
 				article {
-					// width: calc((100% - 160px) / 3);
 					margin-right: 80px;
 					&:nth-of-type(3) {
 						margin-right: 0;
 					}
 					i {
-						// font-size: 30px;
 						font-size: 6vmin;
 					}
 				}
@@ -671,6 +670,9 @@
 	//header
 	#sub_header {
 		.inner {
+			> h1 {
+				left: 30px;
+			}
 			.menuMo {
 				.loginBox {
 					width: 100%;
@@ -688,7 +690,7 @@
 			.visual_box {
 				.inner {
 					width: 100%;
-					padding: 260px 0 0 50px;
+					padding: 260px 0 0 30px;
 					.title_txt {
 						h1 {
 							font-size: 12vmin;
@@ -703,7 +705,7 @@
 		.sub_con {
 			> .inner {
 				width: 100%;
-				padding: 80px 50px;
+				padding: 80px 30px;
 			}
 		}
 	}
@@ -713,12 +715,9 @@
 		.inner {
 			.wrap {
 				display: flex;
-				// flex-wrap: wrap;
 				article {
 					width: 100%;
 					margin-right: 0;
-					// padding: 20px 30px;
-					// margin-bottom: 20px;
 					i {
 						font-size: 7vmin;
 					}

@@ -26,33 +26,4 @@ prev.addEventListener('click', e => {
     console.log('prev');
 
 
-})
-// let count = 0;
-// next.addEventListener('click', e => {
-//     e.preventDefault();
-//     count++;
-//     numBtn.forEach((el, idx) => {
-//         count++;
-//         el.classList.remove('on');
-//     })
-//     numBtn[idx].classList.add('on')
-//     // for (const el of numBtn) {
-//     //     el.classList.remove('on');
-//     //     console.log(el);
-//     // }
-//     // numBtn[idx].classList.add('on');
-
-//     console.log(count)
-
-// })
-// numBtn.forEach((el, idx) => {
-//     next.addEventListener('click', e => {
-//         count++;
-//         e.preventDefault();
-
-//         for (const el of numBtn) {
-//             el.classList.remove('on');
-//         }
-//         count[idx].classList.add('on');
-//     })
-// })
+});

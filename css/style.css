@@ -643,6 +643,7 @@ fieldset {
   }
   #sub_header .inner .quick_menu {
     display: block;
+    right: 55px;
   }
   #sub_header .inner .quick_menu .bars {
     display: flex;
@@ -687,6 +688,9 @@ fieldset {
   }
 }
 @media screen and (max-width: 539px) {
+  #sub_header .inner > h1 {
+    left: 30px;
+  }
   #sub_header .inner .menuMo .loginBox {
     width: 100%;
   }
@@ -698,7 +702,7 @@ fieldset {
   }
   .com .sub_Visual .visual_box .inner {
     width: 100%;
-    padding: 260px 0 0 50px;
+    padding: 260px 0 0 30px;
   }
   .com .sub_Visual .visual_box .inner .title_txt h1 {
     font-size: 12vmin;
@@ -708,7 +712,7 @@ fieldset {
   }
   .com .sub_con > .inner {
     width: 100%;
-    padding: 80px 50px;
+    padding: 80px 30px;
   }
   #sub_footer .inner .wrap {
     display: flex;
