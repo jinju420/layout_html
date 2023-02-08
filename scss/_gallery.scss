@@ -239,7 +239,7 @@ figure.popup {
 						.con {
 							h2 {
 								margin-bottom: 20px;
-								font-size: 3vmin;
+								font-size: 4vmin;
 
 								overflow: hidden;
 								text-overflow: ellipsis;
@@ -249,14 +249,14 @@ figure.popup {
 								-webkit-box-orient: vertical;
 							}
 							p {
-								font-size: 2vw;
+								font-size: 3vmin;
 								word-break: keep-all;
 
 								overflow: hidden;
 								text-overflow: ellipsis;
 
 								display: -webkit-box;
-								-webkit-line-clamp: 1;
+								-webkit-line-clamp: 2;
 								-webkit-box-orient: vertical;
 							}
 							span {

@@ -127,7 +127,7 @@ fieldset {
 }
 #sub_header .inner .menuWeb #gnb > li:hover:nth-of-type(2) .sub_menu {
   display: block;
-  padding-right: 135px;
+  padding-right: 164px;
 }
 #sub_header .inner .menuWeb #gnb > li:hover:nth-of-type(3) .sub_menu {
   display: block;
@@ -912,7 +912,7 @@ figure.popup .closeBtn i {
   }
   .gallery .sub_con .inner .vids article .con h2 {
     margin-bottom: 20px;
-    font-size: 3vmin;
+    font-size: 4vmin;
     overflow: hidden;
     text-overflow: ellipsis;
     display: -webkit-box;
@@ -920,12 +920,12 @@ figure.popup .closeBtn i {
     -webkit-box-orient: vertical;
   }
   .gallery .sub_con .inner .vids article .con p {
-    font-size: 2vw;
+    font-size: 3vmin;
     word-break: keep-all;
     overflow: hidden;
     text-overflow: ellipsis;
     display: -webkit-box;
-    -webkit-line-clamp: 1;
+    -webkit-line-clamp: 2;
     -webkit-box-orient: vertical;
   }
   .gallery .sub_con .inner .vids article .con span {
@@ -1298,6 +1298,7 @@ figure.popup .closeBtn i {
   margin-top: 5px;
   color: #ff1d5c;
   letter-spacing: -0.4px;
+  word-break: keep-all;
 }
 
 @media screen and (max-width: 1179px) {
@@ -1649,7 +1650,7 @@ figure.popup .closeBtn i {
 }
 #header .inner .menuWeb #gnb > li:hover:nth-of-type(2) .sub_menu {
   display: block;
-  padding-right: 135px;
+  padding-right: 164px;
 }
 #header .inner .menuWeb #gnb > li:hover:nth-of-type(3) .sub_menu {
   display: block;
