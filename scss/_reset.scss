@@ -12,19 +12,16 @@ a {
 	text-decoration: none;
 	color: $basicFontColor;
 }
-input,
-textarea,
-button {
-	appearance: none;
-	-moz-appearance: none;
-	-webkit-appearance: none;
-	border-radius: 0;
-	-webkit-border-radius: 0;
-	-moz-border-radius: 0;
-}
-select{
-	
-}
+// input,
+// textarea,
+// button {
+// 	appearance: none;
+// 	-moz-appearance: none;
+// 	-webkit-appearance: none;
+// 	border-radius: 0;
+// 	-webkit-border-radius: 0;
+// 	-moz-border-radius: 0;
+// }
 body {
 	height: 100%;
 	color: $basicFontColor;
