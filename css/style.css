@@ -2529,6 +2529,9 @@ figure.popup .closeBtn i {
   #header .inner .menuMo.on {
     width: 100%;
   }
+  #list {
+    padding: 0 30px;
+  }
   #list .inner .wrap {
     height: 289vmax;
     padding: 0px 30px;
@@ -2572,7 +2575,7 @@ figure.popup .closeBtn i {
     text-align: center;
   }
   #content {
-    padding: 70px 50px 50px;
+    padding: 70px 30px 70px;
   }
   #content .inner .wrap {
     display: flex;
@@ -2590,6 +2593,9 @@ figure.popup .closeBtn i {
   }
   #content .inner .wrap .contSwiper .swiper-wrapper .swiper-slide article .pic {
     height: 40vmax;
+  }
+  #content .inner .wrap .contSwiper .swiper-wrapper .swiper-slide article .pic_txt a {
+    margin-bottom: 5px;
   }
   #content .inner .btn {
     display: none;
