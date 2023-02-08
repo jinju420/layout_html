@@ -1,13 +1,11 @@
+const list = document.querySelector('#list');
+const content = document.querySelector('#content'); 
 const listBtns = list.querySelectorAll('.inner dt');
 const listContent = list.querySelectorAll('.wrap dd');
 const listBtns_a = list.querySelectorAll('.wrap dt > a');
 const articleA = list.querySelectorAll('.wrap dd article');
 const conSwiper = content.querySelector('.inner .contSwiper');
 const contentBtn = content.querySelector('.inner .btn');
-// const gallery = document.querySelector('.gallery');
-// const galleryImg = gallery.querySelectorAll('.second .pic');
-// const colorBtn = gallery.querySelectorAll('.colorBtn a');
-
 
 //탭메뉴
 listBtns_a.forEach((el, idx) => {
@@ -66,21 +64,18 @@ function initSwiper() {
 };
 initSwiper();
 
+//리사이즈
+window.addEventListener('resize', () => {
+    initSwiper();
+});
 
-// colorBtn.forEach((el, idx) => {
-//     el.addEventListener('click', e => {
-//         e.preventDefault();
+//탭 on
+function activation(arr, idx) {
+    for (const el of arr) el.classList.remove('on');
+    arr[idx].classList.add('on');
+};
 
-//         galleryActive(colorBtn, idx);
-//         galleryActive(galleryImg, idx);
-
-//     })
-// })
-
-
-// function galleryActive(arr, idx) {
-//     for (const el of arr) {
-//         el.classList.remove('on');
-//     }
-//     arr[idx].classList.add('on');
-// };
+//close버튼 시 on
+function closeOn(arr) {
+    for (const el of arr) el.classList.remove('on');
+};

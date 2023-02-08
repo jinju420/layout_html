@@ -1,7 +1,5 @@
 const header = document.querySelector('.header');
-const list = document.querySelector('#list');
-const content = document.querySelector('#content');
-const footerLink = document.querySelectorAll('#footer article a');
+const footerLink = document.querySelectorAll('.footer article a');
 const topBtn = document.querySelector('.footer .top');
 const hdInner = header.querySelector('.inner');
 const mo = header.querySelector('.menuMo');
@@ -27,14 +25,13 @@ topBtn.addEventListener('click', e => {
 });
 
 //리사이즈시 
-const _mobile = 539;
-const _tablet = 1179;
+const tablet = 1179;
 window.addEventListener('resize', () => {
     wid = window.innerWidth;
 
     //dark베경/스크롤막기
     const bg = header.querySelector('.bg');
-    if (wid > _tablet) {
+    if (wid > tablet) {
         bg.style.display = 'none';
         document.body.classList.remove('hidden');
     } else if (mo.classList.contains('on')) {

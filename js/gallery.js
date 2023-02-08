@@ -1,8 +1,8 @@
 const vids = document.querySelector('.vids');
 const key = 'AIzaSyBGee4MUXU3jusXj7YwDBzdXI5Sn3gAkIA';
 const playlistId = 'PLY0voYdGZtAgPCRyH8libB1_TbuzvCR_a';
-const num = 8;
-const url = `https://www.googleapis.com/youtube/v3/playlistItems?part=snippet&key=${key}&playlistId=${playlistId}&maxResults${num}`;
+const num = 6;
+const url = `https://www.googleapis.com/youtube/v3/playlistItems?part=snippet&key=${key}&playlistId=${playlistId}&maxResults=${num}`;
 
 const gallery = document.querySelector('.gallery');
 const galleryImg = gallery.querySelectorAll('.second .pic');
@@ -26,7 +26,7 @@ fetch(url)
             let date = el.snippet.publishedAt;
 
             if (title.length > 30) title = title.substr(0, 20) + '...';
-            if (des.length > 100) des = des.substr(0, 45) + '...';
+            if (des.length > 100) des = des.substr(0, 35) + '...';
             date = date.split('T')[0];
 
             result += `
@@ -87,7 +87,7 @@ window.addEventListener('resize', () => {
     const pop = vids.querySelector('.popup');
     wid = window.innerWidth;
 
-    if (pop)  document.body.classList.add('hidden');
+    if (pop) document.body.classList.add('hidden');
 });
 
 colorBtn.forEach((el, idx) => {
