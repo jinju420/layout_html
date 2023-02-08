@@ -1,4 +1,3 @@
-@charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Alegreya+Sans+SC:wght@100&family=El+Messiri&family=Montserrat:wght@400;500;600&family=Noto+Sans+KR:wght@300;400;500&family=Poppins:wght@300;500&family=Raleway:wght@300;400;600&display=swap");
 * {
   margin: 0;
@@ -30,7 +29,7 @@ select {
 }
 
 select::-ms-expand {
-  display: none; /* 화살표 없애기 for IE10, 11*/
+  display: none;
 }
 
 body {
@@ -917,7 +916,7 @@ figure.popup .closeBtn i {
   }
   .gallery .sub_con .inner .vids article .con h2 {
     margin-bottom: 20px;
-    font-size: 4vmin;
+    font-size: 19px;
     overflow: hidden;
     text-overflow: ellipsis;
     display: -webkit-box;
@@ -925,7 +924,7 @@ figure.popup .closeBtn i {
     -webkit-box-orient: vertical;
   }
   .gallery .sub_con .inner .vids article .con p {
-    font-size: 3vmin;
+    font-size: 16px;
     word-break: keep-all;
     overflow: hidden;
     text-overflow: ellipsis;
