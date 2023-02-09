@@ -812,7 +812,6 @@ fieldset {
 .gallery .sub_con .inner .tab_cont .vids article {
   width: calc((100% - 40px) / 3);
   margin-bottom: 25px;
-  border-radius: 15px;
   isolation: isolate;
   background: #f8f5f0;
   overflow: hidden;
@@ -864,20 +863,23 @@ fieldset {
 }
 .gallery .sub_con .inner .tab_cont #gallery #searchBox {
   width: 100%;
-  padding: 0 50px;
   font-size: 0;
+  text-align: right;
 }
 .gallery .sub_con .inner .tab_cont #gallery #searchBox input[type=text] {
   width: 300px;
   height: 35px;
   outline: none;
-  background: #eee;
+  background: #f8f5f0;
   padding-left: 15px;
   border: none;
 }
 .gallery .sub_con .inner .tab_cont #gallery #searchBox input[type=text]::placeholder {
   color: #aaa;
   font-size: 12px;
+}
+.gallery .sub_con .inner .tab_cont #gallery #searchBox input[type=text]:focus {
+  background: #eee;
 }
 .gallery .sub_con .inner .tab_cont #gallery #searchBox .btn {
   width: 80px;
@@ -899,7 +901,7 @@ fieldset {
 }
 .gallery .sub_con .inner .tab_cont #gallery #wrap {
   width: 100%;
-  padding: 50px;
+  padding: 50px 0;
 }
 .gallery .sub_con .inner .tab_cont #gallery #wrap .loading {
   width: 100px;
@@ -931,13 +933,14 @@ fieldset {
 .gallery .sub_con .inner .tab_cont #gallery #wrap #list li {
   width: 25%;
   float: left;
-  padding: 0 10px 0 0;
+  padding: 10px;
 }
 .gallery .sub_con .inner .tab_cont #gallery #wrap #list li div {
   width: 100%;
   padding: 20px;
   box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.1);
   border-radius: 5px;
+  overflow: hidden;
 }
 .gallery .sub_con .inner .tab_cont #gallery #wrap #list li div a > img {
   width: 100%;
@@ -945,10 +948,10 @@ fieldset {
   filter: saturate(30%) brightness(70%);
 }
 .gallery .sub_con .inner .tab_cont #gallery #wrap #list li div p {
-  font: 12px/1.2 "Montserrat";
+  font: 13px/1.2 "Montserrat";
   color: #666;
   margin-top: 10px;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
   height: 30px;
   text-align: center;
   word-break: keep-all;
@@ -1061,47 +1064,42 @@ figure.popup .closeBtn i {
     padding: 0;
   }
   .gallery .sub_con .inner .tab_cont #gallery #wrap #list li {
-    width: calc((100% - 40px) / 3);
-    margin-bottom: 20px;
+    width: 33.3333333333%;
   }
-  .gallery .sub_con .inner .tab_cont #gallery #wrap #list li div a {
-    display: block;
-    width: 30vw;
-    height: 25vw;
-    transition: 0.5s;
-    overflow: hidden;
-    filter: saturate(30%) brightness(90%);
-  }
-  .gallery .sub_con .inner .tab_cont #gallery #wrap #list li div a > img {
-    width: 100%;
-    height: 100%;
-    transition: 1s;
-    object-fit: cover;
-    overflow: hidden;
-  }
-  .gallery .sub_con .inner .tab_cont #gallery #wrap #list li div a > img:hover {
-    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
-    transform: scale(1.07);
-  }
-  .gallery .sub_con .inner .tab_cont #gallery #wrap #list li div a:hover {
-    filter: saturate(100%) brightness(100%);
+  .gallery .sub_con .inner .tab_cont #gallery #wrap #list li div {
+    cursor: pointer;
   }
   .gallery .sub_con .inner .tab_cont #gallery #wrap #list li div p {
-    padding: 20px 20px 0;
+    font: 13px/1.2 "Montserrat";
     color: #666;
-    text-align: center;
-    font: 16px/1.5 "Montserrat";
-    word-break: keep-all;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    display: -webkit-box;
+    margin-top: 10px;
+    margin-bottom: 10px;
     -webkit-line-clamp: 2;
-    -webkit-box-orient: vertical;
+  }
+  .gallery .sub_con .inner .tab_cont #gallery aside {
+    width: 100%;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.8);
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .gallery .sub_con .inner .tab_cont #gallery aside img {
+    height: 100%;
+  }
+  .gallery .sub_con .inner .tab_cont #gallery aside span {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    color: #fff;
   }
 }
 @media screen and (max-width: 539px) {
   .gallery .sub_con .inner {
-    height: 600vh;
+    height: 693vh;
   }
   .gallery .sub_con .inner .tab_cont .vids article {
     width: 100%;
@@ -1119,27 +1117,66 @@ figure.popup .closeBtn i {
   .gallery .sub_con .inner .tab_cont .vids article .con span {
     font-size: 16px;
   }
+  .gallery .sub_con .inner .tab_cont #gallery #searchBox {
+    text-align: center;
+  }
+  .gallery .sub_con .inner .tab_cont #gallery #searchBox input[type=text] {
+    width: 50vw;
+  }
+  .gallery .sub_con .inner .tab_cont #gallery #wrap {
+    padding: 20px 0;
+  }
   .gallery .sub_con .inner .tab_cont #gallery #wrap #list {
     padding: 0;
   }
   .gallery .sub_con .inner .tab_cont #gallery #wrap #list li {
     width: 100%;
     margin-bottom: 0;
+    padding: 10px;
+    cursor: pointer;
   }
   .gallery .sub_con .inner .tab_cont #gallery #wrap #list li div {
     display: flex;
     align-items: center;
-    height: 28vmin;
+    padding: 0;
+    height: 13vh;
   }
   .gallery .sub_con .inner .tab_cont #gallery #wrap #list li div a {
+    width: 100px;
     height: 100%;
+  }
+  .gallery .sub_con .inner .tab_cont #gallery #wrap #list li div a img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
   }
   .gallery .sub_con .inner .tab_cont #gallery #wrap #list li div p {
     width: 250px;
+    height: auto;
     font: 16px/1.5 "Montserrat";
     text-align: left;
     -webkit-line-clamp: 3;
     padding: 0 10px 0 30px;
+  }
+  .gallery .sub_con .inner .tab_cont #gallery #wrap aside {
+    width: 100%;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.8);
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .gallery .sub_con .inner .tab_cont #gallery #wrap aside img {
+    height: 100%;
+  }
+  .gallery .sub_con .inner .tab_cont #gallery #wrap aside span {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    color: #fff;
   }
   figure.popup .closeBtn {
     top: -130px;

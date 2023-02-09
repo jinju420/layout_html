@@ -63,7 +63,6 @@
 			}
 			.tab_cont {
 				position: relative;
-				// height: 850px;
 				.cont {
 					opacity: 0;
 					visibility: hidden;
@@ -82,14 +81,12 @@
 					justify-content: space-between;
 					align-content: flex-start;
 					padding-bottom: 80px;
-					// border-bottom: 1px dashed $basicFontColor;
 					article {
 						width: calc((100% - 40px) / 3);
 						margin-bottom: 25px;
-						border-radius: 15px;
+						// border-radius: 15px;
 						isolation: isolate;
 						background: $basicColor1;
-						// background: $mainBg;
 						overflow: hidden;
 						-webkit-backface-visibility: hidden;
 						-moz-backface-visibility: hidden;
@@ -141,18 +138,21 @@
 				#gallery {
 					#searchBox {
 						width: 100%;
-						padding: 0 50px;
 						font-size: 0;
+						text-align: right;
 						input[type='text'] {
 							width: 300px;
 							height: 35px;
 							outline: none;
-							background: #eee;
+							background: $basicColor1;
 							padding-left: 15px;
 							border: none;
 							&::placeholder {
 								color: #aaa;
 								font-size: 12px;
+							}
+							&:focus {
+								background: #eee;
 							}
 						}
 						.btn {
@@ -176,7 +176,7 @@
 					}
 					#wrap {
 						width: 100%;
-						padding: 50px;
+						padding: 50px 0;
 						.loading {
 							width: 100px;
 							position: relative;
@@ -206,12 +206,16 @@
 							li {
 								width: calc(100% / 4);
 								float: left;
-								padding: 0 10px 0 0;
+								padding: 10px;
+								// &:nth-of-type(4n) {
+								// 	padding: 0 0 0 0;
+								// }
 								div {
 									width: 100%;
 									padding: 20px;
 									box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.1);
 									border-radius: 5px;
+									overflow: hidden;
 									a {
 										> img {
 											width: 100%;
@@ -220,14 +224,13 @@
 										}
 									}
 									p {
-										font: 12px/1.2 $contentFont;
+										font: 13px/1.2 $contentFont;
 										color: $basicFontColor;
 										margin-top: 10px;
-										margin-bottom: 20px;
+										margin-bottom: 10px;
 										height: 30px;
 
 										text-align: center;
-										// font: 16px/1.5 $contentFont;
 										word-break: keep-all;
 
 										overflow: hidden;
@@ -241,6 +244,7 @@
 										a {
 											> img {
 												filter: saturate(100%) brightness(100%);
+												// transform: scale(1.05);
 											}
 										}
 									}
@@ -258,9 +262,22 @@
 						display: flex;
 						justify-content: center;
 						align-items: center;
+						// position: relative;
 						img {
 							height: 100%;
 						}
+						// a {
+						// 	position: absolute;
+						// 	top: 0;
+						// 	right: -50px;
+						// 	cursor: pointer;
+						// 	display: block;
+						// 	opacity: 0.7;
+						// 	i {
+						// 		font-size: 35px;
+						// 		color: #fff;
+						// 	}
+						// }
 						span {
 							position: absolute;
 							top: 20px;
@@ -362,48 +379,51 @@ figure.popup {
 							#list {
 								padding: 0;
 								li {
-									width: calc((100% - 40px) / 3);
-									margin-bottom: 20px;
+									width: calc(100% / 3);
 									div {
-										a {
-											display: block;
-											width: 30vw;
-											height: 25vw;
-											// height: 300px;
-											transition: 0.5s;
-											overflow: hidden;
-											filter: saturate(30%) brightness(90%);
-											> img {
-												width: 100%;
-												height: 100%;
-												transition: 1s;
-												object-fit: cover;
-												overflow: hidden;
-												&:hover {
-													box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
-													transform: scale(1.07);
-												}
-											}
-											&:hover {
-												filter: saturate(100%) brightness(100%);
-											}
-										}
+										cursor: pointer;
 										p {
-											padding: 20px 20px 0;
+											font: 13px/1.2 $contentFont;
 											color: $basicFontColor;
-											text-align: center;
-											font: 16px/1.5 $contentFont;
-											word-break: keep-all;
-
-											overflow: hidden;
-											text-overflow: ellipsis;
-
-											display: -webkit-box;
+											margin-top: 10px;
+											margin-bottom: 10px;
 											-webkit-line-clamp: 2;
-											-webkit-box-orient: vertical;
 										}
 									}
 								}
+							}
+						}
+						aside {
+							width: 100%;
+							height: 100vh;
+							background: rgba(0, 0, 0, 0.8);
+							position: fixed;
+							top: 0;
+							left: 0;
+							display: flex;
+							justify-content: center;
+							align-items: center;
+							// position: relative;
+							img {
+								height: 100%;
+							}
+							// a {
+							// 	position: absolute;
+							// 	top: 0;
+							// 	right: -50px;
+							// 	cursor: pointer;
+							// 	display: block;
+							// 	opacity: 0.7;
+							// 	i {
+							// 		font-size: 35px;
+							// 		color: #fff;
+							// 	}
+							// }
+							span {
+								position: absolute;
+								top: 20px;
+								right: 20px;
+								color: #fff;
 							}
 						}
 					}
@@ -418,7 +438,7 @@ figure.popup {
 	.gallery {
 		.sub_con {
 			.inner {
-				height: 600vh;
+				height: 693vh;
 				.tab_cont {
 					.vids {
 						article {
@@ -441,21 +461,36 @@ figure.popup {
 						}
 					}
 					#gallery {
+						#searchBox {
+							text-align: center;
+							input[type='text'] {
+								width: 50vw;
+							}
+						}
 						#wrap {
+							padding: 20px 0;
 							#list {
 								padding: 0;
 								li {
 									width: 100%;
 									margin-bottom: 0;
+									padding: 10px;
+									cursor: pointer;
 									div {
 										display: flex;
 										align-items: center;
-										height: 28vmin;
+										padding: 0;
+										height: 13vh;
 										a {
+											width: 100px;
 											height: 100%;
+											img {
+												@include imgFit;
+											}
 										}
 										p {
 											width: 250px;
+											height: auto;
 											font: 16px/1.5 $contentFont;
 											text-align: left;
 											-webkit-line-clamp: 3;
@@ -464,13 +499,45 @@ figure.popup {
 									}
 								}
 							}
+							aside {
+								width: 100%;
+								height: 100vh;
+								background: rgba(0, 0, 0, 0.8);
+								position: fixed;
+								top: 0;
+								left: 0;
+								display: flex;
+								justify-content: center;
+								align-items: center;
+								// position: relative;
+								img {
+									height: 100%;
+								}
+								// a {
+								// 	position: absolute;
+								// 	top: 0;
+								// 	right: -50px;
+								// 	cursor: pointer;
+								// 	display: block;
+								// 	opacity: 0.7;
+								// 	i {
+								// 		font-size: 35px;
+								// 		color: #fff;
+								// 	}
+								// }
+								span {
+									position: absolute;
+									top: 20px;
+									right: 20px;
+									color: #fff;
+								}
+							}
 						}
 					}
 				}
 			}
 		}
 	}
-
 	figure.popup {
 		.closeBtn {
 			top: -130px;
