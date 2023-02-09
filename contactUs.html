@@ -9,6 +9,9 @@
     <link rel="stylesheet" href="css/style.css">
     <script src="https://kit.fontawesome.com/7783789018.js" crossorigin="anonymous"></script>
     <script defer src="js/common.js"></script>
+    <script defer src="js/contactUs.js"></script>
+    <script type="text/javascript"
+        src="//dapi.kakao.com/v2/maps/sdk.js?appkey=e44fe93b076814ac88936d7f0a2328c1"></script>
 </head>
 
 <body>
@@ -186,15 +189,38 @@
         </div>
         <div class="sub_con">
             <div class="inner">
-                <h1>Contact Us</h1>
-                <div class="office">
-                    <h2>OUR OFFICE</h2>
-                    <span>13, Wausan-ro 35-gil,<br> Mapo-gu, Seoul</span>
+                <div class="sns">
+                    <a href="javascript:void(0);" class="facebook"><i class="fab fab fa-instagram"></i></a>
+                    <a href="javascript:void(0);" class="facebook"><i class="fab fa-twitter"></i></a>
+                    <a href="javascript:void(0);" class="facebook"><i class="fab fa-facebook-f"></i></a>
                 </div>
-                <div class="contactMail">
-                    <h2>EMAIL US</h2>
-                    <span>ljjshlove@naver.com</span>
+                <h1>Contact Us<span>13, Wausan-ro 35-gil, Mapo-gu, Seoul</span><span>|</span><span>Object@naver.com</span></h1>
+                <div id="map"></div>
+
+                <div class="map_guide">
+                    <ul class="traffic">
+                        <li><a href="#">자전거도로 ON</a></li>
+                        <li><a href="#">자전거도로 OFF</a></li>
+                    </ul>
+
+                    <ul class="store">
+                        <li class="on" data-index="1"><a href="#">본점</a></li>
+                        <li data-index="2"><a href="#">청담 지점</a></li>
+                        <li data-index="3"><a href="#">부산 지점</a></li>
+                    </ul>
                 </div>
+
+            
+                <!-- <div class="info">
+                    <div class="office">
+                        <h2>OUR OFFICE</h2>
+                        <span>13, Wausan-ro 35-gil,<br> Mapo-gu, Seoul</span>
+                    </div>
+                    <div class="mail">
+                        <h2>EMAIL US</h2>
+                        <span>ljjshlove@naver.com</span>
+                    </div>
+                </div> -->
             </div>
         </div>
     </section>

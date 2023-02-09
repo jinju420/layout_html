@@ -13,11 +13,20 @@ const base = 'https://www.flickr.com/services/rest/?';
 // const method = 'flickr.interestingness.getList';
 const method = 'flickr.favorites.getList';
 const flickr_key = '8dfeab6f923483f4b3694e700652632a';
-const user_id='195427004@N07';
-const per_page = 6;
+const user_id = '195427004@N07';
+const per_page = 9;
 const frame = document.querySelector('#list');
 const flickr_url = `${base}method=${method}&api_key=${flickr_key}&per_page=${per_page}&format=json&nojsoncallback=1&user_id=${user_id}`;
 
+const tab_title = document.querySelectorAll('h2');
+const tab_cont = document.querySelectorAll('.cont');
+
+tab_title.forEach((el, idx) => {
+    el.addEventListener('click', () => {
+        activation(tab_title, idx);
+        activation(tab_cont, idx);
+    });
+});
 
 //youtube
 fetch(url)
@@ -181,3 +190,5 @@ function galleryActive(arr, idx) {
     }
     arr[idx].classList.add('on');
 };
+
+
