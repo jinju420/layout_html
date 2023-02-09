@@ -55,24 +55,24 @@
 				justify-content: space-between;
 				margin-bottom: 30px;
 				.traffic {
-					a {
-						display: block;
-						width: 200px;
-						height: 40px;
-						background: $basicFontColor;
-						font: bold 14px/40px $krFont;
-						color: #fff;
-						text-align: center;
-					}
-					&.on {
-						a {
-							background: $strongColor;
-							color: $mainBg;
-						}
-					}
 					display: flex;
 					li {
 						margin-right: 20px;
+						a {
+							display: block;
+							width: 200px;
+							height: 40px;
+							background: $basicFontColor;
+							font: bold 14px/40px $krFont;
+							color: #fff;
+							text-align: center;
+						}
+						&.on {
+							a {
+								background: $strongColor;
+								color: $mainBg;
+							}
+						}
 					}
 				}
 				.store {
@@ -204,7 +204,7 @@
 						justify-content: space-between;
 						margin-top: 15px;
 						li {
-							width: calc((100% - 20px)/2);
+							width: calc((100% - 20px) / 2);
 							margin-right: 0;
 							margin-bottom: 10px;
 							a {
@@ -218,7 +218,7 @@
 						display: flex;
 						justify-content: space-between;
 						li {
-							width:calc((100% - 40px)/3);
+							width: calc((100% - 40px) / 3);
 							margin-left: 0;
 							a {
 								width: 100%;

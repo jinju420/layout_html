@@ -17,6 +17,7 @@
 		.inner {
 			display: block;
 			opacity: 1;
+			height: 1800px;
 			> h1 {
 				opacity: 0.7;
 				margin-bottom: 50px;
@@ -62,7 +63,7 @@
 			}
 			.tab_cont {
 				position: relative;
-				height: 850px;
+				// height: 850px;
 				.cont {
 					opacity: 0;
 					visibility: hidden;
@@ -138,75 +139,133 @@
 					}
 				}
 				#gallery {
-					position: absolute;
-					top: 0;
-					left: 0;
+					#searchBox {
+						width: 100%;
+						padding: 0 50px;
+						font-size: 0;
+						input[type='text'] {
+							width: 300px;
+							height: 35px;
+							outline: none;
+							background: #eee;
+							padding-left: 15px;
+							border: none;
+							&::placeholder {
+								color: #aaa;
+								font-size: 12px;
+							}
+						}
+						.btn {
+							width: 80px;
+							height: 35px;
+							background: $basicColor2;
+							font-size: 12px;
+							font-family: $contentFont;
+							cursor: pointer;
+							margin-left: 15px;
+							border: none;
+							letter-spacing: 0.5px;
+							background: $mainBg;
+							vertical-align: top;
+							transition: 0.5s;
+							&:hover {
+								background: $strongColor;
+								color: #fff;
+							}
+						}
+					}
 					#wrap {
 						width: 100%;
+						padding: 50px;
+						.loading {
+							width: 100px;
+							position: relative;
+							top: -300px;
+							left: 50%;
+							transform: translate(-50%);
+							transition: 1s;
+							opacity: 1;
+							&.off {
+								opacity: 0;
+							}
+						}
 						#list {
-							display: flex;
-							flex-wrap: wrap;
-							justify-content: space-between;
 							width: 100%;
 							opacity: 1;
-							transition: 0.5s;
+							transform: translateY(100px);
+							transition: 1s;
 							&.on {
 								opacity: 1;
+								transform: translateY(-100px);
 							}
-							&::after{
+							&::after {
 								content: '';
 								display: block;
 								clear: both;
 							}
 							li {
-								width: calc((100% - 100px) / 6);
+								width: calc(100% / 4);
+								float: left;
+								padding: 0 10px 0 0;
 								div {
 									width: 100%;
-									// height: 100%;
-									// border-radius: 15px;
-									// background: #fff;
 									padding: 20px;
-									margin-bottom: 20px;
-									overflow: hidden;
-									box-shadow: 1px 3px 8px rgba(0, 0, 0, 0.2);
+									box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.1);
+									border-radius: 5px;
 									a {
-										display: block;
-										// height: 300px;
-										margin-bottom: 15px;
-										transition: 0.5s;
-										overflow: hidden;
-										filter: grayscale(100%);
 										> img {
 											width: 100%;
-											height: 100%;
 											transition: 1s;
-											object-fit: cover;
-											overflow: hidden;
-											&:hover {
-												box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
-												transform: scale(1.07);
-											}
-										}
-										&:hover {
-											filter: grayscale(0%);
+											filter: saturate(30%) brightness(70%);
 										}
 									}
 									p {
-										// padding: 20px;
+										font: 12px/1.2 $contentFont;
 										color: $basicFontColor;
+										margin-top: 10px;
+										margin-bottom: 20px;
+										height: 30px;
+
 										text-align: center;
-										font: 16px/1.5 $contentFont;
+										// font: 16px/1.5 $contentFont;
 										word-break: keep-all;
 
 										overflow: hidden;
 										text-overflow: ellipsis;
 
 										display: -webkit-box;
-										-webkit-line-clamp: 2;
+										-webkit-line-clamp: 3;
 										-webkit-box-orient: vertical;
+									}
+									&:hover {
+										a {
+											> img {
+												filter: saturate(100%) brightness(100%);
+											}
+										}
 									}
 								}
 							}
+						}
+					}
+					aside {
+						width: 100%;
+						height: 100vh;
+						background: rgba(0, 0, 0, 0.8);
+						position: fixed;
+						top: 0;
+						left: 0;
+						display: flex;
+						justify-content: center;
+						align-items: center;
+						img {
+							height: 100%;
+						}
+						span {
+							position: absolute;
+							top: 20px;
+							right: 20px;
+							color: #fff;
 						}
 					}
 				}
@@ -258,9 +317,10 @@ figure.popup {
 @media screen and (max-width: $tablet) {
 	.gallery {
 		.sub_con {
+			height: auto;
 			.inner {
+				height: 430vmin;
 				.tab_cont {
-					height: 153vh;
 					.vids {
 						article {
 							width: calc((100% - 40px) / 2);
@@ -358,14 +418,14 @@ figure.popup {
 	.gallery {
 		.sub_con {
 			.inner {
+				height: 600vh;
 				.tab_cont {
-					height: 310vh;
 					.vids {
 						article {
 							width: 100%;
 							margin-bottom: 30px;
 							.pic {
-								// height: 43vmax;
+								height: 42vmax;
 							}
 							.con {
 								h2 {

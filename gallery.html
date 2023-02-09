@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="css/style.css">
     <script defer src="js/common.js"></script>
     <script defer src="js/gallery.js"></script>
+    <script defer src="js/flickr.js"></script>
     <script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.min.js"></script>
 </head>
 
@@ -195,7 +196,12 @@
                     </div>
                    
                     <div id="gallery" class="cont">
+                        <section id="searchBox">
+                            <input type="text" id="search" placeholder="찾고싶은 소품을 검색하세요">
+                            <button class="btn">Search</button>
+                        </section>
                         <article id="wrap">
+                            <img src="img/loading.gif" class="loading" alt="로딩이미지">
                             <ul id="list">
     
                             </ul>

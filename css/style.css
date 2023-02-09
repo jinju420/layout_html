@@ -748,6 +748,7 @@ fieldset {
 .gallery .sub_con .inner {
   display: block;
   opacity: 1;
+  height: 1800px;
 }
 .gallery .sub_con .inner > h1 {
   opacity: 0.7;
@@ -788,7 +789,6 @@ fieldset {
 }
 .gallery .sub_con .inner .tab_cont {
   position: relative;
-  height: 850px;
 }
 .gallery .sub_con .inner .tab_cont .cont {
   opacity: 0;
@@ -862,24 +862,66 @@ fieldset {
   font-weight: bold;
   font-family: "Montserrat";
 }
-.gallery .sub_con .inner .tab_cont #gallery {
-  position: absolute;
-  top: 0;
-  left: 0;
+.gallery .sub_con .inner .tab_cont #gallery #searchBox {
+  width: 100%;
+  padding: 0 50px;
+  font-size: 0;
+}
+.gallery .sub_con .inner .tab_cont #gallery #searchBox input[type=text] {
+  width: 300px;
+  height: 35px;
+  outline: none;
+  background: #eee;
+  padding-left: 15px;
+  border: none;
+}
+.gallery .sub_con .inner .tab_cont #gallery #searchBox input[type=text]::placeholder {
+  color: #aaa;
+  font-size: 12px;
+}
+.gallery .sub_con .inner .tab_cont #gallery #searchBox .btn {
+  width: 80px;
+  height: 35px;
+  background: #e7ded7;
+  font-size: 12px;
+  font-family: "Montserrat";
+  cursor: pointer;
+  margin-left: 15px;
+  border: none;
+  letter-spacing: 0.5px;
+  background: #f8f8f8;
+  vertical-align: top;
+  transition: 0.5s;
+}
+.gallery .sub_con .inner .tab_cont #gallery #searchBox .btn:hover {
+  background: #a06138;
+  color: #fff;
 }
 .gallery .sub_con .inner .tab_cont #gallery #wrap {
   width: 100%;
+  padding: 50px;
+}
+.gallery .sub_con .inner .tab_cont #gallery #wrap .loading {
+  width: 100px;
+  position: relative;
+  top: -300px;
+  left: 50%;
+  transform: translate(-50%);
+  transition: 1s;
+  opacity: 1;
+}
+.gallery .sub_con .inner .tab_cont #gallery #wrap .loading.off {
+  opacity: 0;
 }
 .gallery .sub_con .inner .tab_cont #gallery #wrap #list {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
   width: 100%;
   opacity: 1;
-  transition: 0.5s;
+  transform: translateY(100px);
+  transition: 1s;
 }
 .gallery .sub_con .inner .tab_cont #gallery #wrap #list.on {
   opacity: 1;
+  transform: translateY(-100px);
 }
 .gallery .sub_con .inner .tab_cont #gallery #wrap #list::after {
   content: "";
@@ -887,46 +929,57 @@ fieldset {
   clear: both;
 }
 .gallery .sub_con .inner .tab_cont #gallery #wrap #list li {
-  width: calc((100% - 100px) / 6);
+  width: 25%;
+  float: left;
+  padding: 0 10px 0 0;
 }
 .gallery .sub_con .inner .tab_cont #gallery #wrap #list li div {
   width: 100%;
   padding: 20px;
-  margin-bottom: 20px;
-  overflow: hidden;
-  box-shadow: 1px 3px 8px rgba(0, 0, 0, 0.2);
-}
-.gallery .sub_con .inner .tab_cont #gallery #wrap #list li div a {
-  display: block;
-  margin-bottom: 15px;
-  transition: 0.5s;
-  overflow: hidden;
-  filter: grayscale(100%);
+  box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
 }
 .gallery .sub_con .inner .tab_cont #gallery #wrap #list li div a > img {
   width: 100%;
-  height: 100%;
   transition: 1s;
-  object-fit: cover;
-  overflow: hidden;
-}
-.gallery .sub_con .inner .tab_cont #gallery #wrap #list li div a > img:hover {
-  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
-  transform: scale(1.07);
-}
-.gallery .sub_con .inner .tab_cont #gallery #wrap #list li div a:hover {
-  filter: grayscale(0%);
+  filter: saturate(30%) brightness(70%);
 }
 .gallery .sub_con .inner .tab_cont #gallery #wrap #list li div p {
+  font: 12px/1.2 "Montserrat";
   color: #666;
+  margin-top: 10px;
+  margin-bottom: 20px;
+  height: 30px;
   text-align: center;
-  font: 16px/1.5 "Montserrat";
   word-break: keep-all;
   overflow: hidden;
   text-overflow: ellipsis;
   display: -webkit-box;
-  -webkit-line-clamp: 2;
+  -webkit-line-clamp: 3;
   -webkit-box-orient: vertical;
+}
+.gallery .sub_con .inner .tab_cont #gallery #wrap #list li div:hover a > img {
+  filter: saturate(100%) brightness(100%);
+}
+.gallery .sub_con .inner .tab_cont #gallery aside {
+  width: 100%;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.8);
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.gallery .sub_con .inner .tab_cont #gallery aside img {
+  height: 100%;
+}
+.gallery .sub_con .inner .tab_cont #gallery aside span {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  color: #fff;
 }
 
 figure.popup {
@@ -970,8 +1023,11 @@ figure.popup .closeBtn i {
 }
 
 @media screen and (max-width: 1179px) {
-  .gallery .sub_con .inner .tab_cont {
-    height: 153vh;
+  .gallery .sub_con {
+    height: auto;
+  }
+  .gallery .sub_con .inner {
+    height: 430vmin;
   }
   .gallery .sub_con .inner .tab_cont .vids article {
     width: calc((100% - 40px) / 2);
@@ -1044,12 +1100,15 @@ figure.popup .closeBtn i {
   }
 }
 @media screen and (max-width: 539px) {
-  .gallery .sub_con .inner .tab_cont {
-    height: 310vh;
+  .gallery .sub_con .inner {
+    height: 600vh;
   }
   .gallery .sub_con .inner .tab_cont .vids article {
     width: 100%;
     margin-bottom: 30px;
+  }
+  .gallery .sub_con .inner .tab_cont .vids article .pic {
+    height: 42vmax;
   }
   .gallery .sub_con .inner .tab_cont .vids article .con h2 {
     font-size: 5vmin;
@@ -1728,7 +1787,10 @@ figure.popup .closeBtn i {
 .contactUs .sub_con > .inner .map_guide .traffic {
   display: flex;
 }
-.contactUs .sub_con > .inner .map_guide .traffic a {
+.contactUs .sub_con > .inner .map_guide .traffic li {
+  margin-right: 20px;
+}
+.contactUs .sub_con > .inner .map_guide .traffic li a {
   display: block;
   width: 200px;
   height: 40px;
@@ -1737,12 +1799,9 @@ figure.popup .closeBtn i {
   color: #fff;
   text-align: center;
 }
-.contactUs .sub_con > .inner .map_guide .traffic.on a {
+.contactUs .sub_con > .inner .map_guide .traffic li.on a {
   background: #a06138;
   color: #f8f8f8;
-}
-.contactUs .sub_con > .inner .map_guide .traffic li {
-  margin-right: 20px;
 }
 .contactUs .sub_con > .inner .map_guide .store {
   display: flex;
