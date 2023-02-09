@@ -1692,22 +1692,28 @@ figure.popup .closeBtn i {
   font-size: 20px;
 }
 .contactUs .sub_con > .inner .sns a:hover {
-  color: #222;
+  color: #a06138;
 }
-.contactUs .sub_con > .inner h1 {
+.contactUs .sub_con > .inner > h1 {
+  margin-bottom: 20px;
   opacity: 0.7;
 }
-.contactUs .sub_con > .inner h1 span {
+.contactUs .sub_con > .inner span {
   font-size: 16px;
-  margin-left: 35px;
-  letter-spacing: -0.3px;
+  letter-spacing: 0.5px;
   white-space: nowrap;
+  font-weight: 300;
+}
+.contactUs .sub_con > .inner span:nth-of-type(2) {
+  margin-right: 15px;
+  margin-left: 15px;
 }
 .contactUs .sub_con > .inner #map {
   width: 100%;
   height: 500px;
   border: 1px solid #666;
   margin-bottom: 30px;
+  margin-top: 10px;
   transition: 1s;
   opacity: 0.7;
 }
@@ -1722,10 +1728,7 @@ figure.popup .closeBtn i {
 .contactUs .sub_con > .inner .map_guide .traffic {
   display: flex;
 }
-.contactUs .sub_con > .inner .map_guide .traffic li {
-  margin-right: 20px;
-}
-.contactUs .sub_con > .inner .map_guide .traffic li a {
+.contactUs .sub_con > .inner .map_guide .traffic a {
   display: block;
   width: 200px;
   height: 40px;
@@ -1734,9 +1737,12 @@ figure.popup .closeBtn i {
   color: #fff;
   text-align: center;
 }
-.contactUs .sub_con > .inner .map_guide .traffic li.on a {
+.contactUs .sub_con > .inner .map_guide .traffic.on a {
   background: #a06138;
   color: #f8f8f8;
+}
+.contactUs .sub_con > .inner .map_guide .traffic li {
+  margin-right: 20px;
 }
 .contactUs .sub_con > .inner .map_guide .store {
   display: flex;
@@ -1758,6 +1764,107 @@ figure.popup .closeBtn i {
   color: #f8f8f8;
 }
 
+@media screen and (max-width: 1179px) {
+  .contactUs .sub_con > .inner {
+    width: 100%;
+    padding: 50px 50px;
+  }
+  .contactUs .sub_con > .inner .sns {
+    margin-bottom: 45px;
+  }
+  .contactUs .sub_con > .inner .sns a {
+    margin-left: 20px;
+  }
+  .contactUs .sub_con > .inner .sns a i {
+    font-size: 20px;
+  }
+  .contactUs .sub_con > .inner #map {
+    height: 500px;
+    margin-bottom: 30px;
+  }
+  .contactUs .sub_con > .inner .map_guide {
+    margin-bottom: 30px;
+  }
+  .contactUs .sub_con > .inner .map_guide .traffic {
+    display: block;
+  }
+  .contactUs .sub_con > .inner .map_guide .traffic li {
+    margin-right: 20px;
+    margin-bottom: 10px;
+  }
+  .contactUs .sub_con > .inner .map_guide .traffic li a {
+    width: 17vmax;
+    height: 40px;
+    font: bold 2vmin/40px "Noto Sans KR";
+  }
+  .contactUs .sub_con > .inner .map_guide .store li {
+    margin-left: 10px;
+  }
+  .contactUs .sub_con > .inner .map_guide .store li a {
+    width: 15vmax;
+    font: bold 2vmin/40px "Noto Sans KR";
+  }
+}
+@media screen and (max-width: 539px) {
+  .contactUs .sub_con > .inner {
+    width: 100%;
+    padding: 50px 30px;
+  }
+  .contactUs .sub_con > .inner .sns {
+    margin-bottom: 25px;
+  }
+  .contactUs .sub_con > .inner .sns a {
+    margin-left: 20px;
+  }
+  .contactUs .sub_con > .inner .sns a i {
+    font-size: 20px;
+  }
+  .contactUs .sub_con > .inner > h1 {
+    text-align: center;
+  }
+  .contactUs .sub_con > .inner span {
+    font-size: 16px;
+    display: block;
+    text-align: center;
+  }
+  .contactUs .sub_con > .inner span:nth-of-type(2) {
+    display: none;
+  }
+  .contactUs .sub_con > .inner #map {
+    margin-top: 15px;
+  }
+  .contactUs .sub_con > .inner .map_guide {
+    margin-bottom: 0;
+    flex-direction: column-reverse;
+  }
+  .contactUs .sub_con > .inner .map_guide .traffic {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 15px;
+  }
+  .contactUs .sub_con > .inner .map_guide .traffic li {
+    width: calc((100% - 20px) / 2);
+    margin-right: 0;
+    margin-bottom: 10px;
+  }
+  .contactUs .sub_con > .inner .map_guide .traffic li a {
+    width: 100%;
+    height: 40px;
+    font: bold 3vmin/40px "Noto Sans KR";
+  }
+  .contactUs .sub_con > .inner .map_guide .store {
+    display: flex;
+    justify-content: space-between;
+  }
+  .contactUs .sub_con > .inner .map_guide .store li {
+    width: calc((100% - 40px) / 3);
+    margin-left: 0;
+  }
+  .contactUs .sub_con > .inner .map_guide .store li a {
+    width: 100%;
+    font: bold 3vmin/40px "Noto Sans KR";
+  }
+}
 #header {
   position: absolute;
   top: 0;

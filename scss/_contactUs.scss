@@ -20,17 +20,22 @@
 						font-size: 20px;
 					}
 					&:hover {
-						color: #222;
+						color: $strongColor;
 					}
 				}
 			}
-			h1 {
+			> h1 {
+				margin-bottom: 20px;
 				opacity: 0.7;
-				span {
-					font-size: 16px;
-					margin-left: 35px;
-					letter-spacing: -0.3px;
-					white-space: nowrap;
+			}
+			span {
+				font-size: 16px;
+				letter-spacing: 0.5px;
+				white-space: nowrap;
+				font-weight: 300;
+				&:nth-of-type(2) {
+					margin-right: 15px;
+					margin-left: 15px;
 				}
 			}
 			#map {
@@ -38,6 +43,7 @@
 				height: 500px;
 				border: 1px solid $basicFontColor;
 				margin-bottom: 30px;
+				margin-top: 10px;
 				transition: 1s;
 				opacity: 0.7;
 				&:hover {
@@ -49,24 +55,24 @@
 				justify-content: space-between;
 				margin-bottom: 30px;
 				.traffic {
+					a {
+						display: block;
+						width: 200px;
+						height: 40px;
+						background: $basicFontColor;
+						font: bold 14px/40px $krFont;
+						color: #fff;
+						text-align: center;
+					}
+					&.on {
+						a {
+							background: $strongColor;
+							color: $mainBg;
+						}
+					}
 					display: flex;
 					li {
 						margin-right: 20px;
-						a {
-							display: block;
-							width: 200px;
-							height: 40px;
-							background: $basicFontColor;
-							font: bold 14px/40px $krFont;
-							color: #fff;
-							text-align: center;
-						}
-						&.on {
-							a {
-								background: $strongColor;
-								color: $mainBg;
-							}
-						}
 					}
 				}
 				.store {
@@ -107,6 +113,121 @@
 			// 		}
 			// 	}
 			// }
+		}
+	}
+}
+
+//tablet
+@media screen and (max-width: $tablet) {
+	.contactUs {
+		.sub_con {
+			> .inner {
+				width: 100%;
+				padding: 50px 50px;
+				.sns {
+					margin-bottom: 45px;
+					a {
+						margin-left: 20px;
+						i {
+							font-size: 20px;
+						}
+					}
+				}
+				#map {
+					height: 500px;
+					margin-bottom: 30px;
+				}
+				.map_guide {
+					margin-bottom: 30px;
+					.traffic {
+						display: block;
+						li {
+							margin-right: 20px;
+							margin-bottom: 10px;
+							a {
+								width: 17vmax;
+								height: 40px;
+								font: bold 2vmin/40px $krFont;
+							}
+						}
+					}
+					.store {
+						li {
+							margin-left: 10px;
+							a {
+								width: 15vmax;
+								font: bold 2vmin/40px $krFont;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+//mobile
+@media screen and (max-width: $mobile) {
+	.contactUs {
+		.sub_con {
+			> .inner {
+				width: 100%;
+				padding: 50px 30px;
+				.sns {
+					margin-bottom: 25px;
+					a {
+						margin-left: 20px;
+						i {
+							font-size: 20px;
+						}
+					}
+				}
+				> h1 {
+					text-align: center;
+				}
+				span {
+					font-size: 16px;
+					display: block;
+					text-align: center;
+					&:nth-of-type(2) {
+						display: none;
+					}
+				}
+				#map {
+					margin-top: 15px;
+				}
+				.map_guide {
+					margin-bottom: 0;
+					flex-direction: column-reverse;
+					.traffic {
+						display: flex;
+						justify-content: space-between;
+						margin-top: 15px;
+						li {
+							width: calc((100% - 20px)/2);
+							margin-right: 0;
+							margin-bottom: 10px;
+							a {
+								width: 100%;
+								height: 40px;
+								font: bold 3vmin/40px $krFont;
+							}
+						}
+					}
+					.store {
+						display: flex;
+						justify-content: space-between;
+						li {
+							width:calc((100% - 40px)/3);
+							margin-left: 0;
+							a {
+								width: 100%;
+								font: bold 3vmin/40px $krFont;
+							}
+						}
+					}
+				}
+			}
 		}
 	}
 }
