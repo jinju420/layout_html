@@ -701,8 +701,8 @@ fieldset {
   .com .sub_Visual .visual_box .inner {
     width: 100%;
   }
-  .com .sub_Visual .visual_box .inner .title_txt {
-    text-align: center;
+  .com .sub_Visual .visual_box .inner .title_txt > h1 {
+    font-size: 13vmin;
   }
   .com .sub_Visual .visual_box .inner .title_txt p {
     font-size: 4vmin;
@@ -1509,7 +1509,7 @@ figure.popup .closeBtn i {
 }
 @media screen and (max-width: 539px) {
   .mypage .visual_box {
-    background: url("../img/sub/visual/join_m.jpg") center/no-repeat;
+    background: url("../img/sub/visual/join_m.jpg") no-repeat;
   }
   .mypage .sub_con > .inner form table {
     width: 100%;

@@ -692,7 +692,9 @@
 				.inner {
 					width: 100%;
 					.title_txt {
-						text-align: center;
+						> h1 {
+							font-size: 13vmin;
+						}
 						p {
 							font-size: 4vmin;
 						}
