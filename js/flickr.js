@@ -5,17 +5,17 @@ const method = 'flickr.favorites.getList';
 const method1 = 'flickr.photos.search';
 const flickr_key = '8dfeab6f923483f4b3694e700652632a';
 const user_id = '195427004@N07';
-const per_page = 20;
+const per_page = 15;
 const gal = document.querySelector('#gallery');
 const frame = gal.querySelector('#list');
 const loading = gal.querySelector('.loading');
 const input = gal.querySelector('#search');
 const btn = gal.querySelector('.btn');
 const url1 = `${base}method=${method}&api_key=${flickr_key}&per_page=${per_page}&format=json&nojsoncallback=1&user_id=${user_id}`;
-const url2 = `${base}method=${method1}&api_key=${flickr_key}&per_page=${per_page}&format=json&nojsoncallback=1&tags=고양이&privacy_filter=1`;
+const url2 = `${base}method=${method1}&api_key=${flickr_key}&per_page=${per_page}&format=json&nojsoncallback=1&tags=인테리어&privacy_filter=1`;
 
 //초기 갤러리 화면에 보여지는 데이터
-callDate(url1);
+callDate(url2);
 
 //검색어 입력 후 버튼
 btn.addEventListener('click', () => {
@@ -46,23 +46,55 @@ input.addEventListener('keypress', e => {
 })
 
 frame.addEventListener('click', e => {
-	e.preventDefault();
-	let target = e.target.closest('.imgs');
-	let imgSrc = target.querySelector('a').getAttribute('href');
+    e.preventDefault();
+    //클릭한 대상이 #list이면 return하도록
 
-	let pop = document.createElement('aside');
-	let pops = `
-		<img src="${imgSrc}">
-		<span class="close">Close</span>
+    if (e.target == frame) return;
+    //썸네일을 클릭해야지만 볼수있도록
+    let target = e.target.closest('.imgs').querySelector('.thumb');
+
+    //사용자가 클릭한 대상이 썸네일인지
+    if (e.target == target) {
+        //let imgSrc = target.parentElement.getAttribute('href'); //thumb의 부모인 a태그를 찾는 방법
+        let imgSrc = target.closest('a').getAttribute('href'); //thumb에서 가장 가까이에 있는 a태그를 찾는 방법
+        let pop = document.createElement('aside');
+        pop.classList.add('pop');
+        // document.body.style.overflow ='hidden';
+        document.body.classList.add('hidden');
+        let pops = `
+    	<img src="${imgSrc}">
+    	<span class="close">
+            <i class="far fa-times-circle"></i>
+        </span>
         `;
         pop.innerHTML = pops;
-        document.querySelector('#gallery').append(pop);
-		// <span class="close"><i class="far fa-times-circle"></i></span>
+        gal.append(pop);
+    } else {
+        return;
+    }
 });
+
 gal.addEventListener('click', (e) => {
-	let target = e.target.closest('aside');
-	target.remove();
+    //pop이라는 클래스를 추적한다
+    let pop = gal.querySelector('.pop');
+    if (pop != null) {
+        //탑이 존재하는지
+        let close = pop.querySelector('.close> i');
+        if (e.target == close) {
+            pop.remove();
+            document.body.classList.remove('hidden');
+        }
+    }
 });
+
+//리사이즈시 
+window.addEventListener('resize', () => {
+    let pop = gal.querySelector('.pop');
+    wid = window.innerWidth;
+
+    if (pop) document.body.classList.add('hidden');
+});
+
 
 //flickr
 function callDate(url1) {
@@ -72,12 +104,11 @@ function callDate(url1) {
     fetch(url1)
         .then((data) => {
             const result = data.json();
-            //console.log(result);
             return result;
         })
         .then((json) => {
             const items = json.photos.photo;
-            console.log(items);
+            // console.log(items);
 
             if (items.length > 0) {
                 createImgs(items);
@@ -102,7 +133,7 @@ function createImgs(items) {
             <li class="imgs">
                 <div>
                     <a href=${imgSrcBig}>
-                        <img src=${imgSrc}>
+                        <img class="thumb" src=${imgSrc}>
                     </a>
                     <p>${item.title}</p>
                 </div>

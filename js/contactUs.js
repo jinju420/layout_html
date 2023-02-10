@@ -2,6 +2,7 @@ const mapCont = document.getElementById('map')
 const tr_on = document.querySelectorAll('.traffic li')[0];
 const tr_off = document.querySelectorAll('.traffic li')[1];
 const store = document.querySelectorAll('.store li');
+const bicycle = kakao.maps.MapTypeId.BICYCLE;
 
 var options = {
     center: new kakao.maps.LatLng(37.5556741, 126.9297811), 
@@ -60,29 +61,11 @@ function moveTo(target) {
 
 window.addEventListener('resize', () => {
     const active_btn = document.querySelector('.store li.on');
+    //위 변수에 활성화 되어있는 li안의 data-index의 속성값
     const active_index = active_btn.getAttribute('data-index');
 
     map.setCenter(storeOptions[active_index].lating);
-
-})
-
-
-//marker 
-// var imageSrc = 'img/content/content01.jpg',
-//     imageSize = new kakao.maps.Size(232, 99),
-//     imageOption = { offset: new kakao.maps.Point(116, 69) };
-
-// var markerImage = new kakao.maps.MarkerImage(imageSrc, imageSize, imageOption),
-//     markerPosition = new kakao.maps.LatLng(37.5116827, 127.0591512);
-
-// let marker = new kakao.maps.Marker({
-//     position: markerPosition,
-//     image: markerImage
-// });
-// marker.setMap(map);
-
-const bicycle = kakao.maps.MapTypeId.BICYCLE
-
+});
 
 //자전거
 tr_on.addEventListener('click', e => {

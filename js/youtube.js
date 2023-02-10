@@ -1,7 +1,7 @@
 const vids = document.querySelector('.vids');
 const key = 'AIzaSyBGee4MUXU3jusXj7YwDBzdXI5Sn3gAkIA';
 const playlistId = 'PLY0voYdGZtAgPCRyH8libB1_TbuzvCR_a';
-const num = 9;
+const num = 12;
 const url = `https://www.googleapis.com/youtube/v3/playlistItems?part=snippet&key=${key}&playlistId=${playlistId}&maxResults=${num}`;
 
 const gallery = document.querySelector('.gallery');
@@ -35,7 +35,7 @@ fetch(url)
             let des = el.snippet.description;
             let date = el.snippet.publishedAt;
 
-            if (title.length > 30) title = title.substr(0, 20) + '...';
+            if (title.length > 30) title = title.substr(0, 17) + '...';
             if (des.length > 100) des = des.substr(0, 40) + '...';
             date = date.split('T')[0];
 
@@ -91,10 +91,6 @@ vids.addEventListener('click', e => {
         }
     }
 });
-
-
-
-
 
 
 //리사이즈시 

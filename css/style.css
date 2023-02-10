@@ -512,6 +512,7 @@ fieldset {
   padding: 120px 0;
   opacity: 0.7;
   color: #222;
+  position: relative;
 }
 .com .sub_con > .inner > h1 {
   font-size: 50px;
@@ -748,7 +749,6 @@ fieldset {
 .gallery .sub_con .inner {
   display: block;
   opacity: 1;
-  height: 1800px;
 }
 .gallery .sub_con .inner > h1 {
   opacity: 0.7;
@@ -789,6 +789,7 @@ fieldset {
 }
 .gallery .sub_con .inner .tab_cont {
   position: relative;
+  height: 2000px;
 }
 .gallery .sub_con .inner .tab_cont .cont {
   opacity: 0;
@@ -811,6 +812,7 @@ fieldset {
 }
 .gallery .sub_con .inner .tab_cont .vids article {
   width: calc((100% - 40px) / 3);
+  height: 100%;
   margin-bottom: 25px;
   isolation: isolate;
   background: #f8f5f0;
@@ -823,7 +825,6 @@ fieldset {
 .gallery .sub_con .inner .tab_cont .vids article .pic {
   display: block;
   width: 100%;
-  height: 55%;
   filter: saturate(30%) brightness(90%);
   transition: 0.5s;
 }
@@ -837,7 +838,7 @@ fieldset {
 }
 .gallery .sub_con .inner .tab_cont .vids article .con {
   width: 100%;
-  height: auto;
+  height: 200px;
   padding: 20px;
   opacity: 0.7;
 }
@@ -901,7 +902,6 @@ fieldset {
 }
 .gallery .sub_con .inner .tab_cont #gallery #wrap {
   width: 100%;
-  padding: 50px 0;
 }
 .gallery .sub_con .inner .tab_cont #gallery #wrap .loading {
   width: 100px;
@@ -947,6 +947,9 @@ fieldset {
   transition: 1s;
   filter: saturate(30%) brightness(70%);
 }
+.gallery .sub_con .inner .tab_cont #gallery #wrap #list li div a > img:hover {
+  filter: saturate(100%) brightness(100%);
+}
 .gallery .sub_con .inner .tab_cont #gallery #wrap #list li div p {
   font: 13px/1.2 "Montserrat";
   color: #666;
@@ -961,9 +964,6 @@ fieldset {
   -webkit-line-clamp: 3;
   -webkit-box-orient: vertical;
 }
-.gallery .sub_con .inner .tab_cont #gallery #wrap #list li div:hover a > img {
-  filter: saturate(100%) brightness(100%);
-}
 .gallery .sub_con .inner .tab_cont #gallery aside {
   width: 100%;
   height: 100vh;
@@ -974,14 +974,21 @@ fieldset {
   display: flex;
   justify-content: center;
   align-items: center;
+  z-index: 2;
 }
 .gallery .sub_con .inner .tab_cont #gallery aside img {
   height: 100%;
 }
-.gallery .sub_con .inner .tab_cont #gallery aside span {
+.gallery .sub_con .inner .tab_cont #gallery aside .close {
   position: absolute;
   top: 20px;
   right: 20px;
+  cursor: pointer;
+  display: block;
+  opacity: 0.7;
+}
+.gallery .sub_con .inner .tab_cont #gallery aside .close i {
+  font-size: 35px;
   color: #fff;
 }
 
@@ -1026,22 +1033,19 @@ figure.popup .closeBtn i {
 }
 
 @media screen and (max-width: 1179px) {
-  .gallery .sub_con {
-    height: auto;
-  }
-  .gallery .sub_con .inner {
-    height: 430vmin;
+  .gallery .sub_con .inner .tab_cont {
+    height: 410vh;
   }
   .gallery .sub_con .inner .tab_cont .vids article {
     width: calc((100% - 40px) / 2);
     height: 100%;
   }
   .gallery .sub_con .inner .tab_cont .vids article .pic {
-    height: 27vmax;
+    height: 35vmin;
   }
   .gallery .sub_con .inner .tab_cont .vids article .con h2 {
     margin-bottom: 20px;
-    font-size: 19px;
+    font-size: 22px;
     overflow: hidden;
     text-overflow: ellipsis;
     display: -webkit-box;
@@ -1049,7 +1053,7 @@ figure.popup .closeBtn i {
     -webkit-box-orient: vertical;
   }
   .gallery .sub_con .inner .tab_cont .vids article .con p {
-    font-size: 16px;
+    font-size: 18px;
     word-break: keep-all;
     overflow: hidden;
     text-overflow: ellipsis;
@@ -1065,9 +1069,6 @@ figure.popup .closeBtn i {
   }
   .gallery .sub_con .inner .tab_cont #gallery #wrap #list li {
     width: 33.3333333333%;
-  }
-  .gallery .sub_con .inner .tab_cont #gallery #wrap #list li div {
-    cursor: pointer;
   }
   .gallery .sub_con .inner .tab_cont #gallery #wrap #list li div p {
     font: 13px/1.2 "Montserrat";
@@ -1098,15 +1099,18 @@ figure.popup .closeBtn i {
   }
 }
 @media screen and (max-width: 539px) {
-  .gallery .sub_con .inner {
-    height: 693vh;
+  .gallery .sub_con .inner > h1 {
+    text-align: center;
+  }
+  .gallery .sub_con .inner .tab_cont {
+    height: 620vh;
   }
   .gallery .sub_con .inner .tab_cont .vids article {
     width: 100%;
     margin-bottom: 30px;
   }
   .gallery .sub_con .inner .tab_cont .vids article .pic {
-    height: 42vmax;
+    height: 27vmax;
   }
   .gallery .sub_con .inner .tab_cont .vids article .con h2 {
     font-size: 5vmin;
@@ -1133,7 +1137,6 @@ figure.popup .closeBtn i {
     width: 100%;
     margin-bottom: 0;
     padding: 10px;
-    cursor: pointer;
   }
   .gallery .sub_con .inner .tab_cont #gallery #wrap #list li div {
     display: flex;
@@ -1142,8 +1145,8 @@ figure.popup .closeBtn i {
     height: 13vh;
   }
   .gallery .sub_con .inner .tab_cont #gallery #wrap #list li div a {
-    width: 100px;
-    height: 100%;
+    width: 120px;
+    height: 120px;
   }
   .gallery .sub_con .inner .tab_cont #gallery #wrap #list li div a img {
     width: 100%;
@@ -1293,6 +1296,9 @@ figure.popup .closeBtn i {
   }
 }
 @media screen and (max-width: 539px) {
+  .brand .sub_con .inner h1 {
+    text-align: center;
+  }
   .brand .sub_con .inner .about > h1 {
     font-size: 14vmin;
   }
@@ -1542,7 +1548,7 @@ figure.popup .closeBtn i {
   }
   .mypage .sub_con > .inner form table input[type=reset],
   .mypage .sub_con > .inner form table input[type=submit] {
-    width: 44%;
+    width: 46%;
     font-size: 14px;
     margin-bottom: 20px;
   }
@@ -1711,6 +1717,9 @@ figure.popup .closeBtn i {
   }
 }
 @media screen and (max-width: 539px) {
+  .notice .sub_con > .inner > h1 {
+    text-align: center;
+  }
   .notice .sub_con > .inner .wrap article table tbody > tr {
     height: 0;
   }
@@ -1893,11 +1902,16 @@ figure.popup .closeBtn i {
     height: 40px;
     font: bold 2vmin/40px "Noto Sans KR";
   }
+  .contactUs .sub_con > .inner .map_guide .store {
+    flex-wrap: wrap;
+    justify-content: flex-end;
+  }
   .contactUs .sub_con > .inner .map_guide .store li {
     margin-left: 10px;
+    margin-bottom: 10px;
   }
   .contactUs .sub_con > .inner .map_guide .store li a {
-    width: 15vmax;
+    width: 11vmax;
     font: bold 2vmin/40px "Noto Sans KR";
   }
 }

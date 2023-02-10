@@ -180,6 +180,9 @@
 	.notice {
 		.sub_con {
 			> .inner {
+				> h1 {
+					text-align: center;
+				}
 				.wrap {
 					article {
 						table {
