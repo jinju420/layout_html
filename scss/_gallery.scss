@@ -1,7 +1,7 @@
 .gallery {
 	.visual_box {
 		position: relative;
-		background: url('../img/sub/visual/gallery_b.jpg') no-repeat center top/cover;
+		background: url('../img/sub/visual/gallery_b.jpg') no-repeat center/cover;
 		&::before {
 			content: '';
 			display: block;
@@ -323,9 +323,6 @@ figure.popup {
 //tablet
 @media screen and (max-width: $tablet) {
 	.gallery {
-		.visual_box {
-			background: url('../img/sub/visual/gallery_m.jpg') no-repeat center top/cover;
-		}
 		.sub_con {
 			// height: auto;
 			.inner {

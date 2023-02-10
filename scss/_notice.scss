@@ -1,6 +1,6 @@
 .notice {
 	.visual_box {
-		background: url('../img/sub/visual/notice.jpg') no-repeat center bottom/cover;
+		background: url('../img/sub/visual/notice.jpg') no-repeat center/cover;
 	}
 	.sub_con {
 		height: 1150px;
@@ -127,9 +127,6 @@
 //tablet
 @media screen and (max-width: $tablet) {
 	.notice {
-		.visual_box {
-			background: url('../img/sub/visual/notice_m.jpg') no-repeat center bottom/cover;
-		}
 		.sub_con {
 			> .inner {
 				.wrap {
@@ -181,9 +178,6 @@
 //mobile
 @media screen and (max-width: $mobile) {
 	.notice {
-		.visual_box {
-			background: url('../img/sub/visual/notice_m.jpg') no-repeat right bottom/cover;
-		}
 		.sub_con {
 			> .inner {
 				.wrap {
