@@ -1,7 +1,7 @@
 .gallery {
 	.visual_box {
 		position: relative;
-		background: url('../img/sub/visual/gallery.jpg') no-repeat center bottom/cover;
+		background: url('../img/sub/visual/gallery_b.jpg') no-repeat center top/cover;
 		&::before {
 			content: '';
 			display: block;
@@ -172,7 +172,6 @@
 					}
 					#wrap {
 						width: 100%;
-						// padding: 50px 0;
 						.loading {
 							width: 200px;
 							position: relative;
@@ -394,6 +393,9 @@ figure.popup {
 //mobile
 @media screen and (max-width: $mobile) {
 	.gallery {
+		visual_box {
+			background: url('../img/sub/visual/gallery_m.jpg') no-repeat center top/cover;
+		}
 		.sub_con {
 			.inner {
 				// height: 693vh;

@@ -734,7 +734,7 @@ fieldset {
 }
 .gallery .visual_box {
   position: relative;
-  background: url("../img/sub/visual/gallery.jpg") no-repeat center bottom/cover;
+  background: url("../img/sub/visual/gallery_b.jpg") no-repeat center top/cover;
 }
 .gallery .visual_box::before {
   content: "";
@@ -1090,6 +1090,9 @@ figure.popup .closeBtn i {
   }
 }
 @media screen and (max-width: 539px) {
+  .gallery visual_box {
+    background: url("../img/sub/visual/gallery_m.jpg") no-repeat center top/cover;
+  }
   .gallery .sub_con .inner > h1 {
     text-align: center;
   }
@@ -1307,7 +1310,7 @@ figure.popup .closeBtn i {
   }
 }
 .mypage .visual_box {
-  background: url("../img/sub/visual/mypage.jpg") no-repeat;
+  background: url("../img/sub/visual/join_b.jpg") no-repeat;
   background-size: cover;
   background-position: center 73%;
 }
@@ -1504,6 +1507,11 @@ figure.popup .closeBtn i {
   }
 }
 @media screen and (max-width: 539px) {
+  .mypage .visual_box {
+    background: url("../img/sub/visual/join_m.jpg") no-repeat;
+    background-size: cover;
+    background-position: center 73%;
+  }
   .mypage .sub_con > .inner h1 {
     text-align: center;
   }
@@ -1695,6 +1703,9 @@ figure.popup .closeBtn i {
   }
 }
 @media screen and (max-width: 539px) {
+  .notice .visual_box {
+    background: url("../img/sub/visual/notice_m.jpg") no-repeat center bottom/cover;
+  }
   .notice .sub_con > .inner > h1 {
     text-align: center;
   }
@@ -1894,6 +1905,9 @@ figure.popup .closeBtn i {
   }
 }
 @media screen and (max-width: 539px) {
+  .contactUs .visual_box {
+    background: url("../img/sub/visual/contactUs_m.jpg") no-repeat center bottom/cover;
+  }
   .contactUs .sub_con > .inner {
     width: 100%;
     padding: 50px 30px;
