@@ -464,6 +464,7 @@ fieldset {
 .com .sub_Visual .visual_box {
   filter: saturate(30%) brightness(90%);
   height: 600px;
+  width: 100%;
   background-attachment: fixed;
 }
 .com .sub_Visual .visual_box:hover {
@@ -1309,8 +1310,6 @@ figure.popup .closeBtn i {
   background: url("../img/sub/visual/join_b.jpg") no-repeat;
   background-size: cover;
   background-position: center 73%;
-  width: 100%;
-  height: 100%;
 }
 .mypage .sub_con > .inner {
   display: block;
@@ -1455,9 +1454,6 @@ figure.popup .closeBtn i {
 }
 
 @media screen and (max-width: 1179px) {
-  .mypage .visual_box {
-    background-position: center 73%;
-  }
   .mypage .sub_con > .inner form {
     display: block;
   }
