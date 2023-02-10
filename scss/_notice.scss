@@ -127,6 +127,9 @@
 //tablet
 @media screen and (max-width: $tablet) {
 	.notice {
+		.visual_box {
+			background: url('../img/sub/visual/notice_m.jpg') no-repeat center bottom/cover;
+		}
 		.sub_con {
 			> .inner {
 				.wrap {

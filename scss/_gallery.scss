@@ -323,6 +323,9 @@ figure.popup {
 //tablet
 @media screen and (max-width: $tablet) {
 	.gallery {
+		visual_box {
+			background: url('../img/sub/visual/gallery_m.jpg') no-repeat center top/cover;
+		}
 		.sub_con {
 			// height: auto;
 			.inner {
