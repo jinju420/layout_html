@@ -396,15 +396,12 @@ figure.popup {
 //mobile
 @media screen and (max-width: $mobile) {
 	.gallery {
-		visual_box {
+		.visual_box {
 			background: url('../img/sub/visual/gallery_m.jpg') no-repeat center top/cover;
 		}
 		.sub_con {
 			.inner {
 				// height: 693vh;
-				> h1 {
-					text-align: center;
-				}
 				.tab_cont {
 					height: 620vh;
 					.vids {

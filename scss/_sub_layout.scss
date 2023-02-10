@@ -629,7 +629,7 @@
 					padding: 180px 0 0 50px;
 					.title_txt {
 						h1 {
-							font-size: 12vmin;
+							// font-size: 15vmin;
 						}
 						p {
 							font-size: 3vmin;
@@ -691,13 +691,10 @@
 			.visual_box {
 				.inner {
 					width: 100%;
-					padding: 260px 0 0 30px;
 					.title_txt {
-						h1 {
-							font-size: 12vmin;
-						}
+						text-align: center;
 						p {
-							font-size: 3vmin;
+							font-size: 4vmin;
 						}
 					}
 				}

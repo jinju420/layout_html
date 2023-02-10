@@ -662,9 +662,6 @@ fieldset {
     width: 100%;
     padding: 180px 0 0 50px;
   }
-  .com .sub_Visual .visual_box .inner .title_txt h1 {
-    font-size: 12vmin;
-  }
   .com .sub_Visual .visual_box .inner .title_txt p {
     font-size: 3vmin;
   }
@@ -703,13 +700,12 @@ fieldset {
   }
   .com .sub_Visual .visual_box .inner {
     width: 100%;
-    padding: 260px 0 0 30px;
   }
-  .com .sub_Visual .visual_box .inner .title_txt h1 {
-    font-size: 12vmin;
+  .com .sub_Visual .visual_box .inner .title_txt {
+    text-align: center;
   }
   .com .sub_Visual .visual_box .inner .title_txt p {
-    font-size: 3vmin;
+    font-size: 4vmin;
   }
   .com .sub_con > .inner {
     width: 100%;
@@ -1093,11 +1089,8 @@ figure.popup .closeBtn i {
   }
 }
 @media screen and (max-width: 539px) {
-  .gallery visual_box {
+  .gallery .visual_box {
     background: url("../img/sub/visual/gallery_m.jpg") no-repeat center top/cover;
-  }
-  .gallery .sub_con .inner > h1 {
-    text-align: center;
   }
   .gallery .sub_con .inner .tab_cont {
     height: 620vh;
@@ -1518,9 +1511,6 @@ figure.popup .closeBtn i {
   .mypage .visual_box {
     background: url("../img/sub/visual/join_m.jpg") center/no-repeat;
   }
-  .mypage .sub_con > .inner h1 {
-    text-align: center;
-  }
   .mypage .sub_con > .inner form table {
     width: 100%;
   }
@@ -1714,9 +1704,6 @@ figure.popup .closeBtn i {
 @media screen and (max-width: 539px) {
   .notice .visual_box {
     background: url("../img/sub/visual/notice_m.jpg") no-repeat right bottom/cover;
-  }
-  .notice .sub_con > .inner > h1 {
-    text-align: center;
   }
   .notice .sub_con > .inner .wrap article table tbody > tr {
     height: 0;
@@ -1930,13 +1917,9 @@ figure.popup .closeBtn i {
   .contactUs .sub_con > .inner .sns a i {
     font-size: 20px;
   }
-  .contactUs .sub_con > .inner > h1 {
-    text-align: center;
-  }
   .contactUs .sub_con > .inner span {
     font-size: 16px;
     display: block;
-    text-align: center;
   }
   .contactUs .sub_con > .inner span:nth-of-type(2) {
     display: none;
