@@ -1307,9 +1307,7 @@ figure.popup .closeBtn i {
   }
 }
 .mypage .visual_box {
-  background: url("../img/sub/visual/join_b.jpg") no-repeat;
-  background-size: cover;
-  background-position: center 73%;
+  background: url("../img/sub/visual/join_b.jpg") no-repeat center/cover;
 }
 .mypage .sub_con > .inner {
   display: block;
@@ -1505,7 +1503,7 @@ figure.popup .closeBtn i {
 }
 @media screen and (max-width: 539px) {
   .mypage .visual_box {
-    background: url("../img/sub/visual/join_m.jpg") no-repeat;
+    background: url("../img/sub/visual/join_b.jpg") no-repeat center/cover;
   }
   .mypage .sub_con > .inner form table {
     width: 100%;
