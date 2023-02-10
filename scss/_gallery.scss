@@ -33,7 +33,6 @@
 					width: calc(100% / 2);
 					margin-right: 40px;
 					padding: 20px 0;
-					// background: $basicColor1;
 					font-family: $contentFont;
 					font-weight: 300;
 					color: $basicFontColor;
@@ -42,10 +41,8 @@
 						margin-right: 0;
 					}
 					&.on {
-						// height: 100%;
 						color: $strongColor;
 						font-weight: 500;
-						// background: salmon;
 						border-bottom: 2px solid $strongColor;
 					}
 					span {
@@ -57,9 +54,6 @@
 						margin-top: 30px;
 					}
 				}
-				// h2.new {
-				// 	margin-top: 50px;
-				// }
 			}
 			.tab_cont {
 				position: relative;
@@ -180,7 +174,7 @@
 						width: 100%;
 						// padding: 50px 0;
 						.loading {
-							width: 100px;
+							width: 200px;
 							position: relative;
 							top: -300px;
 							left: 50%;
@@ -194,11 +188,11 @@
 						#list {
 							width: 100%;
 							opacity: 1;
-							transform: translateY(100px);
+							transform: translateY(190px);
 							transition: 1s;
 							&.on {
 								opacity: 1;
-								transform: translateY(-100px);
+								transform: translateY(-190px);
 							}
 							&::after {
 								content: '';
@@ -247,51 +241,40 @@
 						}
 					}
 					aside {
-						width: 100%;
-						height: 100vh;
-						background: rgba(0, 0, 0, 0.8);
 						position: fixed;
 						top: 0;
 						left: 0;
-						display: flex;
-						justify-content: center;
-						align-items: center;
+						width: 100%;
+						height: 100%;
+						background: rgba(0, 0, 0, 0.8);
+						padding: 9vw;
 						z-index: 2;
-						// position: relative;
-						img {
-							height: 100%;
-						}
-						.close {
+						.imgCont {
 							position: absolute;
-							top: 20px;
-							right: 20px;
-							cursor: pointer;
-							display: block;
-							opacity: 0.7;
-							i {
-								font-size: 35px;
-								color: #fff;
+							top: 50%;
+							left: 50%;
+							transform: translate(-50%, -50%);
+							position: relative;
+							padding-bottom: 56.25%;
+							img {
+								position: absolute;
+								top: 0;
+								left: 0;
+								@include imgFit;
+							}
+							.close {
+								position: absolute;
+								top: -2px;
+								right: -50px;
+								cursor: pointer;
+								display: block;
+								opacity: 0.7;
+								i {
+									font-size: 35px;
+									color: #fff;
+								}
 							}
 						}
-						// a {
-						// 	position: absolute;
-						// 	top: 0;
-						// 	right: -50px;
-						// 	cursor: pointer;
-						// 	display: block;
-						// 	opacity: 0.7;
-						// 	i {
-						// 		font-size: 35px;
-						// 		color: #fff;
-						// 	}
-						// }
-						// span {
-						// 	position: absolute;
-						// 	top: 20px;
-						// 	right: 20px;
-						// 	color: #fff;
-						// 	cursor: pointer;
-						// }
 					}
 				}
 			}
@@ -401,38 +384,6 @@ figure.popup {
 								}
 							}
 						}
-						aside {
-							width: 100%;
-							height: 100vh;
-							background: rgba(0, 0, 0, 0.8);
-							position: fixed;
-							top: 0;
-							left: 0;
-							display: flex;
-							justify-content: center;
-							align-items: center;
-							img {
-								height: 100%;
-							}
-							// a {
-							// 	position: absolute;
-							// 	top: 0;
-							// 	right: -50px;
-							// 	cursor: pointer;
-							// 	display: block;
-							// 	opacity: 0.7;
-							// 	i {
-							// 		font-size: 35px;
-							// 		color: #fff;
-							// 	}
-							// }
-							span {
-								position: absolute;
-								top: 20px;
-								right: 20px;
-								color: #fff;
-							}
-						}
 					}
 				}
 			}
@@ -509,37 +460,15 @@ figure.popup {
 									}
 								}
 							}
-							aside {
-								width: 100%;
-								height: 100vh;
-								background: rgba(0, 0, 0, 0.8);
-								position: fixed;
-								top: 0;
-								left: 0;
-								display: flex;
-								justify-content: center;
-								align-items: center;
-								// position: relative;
-								img {
-									height: 100%;
-								}
-								// a {
-								// 	position: absolute;
-								// 	top: 0;
-								// 	right: -50px;
-								// 	cursor: pointer;
-								// 	display: block;
-								// 	opacity: 0.7;
-								// 	i {
-								// 		font-size: 35px;
-								// 		color: #fff;
-								// 	}
-								// }
-								span {
-									position: absolute;
-									top: 20px;
-									right: 20px;
-									color: #fff;
+						}
+						aside {
+							.imgCont {
+								.close {
+									top: -130px;
+									right: 44%;
+									i {
+										font-size: 50px;
+									}
 								}
 							}
 						}

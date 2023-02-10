@@ -5,7 +5,7 @@ const method = 'flickr.favorites.getList';
 const method1 = 'flickr.photos.search';
 const flickr_key = '8dfeab6f923483f4b3694e700652632a';
 const user_id = '195427004@N07';
-const per_page = 15;
+const per_page = 150;
 const gal = document.querySelector('#gallery');
 const frame = gal.querySelector('#list');
 const loading = gal.querySelector('.loading');
@@ -62,10 +62,12 @@ frame.addEventListener('click', e => {
         // document.body.style.overflow ='hidden';
         document.body.classList.add('hidden');
         let pops = `
-    	<img src="${imgSrc}">
-    	<span class="close">
-            <i class="far fa-times-circle"></i>
-        </span>
+        <div class='imgCont'>
+            <img src="${imgSrc}">
+            <span class="close">
+                <i class="far fa-times-circle"></i>
+            </span>
+        </div>
         `;
         pop.innerHTML = pops;
         gal.append(pop);
@@ -78,7 +80,7 @@ gal.addEventListener('click', (e) => {
     //pop이라는 클래스를 추적한다
     let pop = gal.querySelector('.pop');
     if (pop != null) {
-        //탑이 존재하는지
+        //팝이 존재하는지
         let close = pop.querySelector('.close> i');
         if (e.target == close) {
             pop.remove();
@@ -90,8 +92,6 @@ gal.addEventListener('click', (e) => {
 //리사이즈시 
 window.addEventListener('resize', () => {
     let pop = gal.querySelector('.pop');
-    wid = window.innerWidth;
-
     if (pop) document.body.classList.add('hidden');
 });
 
@@ -156,7 +156,7 @@ function Loading() {
         })
 
         el.addEventListener('error', () => {
-            e.currentTarget.closest('.item').querySelector('img').setAttribute('src', 'img/k1.jpg');
+            e.currentTarget.closest('.imgs').querySelector('img').setAttribute('src', 'img/k1.jpg');
         })
     }
 }
