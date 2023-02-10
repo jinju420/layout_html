@@ -1462,6 +1462,9 @@ figure.popup .closeBtn i {
 }
 
 @media screen and (max-width: 1179px) {
+  .mypage .visual_box {
+    background-position: center 73%;
+  }
   .mypage .sub_con > .inner form {
     display: block;
   }
@@ -1710,7 +1713,7 @@ figure.popup .closeBtn i {
 }
 @media screen and (max-width: 539px) {
   .notice .visual_box {
-    background: url("../img/sub/visual/notice_m.jpg") no-repeat center bottom/cover;
+    background: url("../img/sub/visual/notice_m.jpg") no-repeat right bottom/cover;
   }
   .notice .sub_con > .inner > h1 {
     text-align: center;

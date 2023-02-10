@@ -158,7 +158,10 @@
 
 //tablet
 @media screen and (max-width: $tablet) {
-	.mypage {	
+	.mypage {
+		.visual_box {
+			background-position: center 73%;
+		}
 		.sub_con {
 			> .inner {
 				form {
