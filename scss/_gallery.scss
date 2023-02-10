@@ -17,7 +17,6 @@
 		.inner {
 			display: block;
 			opacity: 1;
-			// height: 1800px;
 			> h1 {
 				opacity: 0.7;
 				margin-bottom: 50px;
@@ -57,7 +56,7 @@
 			}
 			.tab_cont {
 				position: relative;
-				height: 2000px;
+				height: auto;
 				.cont {
 					opacity: 0;
 					visibility: hidden;
@@ -80,7 +79,6 @@
 						width: calc((100% - 40px) / 3);
 						height: 100%;
 						margin-bottom: 25px;
-						// border-radius: 15px;
 						isolation: isolate;
 						background: $basicColor1;
 						overflow: hidden;
@@ -91,7 +89,6 @@
 						.pic {
 							display: block;
 							width: 100%;
-							// height: 55%;
 							filter: saturate(30%) brightness(90%);
 							transition: 0.5s;
 							img {
@@ -324,11 +321,9 @@ figure.popup {
 @media screen and (max-width: $tablet) {
 	.gallery {
 		.sub_con {
-			// height: auto;
 			.inner {
-				// height: 430vmin;
 				.tab_cont {
-					height: 410vh;
+					height: 200vmin;
 					.vids {
 						article {
 							width: calc((100% - 40px) / 2);
@@ -337,6 +332,7 @@ figure.popup {
 								height: 35vmin;
 							}
 							.con {
+								height: 160px;
 								h2 {
 									margin-bottom: 20px;
 									font-size: 22px;
@@ -356,7 +352,7 @@ figure.popup {
 									text-overflow: ellipsis;
 
 									display: -webkit-box;
-									-webkit-line-clamp: 2;
+									-webkit-line-clamp: 1;
 									-webkit-box-orient: vertical;
 								}
 								span {
@@ -393,20 +389,15 @@ figure.popup {
 //mobile
 @media screen and (max-width: $mobile) {
 	.gallery {
-		.visual_box {
-			background: url('../img/sub/visual/gallery_m.jpg') no-repeat center top/cover;
-		}
 		.sub_con {
 			.inner {
-				// height: 693vh;
 				.tab_cont {
-					height: 620vh;
 					.vids {
 						article {
 							width: 100%;
 							margin-bottom: 30px;
 							.pic {
-								height: 27vmax;
+								height: 42vmax;
 							}
 							.con {
 								h2 {

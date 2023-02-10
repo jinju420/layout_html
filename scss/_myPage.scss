@@ -1,8 +1,6 @@
 .mypage {
 	.visual_box {
 		background: url('../img/sub/visual/join_b.jpg') no-repeat center/cover;
-		// background-size: cover;
-		// background-position: center 73%;
 	}
 	.sub_con {
 		> .inner {
@@ -218,7 +216,6 @@
 //mobile
 @media screen and (max-width: $mobile) {
 	.mypage {
-
 		.sub_con {
 			> .inner {
 				form {

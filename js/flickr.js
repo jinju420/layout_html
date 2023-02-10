@@ -5,12 +5,13 @@ const method = 'flickr.favorites.getList';
 const method1 = 'flickr.photos.search';
 const flickr_key = '8dfeab6f923483f4b3694e700652632a';
 const user_id = '195427004@N07';
-const per_page = 150;
+const per_page = 8;
 const gal = document.querySelector('#gallery');
 const frame = gal.querySelector('#list');
 const loading = gal.querySelector('.loading');
 const input = gal.querySelector('#search');
 const btn = gal.querySelector('.btn');
+const youtube = document.querySelector('.vids')
 const url1 = `${base}method=${method}&api_key=${flickr_key}&per_page=${per_page}&format=json&nojsoncallback=1&user_id=${user_id}`;
 const url2 = `${base}method=${method1}&api_key=${flickr_key}&per_page=${per_page}&format=json&nojsoncallback=1&tags=인테리어&privacy_filter=1`;
 
