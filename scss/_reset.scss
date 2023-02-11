@@ -12,21 +12,31 @@ a {
 	text-decoration: none;
 	color: $basicFontColor;
 }
-input,
-textarea,
+
 button,
+textarea,
 select {
+	appearance: none;
+	-moz-appearance: none;
+	-webkit-appearance: none;
 	border: none;
 	border-radius: 0;
 	-webkit-border-radius: 0;
 	-moz-border-radius: 0;
 }
-select {appearance: none;
-	-moz-appearance: none;
-	-webkit-appearance: none;}
+input {
+	border: none;
+	border-radius: 0;
+	-webkit-border-radius: 0;
+	-moz-border-radius: 0;
+}
+// select {
+// 	appearance: none;
+// 	-moz-appearance: none;
+// 	-webkit-appearance: none;
+// }
 select::-ms-expand {
 	display: none;
-	
 }
 body {
 	height: 100%;
