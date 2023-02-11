@@ -36,6 +36,7 @@
 					font-weight: 300;
 					color: $basicFontColor;
 					border-bottom: 2px solid $basicFontColor;
+					z-index: 2;
 					&:last-child {
 						margin-right: 0;
 					}
@@ -170,7 +171,7 @@
 					#wrap {
 						width: 100%;
 						.loading {
-							width: 200px;
+							// width: 200px;
 							position: relative;
 							top: -300px;
 							left: 50%;
@@ -188,7 +189,7 @@
 							transition: 1s;
 							&.on {
 								opacity: 1;
-								transform: translateY(-190px);
+								transform: translateY(-30px);
 							}
 							&::after {
 								content: '';
@@ -444,7 +445,7 @@ figure.popup {
 											height: auto;
 											font: 16px/1.5 $contentFont;
 											text-align: left;
-											-webkit-line-clamp: 3;
+											-webkit-line-clamp: 2;
 											padding: 0 10px 0 30px;
 										}
 									}

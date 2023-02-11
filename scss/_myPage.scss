@@ -218,7 +218,9 @@
 	.mypage {
 		.sub_con {
 			> .inner {
+				padding: 80px 0;
 				form {
+					padding: 30px;
 					table {
 						width: 100%;
 						&:last-child {
@@ -234,6 +236,8 @@
 						}
 						tr {
 							display: block;
+							width: 85%;
+							margin: 0 auto;
 						}
 						td {
 							width: 100%;

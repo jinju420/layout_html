@@ -20,12 +20,16 @@ input,
 textarea,
 button,
 select {
-  appearance: none;
-  -moz-appearance: none;
-  -webkit-appearance: none;
+  border: none;
   border-radius: 0;
   -webkit-border-radius: 0;
   -moz-border-radius: 0;
+}
+
+select {
+  appearance: none;
+  -moz-appearance: none;
+  -webkit-appearance: none;
 }
 
 select::-ms-expand {
@@ -766,6 +770,7 @@ fieldset {
   font-weight: 300;
   color: #666;
   border-bottom: 2px solid #666;
+  z-index: 2;
 }
 .gallery .sub_con .inner .tab_title > h2:last-child {
   margin-right: 0;
@@ -900,7 +905,6 @@ fieldset {
   width: 100%;
 }
 .gallery .sub_con .inner .tab_cont #gallery #wrap .loading {
-  width: 200px;
   position: relative;
   top: -300px;
   left: 50%;
@@ -919,7 +923,7 @@ fieldset {
 }
 .gallery .sub_con .inner .tab_cont #gallery #wrap #list.on {
   opacity: 1;
-  transform: translateY(-190px);
+  transform: translateY(-30px);
 }
 .gallery .sub_con .inner .tab_cont #gallery #wrap #list::after {
   content: "";
@@ -1142,7 +1146,7 @@ figure.popup .closeBtn i {
     height: auto;
     font: 16px/1.5 "Montserrat";
     text-align: left;
-    -webkit-line-clamp: 3;
+    -webkit-line-clamp: 2;
     padding: 0 10px 0 30px;
   }
   .gallery .sub_con .inner .tab_cont #gallery aside .imgCont .close {
@@ -1495,6 +1499,12 @@ figure.popup .closeBtn i {
   }
 }
 @media screen and (max-width: 539px) {
+  .mypage .sub_con > .inner {
+    padding: 80px 0;
+  }
+  .mypage .sub_con > .inner form {
+    padding: 30px;
+  }
   .mypage .sub_con > .inner form table {
     width: 100%;
   }
@@ -1507,6 +1517,8 @@ figure.popup .closeBtn i {
   }
   .mypage .sub_con > .inner form table tr {
     display: block;
+    width: 85%;
+    margin: 0 auto;
   }
   .mypage .sub_con > .inner form table td {
     width: 100%;
@@ -2839,6 +2851,9 @@ figure.popup .closeBtn i {
   }
 }
 @media screen and (max-width: 539px) {
+  #header .inner > h1 {
+    left: 30px;
+  }
   #header .inner .menuMo .loginBox {
     width: 100%;
   }
@@ -2918,6 +2933,7 @@ figure.popup .closeBtn i {
   }
   #footer .inner .wrap {
     display: flex;
+    padding: 50px 30px;
   }
   #footer .inner .wrap article {
     width: 100%;

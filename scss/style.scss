@@ -968,6 +968,9 @@ $mobile: 539px;
 	//header
 	#header {
 		.inner {
+			> h1 {
+				left: 30px;
+			}
 			.menuMo {
 				.loginBox {
 					width: 100%;
@@ -1082,12 +1085,10 @@ $mobile: 539px;
 		.inner {
 			.wrap {
 				display: flex;
-				// flex-wrap: wrap;
+				padding: 50px 30px;
 				article {
 					width: 100%;
 					margin-right: 0;
-					// padding: 20px 30px;
-					// margin-bottom: 20px;
 					i {
 						font-size: 7vmin;
 					}
