@@ -16,7 +16,6 @@ a {
   color: #666;
 }
 
-button,
 textarea,
 select {
   appearance: none;
@@ -30,6 +29,7 @@ select {
 
 input {
   border: none;
+  outline: none;
   border-radius: 0;
   -webkit-border-radius: 0;
   -moz-border-radius: 0;
@@ -1432,6 +1432,13 @@ figure.popup .closeBtn i {
   font-size: 14px;
   width: 152px;
   box-shadow: 5px 3px 6px rgba(0, 0, 0, 0.2);
+  appearance: none;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  border: none;
+  border-radius: 0;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
 }
 .mypage .sub_con > .inner form table input[type=reset]:hover,
 .mypage .sub_con > .inner form table input[type=submit]:hover {

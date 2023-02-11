@@ -13,7 +13,7 @@ a {
 	color: $basicFontColor;
 }
 
-button,
+
 textarea,
 select {
 	appearance: none;
@@ -26,6 +26,7 @@ select {
 }
 input {
 	border: none;
+	outline: none;
 	border-radius: 0;
 	-webkit-border-radius: 0;
 	-moz-border-radius: 0;
