@@ -4,14 +4,16 @@ const base = 'https://www.flickr.com/services/rest/?';
 const method = 'flickr.favorites.getList';
 const method1 = 'flickr.photos.search';
 const flickr_key = '8dfeab6f923483f4b3694e700652632a';
-const user_id = '195427004@N07';
-const per_page = 8;
-const gal = document.querySelector('#gallery');
+const user_id = '195427004@N07';//즐겨찾기이미지
+const per_page = 10;
+const per_page2 = 16;
+const galCont = document.querySelector('.gallery');
+const gal = galCont.querySelector('#gallery');
 const frame = gal.querySelector('#list');
 const loading = gal.querySelector('.loading');
 const input = gal.querySelector('#search');
 const btn = gal.querySelector('.btn');
-const youtube = document.querySelector('.vids')
+const youtube = galCont.querySelector('.vids')
 const url1 = `${base}method=${method}&api_key=${flickr_key}&per_page=${per_page}&format=json&nojsoncallback=1&user_id=${user_id}`;
 const url2 = `${base}method=${method1}&api_key=${flickr_key}&per_page=${per_page}&format=json&nojsoncallback=1&tags=인테리어&privacy_filter=1`;
 
@@ -49,7 +51,6 @@ input.addEventListener('keypress', e => {
 frame.addEventListener('click', e => {
     e.preventDefault();
     //클릭한 대상이 #list이면 return하도록
-
     if (e.target == frame) return;
     //썸네일을 클릭해야지만 볼수있도록
     let target = e.target.closest('.imgs').querySelector('.thumb');
@@ -94,7 +95,15 @@ gal.addEventListener('click', (e) => {
 window.addEventListener('resize', () => {
     let pop = gal.querySelector('.pop');
     if (pop) document.body.classList.add('hidden');
+
 });
+if (539 >= window.innerWidth) {
+    // frame.innerHTML = '';
+    // loading.classList.remove('off');
+    // frame.classList.remove('on');
+    
+    callDate(url1)
+}
 
 
 //flickr
@@ -109,7 +118,6 @@ function callDate(url1) {
         })
         .then((json) => {
             const items = json.photos.photo;
-            // console.log(items);
 
             if (items.length > 0) {
                 createImgs(items);
