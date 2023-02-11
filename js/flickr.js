@@ -6,7 +6,6 @@ const method1 = 'flickr.photos.search';
 const flickr_key = '8dfeab6f923483f4b3694e700652632a';
 const user_id = '195427004@N07';//즐겨찾기이미지
 const per_page = 10;
-const per_page2 = 16;
 const galCont = document.querySelector('.gallery');
 const gal = galCont.querySelector('#gallery');
 const frame = gal.querySelector('#list');
@@ -97,13 +96,13 @@ window.addEventListener('resize', () => {
     if (pop) document.body.classList.add('hidden');
 
 });
-if (539 >= window.innerWidth) {
-    // frame.innerHTML = '';
-    // loading.classList.remove('off');
-    // frame.classList.remove('on');
+// if (539 >= window.innerWidth) {
+//     // frame.innerHTML = '';
+//     // loading.classList.remove('off');
+//     // frame.classList.remove('on');
     
-    callDate(url1)
-}
+//     callDate(url1)
+// }
 
 
 //flickr
@@ -144,13 +143,13 @@ function createImgs(items) {
                     <a href=${imgSrcBig}>
                         <img class="thumb" src=${imgSrc}>
                     </a>
-                    <p>${item.title}</p>
-                </div>
-            </li>
-        `;
-    })
-    frame.innerHTML = htmls;
-}
+                    </div>
+                    </li>
+                    `;
+                })
+                frame.innerHTML = htmls;
+            }
+            // <p>${item.title}</p>
 
 //로딩
 function Loading() {

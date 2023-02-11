@@ -793,6 +793,10 @@ fieldset {
 .gallery .sub_con .inner .tab_title > h2 .new {
   margin-top: 30px;
 }
+.gallery .sub_con .inner .tab_cont {
+  position: relative;
+  height: auto;
+}
 .gallery .sub_con .inner .tab_cont .cont {
   opacity: 0;
   visibility: hidden;
@@ -801,10 +805,7 @@ fieldset {
   opacity: 1;
   visibility: visible;
 }
-.gallery .sub_con .inner .tab_cont.cont1 .wrap {
-  position: relative;
-}
-.gallery .sub_con .inner .tab_cont.cont1 .wrap .vids {
+.gallery .sub_con .inner .tab_cont .vids {
   position: absolute;
   top: 0;
   left: 0;
@@ -815,10 +816,10 @@ fieldset {
   align-content: flex-start;
   padding-bottom: 80px;
 }
-.gallery .sub_con .inner .tab_cont.cont1 .wrap .vids article {
+.gallery .sub_con .inner .tab_cont .vids article {
   width: calc((100% - 40px) / 3);
   height: 100%;
-  margin-bottom: 25px;
+  margin-bottom: 30px;
   isolation: isolate;
   background: #f8f5f0;
   overflow: hidden;
@@ -827,39 +828,39 @@ fieldset {
   -webkit-transform: translate3d(0, 0, 0);
   -moz-transform: translate3d(0, 0, 0);
 }
-.gallery .sub_con .inner .tab_cont.cont1 .wrap .vids article .pic {
+.gallery .sub_con .inner .tab_cont .vids article .pic {
   display: block;
   width: 100%;
   filter: saturate(30%) brightness(90%);
   transition: 0.5s;
 }
-.gallery .sub_con .inner .tab_cont.cont1 .wrap .vids article .pic img {
+.gallery .sub_con .inner .tab_cont .vids article .pic img {
   width: 100%;
   height: 100%;
   object-fit: cover;
 }
-.gallery .sub_con .inner .tab_cont.cont1 .wrap .vids article .pic:hover {
+.gallery .sub_con .inner .tab_cont .vids article .pic:hover {
   filter: saturate(100%) brightness(100%);
 }
-.gallery .sub_con .inner .tab_cont.cont1 .wrap .vids article .con {
+.gallery .sub_con .inner .tab_cont .vids article .con {
   width: 100%;
   height: 200px;
   padding: 20px;
   opacity: 0.7;
 }
-.gallery .sub_con .inner .tab_cont.cont1 .wrap .vids article .con h2 {
+.gallery .sub_con .inner .tab_cont .vids article .con h2 {
   font-size: 22px;
   font-family: "Poppins";
   margin-bottom: 30px;
 }
-.gallery .sub_con .inner .tab_cont.cont1 .wrap .vids article .con p {
+.gallery .sub_con .inner .tab_cont .vids article .con p {
   font-size: 18px;
   font-weight: bold;
   line-height: 1.5;
   font-family: "Poppins";
   margin-bottom: 20px;
 }
-.gallery .sub_con .inner .tab_cont.cont1 .wrap .vids article .con span {
+.gallery .sub_con .inner .tab_cont .vids article .con span {
   font-size: 15px;
   text-align: right;
   display: block;
@@ -867,12 +868,15 @@ fieldset {
   font-weight: bold;
   font-family: "Montserrat";
 }
-.gallery .sub_con .inner .tab_cont.cont2 .wrap1 #gallery #searchBox {
+.gallery .sub_con .inner .tab_cont .vids.hidden {
+  display: none;
+}
+.gallery .sub_con .inner .tab_cont #gallery #searchBox {
   width: 100%;
   font-size: 0;
   text-align: right;
 }
-.gallery .sub_con .inner .tab_cont.cont2 .wrap1 #gallery #searchBox input[type=text] {
+.gallery .sub_con .inner .tab_cont #gallery #searchBox input[type=text] {
   width: 300px;
   height: 35px;
   outline: none;
@@ -880,14 +884,14 @@ fieldset {
   padding-left: 15px;
   border: none;
 }
-.gallery .sub_con .inner .tab_cont.cont2 .wrap1 #gallery #searchBox input[type=text]::placeholder {
+.gallery .sub_con .inner .tab_cont #gallery #searchBox input[type=text]::placeholder {
   color: #aaa;
   font-size: 12px;
 }
-.gallery .sub_con .inner .tab_cont.cont2 .wrap1 #gallery #searchBox input[type=text]:focus {
+.gallery .sub_con .inner .tab_cont #gallery #searchBox input[type=text]:focus {
   background: #eee;
 }
-.gallery .sub_con .inner .tab_cont.cont2 .wrap1 #gallery #searchBox .btn {
+.gallery .sub_con .inner .tab_cont #gallery #searchBox .btn {
   width: 80px;
   height: 35px;
   background: #e7ded7;
@@ -901,14 +905,14 @@ fieldset {
   vertical-align: top;
   transition: 0.5s;
 }
-.gallery .sub_con .inner .tab_cont.cont2 .wrap1 #gallery #searchBox .btn:hover {
+.gallery .sub_con .inner .tab_cont #gallery #searchBox .btn:hover {
   background: #a06138;
   color: #fff;
 }
-.gallery .sub_con .inner .tab_cont.cont2 .wrap1 #gallery #wrap {
+.gallery .sub_con .inner .tab_cont #gallery #wrap {
   width: 100%;
 }
-.gallery .sub_con .inner .tab_cont.cont2 .wrap1 #gallery #wrap .loading {
+.gallery .sub_con .inner .tab_cont #gallery #wrap .loading {
   position: relative;
   top: -200px;
   left: 50%;
@@ -916,45 +920,52 @@ fieldset {
   transition: 1s;
   opacity: 1;
 }
-.gallery .sub_con .inner .tab_cont.cont2 .wrap1 #gallery #wrap .loading.off {
+.gallery .sub_con .inner .tab_cont #gallery #wrap .loading.off {
   opacity: 0;
 }
-.gallery .sub_con .inner .tab_cont.cont2 .wrap1 #gallery #wrap #list {
+.gallery .sub_con .inner .tab_cont #gallery #wrap #list {
   width: 100%;
   opacity: 1;
   transform: translateY(190px);
   transition: 1s;
 }
-.gallery .sub_con .inner .tab_cont.cont2 .wrap1 #gallery #wrap #list.on {
+.gallery .sub_con .inner .tab_cont #gallery #wrap #list.on {
   opacity: 1;
   transform: translateY(-30px);
 }
-.gallery .sub_con .inner .tab_cont.cont2 .wrap1 #gallery #wrap #list::after {
+.gallery .sub_con .inner .tab_cont #gallery #wrap #list::after {
   content: "";
   display: block;
   clear: both;
 }
-.gallery .sub_con .inner .tab_cont.cont2 .wrap1 #gallery #wrap #list li {
+.gallery .sub_con .inner .tab_cont #gallery #wrap #list li {
   width: 25%;
   float: left;
   padding: 10px;
+  transition: 0.5s;
 }
-.gallery .sub_con .inner .tab_cont.cont2 .wrap1 #gallery #wrap #list li div {
+.gallery .sub_con .inner .tab_cont #gallery #wrap #list li div {
   width: 100%;
   padding: 20px;
-  box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.1);
+  box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.3);
   border-radius: 5px;
   overflow: hidden;
+  transition: 0.5s;
 }
-.gallery .sub_con .inner .tab_cont.cont2 .wrap1 #gallery #wrap #list li div a > img {
+.gallery .sub_con .inner .tab_cont #gallery #wrap #list li div a {
+  height: 100%;
+}
+.gallery .sub_con .inner .tab_cont #gallery #wrap #list li div a > img {
   width: 100%;
+  height: 100%;
+  object-fit: cover;
   transition: 1s;
   filter: saturate(30%) brightness(70%);
 }
-.gallery .sub_con .inner .tab_cont.cont2 .wrap1 #gallery #wrap #list li div a > img:hover {
+.gallery .sub_con .inner .tab_cont #gallery #wrap #list li div a > img:hover {
   filter: saturate(100%) brightness(100%);
 }
-.gallery .sub_con .inner .tab_cont.cont2 .wrap1 #gallery #wrap #list li div p {
+.gallery .sub_con .inner .tab_cont #gallery #wrap #list li div p {
   font: 13px/1.2 "Montserrat";
   color: #666;
   margin-top: 10px;
@@ -968,7 +979,12 @@ fieldset {
   -webkit-line-clamp: 3;
   -webkit-box-orient: vertical;
 }
-.gallery .sub_con .inner .tab_cont.cont2 .wrap1 #gallery aside {
+.gallery .sub_con .inner .tab_cont #gallery #wrap #list li div:hover {
+  transform: scale(1.06);
+  box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.7);
+  background: rgba(160, 97, 56, 0.5);
+}
+.gallery .sub_con .inner .tab_cont #gallery aside {
   position: fixed;
   top: 0;
   left: 0;
@@ -978,7 +994,7 @@ fieldset {
   padding: 9vw;
   z-index: 2;
 }
-.gallery .sub_con .inner .tab_cont.cont2 .wrap1 #gallery aside .imgCont {
+.gallery .sub_con .inner .tab_cont #gallery aside .imgCont {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -986,7 +1002,7 @@ fieldset {
   position: relative;
   padding-bottom: 56.25%;
 }
-.gallery .sub_con .inner .tab_cont.cont2 .wrap1 #gallery aside .imgCont img {
+.gallery .sub_con .inner .tab_cont #gallery aside .imgCont img {
   position: absolute;
   top: 0;
   left: 0;
@@ -994,7 +1010,7 @@ fieldset {
   height: 100%;
   object-fit: cover;
 }
-.gallery .sub_con .inner .tab_cont.cont2 .wrap1 #gallery aside .imgCont .close {
+.gallery .sub_con .inner .tab_cont #gallery aside .imgCont .close {
   position: absolute;
   top: -2px;
   right: -50px;
@@ -1002,9 +1018,12 @@ fieldset {
   display: block;
   opacity: 0.7;
 }
-.gallery .sub_con .inner .tab_cont.cont2 .wrap1 #gallery aside .imgCont .close i {
+.gallery .sub_con .inner .tab_cont #gallery aside .imgCont .close i {
   font-size: 35px;
   color: #fff;
+}
+.gallery .sub_con .inner .tab_cont #gallery.hidden {
+  display: none;
 }
 
 figure.popup {
@@ -1048,14 +1067,17 @@ figure.popup .closeBtn i {
 }
 
 @media screen and (max-width: 1179px) {
-  .gallery .sub_con .inner .tab_cont.cont1 .wrap .vids article {
+  .gallery .sub_con .inner .tab_cont {
+    height: 223vh;
+  }
+  .gallery .sub_con .inner .tab_cont .vids article {
     width: calc((100% - 40px) / 2);
     height: 100%;
   }
-  .gallery .sub_con .inner .tab_cont.cont1 .wrap .vids article .con {
+  .gallery .sub_con .inner .tab_cont .vids article .con {
     height: 160px;
   }
-  .gallery .sub_con .inner .tab_cont.cont1 .wrap .vids article .con h2 {
+  .gallery .sub_con .inner .tab_cont .vids article .con h2 {
     margin-bottom: 20px;
     font-size: 22px;
     overflow: hidden;
@@ -1064,7 +1086,7 @@ figure.popup .closeBtn i {
     -webkit-line-clamp: 1;
     -webkit-box-orient: vertical;
   }
-  .gallery .sub_con .inner .tab_cont.cont1 .wrap .vids article .con p {
+  .gallery .sub_con .inner .tab_cont .vids article .con p {
     font-size: 18px;
     word-break: keep-all;
     overflow: hidden;
@@ -1073,16 +1095,16 @@ figure.popup .closeBtn i {
     -webkit-line-clamp: 1;
     -webkit-box-orient: vertical;
   }
-  .gallery .sub_con .inner .tab_cont.cont1 .wrap .vids article .con span {
+  .gallery .sub_con .inner .tab_cont .vids article .con span {
     font-size: 16px;
   }
-  .gallery .sub_con .inner .tab_cont.cont2 .wrap1 #gallery #wrap #list {
+  .gallery .sub_con .inner .tab_cont #gallery #wrap #list {
     padding: 0;
   }
-  .gallery .sub_con .inner .tab_cont.cont2 .wrap1 #gallery #wrap #list li {
+  .gallery .sub_con .inner .tab_cont #gallery #wrap #list li {
     width: 33.3333333333%;
   }
-  .gallery .sub_con .inner .tab_cont.cont2 .wrap1 #gallery #wrap #list li div p {
+  .gallery .sub_con .inner .tab_cont #gallery #wrap #list li div p {
     font: 13px/1.2 "Montserrat";
     color: #666;
     margin-top: 10px;
@@ -1091,83 +1113,59 @@ figure.popup .closeBtn i {
   }
 }
 @media screen and (max-width: 539px) {
-  .gallery .sub_con .inner .tab_title > h2 {
-    font-size: 4vmin;
+  .gallery .sub_con .inner .tab_cont {
+    height: 555vmin;
   }
-  .gallery .sub_con .inner .tab_cont.cont1 .wrap {
-    height: 420vmin;
-  }
-  .gallery .sub_con .inner .tab_cont.cont1 .wrap .vids article {
+  .gallery .sub_con .inner .tab_cont .vids article {
     width: 100%;
-    margin-bottom: 30px;
+    margin-bottom: 50px;
   }
-  .gallery .sub_con .inner .tab_cont.cont1 .wrap .vids article .pic {
+  .gallery .sub_con .inner .tab_cont .vids article .pic {
     min-height: 45vmin;
   }
-  .gallery .sub_con .inner .tab_cont.cont1 .wrap .vids article .con {
+  .gallery .sub_con .inner .tab_cont .vids article .con {
     min-height: 140px;
   }
-  .gallery .sub_con .inner .tab_cont.cont1 .wrap .vids article .con h2 {
+  .gallery .sub_con .inner .tab_cont .vids article .con h2 {
     font-size: 5vmin;
   }
-  .gallery .sub_con .inner .tab_cont.cont1 .wrap .vids article .con p {
+  .gallery .sub_con .inner .tab_cont .vids article .con p {
     font-size: 17px;
   }
-  .gallery .sub_con .inner .tab_cont.cont1 .wrap .vids article .con span {
+  .gallery .sub_con .inner .tab_cont .vids article .con span {
     font-size: 16px;
   }
-  .gallery .sub_con .inner .tab_cont.cont1.hidden {
-    display: none;
-  }
-  .gallery .sub_con .inner .tab_cont.cont2 .wrap1 #gallery #searchBox {
+  .gallery .sub_con .inner .tab_cont #gallery #searchBox {
     text-align: center;
   }
-  .gallery .sub_con .inner .tab_cont.cont2 .wrap1 #gallery #searchBox input[type=text] {
+  .gallery .sub_con .inner .tab_cont #gallery #searchBox input[type=text] {
     width: 50vw;
   }
-  .gallery .sub_con .inner .tab_cont.cont2 .wrap1 #gallery #wrap {
+  .gallery .sub_con .inner .tab_cont #gallery #wrap {
     padding: 20px 0;
   }
-  .gallery .sub_con .inner .tab_cont.cont2 .wrap1 #gallery #wrap #list {
+  .gallery .sub_con .inner .tab_cont #gallery #wrap #list {
     padding: 0;
   }
-  .gallery .sub_con .inner .tab_cont.cont2 .wrap1 #gallery #wrap #list li {
+  .gallery .sub_con .inner .tab_cont #gallery #wrap #list li {
     width: 100%;
-    margin-bottom: 0;
-    padding: 10px;
   }
-  .gallery .sub_con .inner .tab_cont.cont2 .wrap1 #gallery #wrap #list li div {
-    display: flex;
-    align-items: center;
-    padding: 0;
-    height: 13vh;
+  .gallery .sub_con .inner .tab_cont #gallery #wrap #list li div {
+    height: 35vmax;
   }
-  .gallery .sub_con .inner .tab_cont.cont2 .wrap1 #gallery #wrap #list li div a {
-    width: 120px;
-    height: 120px;
-  }
-  .gallery .sub_con .inner .tab_cont.cont2 .wrap1 #gallery #wrap #list li div a img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-  }
-  .gallery .sub_con .inner .tab_cont.cont2 .wrap1 #gallery #wrap #list li div p {
-    width: 250px;
-    height: auto;
-    font: 16px/1.5 "Montserrat";
-    text-align: left;
+  .gallery .sub_con .inner .tab_cont #gallery #wrap #list li div p {
+    font: 13px/1.2 "Montserrat";
+    color: #666;
+    margin-top: 10px;
+    margin-bottom: 10px;
     -webkit-line-clamp: 2;
-    padding: 0 10px 0 30px;
   }
-  .gallery .sub_con .inner .tab_cont.cont2 .wrap1 #gallery aside .imgCont .close {
+  .gallery .sub_con .inner .tab_cont #gallery aside .imgCont .close {
     top: -130px;
     right: 44%;
   }
-  .gallery .sub_con .inner .tab_cont.cont2 .wrap1 #gallery aside .imgCont .close i {
+  .gallery .sub_con .inner .tab_cont #gallery aside .imgCont .close i {
     font-size: 50px;
-  }
-  .gallery .sub_con .inner .tab_cont.cont2.hidden {
-    display: none;
   }
   figure.popup .closeBtn {
     top: -130px;

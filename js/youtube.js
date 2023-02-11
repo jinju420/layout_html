@@ -96,9 +96,6 @@ vids.addEventListener('click', e => {
 //리사이즈시 
 window.addEventListener('resize', e => {
     const pop = vids.querySelector('.popup');
-    wid = window.innerWidth;
-
-    console.log(wid);
     if (pop) document.body.classList.add('hidden');
 
     // if (wid <= 539) {
