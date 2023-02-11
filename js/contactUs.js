@@ -15,23 +15,23 @@ let storeOptions = [
     {
         title: '본점 홍대',
         lating: new kakao.maps.LatLng(37.5556741, 126.9297811),
-        imgSrc: 'img/content/content01.jpg',
-        imgSize: new kakao.maps.Size(232, 99),
-        imgPos: { offset: new kakao.maps.Point(116, 69) },
+        imgSrc: 'img/sub/marker1.png',
+        imgSize: new kakao.maps.Size(86, 99),
+        imgPos: { offset: new kakao.maps.Point(40, 113) },
         button: store[0]
     }, {
         title: '삼청 지점',
         lating: new kakao.maps.LatLng(37.5793944, 126.9846224),
-        imgSrc: 'img/content/content01.jpg',
-        imgSize: new kakao.maps.Size(232, 99),
-        imgPos: { offset: new kakao.maps.Point(116, 69) },
+        imgSrc: 'img/sub/marker2.png',
+        imgSize: new kakao.maps.Size(86, 99),
+        imgPos: { offset: new kakao.maps.Point(40, 113) },
         button: store[1]
     }, {
         title: '부산 지점',
         lating: new kakao.maps.LatLng(35.1553121, 129.0644697),
-        imgSrc: 'img/content/content01.jpg',
-        imgSize: new kakao.maps.Size(232, 99),
-        imgPos: { offset: new kakao.maps.Point(116, 69) },
+        imgSrc: 'img/sub/marker3.png',
+        imgSize: new kakao.maps.Size(86, 99),
+        imgPos: { offset: new kakao.maps.Point(40, 113) },
         button: store[2]
     }
 ]
@@ -47,6 +47,7 @@ for (let i = 0; i < storeOptions.length; i++) {
 
         for (let j = 0; j < storeOptions.length; j++) {
             storeOptions[j].button.classList.remove('on');
+
         }
         storeOptions[i].button.classList.add('on');
         moveTo(storeOptions[i].lating);

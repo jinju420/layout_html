@@ -51,15 +51,15 @@ $mobile: 539px;
 					margin-left: 40px;
 					&:hover:nth-of-type(1) .sub_menu {
 						display: block;
-						padding-right: 350px;
+						padding-right: 460px;
 					}
 					&:hover:nth-of-type(2) .sub_menu {
 						display: block;
-						padding-right: 164px;
+						padding-right: 315px;
 					}
 					&:hover:nth-of-type(3) .sub_menu {
 						display: block;
-						padding-right: 246px;
+						padding-right: 307px;
 					}
 					&:hover:nth-of-type(4) .sub_menu {
 						display: block;
@@ -658,13 +658,13 @@ $mobile: 539px;
 			top: 0;
 			left: 50px;
 			.prevBtn {
-				background: url('../img/prev.png') no-repeat center center/cover;
+				background: url('../img/content/prev.png') no-repeat center center/cover;
 				width: 50px;
 				height: 50px;
 				margin-right: 5px;
 			}
 			.nextBtn {
-				background: url('../img/prev.png') no-repeat center center/cover;
+				background: url('../img/content/prev.png') no-repeat center center/cover;
 				transform: rotate(180deg);
 				width: 50px;
 				height: 50px;
@@ -867,7 +867,6 @@ $mobile: 539px;
 									}
 								}
 							}
-							//article 하나하나 만든것
 							.pic {
 								height: 35vmax;
 							}
@@ -948,13 +947,11 @@ $mobile: 539px;
 			.wrap {
 				padding: 50px;
 				article {
-					// width: calc((100% - 160px) / 3);
 					margin-right: 80px;
 					&:nth-of-type(3) {
 						margin-right: 0;
 					}
 					i {
-						// font-size: 30px;
 						font-size: 6vmin;
 					}
 				}

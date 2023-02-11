@@ -33,15 +33,15 @@
 					margin-left: 40px;
 					&:hover:nth-of-type(1) .sub_menu {
 						display: block;
-						padding-right: 350px;
+						padding-right: 460px;
 					}
 					&:hover:nth-of-type(2) .sub_menu {
 						display: block;
-						padding-right: 164px;
+						padding-right: 315px;
 					}
 					&:hover:nth-of-type(3) .sub_menu {
 						display: block;
-						padding-right: 246px;
+						padding-right: 307px;
 					}
 					&:hover:nth-of-type(4) .sub_menu {
 						display: block;
@@ -693,10 +693,10 @@
 					width: 100%;
 					.title_txt {
 						> h1 {
-							font-size: 13vmin;
+							font-size: 16vmin;
 						}
 						p {
-							font-size: 4vmin;
+							font-size: 5vmin;
 						}
 					}
 				}

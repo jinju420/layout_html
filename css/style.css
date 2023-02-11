@@ -131,15 +131,15 @@ fieldset {
 }
 #sub_header .inner .menuWeb #gnb > li:hover:nth-of-type(1) .sub_menu {
   display: block;
-  padding-right: 350px;
+  padding-right: 460px;
 }
 #sub_header .inner .menuWeb #gnb > li:hover:nth-of-type(2) .sub_menu {
   display: block;
-  padding-right: 164px;
+  padding-right: 315px;
 }
 #sub_header .inner .menuWeb #gnb > li:hover:nth-of-type(3) .sub_menu {
   display: block;
-  padding-right: 246px;
+  padding-right: 307px;
 }
 #sub_header .inner .menuWeb #gnb > li:hover:nth-of-type(4) .sub_menu {
   display: block;
@@ -706,10 +706,10 @@ fieldset {
     width: 100%;
   }
   .com .sub_Visual .visual_box .inner .title_txt > h1 {
-    font-size: 13vmin;
+    font-size: 16vmin;
   }
   .com .sub_Visual .visual_box .inner .title_txt p {
-    font-size: 4vmin;
+    font-size: 5vmin;
   }
   .com .sub_con > .inner {
     width: 100%;
@@ -734,7 +734,7 @@ fieldset {
 }
 .gallery .visual_box {
   position: relative;
-  background: url("../img/sub/visual/gallery_b.jpg") no-repeat center/cover;
+  background: url("../img/sub/visual/gallery.jpg") no-repeat center/cover;
 }
 .gallery .visual_box::before {
   content: "";
@@ -1271,11 +1271,9 @@ figure.popup .closeBtn i {
   }
 }
 @media screen and (max-width: 539px) {
-  .brand .sub_con .inner h1 {
-    text-align: center;
-  }
   .brand .sub_con .inner .about > h1 {
     font-size: 14vmin;
+    text-align: center;
   }
   .brand .sub_con .inner .about p {
     text-align: center;
@@ -1283,9 +1281,6 @@ figure.popup .closeBtn i {
   }
   .brand .sub_con .inner .member {
     margin-top: 50px;
-  }
-  .brand .sub_con .inner .member h1 {
-    text-align: center;
   }
   .brand .sub_con .inner .member .member_wrap article {
     width: 100%;
@@ -1304,7 +1299,7 @@ figure.popup .closeBtn i {
   }
 }
 .mypage .visual_box {
-  background: url("../img/sub/visual/join_b.jpg") no-repeat center/cover;
+  background: url("../img/sub/visual/join.jpg") no-repeat center/cover;
 }
 .mypage .sub_con > .inner {
   display: block;
@@ -1383,7 +1378,7 @@ figure.popup .closeBtn i {
   font-family: "Montserrat";
 }
 .mypage .sub_con > .inner form table select {
-  background: url("../img/arrow.png") no-repeat 96% 50% #fff;
+  background: url("../img/sub/arrow.png") no-repeat 96% 50% #fff;
   width: 100%;
   height: 100%;
   background-size: 10px 7px;
@@ -1501,6 +1496,9 @@ figure.popup .closeBtn i {
 @media screen and (max-width: 539px) {
   .mypage .sub_con > .inner {
     padding: 80px 0;
+  }
+  .mypage .sub_con > .inner > h1 {
+    margin-left: 30px;
   }
   .mypage .sub_con > .inner form {
     padding: 30px;
@@ -1819,6 +1817,7 @@ figure.popup .closeBtn i {
   font: bold 14px/40px "Noto Sans KR";
   color: #fff;
   text-align: center;
+  letter-spacing: 1px;
 }
 .contactUs .sub_con > .inner .map_guide .traffic li.on a {
   background: #a06138;
@@ -1838,6 +1837,7 @@ figure.popup .closeBtn i {
   font: bold 14px/40px "Noto Sans KR";
   color: #fff;
   text-align: center;
+  letter-spacing: 1px;
 }
 .contactUs .sub_con > .inner .map_guide .store li.on a {
   background: #a06138;
@@ -1875,7 +1875,8 @@ figure.popup .closeBtn i {
   .contactUs .sub_con > .inner .map_guide .traffic li a {
     width: 17vmax;
     height: 40px;
-    font: bold 2vmin/40px "Noto Sans KR";
+    font: bold 15px/40px "Noto Sans KR";
+    letter-spacing: 0px;
   }
   .contactUs .sub_con > .inner .map_guide .store {
     flex-wrap: wrap;
@@ -1887,7 +1888,7 @@ figure.popup .closeBtn i {
   }
   .contactUs .sub_con > .inner .map_guide .store li a {
     width: 11vmax;
-    font: bold 2vmin/40px "Noto Sans KR";
+    font: bold 16px/40px "Noto Sans KR";
   }
 }
 @media screen and (max-width: 539px) {
@@ -1932,6 +1933,7 @@ figure.popup .closeBtn i {
     width: 100%;
     height: 40px;
     font: bold 3vmin/40px "Noto Sans KR";
+    letter-spacing: 1px;
   }
   .contactUs .sub_con > .inner .map_guide .store {
     display: flex;
@@ -1988,15 +1990,15 @@ figure.popup .closeBtn i {
 }
 #header .inner .menuWeb #gnb > li:hover:nth-of-type(1) .sub_menu {
   display: block;
-  padding-right: 350px;
+  padding-right: 460px;
 }
 #header .inner .menuWeb #gnb > li:hover:nth-of-type(2) .sub_menu {
   display: block;
-  padding-right: 164px;
+  padding-right: 315px;
 }
 #header .inner .menuWeb #gnb > li:hover:nth-of-type(3) .sub_menu {
   display: block;
-  padding-right: 246px;
+  padding-right: 307px;
 }
 #header .inner .menuWeb #gnb > li:hover:nth-of-type(4) .sub_menu {
   display: block;
@@ -2589,13 +2591,13 @@ figure.popup .closeBtn i {
   left: 50px;
 }
 #content .inner .btn .prevBtn {
-  background: url("../img/prev.png") no-repeat center center/cover;
+  background: url("../img/content/prev.png") no-repeat center center/cover;
   width: 50px;
   height: 50px;
   margin-right: 5px;
 }
 #content .inner .btn .nextBtn {
-  background: url("../img/prev.png") no-repeat center center/cover;
+  background: url("../img/content/prev.png") no-repeat center center/cover;
   transform: rotate(180deg);
   width: 50px;
   height: 50px;

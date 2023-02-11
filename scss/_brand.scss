@@ -127,12 +127,10 @@
 	.brand {
 		.sub_con {
 			.inner {
-				h1 {
-					text-align: center;
-				}
 				.about {
 					> h1 {
 						font-size: 14vmin;
+						text-align: center;
 					}
 					p {
 						text-align: center;
@@ -141,9 +139,6 @@
 				}
 				.member {
 					margin-top: 50px;
-					h1 {
-						text-align: center;
-					}
 					.member_wrap {
 						article {
 							width: 100%;
