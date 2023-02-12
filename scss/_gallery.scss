@@ -347,6 +347,12 @@ figure.popup {
 								h2 {
 									margin-bottom: 20px;
 									font-size: 25px;
+									overflow: hidden;
+									text-overflow: ellipsis;
+
+									display: -webkit-box;
+									-webkit-line-clamp: 1;
+									-webkit-box-orient: vertical;
 								}
 								p {
 									font-size: 18px;

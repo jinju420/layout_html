@@ -1080,6 +1080,11 @@ figure.popup .closeBtn i {
   .gallery .sub_con .inner .tab_cont .vids article .con h2 {
     margin-bottom: 20px;
     font-size: 25px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
   }
   .gallery .sub_con .inner .tab_cont .vids article .con p {
     font-size: 18px;
