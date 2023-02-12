@@ -103,7 +103,7 @@
 						}
 						.con {
 							width: 100%;
-							min-height: 200px;
+							height: 200px;
 							padding: 20px;
 							opacity: 0.7;
 							h2 {
@@ -241,7 +241,7 @@
 									&:hover {
 										transform: scale(1.06);
 										box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.7);
-										// background: rgba($strongColor, 0.5);
+										background: rgba($strongColor, 0.5);
 									}
 								}
 							}
@@ -337,31 +337,19 @@ figure.popup {
 		.sub_con {
 			.inner {
 				.tab_cont {
-					height: 230vmin;
+					height: 240vh;
 					.vids {
 						article {
 							width: calc((100% - 40px) / 2);
-							height: 100%;
-							.pic {
-								// height: 35vmin;
-							}
+							margin-bottom: 50px;
 							.con {
-								min-height: 160px;
+								height: 160px;
 								h2 {
 									margin-bottom: 20px;
-									font-size: 22px;
-
-									overflow: hidden;
-									text-overflow: ellipsis;
-
-									display: -webkit-box;
-									-webkit-line-clamp: 1;
-									-webkit-box-orient: vertical;
+									font-size: 25px;
 								}
 								p {
 									font-size: 18px;
-									word-break: keep-all;
-
 									overflow: hidden;
 									text-overflow: ellipsis;
 
@@ -381,6 +369,125 @@ figure.popup {
 								padding: 0;
 								li {
 									width: calc(100% / 3);
+									padding: 10px 10px 25px;
+									&:nth-of-type(1) {
+										div {
+											height: 35vmax;
+										}
+									}
+									&:nth-of-type(2) {
+										div {
+											height: 25vmax;
+										}
+									}
+									&:nth-of-type(3) {
+										div {
+											height: 35vmax;
+										}
+									}
+									&:nth-of-type(4) {
+										div {
+											height: 25vmax;
+										}
+									}
+									&:nth-of-type(5) {
+										div {
+											height: 30vmax;
+										}
+									}
+									&:nth-of-type(6) {
+										div {
+											height: 40vmax;
+										}
+									}
+									&:nth-of-type(7) {
+										div {
+											height: 30vmax;
+										}
+									}
+									&:nth-of-type(8) {
+										div {
+											height: 30vmax;
+										}
+									}
+									&:nth-of-type(9) {
+										div {
+											height: 35vmax;
+										}
+									}
+									&:nth-of-type(10) {
+										div {
+											height: 35vmax;
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
+@media screen and (max-width: 1080px) {
+	.gallery {
+		.sub_con {
+			.inner {
+				.tab_cont {
+					#gallery {
+						#wrap {
+							#list {
+								li {
+									&:nth-of-type(1) {
+										div {
+											height: 35vmax;
+										}
+									}
+									&:nth-of-type(2) {
+										div {
+											height: 25vmax;
+										}
+									}
+									&:nth-of-type(3) {
+										div {
+											height: 35vmax;
+										}
+									}
+									&:nth-of-type(4) {
+										div {
+											height: 40vmax;
+										}
+									}
+									&:nth-of-type(5) {
+										div {
+											height: 50vmax;
+										}
+									}
+									&:nth-of-type(6) {
+										div {
+											height: 40vmax;
+										}
+									}
+									&:nth-of-type(7) {
+										div {
+											height: 30vmax;
+										}
+									}
+									&:nth-of-type(8) {
+										div {
+											height: 20vmax;
+										}
+									}
+									&:nth-of-type(9) {
+										div {
+											height: 35vmax;
+										}
+									}
+									&:nth-of-type(10) {
+										div {
+											height: 45vmax;
+										}
+									}
 									div {
 										p {
 											font: 13px/1.2 $contentFont;
@@ -399,23 +506,150 @@ figure.popup {
 		}
 	}
 }
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 993px) {
 	.gallery {
 		.sub_con {
 			.inner {
 				.tab_cont {
-					height: 210vmin;
+					height: 220vh;
 				}
 			}
 		}
 	}
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 876px) {
 	.gallery {
 		.sub_con {
 			.inner {
 				.tab_cont {
-					height: 170vmin;
+					height: 210vh;
+					.vids {
+						article {
+							.pic {
+								height: 35vmax;
+							}
+							.con {
+								h2 {
+									font-size: 3vmin;
+
+									overflow: hidden;
+									text-overflow: ellipsis;
+
+									display: -webkit-box;
+									-webkit-line-clamp: 1;
+									-webkit-box-orient: vertical;
+								}
+								span {
+									font-size: 2vmin;
+								}
+							}
+						}
+					}
+					#gallery {
+						#wrap {
+							#list {
+								padding: 0;
+								li {
+									width: calc(100% / 2);
+									padding: 10px;
+									&:nth-of-type(1) {
+										div {
+											height: 35vmax;
+										}
+									}
+									&:nth-of-type(2) {
+										div {
+											height: 15vmax;
+										}
+									}
+									&:nth-of-type(3) {
+										div {
+											height: 20vmax;
+										}
+									}
+									&:nth-of-type(4) {
+										div {
+											height: 25vmax;
+										}
+									}
+									&:nth-of-type(5) {
+										div {
+											height: 30vmax;
+										}
+									}
+									&:nth-of-type(6) {
+										div {
+											height: 20vmax;
+										}
+									}
+									&:nth-of-type(7) {
+										div {
+											height: 20vmax;
+										}
+									}
+									&:nth-of-type(8) {
+										div {
+											height: 20vmax;
+										}
+									}
+									&:nth-of-type(9) {
+										div {
+											height: 15vmax;
+										}
+									}
+									&:nth-of-type(10) {
+										div {
+											height: 20vmax;
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
+@media screen and (max-width: 763px) {
+	.gallery {
+		.sub_con {
+			.inner {
+				.tab_cont {
+					height: 180vh;
+					.vids {
+						article {
+							.pic {
+								height: 30vmax;
+							}
+							.con {
+								h2 {
+									font-size: 3vmin;
+
+									overflow: hidden;
+									text-overflow: ellipsis;
+
+									display: -webkit-box;
+									-webkit-line-clamp: 1;
+									-webkit-box-orient: vertical;
+								}
+								span {
+									font-size: 2vmin;
+								}
+							}
+						}
+					}
+					#gallery {
+						#wrap {
+							#list {
+								li {
+									div {
+										height: 35vmax;
+									}
+								}
+							}
+						}
+					}
 				}
 			}
 		}
@@ -428,13 +662,13 @@ figure.popup {
 		.sub_con {
 			.inner {
 				.tab_cont {
-					height: 570vmin;
+					height: 640vmin;
 					.vids {
 						article {
 							width: 100%;
 							margin-bottom: 50px;
 							.pic {
-								min-height: 45vmin;
+								min-height: 60vmin;
 							}
 							.con {
 								min-height: 140px;
@@ -451,55 +685,61 @@ figure.popup {
 						}
 					}
 					#gallery {
-						#searchBox {
-							text-align: center;
-							input[type='text'] {
-								width: 50vw;
-							}
-						}
 						#wrap {
-							padding: 20px 0;
 							#list {
-								padding: 0;
 								li {
 									width: 100%;
-									div {
-										height: 35vmax;
-										p {
-											font: 13px/1.2 $contentFont;
-											color: $basicFontColor;
-											margin-top: 10px;
-											margin-bottom: 10px;
-											-webkit-line-clamp: 2;
+									&:nth-of-type(1) {
+										div {
+											height: 55vmax;
+										}
+									}
+									&:nth-of-type(2) {
+										div {
+											height: 35vmax;
+										}
+									}
+									&:nth-of-type(3) {
+										div {
+											height: 25vmax;
+										}
+									}
+									&:nth-of-type(4) {
+										div {
+											height: 25vmax;
+										}
+									}
+									&:nth-of-type(5) {
+										div {
+											height: 30vmax;
+										}
+									}
+									&:nth-of-type(6) {
+										div {
+											height: 205max;
+										}
+									}
+									&:nth-of-type(7) {
+										div {
+											height: 20vmax;
+										}
+									}
+									&:nth-of-type(8) {
+										div {
+											height: 30vmax;
+										}
+									}
+									&:nth-of-type(9) {
+										div {
+											height: 35vmax;
+										}
+									}
+									&:nth-of-type(10) {
+										div {
+											height: 35vmax;
 										}
 									}
 								}
-								// li {
-								// 	width: 100%;
-								// 	margin-bottom: 0;
-								// 	padding: 10px;
-								// 	div {
-								// 		display: flex;
-								// 		align-items: center;
-								// 		padding: 0;
-								// 		height: 13vh;
-								// 		a {
-								// 			width: 120px;
-								// 			height: 120px;
-								// 			img {
-								// 				@include imgFit;
-								// 			}
-								// 		}
-								// 		p {
-								// 			width: 250px;
-								// 			height: auto;
-								// 			font: 16px/1.5 $contentFont;
-								// 			text-align: left;
-								// 			-webkit-line-clamp: 2;
-								// 			padding: 0 10px 0 30px;
-								// 		}
-								// 	}
-								// }
 							}
 						}
 						aside {
@@ -524,99 +764,6 @@ figure.popup {
 			right: 44%;
 			i {
 				font-size: 50px;
-			}
-		}
-	}
-}
-@media screen and (max-width: 480px) {
-	.gallery {
-		.sub_con {
-			.inner {
-				.tab_cont {
-					// height: 650vmin;
-				}
-			}
-		}
-	}
-}
-@media screen and (max-width: 376px) {
-	.gallery {
-		.sub_con {
-			.inner {
-				.tab_cont {
-					height: 630vmin;
-					.vids {
-						article {
-							width: 100%;
-							margin-bottom: 70px;
-							.pic {
-								// min-height: 60vmin;
-							}
-							.con {
-								min-height: 120px;
-								h2 {
-									font-size: 5vmin;
-									margin-bottom: 5px;
-								}
-								p {
-									font-size: 17px;
-								}
-								span {
-									font-size: 16px;
-								}
-							}
-						}
-					}
-					#gallery {
-						#searchBox {
-							text-align: center;
-							input[type='text'] {
-								width: 50vw;
-							}
-						}
-						#wrap {
-							padding: 20px 0;
-							#list {
-								padding: 0;
-								li {
-									width: 100%;
-									div {
-										height: 30vmax;
-										p {
-											font: 13px/1.2 $contentFont;
-											color: $basicFontColor;
-											margin-top: 10px;
-											margin-bottom: 10px;
-											-webkit-line-clamp: 2;
-										}
-									}
-								}
-							}
-						}
-						aside {
-							.imgCont {
-								.close {
-									top: -130px;
-									right: 44%;
-									i {
-										font-size: 50px;
-									}
-								}
-							}
-						}
-					}
-				}
-			}
-		}
-	}
-}
-@media screen and (max-width: 320px) {
-	.gallery {
-		.sub_con {
-			.inner {
-				.tab_cont {
-					height: 720vmin;
-				}
 			}
 		}
 	}

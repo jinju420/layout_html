@@ -6,6 +6,17 @@ const listBtns_a = list.querySelectorAll('.wrap dt > a');
 const articleA = list.querySelectorAll('.wrap dd article');
 const conSwiper = content.querySelector('.inner .contSwiper');
 const contentBtn = content.querySelector('.inner .btn');
+const skipNavi=document.querySelectorAll('#skipNavi li a');
+
+//skipNavi
+for(const el of skipNavi){
+    el.addEventListener('focusin',()=>{
+        el.classList.add('skip');
+    });
+    el.addEventListener('focusout',()=>{
+        el.classList.remove('skip');
+    });
+}
 
 //탭메뉴
 listBtns_a.forEach((el, idx) => {

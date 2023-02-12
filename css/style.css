@@ -844,7 +844,7 @@ fieldset {
 }
 .gallery .sub_con .inner .tab_cont .vids article .con {
   width: 100%;
-  min-height: 200px;
+  height: 200px;
   padding: 20px;
   opacity: 0.7;
 }
@@ -982,6 +982,7 @@ fieldset {
 .gallery .sub_con .inner .tab_cont #gallery #wrap #list li div:hover {
   transform: scale(1.06);
   box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.7);
+  background: rgba(160, 97, 56, 0.5);
 }
 .gallery .sub_con .inner .tab_cont #gallery aside {
   position: fixed;
@@ -1067,27 +1068,21 @@ figure.popup .closeBtn i {
 
 @media screen and (max-width: 1179px) {
   .gallery .sub_con .inner .tab_cont {
-    height: 230vmin;
+    height: 240vh;
   }
   .gallery .sub_con .inner .tab_cont .vids article {
     width: calc((100% - 40px) / 2);
-    height: 100%;
+    margin-bottom: 50px;
   }
   .gallery .sub_con .inner .tab_cont .vids article .con {
-    min-height: 160px;
+    height: 160px;
   }
   .gallery .sub_con .inner .tab_cont .vids article .con h2 {
     margin-bottom: 20px;
-    font-size: 22px;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    display: -webkit-box;
-    -webkit-line-clamp: 1;
-    -webkit-box-orient: vertical;
+    font-size: 25px;
   }
   .gallery .sub_con .inner .tab_cont .vids article .con p {
     font-size: 18px;
-    word-break: keep-all;
     overflow: hidden;
     text-overflow: ellipsis;
     display: -webkit-box;
@@ -1102,6 +1097,69 @@ figure.popup .closeBtn i {
   }
   .gallery .sub_con .inner .tab_cont #gallery #wrap #list li {
     width: 33.3333333333%;
+    padding: 10px 10px 25px;
+  }
+  .gallery .sub_con .inner .tab_cont #gallery #wrap #list li:nth-of-type(1) div {
+    height: 35vmax;
+  }
+  .gallery .sub_con .inner .tab_cont #gallery #wrap #list li:nth-of-type(2) div {
+    height: 25vmax;
+  }
+  .gallery .sub_con .inner .tab_cont #gallery #wrap #list li:nth-of-type(3) div {
+    height: 35vmax;
+  }
+  .gallery .sub_con .inner .tab_cont #gallery #wrap #list li:nth-of-type(4) div {
+    height: 25vmax;
+  }
+  .gallery .sub_con .inner .tab_cont #gallery #wrap #list li:nth-of-type(5) div {
+    height: 30vmax;
+  }
+  .gallery .sub_con .inner .tab_cont #gallery #wrap #list li:nth-of-type(6) div {
+    height: 40vmax;
+  }
+  .gallery .sub_con .inner .tab_cont #gallery #wrap #list li:nth-of-type(7) div {
+    height: 30vmax;
+  }
+  .gallery .sub_con .inner .tab_cont #gallery #wrap #list li:nth-of-type(8) div {
+    height: 30vmax;
+  }
+  .gallery .sub_con .inner .tab_cont #gallery #wrap #list li:nth-of-type(9) div {
+    height: 35vmax;
+  }
+  .gallery .sub_con .inner .tab_cont #gallery #wrap #list li:nth-of-type(10) div {
+    height: 35vmax;
+  }
+}
+@media screen and (max-width: 1080px) {
+  .gallery .sub_con .inner .tab_cont #gallery #wrap #list li:nth-of-type(1) div {
+    height: 35vmax;
+  }
+  .gallery .sub_con .inner .tab_cont #gallery #wrap #list li:nth-of-type(2) div {
+    height: 25vmax;
+  }
+  .gallery .sub_con .inner .tab_cont #gallery #wrap #list li:nth-of-type(3) div {
+    height: 35vmax;
+  }
+  .gallery .sub_con .inner .tab_cont #gallery #wrap #list li:nth-of-type(4) div {
+    height: 40vmax;
+  }
+  .gallery .sub_con .inner .tab_cont #gallery #wrap #list li:nth-of-type(5) div {
+    height: 50vmax;
+  }
+  .gallery .sub_con .inner .tab_cont #gallery #wrap #list li:nth-of-type(6) div {
+    height: 40vmax;
+  }
+  .gallery .sub_con .inner .tab_cont #gallery #wrap #list li:nth-of-type(7) div {
+    height: 30vmax;
+  }
+  .gallery .sub_con .inner .tab_cont #gallery #wrap #list li:nth-of-type(8) div {
+    height: 20vmax;
+  }
+  .gallery .sub_con .inner .tab_cont #gallery #wrap #list li:nth-of-type(9) div {
+    height: 35vmax;
+  }
+  .gallery .sub_con .inner .tab_cont #gallery #wrap #list li:nth-of-type(10) div {
+    height: 45vmax;
   }
   .gallery .sub_con .inner .tab_cont #gallery #wrap #list li div p {
     font: 13px/1.2 "Montserrat";
@@ -1111,26 +1169,99 @@ figure.popup .closeBtn i {
     -webkit-line-clamp: 2;
   }
 }
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 993px) {
   .gallery .sub_con .inner .tab_cont {
-    height: 210vmin;
+    height: 220vh;
   }
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 876px) {
   .gallery .sub_con .inner .tab_cont {
-    height: 170vmin;
+    height: 210vh;
+  }
+  .gallery .sub_con .inner .tab_cont .vids article .pic {
+    height: 35vmax;
+  }
+  .gallery .sub_con .inner .tab_cont .vids article .con h2 {
+    font-size: 3vmin;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+  }
+  .gallery .sub_con .inner .tab_cont .vids article .con span {
+    font-size: 2vmin;
+  }
+  .gallery .sub_con .inner .tab_cont #gallery #wrap #list {
+    padding: 0;
+  }
+  .gallery .sub_con .inner .tab_cont #gallery #wrap #list li {
+    width: 50%;
+    padding: 10px;
+  }
+  .gallery .sub_con .inner .tab_cont #gallery #wrap #list li:nth-of-type(1) div {
+    height: 35vmax;
+  }
+  .gallery .sub_con .inner .tab_cont #gallery #wrap #list li:nth-of-type(2) div {
+    height: 15vmax;
+  }
+  .gallery .sub_con .inner .tab_cont #gallery #wrap #list li:nth-of-type(3) div {
+    height: 20vmax;
+  }
+  .gallery .sub_con .inner .tab_cont #gallery #wrap #list li:nth-of-type(4) div {
+    height: 25vmax;
+  }
+  .gallery .sub_con .inner .tab_cont #gallery #wrap #list li:nth-of-type(5) div {
+    height: 30vmax;
+  }
+  .gallery .sub_con .inner .tab_cont #gallery #wrap #list li:nth-of-type(6) div {
+    height: 20vmax;
+  }
+  .gallery .sub_con .inner .tab_cont #gallery #wrap #list li:nth-of-type(7) div {
+    height: 20vmax;
+  }
+  .gallery .sub_con .inner .tab_cont #gallery #wrap #list li:nth-of-type(8) div {
+    height: 20vmax;
+  }
+  .gallery .sub_con .inner .tab_cont #gallery #wrap #list li:nth-of-type(9) div {
+    height: 15vmax;
+  }
+  .gallery .sub_con .inner .tab_cont #gallery #wrap #list li:nth-of-type(10) div {
+    height: 20vmax;
+  }
+}
+@media screen and (max-width: 763px) {
+  .gallery .sub_con .inner .tab_cont {
+    height: 180vh;
+  }
+  .gallery .sub_con .inner .tab_cont .vids article .pic {
+    height: 30vmax;
+  }
+  .gallery .sub_con .inner .tab_cont .vids article .con h2 {
+    font-size: 3vmin;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+  }
+  .gallery .sub_con .inner .tab_cont .vids article .con span {
+    font-size: 2vmin;
+  }
+  .gallery .sub_con .inner .tab_cont #gallery #wrap #list li div {
+    height: 35vmax;
   }
 }
 @media screen and (max-width: 539px) {
   .gallery .sub_con .inner .tab_cont {
-    height: 570vmin;
+    height: 640vmin;
   }
   .gallery .sub_con .inner .tab_cont .vids article {
     width: 100%;
     margin-bottom: 50px;
   }
   .gallery .sub_con .inner .tab_cont .vids article .pic {
-    min-height: 45vmin;
+    min-height: 60vmin;
   }
   .gallery .sub_con .inner .tab_cont .vids article .con {
     min-height: 140px;
@@ -1144,30 +1275,38 @@ figure.popup .closeBtn i {
   .gallery .sub_con .inner .tab_cont .vids article .con span {
     font-size: 16px;
   }
-  .gallery .sub_con .inner .tab_cont #gallery #searchBox {
-    text-align: center;
-  }
-  .gallery .sub_con .inner .tab_cont #gallery #searchBox input[type=text] {
-    width: 50vw;
-  }
-  .gallery .sub_con .inner .tab_cont #gallery #wrap {
-    padding: 20px 0;
-  }
-  .gallery .sub_con .inner .tab_cont #gallery #wrap #list {
-    padding: 0;
-  }
   .gallery .sub_con .inner .tab_cont #gallery #wrap #list li {
     width: 100%;
   }
-  .gallery .sub_con .inner .tab_cont #gallery #wrap #list li div {
+  .gallery .sub_con .inner .tab_cont #gallery #wrap #list li:nth-of-type(1) div {
+    height: 55vmax;
+  }
+  .gallery .sub_con .inner .tab_cont #gallery #wrap #list li:nth-of-type(2) div {
     height: 35vmax;
   }
-  .gallery .sub_con .inner .tab_cont #gallery #wrap #list li div p {
-    font: 13px/1.2 "Montserrat";
-    color: #666;
-    margin-top: 10px;
-    margin-bottom: 10px;
-    -webkit-line-clamp: 2;
+  .gallery .sub_con .inner .tab_cont #gallery #wrap #list li:nth-of-type(3) div {
+    height: 25vmax;
+  }
+  .gallery .sub_con .inner .tab_cont #gallery #wrap #list li:nth-of-type(4) div {
+    height: 25vmax;
+  }
+  .gallery .sub_con .inner .tab_cont #gallery #wrap #list li:nth-of-type(5) div {
+    height: 30vmax;
+  }
+  .gallery .sub_con .inner .tab_cont #gallery #wrap #list li:nth-of-type(6) div {
+    height: 205max;
+  }
+  .gallery .sub_con .inner .tab_cont #gallery #wrap #list li:nth-of-type(7) div {
+    height: 20vmax;
+  }
+  .gallery .sub_con .inner .tab_cont #gallery #wrap #list li:nth-of-type(8) div {
+    height: 30vmax;
+  }
+  .gallery .sub_con .inner .tab_cont #gallery #wrap #list li:nth-of-type(9) div {
+    height: 35vmax;
+  }
+  .gallery .sub_con .inner .tab_cont #gallery #wrap #list li:nth-of-type(10) div {
+    height: 35vmax;
   }
   .gallery .sub_con .inner .tab_cont #gallery aside .imgCont .close {
     top: -130px;
@@ -1182,65 +1321,6 @@ figure.popup .closeBtn i {
   }
   figure.popup .closeBtn i {
     font-size: 50px;
-  }
-}
-@media screen and (max-width: 376px) {
-  .gallery .sub_con .inner .tab_cont {
-    height: 630vmin;
-  }
-  .gallery .sub_con .inner .tab_cont .vids article {
-    width: 100%;
-    margin-bottom: 70px;
-  }
-  .gallery .sub_con .inner .tab_cont .vids article .con {
-    min-height: 120px;
-  }
-  .gallery .sub_con .inner .tab_cont .vids article .con h2 {
-    font-size: 5vmin;
-    margin-bottom: 5px;
-  }
-  .gallery .sub_con .inner .tab_cont .vids article .con p {
-    font-size: 17px;
-  }
-  .gallery .sub_con .inner .tab_cont .vids article .con span {
-    font-size: 16px;
-  }
-  .gallery .sub_con .inner .tab_cont #gallery #searchBox {
-    text-align: center;
-  }
-  .gallery .sub_con .inner .tab_cont #gallery #searchBox input[type=text] {
-    width: 50vw;
-  }
-  .gallery .sub_con .inner .tab_cont #gallery #wrap {
-    padding: 20px 0;
-  }
-  .gallery .sub_con .inner .tab_cont #gallery #wrap #list {
-    padding: 0;
-  }
-  .gallery .sub_con .inner .tab_cont #gallery #wrap #list li {
-    width: 100%;
-  }
-  .gallery .sub_con .inner .tab_cont #gallery #wrap #list li div {
-    height: 30vmax;
-  }
-  .gallery .sub_con .inner .tab_cont #gallery #wrap #list li div p {
-    font: 13px/1.2 "Montserrat";
-    color: #666;
-    margin-top: 10px;
-    margin-bottom: 10px;
-    -webkit-line-clamp: 2;
-  }
-  .gallery .sub_con .inner .tab_cont #gallery aside .imgCont .close {
-    top: -130px;
-    right: 44%;
-  }
-  .gallery .sub_con .inner .tab_cont #gallery aside .imgCont .close i {
-    font-size: 50px;
-  }
-}
-@media screen and (max-width: 320px) {
-  .gallery .sub_con .inner .tab_cont {
-    height: 720vmin;
   }
 }
 .brand .sub_Visual .visual_box {
@@ -2038,6 +2118,23 @@ figure.popup .closeBtn i {
     font: bold 3vmin/40px "Noto Sans KR";
   }
 }
+#skipNavi li a {
+  display: block;
+  position: fixed;
+  top: -50px;
+  left: 0;
+  width: 100%;
+  height: 50px;
+  background: #a06138;
+  color: #f8f8f8;
+  text-align: center;
+  font: bold 16px/50px "Poppins";
+  z-index: 2;
+}
+#skipNavi li a.skip {
+  top: 0;
+}
+
 #header {
   position: absolute;
   top: 0;

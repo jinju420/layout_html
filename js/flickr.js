@@ -5,7 +5,7 @@ const method = 'flickr.favorites.getList';
 const method1 = 'flickr.photos.search';
 const flickr_key = '8dfeab6f923483f4b3694e700652632a';
 const user_id = '195427004@N07';//즐겨찾기이미지
-const per_page = 10;
+const per_page = 12;
 const galCont = document.querySelector('.gallery');
 const gal = galCont.querySelector('#gallery');
 const frame = gal.querySelector('#list');
@@ -60,7 +60,6 @@ frame.addEventListener('click', e => {
         let imgSrc = target.closest('a').getAttribute('href'); //thumb에서 가장 가까이에 있는 a태그를 찾는 방법
         let pop = document.createElement('aside');
         pop.classList.add('pop');
-        // document.body.style.overflow ='hidden';
         document.body.classList.add('hidden');
         let pops = `
         <div class='imgCont'>
@@ -94,6 +93,7 @@ gal.addEventListener('click', (e) => {
 window.addEventListener('resize', () => {
     let pop = gal.querySelector('.pop');
     if (pop) document.body.classList.add('hidden');
+
 });
 
 //flickr
@@ -125,22 +125,22 @@ function createImgs(items) {
     htmls = '';
 
     items.map((item) => {
-        const imgSrcBig = `https://live.staticflickr.com/${item.server}/${item.id}_${item.secret}_b.jpg`;
-        const imgSrc = `https://live.staticflickr.com/${item.server}/${item.id}_${item.secret}_m.jpg`;
+        // const imgSrcBig = `https://live.staticflickr.com/${item.server}/${item.id}_${item.secret}_b.jpg`;
+        const imgSrc = `https://live.staticflickr.com/${item.server}/${item.id}_${item.secret}_b.jpg`;
 
         htmls += `
             <li class="imgs">
                 <div>
-                    <a href=${imgSrcBig}>
+                    <a href=${imgSrc}>
                         <img class="thumb" src=${imgSrc}>
                     </a>
                     </div>
                     </li>
                     `;
-    })
-    frame.innerHTML = htmls;
-}
-// <p>${item.title}</p>
+                })
+                frame.innerHTML = htmls;
+            }
+            // <p>${item.title}</p>
 
 //로딩
 function Loading() {
