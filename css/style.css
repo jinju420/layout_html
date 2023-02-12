@@ -622,7 +622,7 @@ fieldset {
   }
   #sub_header .inner > h1 {
     position: absolute;
-    top: 20px;
+    top: 30px;
     left: 50px;
   }
   #sub_header .inner > h1 a {
@@ -982,7 +982,6 @@ fieldset {
 .gallery .sub_con .inner .tab_cont #gallery #wrap #list li div:hover {
   transform: scale(1.06);
   box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.7);
-  background: rgba(160, 97, 56, 0.5);
 }
 .gallery .sub_con .inner .tab_cont #gallery aside {
   position: fixed;
@@ -1068,7 +1067,7 @@ figure.popup .closeBtn i {
 
 @media screen and (max-width: 1179px) {
   .gallery .sub_con .inner .tab_cont {
-    height: 223vh;
+    height: 230vmin;
   }
   .gallery .sub_con .inner .tab_cont .vids article {
     width: calc((100% - 40px) / 2);
@@ -1112,9 +1111,19 @@ figure.popup .closeBtn i {
     -webkit-line-clamp: 2;
   }
 }
+@media screen and (max-width: 1024px) {
+  .gallery .sub_con .inner .tab_cont {
+    height: 210vmin;
+  }
+}
+@media screen and (max-width: 768px) {
+  .gallery .sub_con .inner .tab_cont {
+    height: 170vmin;
+  }
+}
 @media screen and (max-width: 539px) {
   .gallery .sub_con .inner .tab_cont {
-    height: 555vmin;
+    height: 570vmin;
   }
   .gallery .sub_con .inner .tab_cont .vids article {
     width: 100%;
@@ -1173,6 +1182,21 @@ figure.popup .closeBtn i {
   }
   figure.popup .closeBtn i {
     font-size: 50px;
+  }
+}
+@media screen and (max-width: 480px) {
+  .gallery .sub_con .inner .tab_cont {
+    height: 600vmin;
+  }
+}
+@media screen and (max-width: 376px) {
+  .gallery .sub_con .inner .tab_cont {
+    height: 670vmin;
+  }
+}
+@media screen and (max-width: 320px) {
+  .gallery .sub_con .inner .tab_cont {
+    height: 700vmin;
   }
 }
 .brand .sub_Visual .visual_box {
@@ -1638,6 +1662,10 @@ figure.popup .closeBtn i {
   padding: 20px;
   cursor: pointer;
   font-size: 14px;
+}
+.notice .sub_con > .inner .wrap article table td:nth-of-type(2) {
+  text-align: left;
+  font-size: 16px;
 }
 .notice .sub_con > .inner .wrap article.on {
   display: block;
@@ -2716,7 +2744,7 @@ figure.popup .closeBtn i {
   }
   #header .inner > h1 {
     position: absolute;
-    top: 20px;
+    top: 30px;
     left: 50px;
   }
   #header .inner > h1 a {

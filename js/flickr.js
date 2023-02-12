@@ -94,16 +94,7 @@ gal.addEventListener('click', (e) => {
 window.addEventListener('resize', () => {
     let pop = gal.querySelector('.pop');
     if (pop) document.body.classList.add('hidden');
-
 });
-// if (539 >= window.innerWidth) {
-//     // frame.innerHTML = '';
-//     // loading.classList.remove('off');
-//     // frame.classList.remove('on');
-    
-//     callDate(url1)
-// }
-
 
 //flickr
 function callDate(url1) {
@@ -146,10 +137,10 @@ function createImgs(items) {
                     </div>
                     </li>
                     `;
-                })
-                frame.innerHTML = htmls;
-            }
-            // <p>${item.title}</p>
+    })
+    frame.innerHTML = htmls;
+}
+// <p>${item.title}</p>
 
 //로딩
 function Loading() {

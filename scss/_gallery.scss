@@ -241,7 +241,7 @@
 									&:hover {
 										transform: scale(1.06);
 										box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.7);
-										background: rgba($strongColor, 0.5);
+										// background: rgba($strongColor, 0.5);
 									}
 								}
 							}
@@ -337,7 +337,7 @@ figure.popup {
 		.sub_con {
 			.inner {
 				.tab_cont {
-					height: 223vh;
+					height: 230vmin;
 					.vids {
 						article {
 							width: calc((100% - 40px) / 2);
@@ -399,6 +399,28 @@ figure.popup {
 		}
 	}
 }
+@media screen and (max-width: 1024px) {
+	.gallery {
+		.sub_con {
+			.inner {
+				.tab_cont {
+					height: 210vmin;
+				}
+			}
+		}
+	}
+}
+@media screen and (max-width: 768px) {
+	.gallery {
+		.sub_con {
+			.inner {
+				.tab_cont {
+					height: 170vmin;
+				}
+			}
+		}
+	}
+}
 
 //mobile
 @media screen and (max-width: $mobile) {
@@ -406,7 +428,7 @@ figure.popup {
 		.sub_con {
 			.inner {
 				.tab_cont {
-					height: 555vmin;
+					height: 570vmin;
 					.vids {
 						article {
 							width: 100%;
@@ -502,6 +524,39 @@ figure.popup {
 			right: 44%;
 			i {
 				font-size: 50px;
+			}
+		}
+	}
+}
+@media screen and (max-width: 480px) {
+	.gallery {
+		.sub_con {
+			.inner {
+				.tab_cont {
+					height: 600vmin;
+				}
+			}
+		}
+	}
+}
+@media screen and (max-width: 376px) {
+	.gallery {
+		.sub_con {
+			.inner {
+				.tab_cont {
+					height: 670vmin;
+				}
+			}
+		}
+	}
+}
+@media screen and (max-width: 320px) {
+	.gallery {
+		.sub_con {
+			.inner {
+				.tab_cont {
+					height: 700vmin;
+				}
 			}
 		}
 	}
