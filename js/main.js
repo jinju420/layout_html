@@ -1,19 +1,19 @@
 const list = document.querySelector('#list');
-const content = document.querySelector('#content'); 
+const content = document.querySelector('#content');
 const listBtns = list.querySelectorAll('.inner dt');
 const listContent = list.querySelectorAll('.wrap dd');
 const listBtns_a = list.querySelectorAll('.wrap dt > a');
 const articleA = list.querySelectorAll('.wrap dd article');
 const conSwiper = content.querySelector('.inner .contSwiper');
 const contentBtn = content.querySelector('.inner .btn');
-const skipNavi=document.querySelectorAll('#skipNavi li a');
+const skipNavi = document.querySelectorAll('#skipNavi li a');
 
 //skipNavi
-for(const el of skipNavi){
-    el.addEventListener('focusin',()=>{
+for (const el of skipNavi) {
+    el.addEventListener('focusin', () => {
         el.classList.add('skip');
     });
-    el.addEventListener('focusout',()=>{
+    el.addEventListener('focusout', () => {
         el.classList.remove('skip');
     });
 }
@@ -42,8 +42,8 @@ var swiper = new Swiper("#content .contSwiper", {
     spaceBetween: 30,
     loop: true,
     navigation: {
-        prevEl: '.prevBtn',
         nextEl: '.nextBtn',
+        prevEl: '.prevBtn',
     },
     pagination: {
         clickable: true,
@@ -67,6 +67,7 @@ function initSwiper() {
                 delay: 2500,
                 disableOnInteraction: false,
             },
+
         })
     } else if (wid > _mobile && mySwiper !== undefined) {
         mySwiper.destroy();

@@ -125,13 +125,13 @@ function createImgs(items) {
     htmls = '';
 
     items.map((item) => {
-        // const imgSrcBig = `https://live.staticflickr.com/${item.server}/${item.id}_${item.secret}_b.jpg`;
+        const imgSrcBig = `https://live.staticflickr.com/${item.server}/${item.id}_${item.secret}_b.jpg`;
         const imgSrc = `https://live.staticflickr.com/${item.server}/${item.id}_${item.secret}_b.jpg`;
 
         htmls += `
             <li class="imgs">
                 <div>
-                    <a href=${imgSrc}>
+                    <a href=${imgSrcBig}>
                         <img class="thumb" src=${imgSrc}>
                     </a>
                     </div>
