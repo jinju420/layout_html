@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
 
 <head>
     <meta charset="UTF-8">
@@ -9,7 +9,7 @@
     <script src="https://kit.fontawesome.com/7783789018.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="css/style.css">
     <script defer src="js/common.js"></script>
-    <!-- <script defer src="js/youtube.js"></script> -->
+    <script defer src="js/youtube.js"></script>
     <script defer src="js/flickr.js"></script>
     <script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.min.js"></script>
 </head>
@@ -31,7 +31,7 @@
                         </div>
                     </li>
                     <li>
-                        <a href="gallery.html" class="on">GALLERY</a>
+                        <a href="gallery.html">GALLERY</a>
                         <div class="sub_menu">
                             <ul>
                                 <li><a href="gallery.html">POPULAR</a></li>
@@ -39,7 +39,7 @@
                         </div>
                     </li>
                     <li>
-                        <a href="youtube.html">YOUTUBE</a>
+                        <a href="youtube.html" class="on">YOUTUBE</a>
                         <div class="sub_menu">
                             <ul>
                                 <li><a href="youtube.html">COMMUNITY</a></li>
@@ -170,32 +170,41 @@
         </div>
     </header>
 
-    <section class="com gallery">
+    <section class="com youtube">
         <div class="sub_Visual">
             <div class="visual_box">
                 <div class="inner">
                     <div class="title_txt">
-                        <h1>Exhibition</h1>
-                        <p>다양한 제품을 풍부하게 만나보세요</p>
+                        <h1>Youtube</h1>
+                        <p>온라인으로 오브젝트를 만나보세요</p>
                     </div>
                 </div>
             </div>
         </div>
         <div class="sub_con">
             <div class="inner">
-                <h1>Gallery</h1>
-                <div id="gallery" class="cont">
-                    <section id="searchBox">
-                        <input type="text" id="search" placeholder="찾고싶은 소품을 검색하세요">
-                        <button class="btn">Search</button>
-                    </section>
-                    <article id="wrap">
-                        <img src="img/loadingImg.gif" class="loading" alt="로딩이미지">
-                        <ul id="list">
+                <h1>Youtube</h1>
+                <!-- <div class="tab_title">
+                    <h2 class="h2 on">YOUTUBE </h2>
 
-                        </ul>
-                    </article>
+                    <h2 class="new">POPULAR</h2>
+                </div> -->
+
+                <div class="vids cont on">
                 </div>
+
+                <!-- <div id="gallery" class="cont">
+                        <section id="searchBox">
+                            <input type="text" id="search" placeholder="찾고싶은 소품을 검색하세요">
+                            <button class="btn">Search</button>
+                        </section>
+                        <article id="wrap">
+                            <img src="img/loadingImg.gif" class="loading" alt="로딩이미지">
+                            <ul id="list">
+
+                            </ul>
+                        </article>
+                    </div> -->
             </div>
         </div>
     </section>
