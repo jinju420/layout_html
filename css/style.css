@@ -803,7 +803,7 @@ fieldset {
 .gallery .sub_con .inner #gallery #wrap .loading {
   position: relative;
   top: -120px;
-  left: 50%;
+  left: 44%;
   transition: 1s;
   opacity: 1;
 }
