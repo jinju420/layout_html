@@ -480,36 +480,59 @@
 
 #sub_footer {
 	width: 100%;
+	background: $basicColor2;
+	padding-top: 50px;
+	padding: 10vw 10vw 2vw;
 	.inner {
-		@include innerWid;
-		position: relative;
+		width: 100%;
 		.wrap {
 			display: flex;
+			flex-wrap: wrap;
+			justify-content: space-between;
 			width: 100%;
-			padding: 150px 50px 50px;
-			font-size: 14px;
+			padding: 0 0 120px;
 			article {
-				width: 280px;
-				margin-right: 120px;
-				padding: 20px 0;
-				text-align: center;
-				&:nth-of-type(3) {
-					margin-right: 0;
+				h1 {
+					font: bold 16px/1 $titleFont;
 				}
-				i {
-					font-size: 40px;
+				p {
+					padding: 20px 0;
+					font: bold 14px/1.5 $contentFont;
+					color: #888;
 				}
 				a {
 					display: block;
-					height: 100%;
-					> span {
-						display: block;
+					color: #888;
+					font: bold 13px/1 $contentFont;
+					.svg-inline--fa {
+						font-size: 16px;
+						color: #888;
+						margin-right: 10px;
+						vertical-align: text-top;
+					}
+				}
+				span {
+					display: block;
+					letter-spacing: 1px;
+					color: #666;
+					font-family: $contentFont;
+					font-weight: 500;
+				}
+				&:nth-of-type(2) {
+					width: 20%;
+					input {
+						background: transparent;
+						border-bottom: 1px solid #888;
 						width: 100%;
-						margin-top: 20px;
-						font-size: 2vmin;
-						font-family: $contentFont;
-						font-weight: 500;
-						letter-spacing: 1px;
+						padding: 10px 0;
+						&::placeholder {
+							font: bold 12px/1 $contentFont;
+						}
+					}
+				}
+				&:nth-of-type(3) {
+					a {
+						padding: 5px 0;
 					}
 				}
 			}
@@ -526,8 +549,8 @@
 			opacity: 0;
 			transition: opacity 1s;
 			background: #fff;
-			box-shadow: rgba(255, 255, 255, 0.12) 0px 0px 2px 0px inset,
-				rgba(0, 0, 0, 0.05) 0px 0px 2px 1px, rgba(0, 0, 0, 0.22) 0px 4px 20px;
+			box-shadow: rgba(255, 255, 255, 0.12) 0px 0px 2px 0px inset, rgba(0, 0, 0, 0.05) 0px 0px 2px 1px,
+				rgba(0, 0, 0, 0.22) 0px 4px 20px;
 			border-radius: 15px;
 			&.on {
 				opacity: 1;
@@ -540,19 +563,28 @@
 		}
 	}
 	.ft_txt {
-		width: 100%;
-		text-align: center;
-		font-family: $contentFont;
-		font-size: 12px;
-		letter-spacing: 1px;
-		span {
-			display: block;
-			padding: 10px 0;
-		}
-		p {
-			display: block;
-			padding: 10px 0;
-			background: $mainBg;
+		.desc {
+			display: flex;
+			justify-content: space-between;
+			align-items: flex-start;
+			margin-bottom: 50px;
+			border-top: 1px solid #888;
+			padding-top: 30px;
+			font: 14px/1 $contentFont;
+			letter-spacing: 0.5px;
+			color: #888;
+			line-height: 1.5;
+			.sns {
+				color: #888;
+			}
+			span {
+				display: block;
+			}
+			> p {
+				width: 60%;
+				line-height: 1.5;
+				word-break: keep-all;
+			}
 		}
 	}
 }
@@ -656,14 +688,29 @@
 		.inner {
 			width: 100%;
 			.wrap {
-				padding: 50px;
+				flex-direction: column;
+				padding: 0;
 				article {
-					margin-right: 80px;
-					&:nth-of-type(3) {
-						margin-right: 0;
+					margin-bottom: 80px;
+					&:nth-of-type(2) {
+						width: 40%;
 					}
-					i {
-						font-size: 6vmin;
+				}
+			}
+			.ft_txt {
+				.desc {
+					flex-direction: column;
+					.sns {
+						margin-bottom: 30px;
+					}
+					span {
+						margin-bottom: 30px;
+						font: 13px/1.5 $contentFont;
+					}
+					> p {
+						width: 100%;
+						margin-bottom: 30px;
+						font: 13px/1.5 $contentFont;
 					}
 				}
 			}
@@ -719,23 +766,45 @@
 	#sub_footer {
 		.inner {
 			.wrap {
-				display: flex;
-				padding: 50px 30px;
 				article {
-					width: 100%;
-					margin-right: 0;
-					i {
-						font-size: 7vmin;
+					margin-bottom: 50px;
+					&:nth-of-type(2) {
+						width: 100%;
+						input {
+							width: 100%;
+							&::placeholder {
+								font: bold 14px/1 $contentFont;
+							}
+						}
+					}
+					h1 {
+						font: bold 14px/1 $titleFont;
+					}
+					p {
+						font: bold 13px/1.5 $contentFont;
 					}
 					a {
-						> span {
-							font-size: 3vmin;
-						}
+						font: bold 13px/1 $contentFont;
 					}
 				}
 			}
 			.top {
 				display: none;
+			}
+		}
+		.ft_txt {
+			.desc {
+				flex-direction: column;
+				.sns {
+					margin-bottom: 30px;
+				}
+				span {
+					margin-bottom: 30px;
+				}
+				> p {
+					width: 100%;
+					margin-bottom: 30px;
+				}
 			}
 		}
 	}
