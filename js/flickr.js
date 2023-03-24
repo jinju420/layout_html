@@ -1,6 +1,6 @@
 const base = 'https://www.flickr.com/services/rest/?';
 // const method = 'flickr.interestingness.getList';
-const method = 'flickr.favorites.getList';
+const method = 'flickr.interested.getList';
 const method1 = 'flickr.photos.search';
 const flickr_key = '8dfeab6f923483f4b3694e700652632a';
 const user_id = '195427004@N07'; //즐겨찾기이미지
@@ -13,7 +13,7 @@ const input = galCont.querySelector('#search');
 const btn = galCont.querySelector('.btn');
 // const youtube = document.querySelector('.vids');
 const url1 = `${base}method=${method}&api_key=${flickr_key}&per_page=${per_page}&format=json&nojsoncallback=1&user_id=${user_id}`;
-const url2 = `${base}method=${method1}&api_key=${flickr_key}&per_page=${per_page}&format=json&nojsoncallback=1&tags=인테리어&privacy_filter=1`;
+const url2 = `${base}method=${method1}&api_key=${flickr_key}&per_page=${per_page}&format=json&nojsoncallback=1&tags=interior&privacy_filter=1`;
 
 //초기 갤러리 화면에 보여지는 데이터
 callDate(url2);
@@ -105,7 +105,6 @@ function callDate(url1) {
 		})
 		.then((json) => {
 			const items = json.photos.photo;
-
 			if (items.length > 0) {
 				createImgs(items);
 				Loading();
@@ -120,17 +119,28 @@ function createImgs(items) {
 	htmls = '';
 
 	items.map((item) => {
+		let title = item.title;
+		const icon = item.owner;
+
+		if (title.length > 20) title = title.substr(0, 10) + '...';
+
+		const buddy = `http://farm${item.farm}.staticflickr.com/${item.server}/buddyicons/${item.owner}.jpg`;
 		const imgSrcBig = `https://live.staticflickr.com/${item.server}/${item.id}_${item.secret}_b.jpg`;
 		const imgSrc = `https://live.staticflickr.com/${item.server}/${item.id}_${item.secret}_b.jpg`;
 
 		htmls += `
             <li class="imgs">
                 <div>
-                    <a href=${imgSrcBig}>
-                        <img class="thumb" src=${imgSrc}>
-                    </a>
-                    </div>
-                    </li>
+									<h1>${title}</h1>
+									<span class='profile'>
+										<img class='buddy' src=${buddy}/>
+										<span>${icon}</span>
+									</span>
+									<a href=${imgSrcBig}>
+										<img class="thumb" src=${imgSrc}>
+									</a>
+                </div>
+            </li>
                     `;
 	});
 	frame.innerHTML = htmls;
@@ -149,8 +159,8 @@ function Loading() {
 			if (count == len) isoLayout();
 		});
 
-		el.addEventListener('error', () => {
-			e.currentTarget.closest('.imgs').querySelector('img').setAttribute('src', 'img/k1.jpg');
+		el.addEventListener('error', (e) => {
+			e.currentTarget.closest('.imgs').querySelector('.buddy').setAttribute('src', 'img/sub/visual/gallery.jpg');
 		});
 	}
 }

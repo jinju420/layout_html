@@ -782,19 +782,15 @@ fieldset {
 .gallery .sub_con .inner #gallery #searchBox .btn {
   width: 80px;
   height: 35px;
-  background: #e7ded7;
+  background: #a06138;
   font-size: 12px;
   font-family: "Montserrat";
   cursor: pointer;
   margin-left: 15px;
   border: none;
   letter-spacing: 0.5px;
-  background: #f8f8f8;
   vertical-align: top;
   transition: 0.5s;
-}
-.gallery .sub_con .inner #gallery #searchBox .btn:hover {
-  background: #a06138;
   color: #fff;
 }
 .gallery .sub_con .inner #gallery #wrap {
@@ -832,14 +828,33 @@ fieldset {
   transition: 0.5s;
 }
 .gallery .sub_con .inner #gallery #wrap #list li div {
+  border-top: 2px solid #333;
   width: 100%;
-  padding: 20px;
-  box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.3);
-  border-radius: 5px;
   overflow: hidden;
   transition: 0.5s;
 }
+.gallery .sub_con .inner #gallery #wrap #list li div > h1 {
+  font: 24px/1 "Poppins";
+  padding: 20px 0 50px;
+}
+.gallery .sub_con .inner #gallery #wrap #list li div .profile {
+  display: flex;
+  align-items: center;
+  border-top: 1px solid #666;
+  padding: 10px 0;
+}
+.gallery .sub_con .inner #gallery #wrap #list li div .profile .buddy {
+  width: 30px;
+  height: 30px;
+  object-fit: cover;
+  border-radius: 50%;
+}
+.gallery .sub_con .inner #gallery #wrap #list li div .profile span {
+  margin-left: 15px;
+  font: 14px/1 "Montserrat";
+}
 .gallery .sub_con .inner #gallery #wrap #list li div a {
+  display: block;
   height: 100%;
 }
 .gallery .sub_con .inner #gallery #wrap #list li div a > img {
@@ -865,11 +880,6 @@ fieldset {
   display: -webkit-box;
   -webkit-line-clamp: 3;
   -webkit-box-orient: vertical;
-}
-.gallery .sub_con .inner #gallery #wrap #list li div:hover {
-  transform: scale(1.06);
-  box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.7);
-  background: rgba(160, 97, 56, 0.5);
 }
 .gallery .sub_con .inner #gallery aside {
   position: fixed;
