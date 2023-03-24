@@ -1,25 +1,11 @@
 const vids = document.querySelector('.vids');
 const gall = document.querySelector('#gallery');
 const key = 'AIzaSyBGee4MUXU3jusXj7YwDBzdXI5Sn3gAkIA';
-const playlistId = 'PLY0voYdGZtAgPCRyH8libB1_TbuzvCR_a';
+const playlistId = 'PLY0voYdGZtAipraMUx-_pnepD9KKaUDdm';
 const num = 6;
 const url = `https://www.googleapis.com/youtube/v3/playlistItems?part=snippet&key=${key}&playlistId=${playlistId}&maxResults=${num}`;
 
 const gallery = document.querySelector('.youtube');
-// const galleryImg = gallery.querySelectorAll('.second .pic');
-// const colorBtn = gallery.querySelectorAll('.colorBtn a');
-
-// const tab_title = gallery.querySelectorAll('h2');
-// const tab_cont = gallery.querySelectorAll('.cont');
-
-// tab_title.forEach((el, idx) => {
-// 	el.addEventListener('click', (e) => {
-// 		e.preventDefault();
-
-// 		activation(tab_title, idx);
-// 		activation(tab_cont, idx);
-// 	});
-// });
 
 //youtube
 fetch(url)
@@ -31,24 +17,26 @@ fetch(url)
 		let result = '';
 
 		items.map((el) => {
+			console.log(el);
 			let title = el.snippet.title;
 			let des = el.snippet.description;
 			let date = el.snippet.publishedAt;
-
-			if (title.length > 30) title = title.substr(0, 15) + '...';
-			if (des.length > 100) des = des.substr(0, 30) + '...';
+			let chTitle = el.snippet.videoOwnerChannelTitle;
+			if (des.length > 150) des = des.substr(0, 100) + '...';
 			date = date.split('T')[0];
 
 			result += `
             <article>
-                <a href="${el.snippet.resourceId.videoId}" class="pic">
-                    <img src="${el.snippet.thumbnails.standard.url}" />
-                </a>
-                <div class="con">
-                    <h2>${title}</h2>
-                    <p>${des}</p>
-                    <span>${date}</span>
-                </div>
+							<a href="${el.snippet.resourceId.videoId}" class="pic">
+							<img src="${el.snippet.thumbnails.standard.url}" />
+							</a>
+							<div class="con">
+								<h2>${title}</h2>
+								<div class='subTxt'>
+									<span>${chTitle}</span>
+									<p>${des}</p>
+								</div>
+							</div>
             </article>
             `;
 		});

@@ -10,32 +10,124 @@
 			display: block;
 			opacity: 1;
 			padding: 50px 50px;
-			.sns {
-				margin-bottom: 45px;
-				text-align: right;
-				a {
-					margin-left: 20px;
-					transition: 1s;
-					i {
-						font-size: 20px;
+			.touch {
+				display: flex;
+				justify-content: space-between;
+				margin-top: 100px;
+				margin-bottom: 50px;
+				border-bottom: 1px solid #aaa;
+				padding-bottom: 50px;
+				@include clear;
+				.left {
+					display: flex;
+					flex-wrap: wrap;
+					article {
+						margin-bottom: 50px;
+						width: calc((100% - 50px) / 2);
+						&:nth-of-type(3),
+						&:nth-of-type(4) {
+							margin-bottom: 0;
+						}
+						h2 {
+							font: 14px/1 $contentFont;
+							padding: 20px 0 10px;
+						}
+						p {
+							font: 12px/1 $contentFont;
+							color: #888;
+						}
 					}
-					&:hover {
-						color: $strongColor;
+				}
+				.right {
+					position: relative;
+					width: 70%;
+					.title {
+						h1 {
+							font: bold 5vmin/1 $titleFont;
+							margin-bottom: 30px;
+						}
+					}
+
+					.input_box {
+						input[type='submit'] {
+							position: absolute;
+							top: 0;
+							right: 0;
+							color: #fff;
+							font: 14px/1 $titleFont;
+							margin-top: 0;
+							background: #ff5722;
+							width: 13vw;
+							cursor: pointer;
+							padding: 10px 15px;
+						}
+						.input_touch {
+							display: flex;
+							align-items: center;
+							label {
+								font: 14px/1 $contentFont;
+							}
+							.err {
+								display: block;
+								color: $basicColor1;
+								font: 10px/1 $contentFont;
+								margin: 10px 0 20px;
+							}
+							.input {
+								width: 100%;
+								margin-right: 30px;
+								input {
+									width: 100%;
+									padding: 10px;
+									border-bottom: 1px solid #ddd;
+									background: transparent;
+									&:last-child {
+										margin-bottom: 0;
+									}
+								}
+							}
+						}
+						.txtarea {
+							width: 100%;
+							textarea {
+								&::placeholder {
+									color: #bbb;
+									font: 12px/1 $contentFont;
+								}
+								width: 100%;
+								height: 100px;
+								margin-top: 30px;
+								resize: none;
+								border: 1px solid #ddd;
+								padding: 10px;
+								background: #f8f8f8;
+							}
+						}
 					}
 				}
 			}
-			> h1 {
-				margin-bottom: 20px;
-				opacity: 0.7;
-			}
-			span {
-				font-size: 16px;
-				letter-spacing: 0.5px;
-				white-space: nowrap;
-				font-weight: 300;
-				&:nth-of-type(2) {
-					margin-right: 15px;
-					margin-left: 15px;
+			.traffic {
+				display: flex;
+				li {
+					margin-right: 20px;
+					a {
+						display: block;
+						width: 200px;
+						height: 40px;
+						background: transparent;
+						font: bold 14px/35px $titleFont;
+						color: #333;
+						border: 1px solid #333;
+						text-align: center;
+						letter-spacing: 1px;
+					}
+					&.on {
+						a {
+							background: #666;
+
+							color: $mainBg;
+						}
+					}
 				}
 			}
 			#map {
@@ -46,75 +138,47 @@
 				margin-top: 10px;
 				transition: 1s;
 				opacity: 0.7;
+				filter: saturate(0);
 				&:hover {
+					filter: saturate(1);
 					opacity: 1;
 				}
 			}
 			.map_guide {
-				display: flex;
-				justify-content: space-between;
 				margin-bottom: 30px;
-				.traffic {
-					display: flex;
-					li {
-						margin-right: 20px;
-						a {
-							display: block;
-							width: 200px;
-							height: 40px;
-							background: $basicFontColor;
-							font: bold 14px/40px $krFont;
-							color: #fff;
-							text-align: center;
-							letter-spacing: 1px;
-						}
-						&.on {
-							a {
-								background: $strongColor;
-								color: $mainBg;
-							}
-						}
-					}
-				}
 				.store {
 					display: flex;
 					li {
-						margin-left: 10px;
+						width: calc((100% - 20px) / 3);
+						margin-right: 20px;
 						a {
 							display: block;
-							width: 200px;
+							width: 100%;
 							height: 40px;
-							background: $basicFontColor;
-							font: bold 14px/40px $krFont;
-							color: #fff;
-							text-align: center;
+							background: transparent;
+							font: bold 18px/40px $titleFont;
+							color: #333;
 							letter-spacing: 1px;
+							border-bottom: 1px solid #333;
+						}
+						p {
+							color: #333;
+							font: 16px/1 $contentFont;
+							padding: 20px 0 0;
+						}
+						span {
+							color: #333;
+							font: 13px/1 $contentFont;
 						}
 						&.on {
 							a {
-								background: $strongColor;
-								color: $mainBg;
+								color: #ff5722;
+								border-bottom: 1px solid #ff5722;
 							}
 						}
 					}
 				}
 			}
-
-			// .info {
-			// 	display: flex;
-			// 	// justify-content: space-between;
-			// 	margin-top: 70px;
-			// 	opacity: 0.7;
-			// 	.office,
-			// 	.mail {
-			// 		width: calc((100% - 50px)/2);
-			// 		display: flex;
-			// 		align-items: center;
-			// 		h2 {
-			// 			margin-right: 30px;
-			// 		}
-			// 	}
-			// }
 		}
 	}
 }
@@ -126,46 +190,100 @@
 			> .inner {
 				width: 100%;
 				padding: 50px 50px;
-				.sns {
-					margin-bottom: 45px;
-					a {
-						margin-left: 20px;
-						i {
-							font-size: 20px;
+				.touch {
+					.left {
+						flex-direction: column;
+						article {
+							width: 100%;
+							&:nth-of-type(3),
+							&:nth-of-type(4) {
+								margin-bottom: 50px;
+							}
+							p {
+								font: 12px/1 $contentFont;
+							}
+						}
+					}
+					.right {
+						width: 50%;
+						height: 100%;
+						.title {
+							h1 {
+								margin-bottom: 30px;
+							}
+						}
+
+						.input_box {
+							input[type='submit'] {
+								position: absolute;
+								top: 100%;
+								right: 0;
+								color: #fff;
+								font: 14px/1 $titleFont;
+								margin-top: 0;
+								background: #ff5722;
+								width: 100%;
+								cursor: pointer;
+								padding: 10px 15px;
+							}
+							.input_touch {
+								flex-direction: column;
+								label {
+									font: 14px/1 $contentFont;
+								}
+								.err {
+									display: block;
+									color: $basicColor1;
+									font: 10px/1 $contentFont;
+									margin: 10px 0 20px;
+								}
+								.input {
+									width: 100%;
+									margin-right: 0;
+									input {
+										width: 100%;
+										padding: 10px;
+										border-bottom: 1px solid #ddd;
+										background: transparent;
+										&:last-child {
+											margin-bottom: 0;
+										}
+									}
+								}
+							}
+							.txtarea {
+								width: 100%;
+								textarea {
+									&::placeholder {
+										color: #bbb;
+									}
+									width: 100%;
+									height: 100px;
+									margin-top: 30px;
+									resize: none;
+									border: 1px solid #ddd;
+									padding: 10px;
+									background: #f8f8f8;
+								}
+							}
+						}
+					}
+				}
+				.traffic {
+					li {
+						margin-right: 20px;
+						margin-bottom: 10px;
+						a {
+							width: 20vw;
+							height: 40px;
+							font: bold 15px/40px $titleFont;
+							letter-spacing: 0px;
 						}
 					}
 				}
 				#map {
 					height: 500px;
 					margin-bottom: 30px;
-				}
-				.map_guide {
-					margin-bottom: 30px;
-					.traffic {
-						display: block;
-						li {
-							margin-right: 20px;
-							margin-bottom: 10px;
-							a {
-								width: 17vmax;
-								height: 40px;
-								font: bold 15px/40px $krFont;
-								letter-spacing: 0px;
-							}
-						}
-					}
-					.store {
-						flex-wrap: wrap;
-						justify-content: flex-end;
-						li {
-							margin-left: 10px;
-							margin-bottom: 10px;
-							a {
-								width: 11vmax;
-								font: bold 16px/40px $krFont;
-							}
-						}
-					}
 				}
 			}
 		}
@@ -179,20 +297,40 @@
 			> .inner {
 				width: 100%;
 				padding: 50px 30px;
-				.sns {
-					margin-bottom: 25px;
-					a {
-						margin-left: 20px;
-						i {
-							font-size: 20px;
+
+				.touch {
+					margin-top: 30px;
+					margin-bottom: 50px;
+					flex-direction: column;
+					.left {
+						// display: none;
+					}
+					.right {
+						width: 100%;
+
+						.input_box {
+							input[type='submit'] {
+								top: 0;
+								font: 12px/1 $titleFont;
+								width: 20vw;
+							}
 						}
 					}
 				}
-				span {
-					font-size: 16px;
-					display: block;
-					&:nth-of-type(2) {
-						display: none;
+				.traffic {
+					display: flex;
+					justify-content: space-between;
+					margin-top: 15px;
+					li {
+						width: calc((100% - 20px) / 2);
+						margin-right: 0;
+						margin-bottom: 10px;
+						a {
+							width: 100%;
+							height: 40px;
+							font: bold 3vmin/40px $titleFont;
+							letter-spacing: 1px;
+						}
 					}
 				}
 				#map {
@@ -201,31 +339,31 @@
 				.map_guide {
 					margin-bottom: 0;
 					flex-direction: column-reverse;
-					.traffic {
-						display: flex;
-						justify-content: space-between;
-						margin-top: 15px;
-						li {
-							width: calc((100% - 20px) / 2);
-							margin-right: 0;
-							margin-bottom: 10px;
-							a {
-								width: 100%;
-								height: 40px;
-								font: bold 3vmin/40px $krFont;
-								letter-spacing: 1px;
-							}
-						}
-					}
+
 					.store {
-						display: flex;
-						justify-content: space-between;
+						display: block;
 						li {
-							width: calc((100% - 40px) / 3);
+							width: 100%;
 							margin-left: 0;
+							border-bottom: 1px solid #333;
+							margin-bottom: 50px;
 							a {
 								width: 100%;
-								font: bold 3vmin/40px $krFont;
+								border: none;
+								margin-bottom: 10px;
+							}
+							p {
+								padding: 0;
+							}
+							span {
+								display: inline-block;
+								margin-bottom: 10px;
+							}
+							&.on {
+								a {
+									color: #ff5722;
+									border: none;
+								}
 							}
 						}
 					}

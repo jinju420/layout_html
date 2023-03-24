@@ -31,29 +31,18 @@
 							tr:nth-of-type(7) td:first-child,
 							tr:nth-of-type(8) td:first-child,
 							tr:nth-of-type(9) td:first-child {
-								border-top-left-radius: 10px;
-								border-bottom-left-radius: 10px;
 								background: #bbb;
 								position: relative;
 								color: #222;
 								font-weight: bold;
 								font-size: 16px;
 							}
-							tr:nth-of-type(2) td:last-child,
-							tr:nth-of-type(3) td:last-child,
-							tr:nth-of-type(4) td:last-child,
-							tr:nth-of-type(5) td:last-child,
-							tr:nth-of-type(6) td:last-child,
-							tr:nth-of-type(7) td:last-child,
-							tr:nth-of-type(8) td:last-child,
-							tr:nth-of-type(9) td:last-child {
-								border-top-right-radius: 10px;
-								border-bottom-right-radius: 10px;
-							}
+
 							tr {
 								border-collapse: separate;
 								border-spacing: 0 10px;
-								background: $mainBg;
+								border: 1px solid #333;
+								// background: $mainBg;
 								&:hover td:first-child {
 									background: $strongColor;
 									color: #fff;
@@ -83,7 +72,7 @@
 							padding: 20px;
 							cursor: pointer;
 							font-size: 14px;
-							&:nth-of-type(2){
+							&:nth-of-type(2) {
 								text-align: left;
 								font-size: 16px;
 							}

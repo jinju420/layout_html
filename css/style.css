@@ -514,7 +514,7 @@ fieldset {
   text-shadow: 0px 2px 5px rgba(0, 0, 0, 0.7);
 }
 .com .sub_con {
-  background: #e7ded7;
+  background: #fefbf4;
 }
 .com .sub_con > .inner {
   width: 1180px;
@@ -999,20 +999,24 @@ fieldset {
   padding-bottom: 80px;
 }
 .youtube .sub_con .inner .vids article {
-  width: calc((100% - 40px) / 3);
+  width: 100%;
   height: 100%;
-  margin-bottom: 30px;
-  isolation: isolate;
-  background: #f8f5f0;
-  overflow: hidden;
-  -webkit-backface-visibility: hidden;
-  -moz-backface-visibility: hidden;
-  -webkit-transform: translate3d(0, 0, 0);
-  -moz-transform: translate3d(0, 0, 0);
+  margin-bottom: 20px;
+  display: flex;
+  border-top: 1px solid #333;
+  padding-top: 20px;
+}
+.youtube .sub_con .inner .vids article:nth-of-type(odd) {
+  flex-direction: row-reverse;
+}
+.youtube .sub_con .inner .vids article:nth-of-type(even) .con {
+  margin-left: 70px;
+  margin-right: 0;
 }
 .youtube .sub_con .inner .vids article .pic {
   display: block;
-  width: 100%;
+  width: 68%;
+  height: 260px;
   filter: saturate(30%) brightness(90%);
   transition: 0.5s;
 }
@@ -1025,30 +1029,33 @@ fieldset {
   filter: saturate(100%) brightness(100%);
 }
 .youtube .sub_con .inner .vids article .con {
-  width: 100%;
-  height: 200px;
-  padding: 20px;
+  width: 60%;
   opacity: 0.7;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-right: 70px;
 }
 .youtube .sub_con .inner .vids article .con h2 {
-  font-size: 22px;
+  font-size: 20px;
   font-family: "Poppins";
-  margin-bottom: 30px;
 }
 .youtube .sub_con .inner .vids article .con p {
   font-size: 18px;
-  font-weight: bold;
+  font-weight: 300;
   line-height: 1.5;
   font-family: "Poppins";
   margin-bottom: 20px;
+  word-break: keep-all;
 }
 .youtube .sub_con .inner .vids article .con span {
   font-size: 15px;
-  text-align: right;
   display: block;
-  color: #a06138;
+  color: #333;
   font-weight: bold;
+  padding-top: 10px;
   font-family: "Montserrat";
+  margin-bottom: 10px;
 }
 
 figure.popup {
@@ -1091,33 +1098,34 @@ figure.popup .closeBtn i {
   color: #fff;
 }
 
-@media screen and (max-width: 1179px) {
-  .youtube .sub_con .inner .vids article {
-    width: calc((100% - 40px) / 2);
-  }
-  .youtube .sub_con .inner .vids article .con {
-    height: auto;
-  }
-  .youtube .sub_con .inner .vids article .con h2 {
-    font-size: 22px;
-    margin-bottom: 20px;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    display: -webkit-box;
-    -webkit-line-clamp: 1;
-    -webkit-box-orient: vertical;
-  }
-  .youtube .sub_con .inner .vids article .con p {
-    overflow: hidden;
-    text-overflow: ellipsis;
-    display: -webkit-box;
-    -webkit-line-clamp: 1;
-    -webkit-box-orient: vertical;
-  }
-}
 @media screen and (max-width: 539px) {
   .youtube .sub_con .inner .vids article {
     width: 100%;
+    flex-direction: column-reverse;
+  }
+  .youtube .sub_con .inner .vids article:nth-of-type(odd) {
+    flex-direction: column-reverse;
+  }
+  .youtube .sub_con .inner .vids article:nth-of-type(even) .con {
+    margin-left: 0;
+    margin-right: 0;
+  }
+  .youtube .sub_con .inner .vids article .pic {
+    width: 100%;
+  }
+  .youtube .sub_con .inner .vids article .con {
+    width: 100%;
+  }
+  .youtube .sub_con .inner .vids article .con h2 {
+    font-size: 20px;
+    margin-bottom: 20px;
+  }
+  .youtube .sub_con .inner .vids article .con .subTxt span {
+    font-size: 16px;
+  }
+  .youtube .sub_con .inner .vids article .con .subTxt p {
+    font-size: 14px;
+    line-height: 1.3;
   }
   figure.popup .closeBtn {
     top: -130px;
@@ -1540,29 +1548,16 @@ figure.popup .closeBtn i {
 .notice .sub_con > .inner .wrap article table tbody tr:nth-of-type(7) td:first-child,
 .notice .sub_con > .inner .wrap article table tbody tr:nth-of-type(8) td:first-child,
 .notice .sub_con > .inner .wrap article table tbody tr:nth-of-type(9) td:first-child {
-  border-top-left-radius: 10px;
-  border-bottom-left-radius: 10px;
   background: #bbb;
   position: relative;
   color: #222;
   font-weight: bold;
   font-size: 16px;
 }
-.notice .sub_con > .inner .wrap article table tbody tr:nth-of-type(2) td:last-child,
-.notice .sub_con > .inner .wrap article table tbody tr:nth-of-type(3) td:last-child,
-.notice .sub_con > .inner .wrap article table tbody tr:nth-of-type(4) td:last-child,
-.notice .sub_con > .inner .wrap article table tbody tr:nth-of-type(5) td:last-child,
-.notice .sub_con > .inner .wrap article table tbody tr:nth-of-type(6) td:last-child,
-.notice .sub_con > .inner .wrap article table tbody tr:nth-of-type(7) td:last-child,
-.notice .sub_con > .inner .wrap article table tbody tr:nth-of-type(8) td:last-child,
-.notice .sub_con > .inner .wrap article table tbody tr:nth-of-type(9) td:last-child {
-  border-top-right-radius: 10px;
-  border-bottom-right-radius: 10px;
-}
 .notice .sub_con > .inner .wrap article table tbody tr {
   border-collapse: separate;
   border-spacing: 0 10px;
-  background: #f8f8f8;
+  border: 1px solid #333;
 }
 .notice .sub_con > .inner .wrap article table tbody tr:hover td:first-child {
   background: #a06138;
@@ -1732,33 +1727,120 @@ figure.popup .closeBtn i {
   opacity: 1;
   padding: 50px 50px;
 }
-.contactUs .sub_con > .inner .sns {
-  margin-bottom: 45px;
-  text-align: right;
+.contactUs .sub_con > .inner .touch {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 100px;
+  margin-bottom: 50px;
+  border-bottom: 1px solid #aaa;
+  padding-bottom: 50px;
 }
-.contactUs .sub_con > .inner .sns a {
-  margin-left: 20px;
-  transition: 1s;
+.contactUs .sub_con > .inner .touch::after {
+  content: "";
+  display: block;
+  clear: both;
 }
-.contactUs .sub_con > .inner .sns a i {
-  font-size: 20px;
+.contactUs .sub_con > .inner .touch .left {
+  display: flex;
+  flex-wrap: wrap;
 }
-.contactUs .sub_con > .inner .sns a:hover {
-  color: #a06138;
+.contactUs .sub_con > .inner .touch .left article {
+  margin-bottom: 50px;
+  width: calc((100% - 50px) / 2);
 }
-.contactUs .sub_con > .inner > h1 {
-  margin-bottom: 20px;
-  opacity: 0.7;
+.contactUs .sub_con > .inner .touch .left article:nth-of-type(3), .contactUs .sub_con > .inner .touch .left article:nth-of-type(4) {
+  margin-bottom: 0;
 }
-.contactUs .sub_con > .inner span {
-  font-size: 16px;
-  letter-spacing: 0.5px;
-  white-space: nowrap;
-  font-weight: 300;
+.contactUs .sub_con > .inner .touch .left article h2 {
+  font: 14px/1 "Montserrat";
+  padding: 20px 0 10px;
 }
-.contactUs .sub_con > .inner span:nth-of-type(2) {
-  margin-right: 15px;
-  margin-left: 15px;
+.contactUs .sub_con > .inner .touch .left article p {
+  font: 12px/1 "Montserrat";
+  color: #888;
+}
+.contactUs .sub_con > .inner .touch .right {
+  position: relative;
+  width: 70%;
+}
+.contactUs .sub_con > .inner .touch .right .title h1 {
+  font: bold 5vmin/1 "Poppins";
+  margin-bottom: 30px;
+}
+.contactUs .sub_con > .inner .touch .right .input_box input[type=submit] {
+  position: absolute;
+  top: 0;
+  right: 0;
+  color: #fff;
+  font: 14px/1 "Poppins";
+  margin-top: 0;
+  background: #ff5722;
+  width: 13vw;
+  cursor: pointer;
+  padding: 10px 15px;
+}
+.contactUs .sub_con > .inner .touch .right .input_box .input_touch {
+  display: flex;
+  align-items: center;
+}
+.contactUs .sub_con > .inner .touch .right .input_box .input_touch label {
+  font: 14px/1 "Montserrat";
+}
+.contactUs .sub_con > .inner .touch .right .input_box .input_touch .err {
+  display: block;
+  color: #f8f5f0;
+  font: 10px/1 "Montserrat";
+  margin: 10px 0 20px;
+}
+.contactUs .sub_con > .inner .touch .right .input_box .input_touch .input {
+  width: 100%;
+  margin-right: 30px;
+}
+.contactUs .sub_con > .inner .touch .right .input_box .input_touch .input input {
+  width: 100%;
+  padding: 10px;
+  border-bottom: 1px solid #ddd;
+  background: transparent;
+}
+.contactUs .sub_con > .inner .touch .right .input_box .input_touch .input input:last-child {
+  margin-bottom: 0;
+}
+.contactUs .sub_con > .inner .touch .right .input_box .txtarea {
+  width: 100%;
+}
+.contactUs .sub_con > .inner .touch .right .input_box .txtarea textarea {
+  width: 100%;
+  height: 100px;
+  margin-top: 30px;
+  resize: none;
+  border: 1px solid #ddd;
+  padding: 10px;
+  background: #f8f8f8;
+}
+.contactUs .sub_con > .inner .touch .right .input_box .txtarea textarea::placeholder {
+  color: #bbb;
+  font: 12px/1 "Montserrat";
+}
+.contactUs .sub_con > .inner .traffic {
+  display: flex;
+}
+.contactUs .sub_con > .inner .traffic li {
+  margin-right: 20px;
+}
+.contactUs .sub_con > .inner .traffic li a {
+  display: block;
+  width: 200px;
+  height: 40px;
+  background: transparent;
+  font: bold 14px/35px "Poppins";
+  color: #333;
+  border: 1px solid #333;
+  text-align: center;
+  letter-spacing: 1px;
+}
+.contactUs .sub_con > .inner .traffic li.on a {
+  background: #666;
+  color: #f8f8f8;
 }
 .contactUs .sub_con > .inner #map {
   width: 100%;
@@ -1768,54 +1850,44 @@ figure.popup .closeBtn i {
   margin-top: 10px;
   transition: 1s;
   opacity: 0.7;
+  filter: saturate(0);
 }
 .contactUs .sub_con > .inner #map:hover {
+  filter: saturate(1);
   opacity: 1;
 }
 .contactUs .sub_con > .inner .map_guide {
-  display: flex;
-  justify-content: space-between;
   margin-bottom: 30px;
-}
-.contactUs .sub_con > .inner .map_guide .traffic {
-  display: flex;
-}
-.contactUs .sub_con > .inner .map_guide .traffic li {
-  margin-right: 20px;
-}
-.contactUs .sub_con > .inner .map_guide .traffic li a {
-  display: block;
-  width: 200px;
-  height: 40px;
-  background: #666;
-  font: bold 14px/40px "Noto Sans KR";
-  color: #fff;
-  text-align: center;
-  letter-spacing: 1px;
-}
-.contactUs .sub_con > .inner .map_guide .traffic li.on a {
-  background: #a06138;
-  color: #f8f8f8;
 }
 .contactUs .sub_con > .inner .map_guide .store {
   display: flex;
 }
 .contactUs .sub_con > .inner .map_guide .store li {
-  margin-left: 10px;
+  width: calc((100% - 20px) / 3);
+  margin-right: 20px;
 }
 .contactUs .sub_con > .inner .map_guide .store li a {
   display: block;
-  width: 200px;
+  width: 100%;
   height: 40px;
-  background: #666;
-  font: bold 14px/40px "Noto Sans KR";
-  color: #fff;
-  text-align: center;
+  background: transparent;
+  font: bold 18px/40px "Poppins";
+  color: #333;
   letter-spacing: 1px;
+  border-bottom: 1px solid #333;
+}
+.contactUs .sub_con > .inner .map_guide .store li p {
+  color: #333;
+  font: 16px/1 "Montserrat";
+  padding: 20px 0 0;
+}
+.contactUs .sub_con > .inner .map_guide .store li span {
+  color: #333;
+  font: 13px/1 "Montserrat";
 }
 .contactUs .sub_con > .inner .map_guide .store li.on a {
-  background: #a06138;
-  color: #f8f8f8;
+  color: #ff5722;
+  border-bottom: 1px solid #ff5722;
 }
 
 @media screen and (max-width: 1179px) {
@@ -1823,46 +1895,90 @@ figure.popup .closeBtn i {
     width: 100%;
     padding: 50px 50px;
   }
-  .contactUs .sub_con > .inner .sns {
-    margin-bottom: 45px;
+  .contactUs .sub_con > .inner .touch .left {
+    flex-direction: column;
   }
-  .contactUs .sub_con > .inner .sns a {
-    margin-left: 20px;
+  .contactUs .sub_con > .inner .touch .left article {
+    width: 100%;
   }
-  .contactUs .sub_con > .inner .sns a i {
-    font-size: 20px;
+  .contactUs .sub_con > .inner .touch .left article:nth-of-type(3), .contactUs .sub_con > .inner .touch .left article:nth-of-type(4) {
+    margin-bottom: 50px;
+  }
+  .contactUs .sub_con > .inner .touch .left article p {
+    font: 12px/1 "Montserrat";
+  }
+  .contactUs .sub_con > .inner .touch .right {
+    width: 50%;
+    height: 100%;
+  }
+  .contactUs .sub_con > .inner .touch .right .title h1 {
+    margin-bottom: 30px;
+  }
+  .contactUs .sub_con > .inner .touch .right .input_box input[type=submit] {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    color: #fff;
+    font: 14px/1 "Poppins";
+    margin-top: 0;
+    background: #ff5722;
+    width: 100%;
+    cursor: pointer;
+    padding: 10px 15px;
+  }
+  .contactUs .sub_con > .inner .touch .right .input_box .input_touch {
+    flex-direction: column;
+  }
+  .contactUs .sub_con > .inner .touch .right .input_box .input_touch label {
+    font: 14px/1 "Montserrat";
+  }
+  .contactUs .sub_con > .inner .touch .right .input_box .input_touch .err {
+    display: block;
+    color: #f8f5f0;
+    font: 10px/1 "Montserrat";
+    margin: 10px 0 20px;
+  }
+  .contactUs .sub_con > .inner .touch .right .input_box .input_touch .input {
+    width: 100%;
+    margin-right: 0;
+  }
+  .contactUs .sub_con > .inner .touch .right .input_box .input_touch .input input {
+    width: 100%;
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+    background: transparent;
+  }
+  .contactUs .sub_con > .inner .touch .right .input_box .input_touch .input input:last-child {
+    margin-bottom: 0;
+  }
+  .contactUs .sub_con > .inner .touch .right .input_box .txtarea {
+    width: 100%;
+  }
+  .contactUs .sub_con > .inner .touch .right .input_box .txtarea textarea {
+    width: 100%;
+    height: 100px;
+    margin-top: 30px;
+    resize: none;
+    border: 1px solid #ddd;
+    padding: 10px;
+    background: #f8f8f8;
+  }
+  .contactUs .sub_con > .inner .touch .right .input_box .txtarea textarea::placeholder {
+    color: #bbb;
+  }
+  .contactUs .sub_con > .inner .traffic li {
+    margin-right: 20px;
+    margin-bottom: 10px;
+  }
+  .contactUs .sub_con > .inner .traffic li a {
+    width: 20vw;
+    height: 40px;
+    font: bold 15px/40px "Poppins";
+    letter-spacing: 0px;
   }
   .contactUs .sub_con > .inner #map {
     height: 500px;
     margin-bottom: 30px;
-  }
-  .contactUs .sub_con > .inner .map_guide {
-    margin-bottom: 30px;
-  }
-  .contactUs .sub_con > .inner .map_guide .traffic {
-    display: block;
-  }
-  .contactUs .sub_con > .inner .map_guide .traffic li {
-    margin-right: 20px;
-    margin-bottom: 10px;
-  }
-  .contactUs .sub_con > .inner .map_guide .traffic li a {
-    width: 17vmax;
-    height: 40px;
-    font: bold 15px/40px "Noto Sans KR";
-    letter-spacing: 0px;
-  }
-  .contactUs .sub_con > .inner .map_guide .store {
-    flex-wrap: wrap;
-    justify-content: flex-end;
-  }
-  .contactUs .sub_con > .inner .map_guide .store li {
-    margin-left: 10px;
-    margin-bottom: 10px;
-  }
-  .contactUs .sub_con > .inner .map_guide .store li a {
-    width: 11vmax;
-    font: bold 16px/40px "Noto Sans KR";
   }
 }
 @media screen and (max-width: 539px) {
@@ -1870,21 +1986,34 @@ figure.popup .closeBtn i {
     width: 100%;
     padding: 50px 30px;
   }
-  .contactUs .sub_con > .inner .sns {
-    margin-bottom: 25px;
+  .contactUs .sub_con > .inner .touch {
+    margin-top: 30px;
+    margin-bottom: 50px;
+    flex-direction: column;
   }
-  .contactUs .sub_con > .inner .sns a {
-    margin-left: 20px;
+  .contactUs .sub_con > .inner .touch .right {
+    width: 100%;
   }
-  .contactUs .sub_con > .inner .sns a i {
-    font-size: 20px;
+  .contactUs .sub_con > .inner .touch .right .input_box input[type=submit] {
+    top: 0;
+    font: 12px/1 "Poppins";
+    width: 20vw;
   }
-  .contactUs .sub_con > .inner span {
-    font-size: 16px;
-    display: block;
+  .contactUs .sub_con > .inner .traffic {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 15px;
   }
-  .contactUs .sub_con > .inner span:nth-of-type(2) {
-    display: none;
+  .contactUs .sub_con > .inner .traffic li {
+    width: calc((100% - 20px) / 2);
+    margin-right: 0;
+    margin-bottom: 10px;
+  }
+  .contactUs .sub_con > .inner .traffic li a {
+    width: 100%;
+    height: 40px;
+    font: bold 3vmin/40px "Poppins";
+    letter-spacing: 1px;
   }
   .contactUs .sub_con > .inner #map {
     margin-top: 15px;
@@ -1893,33 +2022,30 @@ figure.popup .closeBtn i {
     margin-bottom: 0;
     flex-direction: column-reverse;
   }
-  .contactUs .sub_con > .inner .map_guide .traffic {
-    display: flex;
-    justify-content: space-between;
-    margin-top: 15px;
-  }
-  .contactUs .sub_con > .inner .map_guide .traffic li {
-    width: calc((100% - 20px) / 2);
-    margin-right: 0;
-    margin-bottom: 10px;
-  }
-  .contactUs .sub_con > .inner .map_guide .traffic li a {
-    width: 100%;
-    height: 40px;
-    font: bold 3vmin/40px "Noto Sans KR";
-    letter-spacing: 1px;
-  }
   .contactUs .sub_con > .inner .map_guide .store {
-    display: flex;
-    justify-content: space-between;
+    display: block;
   }
   .contactUs .sub_con > .inner .map_guide .store li {
-    width: calc((100% - 40px) / 3);
+    width: 100%;
     margin-left: 0;
+    border-bottom: 1px solid #333;
+    margin-bottom: 50px;
   }
   .contactUs .sub_con > .inner .map_guide .store li a {
     width: 100%;
-    font: bold 3vmin/40px "Noto Sans KR";
+    border: none;
+    margin-bottom: 10px;
+  }
+  .contactUs .sub_con > .inner .map_guide .store li p {
+    padding: 0;
+  }
+  .contactUs .sub_con > .inner .map_guide .store li span {
+    display: inline-block;
+    margin-bottom: 10px;
+  }
+  .contactUs .sub_con > .inner .map_guide .store li.on a {
+    color: #ff5722;
+    border: none;
   }
 }
 #skipNavi li a {

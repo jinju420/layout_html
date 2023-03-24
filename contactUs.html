@@ -2,243 +2,290 @@
 <html lang="ko">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>contact us</title>
-    <link rel="stylesheet" href="css/style.css">
-    <script src="https://kit.fontawesome.com/7783789018.js" crossorigin="anonymous"></script>
-    <script defer src="js/common.js"></script>
-    <script defer src="js/contactUs.js"></script>
-    <script type="text/javascript"
-        src="//dapi.kakao.com/v2/maps/sdk.js?appkey=e44fe93b076814ac88936d7f0a2328c1"></script>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>contact us</title>
+	<link rel="stylesheet" href="css/style.css">
+	<script src="https://kit.fontawesome.com/7783789018.js" crossorigin="anonymous"></script>
+	<script defer src="js/common.js"></script>
+	<script defer src="js/contactUs.js"></script>
+	<script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=e44fe93b076814ac88936d7f0a2328c1"></script>
 </head>
 
 <body>
-    <header id="sub_header" class="header">
-        <div class="bg"></div>
-        <div class="inner">
-            <h1><a href="index.html" class="logo">Obj</a></h1>
-            <nav class="menuWeb">
-                <ul id="gnb">
-                    <li>
-                        <a href="brand.html">BRAND</a>
-                    </li>
-                    <li>
-                        <a href="gallery.html">GALLERY</a>
-                    </li>
-                    <li>
-                        <a href="youtube.html">YOUTUBE</a>
-                    </li>
-                    <li>
-                        <a href="myPage.html">MY PAGE</a>
-                    </li>
-                    <li>
-                        <a href="notice.html">NOTICE</a>
-                    </li>
-                    <li>
-                        <a href="contactUs.html" class="on">CONTACT US</a>
-                    </li>
-                </ul>
-            </nav>
-            <!-- mobile -->
-            <div class="quick_menu">
-                <a href="#" class="bars">
-                    <span></span>
-                </a>
-            </div>
+	<header id="sub_header" class="header">
+		<div class="bg"></div>
+		<div class="inner">
+			<h1><a href="index.html" class="logo">Obj</a></h1>
+			<nav class="menuWeb">
+				<ul id="gnb">
+					<li>
+						<a href="brand.html">BRAND</a>
+					</li>
+					<li>
+						<a href="gallery.html">GALLERY</a>
+					</li>
+					<li>
+						<a href="youtube.html">YOUTUBE</a>
+					</li>
+					<li>
+						<a href="myPage.html">MY PAGE</a>
+					</li>
+					<li>
+						<a href="notice.html">NOTICE</a>
+					</li>
+					<li>
+						<a href="contactUs.html" class="on">CONTACT US</a>
+					</li>
+				</ul>
+			</nav>
+			<!-- mobile -->
+			<div class="quick_menu">
+				<a href="#" class="bars">
+					<span></span>
+				</a>
+			</div>
 
-            <nav class="menuMo">
-                <div class="loginBox">
-                    <div class="joinBox">
-                        <h1><a href="index.html" class="logo">Obj</a></h1>
-                    </div>
-                    <div class="closeBox">
-                        <a href="#" class="close">
-                            <span></span>
-                        </a>
-                    </div>
-                </div>
-                <ul class="sub_menu">
-                    <li>
-                        <div class="tab">
-                            <input type="radio" name="cate" id="cate1">
-                            <label for="cate1">
-                                <h3>BRAND</h3>
-                                <a href="#" class="arrow">
-                                    <span class="hidden">브랜드</span>
-                                </a>
-                            </label>
-                            <ul class="inputUl">
-                                <li><a href="brand.html">ABOUT</a></li>
-                                <li><a href="brand.html">MEMBER</a></li>
-                            </ul>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="tab">
-                            <input type="radio" name="cate" id="cate2">
-                            <label for="cate2">
-                                <h3>GALLERY</h3>
-                                <a href="#" class="arrow">
-                                    <span class="hidden">갤러리</span>
-                                </a>
-                            </label>
-                            <ul class="inputUl">
-                                <li><a href="gallery.html">POPULAR</a></li>
-                            </ul>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="tab">
-                            <input type="radio" name="cate" id="cate3">
-                            <label for="cate3">
-                                <h3>YOUTUBE</h3>
-                                <a href="#" class="arrow">
-                                    <span class="hidden">유투브</span>
-                                </a>
-                            </label>
-                            <ul class="inputUl">
-                                <li><a href="youtube.html">COMMUNITY</a></li>
-                            </ul>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="tab">
-                            <input type="radio" name="cate" id="cate4">
-                            <label for="cate4">
-                                <h3>MY PAGE</h3>
-                                <a href="#" class="arrow">
-                                    <span class="hidden">회원가입</span>
-                                </a>
-                            </label>
-                            <ul class="inputUl">
-                                <li><a href="myPage.html">JOIN</a></li>
-                            </ul>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="tab">
-                            <input type="radio" name="cate" id="cate5">
-                            <label for="cate5">
-                                <h3>NOTICE</h3>
-                                <a href="#" class="arrow">
-                                    <span class="hidden">공지사항</span>
-                                </a>
-                            </label>
-                            <ul class="inputUl">
-                                <li><a href="notice.html">REQUEST</a></li>
-                            </ul>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="tab">
-                            <input type="radio" name="cate" id="cate6">
-                            <label for="cate6">
-                                <h3>CONTACT US</h3>
-                                <a href="#" class="arrow">
-                                    <span class="hidden">오시는길</span>
-                                </a>
-                            </label>
-                            <ul class="inputUl">
-                                <li><a href="contactUs.html">LOCATION</a></li>
-                                <li><a href="contactUs.html">SNS</a></li>
-                            </ul>
-                        </div>
-                    </li>
-                </ul>
-            </nav>
-        </div>
-    </header>
+			<nav class="menuMo">
+				<div class="loginBox">
+					<div class="joinBox">
+						<h1><a href="index.html" class="logo">Obj</a></h1>
+					</div>
+					<div class="closeBox">
+						<a href="#" class="close">
+							<span></span>
+						</a>
+					</div>
+				</div>
+				<ul class="sub_menu">
+					<li>
+						<div class="tab">
+							<input type="radio" name="cate" id="cate1">
+							<label for="cate1">
+								<h3>BRAND</h3>
+								<a href="#" class="arrow">
+									<span class="hidden">브랜드</span>
+								</a>
+							</label>
+							<ul class="inputUl">
+								<li><a href="brand.html">ABOUT</a></li>
+								<li><a href="brand.html">MEMBER</a></li>
+							</ul>
+						</div>
+					</li>
+					<li>
+						<div class="tab">
+							<input type="radio" name="cate" id="cate2">
+							<label for="cate2">
+								<h3>GALLERY</h3>
+								<a href="#" class="arrow">
+									<span class="hidden">갤러리</span>
+								</a>
+							</label>
+							<ul class="inputUl">
+								<li><a href="gallery.html">POPULAR</a></li>
+							</ul>
+						</div>
+					</li>
+					<li>
+						<div class="tab">
+							<input type="radio" name="cate" id="cate3">
+							<label for="cate3">
+								<h3>YOUTUBE</h3>
+								<a href="#" class="arrow">
+									<span class="hidden">유투브</span>
+								</a>
+							</label>
+							<ul class="inputUl">
+								<li><a href="youtube.html">COMMUNITY</a></li>
+							</ul>
+						</div>
+					</li>
+					<li>
+						<div class="tab">
+							<input type="radio" name="cate" id="cate4">
+							<label for="cate4">
+								<h3>MY PAGE</h3>
+								<a href="#" class="arrow">
+									<span class="hidden">회원가입</span>
+								</a>
+							</label>
+							<ul class="inputUl">
+								<li><a href="myPage.html">JOIN</a></li>
+							</ul>
+						</div>
+					</li>
+					<li>
+						<div class="tab">
+							<input type="radio" name="cate" id="cate5">
+							<label for="cate5">
+								<h3>NOTICE</h3>
+								<a href="#" class="arrow">
+									<span class="hidden">공지사항</span>
+								</a>
+							</label>
+							<ul class="inputUl">
+								<li><a href="notice.html">REQUEST</a></li>
+							</ul>
+						</div>
+					</li>
+					<li>
+						<div class="tab">
+							<input type="radio" name="cate" id="cate6">
+							<label for="cate6">
+								<h3>CONTACT US</h3>
+								<a href="#" class="arrow">
+									<span class="hidden">오시는길</span>
+								</a>
+							</label>
+							<ul class="inputUl">
+								<li><a href="contactUs.html">LOCATION</a></li>
+								<li><a href="contactUs.html">SNS</a></li>
+							</ul>
+						</div>
+					</li>
+				</ul>
+			</nav>
+		</div>
+	</header>
 
-    <section class="com contactUs">
-        <div class="sub_Visual">
-            <div class="visual_box">
-                <div class="inner">
-                    <div class="title_txt">
-                        <h1>Location</h1>
-                        <p>오시는 길 / 지역별 매장 안내입니다</p>
-                    </div>
-                    <div id="daumRoughmapContainer1675254631328"
-                        class="map root_daum_roughmap root_daum_roughmap_landing">
-                    </div>
-                </div>
-            </div>
-        </div>
-        </div>
-        <div class="sub_con">
-            <div class="inner">
-                <div class="sns">
-                    <a href="javascript:void(0);" class="facebook"><i class="fab fab fa-instagram"></i></a>
-                    <a href="javascript:void(0);" class="facebook"><i class="fab fa-twitter"></i></a>
-                    <a href="javascript:void(0);" class="facebook"><i class="fab fa-facebook-f"></i></a>
-                </div>
-                <h1>Contact Us</h1>
-                <span>13, Wausan-ro 35-gil, Mapo-gu, Seoul</span>
-                <span>|</span>
-                <span>Object@naver.com</span>
+	<section class="com contactUs">
+		<div class="sub_Visual">
+			<div class="visual_box">
+				<div class="inner">
+					<div class="title_txt">
+						<h1>Location</h1>
+						<p>Here's the way /local store information</p>
+					</div>
+					<div id="daumRoughmapContainer1675254631328" class="map root_daum_roughmap root_daum_roughmap_landing">
+					</div>
+				</div>
+			</div>
+		</div>
+		</div>
+		<div class="sub_con">
+			<div class="inner">
+				<div class='touch'>
+					<div class='left'>
+						<article>
+							<i class="fa fa-map-pin"></i>
+							<h2>ADDRESS</h2>
+							<p>9, Wausan-ro 37-gil,<br> Mapo-gu, Seoul</p>
+						</article>
+						<article>
+							<i class="fa fa-clock"></i>
+							<h2>OPENING TIME</h2>
+							<p>Mon - Fri / 9 to 6</p>
+						</article>
+						<article>
+							<i class="fa fa-envelope"></i>
+							<h2>E-MAIL</h2>
+							<p>hello@granhand.com</p>
+						</article>
+						<article>
+							<i class="fa fa-phone"></i>
+							<h2>PHONE</h2>
+							<p>02-333-6525</p>
+						</article>
+					</div>
+					<div class='right'>
+						<div class='title'>
+							<h1>Get In Touch</h1>
+						</div>
 
-                <div id="map"></div>
-
-                <div class="map_guide">
-                    <ul class="traffic">
-                        <li><a href="#">자전거도로 ON</a></li>
-                        <li class="on"><a href="#">자전거도로 OFF</a></li>
-                    </ul>
-
-                    <ul class="store">
-                        <li class="on" data-index="0"><a href="#">본점</a></li>
-                        <li data-index="1"><a href="#">청담점</a></li>
-                        <li data-index="2"><a href="#">부산점</a></li>
-                    </ul>
-                </div>
+						<form>
+							<fieldset></fieldset>
+							<legend class='hide'>찾아오시는 길 폼 양식</legend>
+							<div class='input_box'>
+								<input type='submit' value='SEND' />
+								<div class='input_touch'>
+									<div class='input'>
+										<label htmlFor='username'>NAME</label>
+										<input type='text' id='username' name='username' />
+										<span class='err'>{Err.username}</span>
 
 
-                <!-- <div class="info">
-                    <div class="office">
-                        <h2>OUR OFFICE</h2>
-                        <span>13, Wausan-ro 35-gil,<br> Mapo-gu, Seoul</span>
-                    </div>
-                    <div class="mail">
-                        <h2>EMAIL US</h2>
-                        <span>ljjshlove@naver.com</span>
-                    </div>
-                </div> -->
-            </div>
-        </div>
-    </section>
+										<label htmlFor='email'>E-MAIL</label>
+										<input type='text' id='email' name='email' />
+										<span class='err'>{Err.email}</span>
 
-    <footer id="sub_footer" class="footer contactft">
-        <div class="inner">
-            <div class="wrap">
-                <article class="map mapClick">
-                    <a href="contactUs.html">
-                        <i class="far fa-map"></i>
-                        <span>LOCATION</span>
-                    </a>
-                </article>
-                <article class="mail">
-                    <a href="notice.html">
-                        <i class="far fa-question-circle"></i>
-                        <span>INQUIRY</span>
-                    </a>
-                </article>
-                <article class="sns">
-                    <a href="contactUs.html">
-                        <i class="fab fa-instagram"></i>
-                        <span>SNS</span>
-                    </a>
-                </article>
-            </div>
-            <a href="#" class="top">
-                <i class="fas fa-solid fa-chevron-up"></i>
-            </a>
-        </div>
-        <div class="ft_txt">
-            <span>LJJSHLOVE@NAVER.COM</span>
-            <p>Copyrightⓒ 2023 All rights reserved</p>
-        </div>
-    </footer>
+									</div>
+
+									<div class='txtarea'>
+										<label htmlFor='comments'>MESSAGE</label>
+										<textarea cols='30' rows='5' placeholder='comments' name='comments' id='comments'></textarea>
+										<span class='err'>{Err.comments}</span>
+									</div>
+								</div>
+							</div>
+						</form>
+					</div>
+				</div>
+
+				<ul class="traffic">
+					<li><a href="#">bicycle ON</a></li>
+					<li class="on"><a href="#">bicycle OFF</a></li>
+				</ul>
+
+				<div id="map"></div>
+
+				<div class="map_guide">
+
+
+					<ul class="store">
+						<li class="on" data-index="0">
+							<a href="#">Hongdae</a>
+							<p>9, Wausan-ro 37-gil, Mapo-gu, Seoul</p>
+							<span>02-333-6525</span>
+						</li>
+						<li data-index="1">
+							<a href="#">Samcheong</a>
+							<p>Bukchon-ro 5-gil, Jongno-gu, Seoul</p>
+							<span>02-333-6525</span>
+						</li>
+						<li data-index="2">
+							<a href="#">Busan</a>
+							<p>Jeonpo-dong, Busanjin-gu, Busan</p>
+							<span>051-808-7747</span>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<footer id="sub_footer" class="footer contactft">
+		<div class="inner">
+			<div class="wrap">
+				<article class="map mapClick">
+					<a href="contactUs.html">
+						<i class="far fa-map"></i>
+						<span>LOCATION</span>
+					</a>
+				</article>
+				<article class="mail">
+					<a href="notice.html">
+						<i class="far fa-question-circle"></i>
+						<span>INQUIRY</span>
+					</a>
+				</article>
+				<article class="sns">
+					<a href="contactUs.html">
+						<i class="fab fa-instagram"></i>
+						<span>SNS</span>
+					</a>
+				</article>
+			</div>
+			<a href="#" class="top">
+				<i class="fas fa-solid fa-chevron-up"></i>
+			</a>
+		</div>
+		<div class="ft_txt">
+			<span>LJJSHLOVE@NAVER.COM</span>
+			<p>Copyrightⓒ 2023 All rights reserved</p>
+		</div>
+	</footer>
 </body>
 
 </html>
