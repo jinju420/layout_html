@@ -492,16 +492,14 @@ fieldset {
   font-weight: 400;
   text-align: left;
   margin-bottom: 10px;
-  color: #fff;
+  color: #666;
   font-family: "Poppins";
-  text-shadow: 2px 5px 12px rgba(0, 0, 0, 0.7);
 }
 .com .sub_Visual .visual_box .inner .title_txt p {
   position: relative;
-  color: #fff;
+  color: #666;
   font-size: 20px;
   font-family: "Montserrat";
-  text-shadow: 0px 2px 5px rgba(0, 0, 0, 0.7);
 }
 .com .sub_con {
   background: #fefbf4;
@@ -645,7 +643,7 @@ fieldset {
     left: 50px;
   }
   #sub_header .inner > h1 a {
-    color: #fff;
+    color: #333;
   }
   #sub_header .inner .menuWeb {
     display: none;
@@ -677,10 +675,10 @@ fieldset {
     display: flex;
   }
   #sub_header .inner .quick_menu .bars span {
-    background: #fff;
+    background: #333;
   }
   #sub_header .inner .quick_menu .bars::before, #sub_header .inner .quick_menu .bars::after {
-    background: #fff;
+    background: #333;
   }
   .com {
     width: 100%;
@@ -794,14 +792,13 @@ fieldset {
 }
 .gallery .visual_box {
   position: relative;
-  background: url("../img/sub/visual/gallery.jpg") no-repeat center/cover;
+  background: url("../img/sub/visual/brand.jpg") no-repeat center/cover;
 }
 .gallery .visual_box::before {
   content: "";
   display: block;
   width: 100%;
   height: 100%;
-  background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.1));
   position: absolute;
   top: 0;
   left: 0;
@@ -1012,14 +1009,13 @@ fieldset {
 }
 .youtube .visual_box {
   position: relative;
-  background: url("../img/sub/visual/youtube.jpg") no-repeat center/cover;
+  background: url("../img/sub/visual/brand.jpg") no-repeat center/cover;
 }
 .youtube .visual_box::before {
   content: "";
   display: block;
   width: 100%;
   height: 100%;
-  background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.1));
   position: absolute;
   top: 0;
   left: 0;
@@ -1029,7 +1025,6 @@ fieldset {
   opacity: 1;
 }
 .youtube .sub_con .inner > h1 {
-  opacity: 0.7;
   margin-bottom: 50px;
 }
 .youtube .sub_con .inner .vids {
@@ -1071,7 +1066,6 @@ fieldset {
 }
 .youtube .sub_con .inner .vids article .con {
   width: 60%;
-  opacity: 0.7;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -1177,7 +1171,7 @@ figure.popup .closeBtn i {
   }
 }
 .brand .sub_Visual .visual_box {
-  background: url("../img/sub/visual/brand.jpg") no-repeat center center/cover;
+  background: url("../img/sub/visual/brand.jpg") no-repeat center/cover;
 }
 .brand .sub_Visual .visual_box .inner .title_txt h1 {
   margin-bottom: 30px;
@@ -1190,7 +1184,6 @@ figure.popup .closeBtn i {
   padding-top: 0;
   text-align: left;
   margin-bottom: 70px;
-  opacity: 0.7;
   font-size: 50px;
   margin-bottom: 30px;
   letter-spacing: 2px;
@@ -1204,7 +1197,7 @@ figure.popup .closeBtn i {
 }
 .brand .sub_con .inner .about > h1 span {
   font-size: 30px;
-  color: #666;
+  color: #333;
 }
 .brand .sub_con .inner .about p {
   font-family: "Montserrat";
@@ -1311,7 +1304,7 @@ figure.popup .closeBtn i {
   }
 }
 .mypage .visual_box {
-  background: url("../img/sub/visual/mypage.jpg") no-repeat center/cover;
+  background: url("../img/sub/visual/brand.jpg") no-repeat center/cover;
 }
 .mypage .sub_con > .inner {
   display: flex;
@@ -1517,7 +1510,7 @@ figure.popup .closeBtn i {
   }
 }
 .notice .visual_box {
-  background: url("../img/sub/visual/notice.jpg") no-repeat center/cover;
+  background: url("../img/sub/visual/brand.jpg") no-repeat center/cover;
 }
 .notice .sub_con {
   height: 1150px;
@@ -1723,7 +1716,7 @@ figure.popup .closeBtn i {
   }
 }
 .contactUs .visual_box {
-  background: url("../img/sub/visual/contactUs.jpg") no-repeat center/cover;
+  background: url("../img/sub/visual/brand.jpg") no-repeat center/cover;
   filter: saturate(30%) brightness(90%);
   transition: 1s;
   margin-bottom: 0;
@@ -2095,7 +2088,7 @@ figure.popup .closeBtn i {
   font-size: 25px;
   letter-spacing: 1px;
   line-height: 1;
-  color: #333;
+  color: #666;
 }
 #header .inner .menuWeb {
   display: flex;
@@ -2137,7 +2130,7 @@ figure.popup .closeBtn i {
 #header .inner .menuWeb #gnb > li > a {
   display: block;
   position: relative;
-  color: #333;
+  color: #666;
   font: bold 15px/60px "Montserrat";
   letter-spacing: 1px;
   text-align: center;
@@ -2151,40 +2144,10 @@ figure.popup .closeBtn i {
   width: 0%;
   height: 2px;
   transition: width 0.5s;
-  background: #333;
+  background: #666;
 }
 #header .inner .menuWeb #gnb > li > a:hover::after {
   width: 100%;
-}
-#header .inner .menuWeb #gnb > li > .sub_menu {
-  display: none;
-  position: absolute;
-  right: 0;
-}
-#header .inner .menuWeb #gnb > li > .sub_menu:last-child > ul > li:last-child {
-  margin-right: 0;
-}
-#header .inner .menuWeb #gnb > li > .sub_menu:last-child > ul > li:last-child a:last-child {
-  padding: 10px 0 10px;
-}
-#header .inner .menuWeb #gnb > li > .sub_menu:hover {
-  display: block;
-}
-#header .inner .menuWeb #gnb > li > .sub_menu > ul {
-  display: flex;
-}
-#header .inner .menuWeb #gnb > li > .sub_menu > ul > li {
-  margin-right: 15px;
-}
-#header .inner .menuWeb #gnb > li > .sub_menu > ul > li > a {
-  padding: 10px;
-  text-align: center;
-  letter-spacing: 1px;
-  color: #333;
-}
-#header .inner .menuWeb #gnb > li > .sub_menu > ul > li > a:hover {
-  opacity: 0.6;
-  font-weight: 500;
 }
 #header .inner .menuMo {
   display: none;

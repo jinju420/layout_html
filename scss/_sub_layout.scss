@@ -407,16 +407,14 @@
 						font-weight: 400;
 						text-align: left;
 						margin-bottom: 10px;
-						color: #fff;
+						color: #666;
 						font-family: $titleFont;
-						text-shadow: 2px 5px 12px rgb(0, 0, 0, 0.7);
 					}
 					p {
 						position: relative;
-						color: #fff;
+						color: #666;
 						font-size: 20px;
 						font-family: $contentFont;
-						text-shadow: 0px 2px 5px rgb(0, 0, 0, 0.7);
 					}
 				}
 			}
@@ -572,7 +570,7 @@
 				top: 30px;
 				left: 50px;
 				a {
-					color: #fff;
+					color: #333;
 				}
 			}
 			.menuWeb {
@@ -609,11 +607,11 @@
 				.bars {
 					display: flex;
 					span {
-						background: #fff;
+						background: #333;
 					}
 					&::before,
 					&::after {
-						background: #fff;
+						background: #333;
 					}
 				}
 			}

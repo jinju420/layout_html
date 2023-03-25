@@ -56,7 +56,7 @@ $mobile: 539px;
 				font-size: 25px;
 				letter-spacing: 1px;
 				line-height: 1;
-				color: #333;
+				color: #666;
 			}
 		}
 		.menuWeb {
@@ -96,7 +96,7 @@ $mobile: 539px;
 					> a {
 						display: block;
 						position: relative;
-						color: #333;
+						color: #666;
 						font: bold 15px/60px $contentFont;
 						letter-spacing: 1px;
 						text-align: center;
@@ -109,44 +109,10 @@ $mobile: 539px;
 							width: 0%;
 							height: 2px;
 							transition: width 0.5s;
-							background: #333;
+							background: #666;
 						}
 						&:hover::after {
 							width: 100%;
-						}
-					}
-					> .sub_menu {
-						display: none;
-						position: absolute;
-						right: 0;
-						&:last-child {
-							> ul {
-								> li:last-child {
-									margin-right: 0;
-									a:last-child {
-										padding: 10px 0 10px;
-									}
-								}
-							}
-						}
-						&:hover {
-							display: block;
-						}
-						> ul {
-							display: flex;
-							> li {
-								margin-right: 15px;
-								> a {
-									padding: 10px;
-									text-align: center;
-									letter-spacing: 1px;
-									color: #333;
-									&:hover {
-										opacity: 0.6;
-										font-weight: 500;
-									}
-								}
-							}
 						}
 					}
 				}

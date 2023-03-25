@@ -1,7 +1,7 @@
 .brand {
 	.sub_Visual {
 		.visual_box {
-			background: url('../img/sub/visual/brand.jpg') no-repeat center center/cover;
+			background: url('../img/sub/visual/brand.jpg') no-repeat center/cover;
 			.inner {
 				.title_txt {
 					h1 {
@@ -19,7 +19,6 @@
 				padding-top: 0;
 				text-align: left;
 				margin-bottom: 70px;
-				opacity: 0.7;
 				font-size: 50px;
 				margin-bottom: 30px;
 				letter-spacing: 2px;
@@ -31,7 +30,7 @@
 					color: $strongColor;
 					span {
 						font-size: 30px;
-						color: $basicFontColor;
+						color: #333;
 					}
 				}
 				p {
