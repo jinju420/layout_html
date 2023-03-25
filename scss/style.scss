@@ -42,7 +42,6 @@ $mobile: 539px;
 	left: 0;
 	width: 100%;
 	z-index: 1;
-	background: rgba(0, 0, 0, 0.3);
 	.inner {
 		@include innerWid;
 		position: relative;
@@ -57,7 +56,7 @@ $mobile: 539px;
 				font-size: 25px;
 				letter-spacing: 1px;
 				line-height: 1;
-				color: #fff;
+				color: #333;
 			}
 		}
 		.menuWeb {
@@ -97,10 +96,9 @@ $mobile: 539px;
 					> a {
 						display: block;
 						position: relative;
-						color: #fff;
-						font-family: $contentFont;
+						color: #333;
+						font: bold 15px/60px $contentFont;
 						letter-spacing: 1px;
-						font-size: 15px;
 						text-align: center;
 						&::after {
 							content: '';
@@ -111,7 +109,7 @@ $mobile: 539px;
 							width: 0%;
 							height: 2px;
 							transition: width 0.5s;
-							background: $mainBg;
+							background: #333;
 						}
 						&:hover::after {
 							width: 100%;
@@ -142,9 +140,9 @@ $mobile: 539px;
 									padding: 10px;
 									text-align: center;
 									letter-spacing: 1px;
-									color: $basicFontColor;
+									color: #333;
 									&:hover {
-										color: $strongColor;
+										opacity: 0.6;
 										font-weight: 500;
 									}
 								}
