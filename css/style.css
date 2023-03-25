@@ -525,7 +525,7 @@ fieldset {
   width: 100%;
   background: #fefbf4;
   padding-top: 50px;
-  padding: 10vw 10vw 2vw;
+  padding: 50px;
   border-top: 1px solid #ddd;
 }
 #sub_footer .inner {
@@ -750,6 +750,9 @@ fieldset {
   .com .sub_con > .inner {
     width: 100%;
     padding: 80px 30px;
+  }
+  #sub_footer {
+    padding: 50px 30px;
   }
   #sub_footer .inner .wrap article {
     margin-bottom: 50px;
@@ -2730,7 +2733,7 @@ figure.popup .closeBtn i {
   width: 100%;
   background: #fefbf4;
   padding-top: 50px;
-  padding: 10vw 10vw 2vw;
+  padding: 50px;
 }
 #footer .inner {
   width: 100%;
@@ -3093,6 +3096,9 @@ figure.popup .closeBtn i {
   }
   #content .inner .btn {
     display: none;
+  }
+  #footer {
+    padding: 50px 30px;
   }
   #footer .inner .wrap article {
     margin-bottom: 50px;

@@ -701,7 +701,7 @@ $mobile: 539px;
 	width: 100%;
 	background: $basicColor2;
 	padding-top: 50px;
-	padding: 10vw 10vw 2vw;
+	padding: 50px;
 	.inner {
 		width: 100%;
 		.wrap {
@@ -1150,6 +1150,7 @@ $mobile: 539px;
 
 	//footer
 	#footer {
+		padding: 50px 30px;
 		.inner {
 			.wrap {
 				article {
