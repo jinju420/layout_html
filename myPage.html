@@ -2,338 +2,359 @@
 <html lang="ko">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>mypage</title>
-    <link rel="stylesheet" href="css/style.css">
-    <script src="https://kit.fontawesome.com/7783789018.js" crossorigin="anonymous"></script>
-    <script defer src="js/common.js"></script>
-    <script defer src="js/mypage.js"></script>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>mypage</title>
+  <link rel="stylesheet" href="css/style.css">
+  <script src="https://kit.fontawesome.com/7783789018.js" crossorigin="anonymous"></script>
+  <script defer src="js/common.js"></script>
+  <script defer src="js/mypage.js"></script>
 </head>
 
 <body>
-    <header id="sub_header" class="header">
-        <div class="bg"></div>
-        <div class="inner">
+  <header id="sub_header" class="header">
+    <div class="bg"></div>
+    <div class="inner">
+      <h1><a href="index.html" class="logo">Obj</a></h1>
+      <nav class="menuWeb">
+        <ul id="gnb">
+          <li>
+            <a href="brand.html">BRAND</a>
+          </li>
+          <li>
+            <a href="gallery.html">GALLERY</a>
+          </li>
+          <li>
+            <a href="youtube.html">YOUTUBE</a>
+          </li>
+          <li>
+            <a href="myPage.html" class="on">MY PAGE</a>
+          </li>
+          <li>
+            <a href="notice.html">NOTICE</a>
+          </li>
+          <li>
+            <a href="contactUs.html">CONTACT US</a>
+          </li>
+        </ul>
+      </nav>
+      <!-- mobile -->
+      <div class="quick_menu">
+        <a href="#" class="bars">
+          <span></span>
+        </a>
+      </div>
+
+      <nav class="menuMo">
+        <div class="loginBox">
+          <div class="joinBox">
             <h1><a href="index.html" class="logo">Obj</a></h1>
-            <nav class="menuWeb">
-                <ul id="gnb">
-                    <li>
-                        <a href="brand.html">BRAND</a>
-                    </li>
-                    <li>
-                        <a href="gallery.html">GALLERY</a>
-                    </li>
-                    <li>
-                        <a href="youtube.html">YOUTUBE</a>
-                    </li>
-                    <li>
-                        <a href="myPage.html" class="on">MY PAGE</a>
-                    </li>
-                    <li>
-                        <a href="notice.html">NOTICE</a>
-                    </li>
-                    <li>
-                        <a href="contactUs.html">CONTACT US</a>
-                    </li>
-                </ul>
-            </nav>
-            <!-- mobile -->
-            <div class="quick_menu">
-                <a href="#" class="bars">
-                    <span></span>
-                </a>
-            </div>
-
-            <nav class="menuMo">
-                <div class="loginBox">
-                    <div class="joinBox">
-                        <h1><a href="index.html" class="logo">Obj</a></h1>
-                    </div>
-                    <div class="closeBox">
-                        <a href="#" class="close">
-                            <span></span>
-                        </a>
-                    </div>
-                </div>
-                <ul class="sub_menu">
-                    <li>
-                        <div class="tab">
-                            <input type="radio" name="cate" id="cate1">
-                            <label for="cate1">
-                                <h3>BRAND</h3>
-                                <a href="#" class="arrow">
-                                    <span class="hidden">브랜드</span>
-                                </a>
-                            </label>
-                            <ul class="inputUl">
-                                <li><a href="brand.html">ABOUT</a></li>
-                                <li><a href="brand.html">MEMBER</a></li>
-                            </ul>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="tab">
-                            <input type="radio" name="cate" id="cate2">
-                            <label for="cate2">
-                                <h3>GALLERY</h3>
-                                <a href="#" class="arrow">
-                                    <span class="hidden">갤러리</span>
-                                </a>
-                            </label>
-                            <ul class="inputUl">
-                                <li><a href="gallery.html">POPULAR</a></li>
-                            </ul>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="tab">
-                            <input type="radio" name="cate" id="cate3">
-                            <label for="cate3">
-                                <h3>YOUTUBE</h3>
-                                <a href="#" class="arrow">
-                                    <span class="hidden">유투브</span>
-                                </a>
-                            </label>
-                            <ul class="inputUl">
-                                <li><a href="youtube.html">COMMUNITY</a></li>
-                            </ul>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="tab">
-                            <input type="radio" name="cate" id="cate4">
-                            <label for="cate4">
-                                <h3>MY PAGE</h3>
-                                <a href="#" class="arrow">
-                                    <span class="hidden">회원가입</span>
-                                </a>
-                            </label>
-                            <ul class="inputUl">
-                                <li><a href="myPage.html">JOIN</a></li>
-                            </ul>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="tab">
-                            <input type="radio" name="cate" id="cate5">
-                            <label for="cate5">
-                                <h3>NOTICE</h3>
-                                <a href="#" class="arrow">
-                                    <span class="hidden">공지사항</span>
-                                </a>
-                            </label>
-                            <ul class="inputUl">
-                                <li><a href="notice.html">REQUEST</a></li>
-                            </ul>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="tab">
-                            <input type="radio" name="cate" id="cate6">
-                            <label for="cate6">
-                                <h3>CONTACT US</h3>
-                                <a href="#" class="arrow">
-                                    <span class="hidden">오시는길</span>
-                                </a>
-                            </label>
-                            <ul class="inputUl">
-                                <li><a href="contactUs.html">LOCATION</a></li>
-                                <li><a href="contactUs.html">SNS</a></li>
-                            </ul>
-                        </div>
-                    </li>
-                </ul>
-            </nav>
-        </div>
-    </header>
-
-    <section class="com mypage">
-        <div class="sub_Visual">
-            <div class="visual_box">
-                <div class="inner">
-                    <div class="title_txt">
-                        <h1>Join</h1>
-                        <p>Enjoy a variety of benefits</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="sub_con">
-            <div class="inner">
-                <h1>Join Us</h1>
-                <form action="result.html" method="get" id="login">
-                    <fieldset></fieldset>
-                    <legend class="hide">회원가입을 위함 폼 입력 양식</legend>
-
-                    <table>
-                        <caption class="hide">회원가입을 위한 아이디, 비밀번호, 이메일, 나이 입력 테이블</caption>
-                        <tbody>
-                            <!-- id -->
-                            <tr>
-                                <th scope="row">
-                                    <label for="userId">Full Name</label>
-                                <td><input type="text" name="userId" id="userId" placeholder="아이디를 입력하세요"></td>
-                                </th>
-                            </tr>
-
-                            <!-- pw -->
-                            <tr>
-                                <th scope="row">
-                                    <label for="pwd1">Password</label>
-                                <td><input type="password" name="pwd1" id="pwd1" placeholder="비밀번호를 입력하세요"></td>
-                                </th>
-                            </tr>
-                            <tr>
-                                <th scope="row">
-                                    <label for="pwd2">Re Password</label>
-                                <td><input type="password" name="pwd2" id="pwd2" placeholder="비밀번호를 입력하세요"></td>
-                                </th>
-                            </tr>
-
-                            <!-- email -->
-                            <tr>
-                                <th scope="row"><label for="email">Email</label></th>
-                                <td><input type="text" name="email" id="email" placeholder="이메일주소를 입력하세요"></td>
-                            </tr>
-
-                            <!-- age -->
-                            <tr>
-                                <th scope="row">Age</th>
-                                <td>
-                                    <select name="age" id="age">
-                                        <option value="">선택하세요</option>
-                                        <option value="teenage">10대</option>
-                                        <option value="20s_30s">20~30대</option>
-                                        <option value="40s_50s">40~50대</option>
-                                        <option value="over_50s">50대 이상</option>
-                                    </select>
-                                </td>
-                            </tr>
-
-                        </tbody>
-                    </table>
-
-                    <table>
-                        <caption class="hide">성별, 스타일, 남기는 말 입력 테이블</caption>
-                        <tbody>
-                            <!-- gender -->
-                            <tr>
-                                <th scope="row">Gender</th>
-                                <td>
-                                    <input type="radio" name="gender" id="female" value="female">
-                                    <label for="female">Female</label>
-
-                                    <input type="radio" name="gender" id="male" value="male">
-                                    <label for="male">Male</label>
-                                </td>
-                            </tr>
-
-                            <!-- interest -->
-                            <tr>
-                                <th scope="row">Preference style</th>
-                                <td>
-                                    <input type="checkbox" name="style" id="simple" value="simple">
-                                    <label for="simple">Simple</label>
-
-                                    <input type="checkbox" name="style" id="mono" value="mono">
-                                    <label for="mono">Monotonous</label><br>
-
-                                    <input type="checkbox" name="style" id="fancy">
-                                    <label for="fancy">Fancy</label>
-
-                                    <input type="checkbox" name="style" id="trendy">
-                                    <label for="trendy">Trendy</label>
-                                </td>
-                            </tr>
-
-                            <!-- comments -->
-                            <tr>
-                                <th scope="row"><label for="comments">Comments</label></th>
-                                <td><textarea name="comments" id="commetns"
-                                        placeholder="추가되었으면 하는 컨셉을 남겨주세요"></textarea>
-                                </td>
-                            </tr>
-
-                            <!-- btns -->
-                            <tr>
-                                <th colspan="2">
-                                    <input type="reset" value="CANCEL">
-                                    <input type="submit" value="SUBMIT">
-                                </th>
-                            </tr>
-                        </tbody>
-                    </table>
-                </form>
-            </div>
-        </div>
-    </section>
-
-    <footer id="sub_footer" class="footer">
-        <div class="inner">
-            <div class="wrap">
-                <article>
-                    <h1>Store</h1>
-                    <p>
-                        The offline store is a space that contains everything Grand Hand wants to show.
-                        <br />
-                        It becomes a time and experience to catch your breath for a while in your busy daily life.
-                    </p>
-                    <a href='/contactUs.html' class='map'>
-                        <i class="fa fa-arrow-right"></i>
-                        Offline Store Guidance
-                    </a>
-                </article>
-                <article>
-                    <h1>Newsletter</h1>
-                    <p>
-                        <input type='text' placeholder='Your email address.' />
-                    </p>
-
-                    <a href='/notice.html' class='map'>
-                        <i class="fa fa-arrow-right"></i>
-                        Newsletter
-                    </a>
-                </article>
-                <article>
-                    <h1>Support</h1>
-                    <p>
-                        <a href="/notice.html">Notice</a>
-                        <a href="/brand.html">Brand</a>
-                        <a href="/contactUs.html">Contact</a>
-                    </p>
-                </article>
-            </div>
-            <!-- top버튼 -->
-            <a href="#" class="top">
-                <i class="fas fa-solid fa-chevron-up"></i>
+          </div>
+          <div class="closeBox">
+            <a href="#" class="close">
+              <span></span>
             </a>
+          </div>
         </div>
-        <div class='ft_txt'>
-            <div class='desc'>
-                <a href="/contactUs.html" class='sns'>
-                    <i class="fa fa-instagram"></i>
+        <ul class="sub_menu">
+          <li>
+            <div class="tab">
+              <input type="radio" name="cate" id="cate1">
+              <label for="cate1">
+                <h3>BRAND</h3>
+                <a href="#" class="arrow">
+                  <span class="hidden">브랜드</span>
                 </a>
-                <span>
-                    Sometimes you win,
-                    <br />
-                    Sometimes you learn.
-                </span>
-                <p>
-                    Inside the drawer, which had never been opened, there was a familiar smell of minutes between
-                    scarves,
-                    accessories,
-                    and various miscellaneous things. When I opened an old notebook with a coated four-leaf clover,
-                    there were
-                    names and
-                    phone numbers of my acquaintances written on one side, and a faded photo next to it showed a young
-                    woman who
-                    looked.
-                </p>
+              </label>
+              <ul class="inputUl">
+                <li><a href="brand.html">ABOUT</a></li>
+                <li><a href="brand.html">MEMBER</a></li>
+              </ul>
             </div>
+          </li>
+          <li>
+            <div class="tab">
+              <input type="radio" name="cate" id="cate2">
+              <label for="cate2">
+                <h3>GALLERY</h3>
+                <a href="#" class="arrow">
+                  <span class="hidden">갤러리</span>
+                </a>
+              </label>
+              <ul class="inputUl">
+                <li><a href="gallery.html">POPULAR</a></li>
+              </ul>
+            </div>
+          </li>
+          <li>
+            <div class="tab">
+              <input type="radio" name="cate" id="cate3">
+              <label for="cate3">
+                <h3>YOUTUBE</h3>
+                <a href="#" class="arrow">
+                  <span class="hidden">유투브</span>
+                </a>
+              </label>
+              <ul class="inputUl">
+                <li><a href="youtube.html">COMMUNITY</a></li>
+              </ul>
+            </div>
+          </li>
+          <li>
+            <div class="tab">
+              <input type="radio" name="cate" id="cate4">
+              <label for="cate4">
+                <h3>MY PAGE</h3>
+                <a href="#" class="arrow">
+                  <span class="hidden">회원가입</span>
+                </a>
+              </label>
+              <ul class="inputUl">
+                <li><a href="myPage.html">JOIN</a></li>
+              </ul>
+            </div>
+          </li>
+          <li>
+            <div class="tab">
+              <input type="radio" name="cate" id="cate5">
+              <label for="cate5">
+                <h3>NOTICE</h3>
+                <a href="#" class="arrow">
+                  <span class="hidden">공지사항</span>
+                </a>
+              </label>
+              <ul class="inputUl">
+                <li><a href="notice.html">REQUEST</a></li>
+              </ul>
+            </div>
+          </li>
+          <li>
+            <div class="tab">
+              <input type="radio" name="cate" id="cate6">
+              <label for="cate6">
+                <h3>CONTACT US</h3>
+                <a href="#" class="arrow">
+                  <span class="hidden">오시는길</span>
+                </a>
+              </label>
+              <ul class="inputUl">
+                <li><a href="contactUs.html">LOCATION</a></li>
+              </ul>
+            </div>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <section class="com mypage">
+    <div class="sub_Visual">
+      <div class="visual_box">
+        <div class="inner">
+          <div class="title_txt">
+            <h1>Join</h1>
+            <p>Enjoy a variety of benefits</p>
+          </div>
         </div>
-    </footer>
+      </div>
+    </div>
+    <div class="sub_con">
+      <div class="inner">
+        <h1>Join Us</h1>
+
+        <div class="form_wrap">
+          <div class='aside'>
+            <h3>
+              The first step is
+              <br />
+              just to reach out.
+            </h3>
+            <p>
+              NUBE, Perfume, GRANHAND.
+              <br />
+              Join with GRANHAND.
+            </p>
+            <div class='sns'>
+              <span>
+                <i class="fa fa-facebook-f"></i>
+              </span>
+              <span>
+                <i class="fa fa-twitter"></i>
+              </span>
+              <span>
+                <i class="fa fa-instagram"></i>
+              </span>
+            </div>
+          </div>
+
+          <form action="result.html" method="get" id="login">
+            <fieldset></fieldset>
+            <legend class="hide">회원가입을 위함 폼 입력 양식</legend>
+
+            <table>
+              <caption class="hide">회원가입을 위한 아이디, 비밀번호, 이메일, 나이 입력 테이블</caption>
+              <tbody>
+                <!-- id -->
+                <tr>
+                  <th scope="row">
+                    <label for="userId">Full Name</label>
+                  <td><input type="text" name="userId" id="userId" placeholder="아이디를 입력하세요"></td>
+                  </th>
+                </tr>
+
+                <!-- pw -->
+                <tr>
+                  <th scope="row">
+                    <label for="pwd1">Password</label>
+                  <td><input type="password" name="pwd1" id="pwd1" placeholder="비밀번호를 입력하세요"></td>
+                  </th>
+                </tr>
+                <tr>
+                  <th scope="row">
+                    <label for="pwd2">Re Password</label>
+                  <td><input type="password" name="pwd2" id="pwd2" placeholder="비밀번호를 입력하세요"></td>
+                  </th>
+                </tr>
+
+                <!-- email -->
+                <tr>
+                  <th scope="row"><label for="email">Email</label></th>
+                  <td><input type="text" name="email" id="email" placeholder="이메일주소를 입력하세요"></td>
+                </tr>
+
+                <!-- age -->
+                <tr>
+                  <th scope="row">Age</th>
+                  <td>
+                    <select name="age" id="age">
+                      <option value="">선택하세요</option>
+                      <option value="teenage">10대</option>
+                      <option value="20s_30s">20~30대</option>
+                      <option value="40s_50s">40~50대</option>
+                      <option value="over_50s">50대 이상</option>
+                    </select>
+                  </td>
+                </tr>
+
+                <!-- gender -->
+                <tr>
+                  <th scope="row">Gender</th>
+                  <td>
+                    <input type="radio" name="gender" id="female" value="female">
+                    <label for="female">Female</label>
+
+                    <input type="radio" name="gender" id="male" value="male">
+                    <label for="male">Male</label>
+                  </td>
+                </tr>
+
+                <!-- interest -->
+                <tr>
+                  <th scope="row">Preference style</th>
+                  <td>
+                    <input type="checkbox" name="style" id="simple" value="simple">
+                    <label for="simple">Simple</label>
+
+                    <input type="checkbox" name="style" id="mono" value="mono">
+                    <label for="mono">Monotonous</label>
+
+                    <input type="checkbox" name="style" id="fancy">
+                    <label for="fancy">Fancy</label>
+
+                    <input type="checkbox" name="style" id="trendy">
+                    <label for="trendy">Trendy</label>
+                  </td>
+                </tr>
+
+                <!-- comments -->
+                <tr>
+                  <th scope="row"><label for="comments">Comments</label></th>
+                  <td><textarea name="comments" id="commetns" placeholder="추가되었으면 하는 컨셉을 남겨주세요"></textarea>
+                  </td>
+                </tr>
+
+                <!-- btns -->
+                <tr>
+                  <th colspan="2">
+                    <input type="reset" value="CANCEL">
+                    <input type="submit" value="SUBMIT">
+                  </th>
+                </tr>
+
+              </tbody>
+            </table>
+          </form>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <footer id="sub_footer" class="footer">
+    <div class="inner">
+      <div class="wrap">
+        <article>
+          <h1>Store</h1>
+          <p>
+            The offline store is a space that contains everything Grand Hand wants to show.
+            <br />
+            It becomes a time and experience to catch your breath for a while in your busy daily life.
+          </p>
+          <a href='/contactUs.html' class='map'>
+            <i class="fa fa-arrow-right"></i>
+            Offline Store Guidance
+          </a>
+        </article>
+        <article>
+          <h1>Newsletter</h1>
+          <p>
+            <input type='text' placeholder='Your email address.' />
+          </p>
+
+          <a href='/notice.html' class='map'>
+            <i class="fa fa-arrow-right"></i>
+            Newsletter
+          </a>
+        </article>
+        <article>
+          <h1>Support</h1>
+          <p>
+            <a href="/notice.html">Notice</a>
+            <a href="/brand.html">Brand</a>
+            <a href="/contactUs.html">Contact</a>
+          </p>
+        </article>
+      </div>
+      <!-- top버튼 -->
+      <a href="#" class="top">
+        <i class="fas fa-solid fa-chevron-up"></i>
+      </a>
+    </div>
+    <div class='ft_txt'>
+      <div class='desc'>
+        <a href="/contactUs.html" class='sns'>
+          <i class="fa fa-instagram"></i>
+        </a>
+        <span>
+          Sometimes you win,
+          <br />
+          Sometimes you learn.
+        </span>
+        <p>
+          Inside the drawer, which had never been opened, there was a familiar smell of minutes between
+          scarves,
+          accessories,
+          and various miscellaneous things. When I opened an old notebook with a coated four-leaf clover,
+          there were
+          names and
+          phone numbers of my acquaintances written on one side, and a faded photo next to it showed a young
+          woman who
+          looked.
+        </p>
+      </div>
+    </div>
+  </footer>
 </body>
 
 </html>

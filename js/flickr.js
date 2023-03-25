@@ -122,7 +122,7 @@ function createImgs(items) {
 		let title = item.title;
 		const icon = item.owner;
 
-		if (title.length > 20) title = title.substr(0, 10) + '...';
+		if (window.innerWidth > 539 && title.length > 20) title = title.substr(0, 10) + '...';
 
 		const buddy = `http://farm${item.farm}.staticflickr.com/${item.server}/buddyicons/${item.owner}.jpg`;
 		const imgSrcBig = `https://live.staticflickr.com/${item.server}/${item.id}_${item.secret}_b.jpg`;

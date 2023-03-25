@@ -132,22 +132,6 @@
 									&:hover {
 										color: $strongColor;
 									}
-									// &::after {
-									// 	content: '';
-									// 	display: block;
-									// 	position: absolute;
-									// 	top: 0;
-									// 	left: 0;
-									// 	width: 100%;
-									// 	height: 2px;
-									// 	transition: width 0.5s;
-									// 	background: $mainBg;
-									// 	opacity: 1;
-									// }
-									&:hover::after {
-										// opacity: 0.7;
-										// width: 100%;
-									}
 								}
 							}
 						}
@@ -160,7 +144,6 @@
 			position: fixed;
 			top: 0;
 			left: -350px;
-			// left: 0;
 			width: 350px;
 			height: 100vh;
 			transition: left 1s;
@@ -435,23 +418,12 @@
 						color: #fff;
 						font-family: $titleFont;
 						text-shadow: 2px 5px 12px rgb(0, 0, 0, 0.7);
-						// &::before {
-						// 	content: '';
-						// 	display: block;
-						// 	position: absolute;
-						// 	bottom: -32px;
-						// 	left: 0;
-						// 	width: 2px;
-						// 	height: 130px;
-						// 	background: #fff;
-						// }
 					}
 					p {
 						position: relative;
 						color: #fff;
 						font-size: 20px;
 						font-family: $contentFont;
-						// margin-left: 30px;
 						text-shadow: 0px 2px 5px rgb(0, 0, 0, 0.7);
 					}
 				}
@@ -460,14 +432,13 @@
 	}
 	.sub_con {
 		background: $basicColor2;
-		// overflow: hidden;
 		> .inner {
 			@include innerWid;
 			display: flex;
 			justify-content: space-between;
 			padding: 120px 0;
-			opacity: 0.7;
-			color: #222;
+			// opacity: 0.7;
+			color: #333;
 			position: relative;
 			> h1 {
 				font-size: 50px;
@@ -732,7 +703,7 @@
 					width: 100%;
 				}
 				&.on {
-					width: 100%;
+					width: 70%;
 				}
 			}
 		}

@@ -522,8 +522,7 @@ fieldset {
   display: flex;
   justify-content: space-between;
   padding: 120px 0;
-  opacity: 0.7;
-  color: #222;
+  color: #333;
   position: relative;
 }
 .com .sub_con > .inner > h1 {
@@ -744,7 +743,7 @@ fieldset {
     width: 100%;
   }
   #sub_header .inner .menuMo.on {
-    width: 100%;
+    width: 70%;
   }
   .com {
     width: 100%;
@@ -895,6 +894,11 @@ fieldset {
 .gallery .sub_con .inner #gallery #wrap #list li div > h1 {
   font: 24px/1 "Poppins";
   padding: 20px 0 50px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
 }
 .gallery .sub_con .inner #gallery #wrap #list li div .profile {
   display: flex;
@@ -977,7 +981,12 @@ fieldset {
   }
   .gallery .sub_con .inner #gallery #wrap #list li {
     width: 33.3333333333%;
-    padding: 10px 10px 25px;
+  }
+  .gallery .sub_con .inner #gallery #wrap #list li div > h1 {
+    font: 3vmin/1 "Poppins";
+  }
+  .gallery .sub_con .inner #gallery #wrap #list li div .profile span {
+    font: 12px/1 "Montserrat";
   }
   .gallery .sub_con .inner #gallery aside {
     padding: 9vw;
@@ -989,36 +998,16 @@ fieldset {
 @media screen and (max-width: 539px) {
   .gallery .sub_con .inner #gallery #wrap #list li {
     width: 100%;
+    margin-top: 25px;
   }
-  .gallery .sub_con .inner #gallery #wrap #list li:nth-of-type(1) div {
-    height: 55vmax;
+  .gallery .sub_con .inner #gallery #wrap #list li div > h1 {
+    font: 30px/1 "Poppins";
   }
-  .gallery .sub_con .inner #gallery #wrap #list li:nth-of-type(2) div {
-    height: 35vmax;
+  .gallery .sub_con .inner #gallery #wrap #list li div .profile span {
+    font: 14px/1 "Montserrat";
   }
-  .gallery .sub_con .inner #gallery #wrap #list li:nth-of-type(3) div {
-    height: 25vmax;
-  }
-  .gallery .sub_con .inner #gallery #wrap #list li:nth-of-type(4) div {
-    height: 25vmax;
-  }
-  .gallery .sub_con .inner #gallery #wrap #list li:nth-of-type(5) div {
-    height: 30vmax;
-  }
-  .gallery .sub_con .inner #gallery #wrap #list li:nth-of-type(6) div {
-    height: 205max;
-  }
-  .gallery .sub_con .inner #gallery #wrap #list li:nth-of-type(7) div {
-    height: 20vmax;
-  }
-  .gallery .sub_con .inner #gallery #wrap #list li:nth-of-type(8) div {
-    height: 30vmax;
-  }
-  .gallery .sub_con .inner #gallery #wrap #list li:nth-of-type(9) div {
-    height: 35vmax;
-  }
-  .gallery .sub_con .inner #gallery #wrap #list li:nth-of-type(10) div {
-    height: 35vmax;
+  .gallery .sub_con .inner #gallery #searchBox {
+    display: flex;
   }
   .gallery .sub_con .inner #gallery aside .imgCont .close {
     top: 20px;
@@ -1332,133 +1321,136 @@ figure.popup .closeBtn i {
   background: url("../img/sub/visual/join.jpg") no-repeat center/cover;
 }
 .mypage .sub_con > .inner {
-  display: block;
-  justify-content: space-around;
-}
-.mypage .sub_con > .inner form {
   display: flex;
-  background: rgba(160, 97, 56, 0.2);
-  padding: 50px;
+  flex-direction: column;
 }
-.mypage .sub_con > .inner form table {
-  width: 50%;
-  height: 400px;
-  margin-right: 50px;
-}
-.mypage .sub_con > .inner form table:first-child td {
-  width: 80%;
-}
-.mypage .sub_con > .inner form table:last-child {
-  margin-right: 0;
-}
-.mypage .sub_con > .inner form table:last-child label[for=simple],
-.mypage .sub_con > .inner form table:last-child label[for=mono],
-.mypage .sub_con > .inner form table:last-child label[for=fancy],
-.mypage .sub_con > .inner form table:last-child label[for=trendy] {
-  line-height: 2;
-}
-.mypage .sub_con > .inner form table:last-child tr:nth-of-type(3) td {
-  padding: 30px 0;
-}
-.mypage .sub_con > .inner form table:last-child tr:last-child th {
+.mypage .sub_con > .inner .form_wrap {
+  display: flex;
   margin-top: 50px;
 }
-.mypage .sub_con > .inner form table th {
+.mypage .sub_con > .inner .form_wrap .aside h3 {
+  color: #333;
+  font-size: 20px;
+  line-height: 1.3;
+  font-family: "Poppins";
+  margin-bottom: 10px;
+}
+.mypage .sub_con > .inner .form_wrap .aside p {
+  margin: 0 0 30px;
+  font: normal 12px/1.2 "Montserrat";
+}
+.mypage .sub_con > .inner .form_wrap .aside .sns span {
+  display: inline-block;
+  width: 25px;
+  height: 25px;
+  line-height: 25px;
+  margin-right: 5px;
+  background: #333;
+  text-align: center;
+}
+.mypage .sub_con > .inner .form_wrap .aside .sns span i {
+  font-size: 12px;
+  cursor: pointer;
+  color: #fff;
+}
+.mypage .sub_con > .inner .form_wrap form {
+  display: flex;
+  width: 65%;
+  margin: 0 auto;
+  text-align: left;
+}
+.mypage .sub_con > .inner .form_wrap form table {
+  width: 100%;
+}
+.mypage .sub_con > .inner .form_wrap form table:first-child td {
+  width: 80%;
+}
+.mypage .sub_con > .inner .form_wrap form table th {
   font-size: 18px;
   width: 20%;
   white-space: nowrap;
 }
-.mypage .sub_con > .inner form table th:last-child {
-  padding: 50px 0 0;
+.mypage .sub_con > .inner .form_wrap form table th:last-child {
+  padding: 50px 30px 0;
   text-align: right;
 }
-.mypage .sub_con > .inner form table th:last-child input[type=reset] {
+.mypage .sub_con > .inner .form_wrap form table th:last-child input[type=reset] {
   margin-right: 17px;
 }
-.mypage .sub_con > .inner form table th,
-.mypage .sub_con > .inner form table td {
-  padding: 15px 0;
+.mypage .sub_con > .inner .form_wrap form table th,
+.mypage .sub_con > .inner .form_wrap form table td {
+  padding: 10px 30px;
 }
-.mypage .sub_con > .inner form table td {
-  display: block;
-  margin-left: 44px;
-  border-bottom: 1px solid #222;
-}
-.mypage .sub_con > .inner form table tr:nth-of-type(5) td {
+.mypage .sub_con > .inner .form_wrap form table tr:nth-of-type(5) td {
   border-bottom: 0;
 }
-.mypage .sub_con > .inner form table label {
+.mypage .sub_con > .inner .form_wrap form table label {
   font-family: "Montserrat";
 }
-.mypage .sub_con > .inner form table input::placeholder,
-.mypage .sub_con > .inner form table textarea::placeholder {
+.mypage .sub_con > .inner .form_wrap form table input::placeholder,
+.mypage .sub_con > .inner .form_wrap form table textarea::placeholder {
   opacity: 0.6;
   font-family: "Montserrat";
 }
-.mypage .sub_con > .inner form table input[type=text],
-.mypage .sub_con > .inner form table input[type=password],
-.mypage .sub_con > .inner form table select,
-.mypage .sub_con > .inner form table textarea {
+.mypage .sub_con > .inner .form_wrap form table input[type=text],
+.mypage .sub_con > .inner .form_wrap form table input[type=password],
+.mypage .sub_con > .inner .form_wrap form table select,
+.mypage .sub_con > .inner .form_wrap form table textarea {
   width: 100%;
-  padding: 15px;
+  padding: 10px;
   outline: none;
-  border: none;
   font-size: 14px;
-  background: #f8f8f8;
+  background: transparent;
+  border: 1px solid #333;
   font-family: "Montserrat";
 }
-.mypage .sub_con > .inner form table select {
-  background: url("../img/sub/arrow.png") no-repeat 96% 50% #fff;
+.mypage .sub_con > .inner .form_wrap form table select {
+  background: url("../img/sub/arrow.png") no-repeat 96% 50% transparent;
   width: 100%;
   height: 100%;
   background-size: 10px 7px;
 }
-.mypage .sub_con > .inner form table textarea {
+.mypage .sub_con > .inner .form_wrap form table textarea {
   resize: none;
   height: 150px;
 }
-.mypage .sub_con > .inner form table input[type=radio],
-.mypage .sub_con > .inner form table input[type=checkbox] {
+.mypage .sub_con > .inner .form_wrap form table input[type=radio],
+.mypage .sub_con > .inner .form_wrap form table input[type=checkbox] {
   appearance: block;
   vertical-align: middle;
   width: 20px;
   height: 20px;
-  background: #f8f8f8;
+  background: transparent;
   outline: none;
   margin-right: 5px;
   margin-left: 20px;
   border: none;
 }
-.mypage .sub_con > .inner form table input[type=radio] td,
-.mypage .sub_con > .inner form table input[type=checkbox] td {
+.mypage .sub_con > .inner .form_wrap form table input[type=radio] td,
+.mypage .sub_con > .inner .form_wrap form table input[type=checkbox] td {
   padding: 27px 0;
 }
-.mypage .sub_con > .inner form table input[type=radio]:first-child,
-.mypage .sub_con > .inner form table input[type=checkbox]:first-child {
+.mypage .sub_con > .inner .form_wrap form table input[type=radio]:first-child,
+.mypage .sub_con > .inner .form_wrap form table input[type=checkbox]:first-child {
   margin-left: 0;
 }
-.mypage .sub_con > .inner form table input[type=radio]:nth-of-type(3),
-.mypage .sub_con > .inner form table input[type=checkbox]:nth-of-type(3) {
-  margin-left: 0;
-}
-.mypage .sub_con > .inner form table input[type=radio]:nth-of-type(4),
-.mypage .sub_con > .inner form table input[type=checkbox]:nth-of-type(4) {
+.mypage .sub_con > .inner .form_wrap form table input[type=radio]:nth-of-type(4),
+.mypage .sub_con > .inner .form_wrap form table input[type=checkbox]:nth-of-type(4) {
   margin-left: 29px;
 }
-.mypage .sub_con > .inner form table input[type=radio]:checked,
-.mypage .sub_con > .inner form table input[type=checkbox]:checked {
+.mypage .sub_con > .inner .form_wrap form table input[type=radio]:checked,
+.mypage .sub_con > .inner .form_wrap form table input[type=checkbox]:checked {
   accent-color: #a06138;
 }
-.mypage .sub_con > .inner form table input[type=reset],
-.mypage .sub_con > .inner form table input[type=submit] {
-  padding: 15px;
+.mypage .sub_con > .inner .form_wrap form table input[type=reset],
+.mypage .sub_con > .inner .form_wrap form table input[type=submit] {
+  padding: 10px 15px;
   border: none;
   cursor: pointer;
   transition: 0.5s;
   font-family: "Poppins";
-  font-size: 14px;
-  width: 152px;
-  box-shadow: 5px 3px 6px rgba(0, 0, 0, 0.2);
+  font-size: 16px;
+  width: 15vw;
   appearance: none;
   -moz-appearance: none;
   -webkit-appearance: none;
@@ -1466,13 +1458,10 @@ figure.popup .closeBtn i {
   border-radius: 0;
   -webkit-border-radius: 0;
   -moz-border-radius: 0;
-}
-.mypage .sub_con > .inner form table input[type=reset]:hover,
-.mypage .sub_con > .inner form table input[type=submit]:hover {
-  background: #a06138;
+  background: #666;
   color: #fff;
 }
-.mypage .sub_con > .inner form table p {
+.mypage .sub_con > .inner .form_wrap form table p {
   font-size: 12px;
   margin-top: 5px;
   color: #ff1d5c;
@@ -1481,92 +1470,57 @@ figure.popup .closeBtn i {
 }
 
 @media screen and (max-width: 1179px) {
-  .mypage .sub_con > .inner form {
-    display: block;
+  .mypage .sub_con > .inner .form_wrap {
+    flex-direction: column;
   }
-  .mypage .sub_con > .inner form table {
+  .mypage .sub_con > .inner .form_wrap form {
     width: 100%;
-    margin: 0 auto;
+    margin-top: 50px;
   }
-  .mypage .sub_con > .inner form table:last-child {
-    margin: 0 auto;
-  }
-  .mypage .sub_con > .inner form table:last-child tr:last-child th {
-    margin-top: 0;
-  }
-  .mypage .sub_con > .inner form table th {
-    font-size: 18px;
-    width: 150px;
-  }
-  .mypage .sub_con > .inner form table th:last-child input[type=reset] {
-    margin-right: 25px;
-  }
-  .mypage .sub_con > .inner form table tr {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-  }
-  .mypage .sub_con > .inner form table td {
+  .mypage .sub_con > .inner .form_wrap form table input[type=radio]:nth-of-type(4),
+  .mypage .sub_con > .inner .form_wrap form table input[type=checkbox]:nth-of-type(4) {
     margin-left: 0;
-    width: 50%;
   }
-  .mypage .sub_con > .inner form table input[type=text],
-  .mypage .sub_con > .inner form table input[type=password],
-  .mypage .sub_con > .inner form table select,
-  .mypage .sub_con > .inner form table textarea {
-    width: 100%;
-    padding: 15px;
-    font-size: 14px;
+  .mypage .sub_con > .inner .form_wrap form table input[type=reset],
+  .mypage .sub_con > .inner .form_wrap form table input[type=submit] {
+    width: 23vw;
   }
-  .mypage .sub_con > .inner form table textarea {
-    height: 30vmin;
-  }
-  .mypage .sub_con > .inner form table input[type=reset],
-  .mypage .sub_con > .inner form table input[type=submit] {
-    font-size: 14px;
-    width: 19vw;
-  }
-  .mypage .sub_con > .inner form table p {
-    font-size: 12px;
+  .mypage .sub_con > .inner .form_wrap form table label {
+    font-size: 16px;
   }
 }
 @media screen and (max-width: 539px) {
   .mypage .sub_con > .inner {
-    padding: 80px 0;
+    padding: 80px 30px;
   }
   .mypage .sub_con > .inner > h1 {
-    margin-left: 30px;
+    margin-left: 0;
+    margin-bottom: 0;
   }
-  .mypage .sub_con > .inner form {
-    padding: 30px;
-  }
-  .mypage .sub_con > .inner form table {
+  .mypage .sub_con > .inner .form_wrap form {
     width: 100%;
   }
-  .mypage .sub_con > .inner form table:last-child tr:last-child th {
-    width: 400px;
+  .mypage .sub_con > .inner .form_wrap form table {
+    display: flex;
+    justify-content: center;
   }
-  .mypage .sub_con > .inner form table th {
-    text-align: left;
-    padding: 30px 0 15px;
+  .mypage .sub_con > .inner .form_wrap form table th {
+    display: none;
   }
-  .mypage .sub_con > .inner form table tr {
+  .mypage .sub_con > .inner .form_wrap form table th:last-child {
     display: block;
-    width: 85%;
-    margin: 0 auto;
-  }
-  .mypage .sub_con > .inner form table td {
+    padding: 0;
     width: 100%;
-    padding: 0 0 15px 0;
   }
-  .mypage .sub_con > .inner form table input[type=reset],
-  .mypage .sub_con > .inner form table input[type=submit] {
-    width: 46%;
-    font-size: 14px;
-    margin-bottom: 20px;
+  .mypage .sub_con > .inner .form_wrap form table td {
+    padding: 10px 0;
   }
-  .mypage .sub_con > .inner form table p {
-    word-break: keep-all;
+  .mypage .sub_con > .inner .form_wrap form table input[type=reset],
+  .mypage .sub_con > .inner .form_wrap form table input[type=submit] {
+    width: 42vw;
+  }
+  .mypage .sub_con > .inner .form_wrap form table label {
+    font-size: 16px;
   }
 }
 .notice .visual_box {
