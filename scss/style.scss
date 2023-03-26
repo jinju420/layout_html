@@ -456,6 +456,7 @@ $mobile: 539px;
 					display: flex;
 					position: relative;
 					padding-bottom: 10px;
+					margin-bottom: 25px;
 					&::after {
 						content: '';
 						position: absolute;
@@ -471,6 +472,43 @@ $mobile: 539px;
 						transform: translateY(120%);
 						text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.1);
 						transition: 0.5s;
+					}
+				}
+				p {
+					//안쪽 글자 내용의 넓이가 곧 p프레임의 넓이가 되도록 하기 위함
+					display: inline-block;
+					overflow: hidden;
+					position: relative;
+					margin-bottom: 10px;
+
+					//텍스트 마스크
+					&::before {
+						content: '';
+						display: block;
+						width: 100%;
+						height: 100%;
+						background: #fff;
+						opacity: 0.7;
+						position: absolute;
+						top: 0;
+						left: -100%;
+						transition: 1s 0.5s;
+					}
+					span {
+						font: bold 30px/1 $contentFont;
+						color: #fff;
+						opacity: 0;
+						transition: 0.2s 0.8s;
+					}
+				}
+				p:nth-of-type(2) {
+					margin-top: -10px;
+					&::before {
+						transition: 1s 1s;
+					}
+					span {
+						font: bold 20px/1 $contentFont;
+						transition: 0.2s 1.4s;
 					}
 				}
 			}
@@ -500,16 +538,18 @@ $mobile: 539px;
 					transition: 0.5s 0.8s;
 					i {
 						font-size: 30px;
-						color: #666;
+						color: #fff;
 					}
 				}
-				strong {
-					margin-left: 15px;
-					font-size: 20px;
-					letter-spacing: 1px;
-					// opacity: 0;
-					transform: translateX(100px);
-					transition: 0.5s 1s;
+				a {
+					color: #fff;
+					strong {
+						margin-left: 15px;
+						opacity: 0;
+						font: 20px/1 $contentFont;
+						transform: translateX(100px);
+						transition: 0.5s 1s;
+					}
 				}
 			}
 		}
@@ -538,6 +578,14 @@ $mobile: 539px;
 						transform: translateY(0%);
 					}
 				}
+				p {
+					&::before {
+						left: 100%;
+					}
+					span {
+						opacity: 1;
+					}
+				}
 			}
 			nav {
 				opacity: 1;
@@ -545,9 +593,11 @@ $mobile: 539px;
 					transform: translateX(0) rotate(0deg);
 					opacity: 1;
 				}
-				strong {
-					transform: translateX(0);
-					opacity: 0;
+				a {
+					strong {
+						transform: translateX(0);
+						opacity: 1;
+					}
 				}
 			}
 		}

@@ -2470,6 +2470,7 @@ figure.popup .closeBtn i {
   display: flex;
   position: relative;
   padding-bottom: 10px;
+  margin-bottom: 25px;
 }
 #visual .panel li .txt h2::after {
   content: "";
@@ -2486,6 +2487,40 @@ figure.popup .closeBtn i {
   transform: translateY(120%);
   text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.1);
   transition: 0.5s;
+}
+#visual .panel li .txt p {
+  display: inline-block;
+  overflow: hidden;
+  position: relative;
+  margin-bottom: 10px;
+}
+#visual .panel li .txt p::before {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 100%;
+  background: #fff;
+  opacity: 0.7;
+  position: absolute;
+  top: 0;
+  left: -100%;
+  transition: 1s 0.5s;
+}
+#visual .panel li .txt p span {
+  font: bold 30px/1 "Montserrat";
+  color: #fff;
+  opacity: 0;
+  transition: 0.2s 0.8s;
+}
+#visual .panel li .txt p:nth-of-type(2) {
+  margin-top: -10px;
+}
+#visual .panel li .txt p:nth-of-type(2)::before {
+  transition: 1s 1s;
+}
+#visual .panel li .txt p:nth-of-type(2) span {
+  font: bold 20px/1 "Montserrat";
+  transition: 0.2s 1.4s;
 }
 #visual .panel li nav {
   display: flex;
@@ -2512,12 +2547,15 @@ figure.popup .closeBtn i {
 }
 #visual .panel li nav span i {
   font-size: 30px;
-  color: #666;
+  color: #fff;
 }
-#visual .panel li nav strong {
+#visual .panel li nav a {
+  color: #fff;
+}
+#visual .panel li nav a strong {
   margin-left: 15px;
-  font-size: 20px;
-  letter-spacing: 1px;
+  opacity: 0;
+  font: 20px/1 "Montserrat";
   transform: translateX(100px);
   transition: 0.5s 1s;
 }
@@ -2541,6 +2579,12 @@ figure.popup .closeBtn i {
 #visual .panel li.on .txt h2 span {
   transform: translateY(0%);
 }
+#visual .panel li.on .txt p::before {
+  left: 100%;
+}
+#visual .panel li.on .txt p span {
+  opacity: 1;
+}
 #visual .panel li.on nav {
   opacity: 1;
 }
@@ -2548,9 +2592,9 @@ figure.popup .closeBtn i {
   transform: translateX(0) rotate(0deg);
   opacity: 1;
 }
-#visual .panel li.on nav strong {
+#visual .panel li.on nav a strong {
   transform: translateX(0);
-  opacity: 0;
+  opacity: 1;
 }
 #visual .panel li.up .bg {
   opacity: 0;
