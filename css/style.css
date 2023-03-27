@@ -164,7 +164,7 @@ fieldset {
   text-align: center;
   color: #333;
   position: relative;
-  font: bold 15px/60px "Montserrat";
+  font: bold 17px/60px "Montserrat";
 }
 #sub_header .inner .menuWeb #gnb > li > a::after {
   content: "";
@@ -528,7 +528,8 @@ fieldset {
   border-top: 1px solid #ddd;
 }
 #sub_footer .inner {
-  width: 100%;
+  width: 1180px;
+  margin: 0 auto;
 }
 #sub_footer .inner .wrap {
   display: flex;
@@ -600,6 +601,10 @@ fieldset {
   font-size: 30px;
   color: #a06138;
   border-width: 1px;
+}
+#sub_footer .ft_txt {
+  width: 1180px;
+  margin: 0 auto;
 }
 #sub_footer .ft_txt .desc {
   display: flex;
@@ -1725,7 +1730,7 @@ figure.popup .closeBtn i {
 .contactUs .sub_con > .inner {
   display: block;
   opacity: 1;
-  padding: 50px 50px;
+  padding: 50px 0;
 }
 .contactUs .sub_con > .inner .touch {
   display: flex;
@@ -1775,7 +1780,7 @@ figure.popup .closeBtn i {
   font: 14px/1 "Poppins";
   margin-top: 0;
   background: #ff5722;
-  width: 13vw;
+  width: 10vw;
   cursor: pointer;
   padding: 10px 15px;
 }
@@ -2070,7 +2075,7 @@ figure.popup .closeBtn i {
   top: 0;
   left: 0;
   width: 100%;
-  z-index: 1;
+  z-index: 5;
 }
 #header .inner {
   width: 1180px;
@@ -2133,7 +2138,7 @@ figure.popup .closeBtn i {
   display: block;
   position: relative;
   color: #666;
-  font: bold 15px/60px "Montserrat";
+  font: bold 17px/60px "Montserrat";
   letter-spacing: 1px;
   text-align: center;
 }
@@ -3013,7 +3018,8 @@ figure.popup .closeBtn i {
   padding: 50px;
 }
 #footer .inner {
-  width: 100%;
+  width: 1180px;
+  margin: 0 auto;
 }
 #footer .inner .wrap {
   display: flex;
@@ -3085,6 +3091,10 @@ figure.popup .closeBtn i {
   font-size: 30px;
   color: #a06138;
   border-width: 1px;
+}
+#footer .ft_txt {
+  width: 1180px;
+  margin: 0 auto;
 }
 #footer .ft_txt .desc {
   display: flex;

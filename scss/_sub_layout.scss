@@ -63,7 +63,7 @@
 						text-align: center;
 						color: #333;
 						position: relative;
-						font: bold 15px/60px $contentFont;
+						font: bold 17px/60px $contentFont;
 						&::after {
 							content: '';
 							display: block;
@@ -446,7 +446,7 @@
 	padding: 50px;
 	border-top: 1px solid #ddd;
 	.inner {
-		width: 100%;
+		@include innerWid;
 		.wrap {
 			display: flex;
 			flex-wrap: wrap;
@@ -525,6 +525,7 @@
 		}
 	}
 	.ft_txt {
+		@include innerWid;
 		.desc {
 			display: flex;
 			justify-content: space-between;

@@ -41,7 +41,7 @@ $mobile: 539px;
 	top: 0;
 	left: 0;
 	width: 100%;
-	z-index: 1;
+	z-index: 5;
 	.inner {
 		@include innerWid;
 		position: relative;
@@ -98,7 +98,7 @@ $mobile: 539px;
 						display: block;
 						position: relative;
 						color: #666;
-						font: bold 15px/60px $contentFont;
+						font: bold 17px/60px $contentFont;
 						letter-spacing: 1px;
 						text-align: center;
 						&::after {
@@ -1029,7 +1029,7 @@ $mobile: 539px;
 	padding-top: 50px;
 	padding: 50px;
 	.inner {
-		width: 100%;
+		@include innerWid;
 		.wrap {
 			display: flex;
 			flex-wrap: wrap;
@@ -1109,6 +1109,7 @@ $mobile: 539px;
 		}
 	}
 	.ft_txt {
+		@include innerWid;
 		.desc {
 			display: flex;
 			justify-content: space-between;
