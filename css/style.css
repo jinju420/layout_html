@@ -1756,12 +1756,15 @@ figure.popup .closeBtn i {
 .contactUs .sub_con > .inner .touch .left article:nth-of-type(3), .contactUs .sub_con > .inner .touch .left article:nth-of-type(4) {
   margin-bottom: 0;
 }
+.contactUs .sub_con > .inner .touch .left article i {
+  font-size: 20px;
+}
 .contactUs .sub_con > .inner .touch .left article h2 {
-  font: 14px/1 "Montserrat";
+  font: 18px/1 "Montserrat";
   padding: 20px 0 10px;
 }
 .contactUs .sub_con > .inner .touch .left article p {
-  font: 12px/1 "Montserrat";
+  font: 16px/1 "Montserrat";
   color: #888;
 }
 .contactUs .sub_con > .inner .touch .right {
@@ -1789,7 +1792,7 @@ figure.popup .closeBtn i {
   align-items: center;
 }
 .contactUs .sub_con > .inner .touch .right .input_box .input_touch label {
-  font: 14px/1 "Montserrat";
+  font: 16px/1 "Montserrat";
 }
 .contactUs .sub_con > .inner .touch .right .input_box .input_touch .err {
   display: block;
@@ -1876,7 +1879,7 @@ figure.popup .closeBtn i {
   width: 100%;
   height: 40px;
   background: transparent;
-  font: bold 18px/40px "Poppins";
+  font: bold 20px/40px "Poppins";
   color: #333;
   letter-spacing: 1px;
   border-bottom: 1px solid #333;
@@ -2781,6 +2784,7 @@ figure.popup .closeBtn i {
 #list .inner .wrap .util dt > a {
   display: block;
   padding: 15px 30px;
+  font-size: 16px;
   text-align: center;
   font-family: "Poppins";
   color: #666;
@@ -3029,17 +3033,17 @@ figure.popup .closeBtn i {
   padding: 0 0 120px;
 }
 #footer .inner .wrap article h1 {
-  font: bold 16px/1 "Poppins";
+  font: bold 18px/1 "Poppins";
 }
 #footer .inner .wrap article p {
   padding: 20px 0;
-  font: bold 14px/1.5 "Montserrat";
+  font: bold 16px/1.5 "Montserrat";
   color: #888;
 }
 #footer .inner .wrap article a {
   display: block;
   color: #888;
-  font: bold 13px/1 "Montserrat";
+  font: bold 15px/1 "Montserrat";
 }
 #footer .inner .wrap article a .svg-inline--fa {
   font-size: 16px;
