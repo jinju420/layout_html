@@ -2619,7 +2619,7 @@ figure.popup .closeBtn i {
   position: absolute;
   right: 7vw;
   margin-right: -60px;
-  bottom: calc(8vh + 100px);
+  bottom: calc(13vh + 100px);
   transform: scale(0.8);
   z-index: 3;
   transition-property: bottom, right;
@@ -2688,7 +2688,7 @@ figure.popup .closeBtn i {
   position: absolute;
   right: 7vw;
   margin-right: -60px;
-  bottom: 8vh;
+  bottom: 13vh;
   transform: scale(0.8);
   z-index: 3;
   transition-property: bottom, right;
@@ -3175,7 +3175,6 @@ figure.popup .closeBtn i {
   }
   #visual .btnUp {
     margin-right: 5vw;
-    bottom: calc(10vh + 100px);
   }
   #visual .btnUp::before, #visual .btnUp::after,
   #visual .btnUp span {
@@ -3186,7 +3185,6 @@ figure.popup .closeBtn i {
   }
   #visual .btnDown {
     margin-right: 5vw;
-    bottom: 10vh;
   }
   #visual .btnDown::before, #visual .btnDown::after,
   #visual .btnDown span {
