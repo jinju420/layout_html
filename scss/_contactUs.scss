@@ -70,9 +70,9 @@
 							label {
 								font: 16px/1 $contentFont;
 							}
-							.err {
+							span {
 								display: block;
-								color: $basicColor1;
+								color: #ff5722;
 								font: 10px/1 $contentFont;
 								margin: 10px 0 20px;
 							}

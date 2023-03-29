@@ -3,6 +3,55 @@ const tr_on = document.querySelectorAll('.traffic li')[0];
 const tr_off = document.querySelectorAll('.traffic li')[1];
 const store = document.querySelectorAll('.store li');
 const bicycle = kakao.maps.MapTypeId.BICYCLE;
+const submit = document.querySelector('input[type=submit]');
+
+//get in touch
+submit.addEventListener('click', (e) => {
+	if (!isTxt('username')) e.preventDefault();
+	if (!isEmail('email')) e.preventDefault();
+	if (!isTxt('comments', 10)) e.preventDefault();
+});
+
+function isTxt(el, len) {
+	if (len === undefined) len = 5;
+	let input = document.querySelector(`input[name=${el}]`);
+	let txt = input.value;
+
+	if (txt.length >= len) {
+		const errMsgs = input.closest('p').querySelectorAll('span');
+		if (errMsgs.length > 0) input.closest('p').querySelector('span').remove();
+
+		return true;
+	} else {
+		const errMsgs = input.closest('p').querySelectorAll('span');
+		if (errMsgs.length > 0) return false;
+
+		let errMessage = document.createElement('span');
+		errMessage.append(`입력항목을 ${len}글자 이상 입력하세요`);
+		input.closest('p').append(errMessage);
+		return false;
+	}
+}
+
+function isEmail(el, len) {
+	let input = document.querySelector(`input[name=${el}]`);
+	let txt = input.value;
+
+	if (/@/.test(txt)) {
+		const errMsgs = input.closest('p').querySelectorAll('span');
+		if (errMsgs.length > 0) input.closest('p').querySelector('span').remove();
+
+		return true;
+	} else {
+		const errMsgs = input.closest('p').querySelectorAll('span');
+		if (errMsgs.length > 0) return false;
+
+		let errMessage = document.createElement('span');
+		errMessage.append('@를 포함한 전체 이메일 주소를 입력하세요');
+		input.closest('p').append(errMessage);
+		return false;
+	}
+}
 
 var options = {
 	center: new kakao.maps.LatLng(37.5556741, 126.9297811),

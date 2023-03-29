@@ -1794,9 +1794,9 @@ figure.popup .closeBtn i {
 .contactUs .sub_con > .inner .touch .right .input_box .input_touch label {
   font: 16px/1 "Montserrat";
 }
-.contactUs .sub_con > .inner .touch .right .input_box .input_touch .err {
+.contactUs .sub_con > .inner .touch .right .input_box .input_touch span {
   display: block;
-  color: #f8f5f0;
+  color: #ff5722;
   font: 10px/1 "Montserrat";
   margin: 10px 0 20px;
 }
