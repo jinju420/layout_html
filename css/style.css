@@ -3418,6 +3418,9 @@ figure.popup .closeBtn i {
   #footer .inner .top {
     display: none;
   }
+  #footer .ft_txt {
+    width: 100%;
+  }
   #footer .ft_txt .desc {
     flex-direction: column;
   }
