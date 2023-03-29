@@ -2619,7 +2619,7 @@ figure.popup .closeBtn i {
   position: absolute;
   right: 7vw;
   margin-right: -60px;
-  bottom: calc(8vh + 100px);
+  bottom: calc(10vh + 100px);
   transform: scale(0.8);
   z-index: 3;
   transition-property: bottom, right;
@@ -2688,7 +2688,7 @@ figure.popup .closeBtn i {
   position: absolute;
   right: 7vw;
   margin-right: -60px;
-  bottom: 8vh;
+  bottom: 10vh;
   transform: scale(0.8);
   z-index: 3;
   transition-property: bottom, right;
