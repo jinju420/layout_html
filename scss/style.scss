@@ -630,7 +630,6 @@ $mobile: 539px;
 		z-index: 3;
 		transition-property: bottom, right;
 		transition-duration: 0.5s;
-
 		&::before,
 		&::after {
 			content: '';
@@ -705,7 +704,6 @@ $mobile: 539px;
 		z-index: 3;
 		transition-property: bottom, right;
 		transition-duration: 0.5s;
-
 		&::before,
 		&::after {
 			content: '';
@@ -1387,6 +1385,41 @@ $mobile: 539px;
 
 	// figure
 	#visual {
+		.panel {
+			li {
+				.txt {
+					p {
+						span {
+							font: bold 20px/1 $contentFont;
+						}
+						&:nth-of-type(2) {
+							span {
+								font: bold 14px/1 $contentFont;
+							}
+						}
+					}
+				}
+				nav {
+					span {
+						i {
+							font-size: 20px;
+						}
+					}
+					a {
+						strong {
+							font: 16px/1 $contentFont;
+						}
+					}
+				}
+			}
+		}
+		.btnUp {
+			bottom: calc(15vh + 100px);
+		}
+
+		.btnDown {
+			bottom: 20vh;
+		}
 	}
 
 	//list

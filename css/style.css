@@ -3325,6 +3325,24 @@ figure.popup .closeBtn i {
   #header .inner .menuMo.on {
     width: 100%;
   }
+  #visual .panel li .txt p span {
+    font: bold 20px/1 "Montserrat";
+  }
+  #visual .panel li .txt p:nth-of-type(2) span {
+    font: bold 14px/1 "Montserrat";
+  }
+  #visual .panel li nav span i {
+    font-size: 20px;
+  }
+  #visual .panel li nav a strong {
+    font: 16px/1 "Montserrat";
+  }
+  #visual .btnUp {
+    bottom: calc(15vh + 100px);
+  }
+  #visual .btnDown {
+    bottom: 20vh;
+  }
   #list {
     padding: 0 30px;
   }
