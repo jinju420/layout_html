@@ -3296,17 +3296,20 @@ figure.popup .closeBtn i {
   #footer .inner .wrap article:nth-of-type(2) {
     width: 40%;
   }
-  #footer .inner .ft_txt .desc {
+  #footer .ft_txt {
+    width: 100%;
+  }
+  #footer .ft_txt .desc {
     flex-direction: column;
   }
-  #footer .inner .ft_txt .desc .sns {
+  #footer .ft_txt .desc .sns {
     margin-bottom: 30px;
   }
-  #footer .inner .ft_txt .desc span {
+  #footer .ft_txt .desc span {
     margin-bottom: 30px;
     font: 13px/1.5 "Montserrat";
   }
-  #footer .inner .ft_txt .desc > p {
+  #footer .ft_txt .desc > p {
     width: 100%;
     margin-bottom: 30px;
     font: 13px/1.5 "Montserrat";
@@ -3419,9 +3422,6 @@ figure.popup .closeBtn i {
   }
   #footer .inner .top {
     display: none;
-  }
-  #footer .ft_txt {
-    width: 100%;
   }
   #footer .ft_txt .desc {
     flex-direction: column;

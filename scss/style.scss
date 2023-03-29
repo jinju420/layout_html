@@ -1344,21 +1344,22 @@ $mobile: 539px;
 					}
 				}
 			}
-			.ft_txt {
-				.desc {
-					flex-direction: column;
-					.sns {
-						margin-bottom: 30px;
-					}
-					span {
-						margin-bottom: 30px;
-						font: 13px/1.5 $contentFont;
-					}
-					> p {
-						width: 100%;
-						margin-bottom: 30px;
-						font: 13px/1.5 $contentFont;
-					}
+		}
+		.ft_txt {
+			width: 100%;
+			.desc {
+				flex-direction: column;
+				.sns {
+					margin-bottom: 30px;
+				}
+				span {
+					margin-bottom: 30px;
+					font: 13px/1.5 $contentFont;
+				}
+				> p {
+					width: 100%;
+					margin-bottom: 30px;
+					font: 13px/1.5 $contentFont;
 				}
 			}
 		}
@@ -1515,7 +1516,6 @@ $mobile: 539px;
 			}
 		}
 		.ft_txt {
-			width: 100%;
 			.desc {
 				flex-direction: column;
 				.sns {
