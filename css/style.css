@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Alegreya+Sans+SC:wght@100&family=El+Messiri&family=Montserrat:wght@400;500;600&family=Noto+Sans+KR:wght@300;400;500&family=Poppins:wght@300;500&family=Raleway:wght@300;400;600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700&family=El+Messiri:wght@400;500;600;700&family=Montserrat:wght@400;500;600&family=Poppins:wght@300;500&display=swap");
 * {
   margin: 0;
   padding: 0;
@@ -525,7 +525,6 @@ fieldset {
   background: #fefbf4;
   padding-top: 50px;
   padding: 50px;
-  border-top: 1px solid #ddd;
 }
 #sub_footer .inner {
   width: 1180px;
@@ -539,17 +538,17 @@ fieldset {
   padding: 0 0 120px;
 }
 #sub_footer .inner .wrap article h1 {
-  font: bold 16px/1 "Poppins";
+  font: bold 18px/1 "Poppins";
 }
 #sub_footer .inner .wrap article p {
   padding: 20px 0;
-  font: bold 14px/1.5 "Montserrat";
+  font: bold 16px/1.5 "Montserrat";
   color: #888;
 }
 #sub_footer .inner .wrap article a {
   display: block;
   color: #888;
-  font: bold 13px/1 "Montserrat";
+  font: bold 15px/1 "Montserrat";
 }
 #sub_footer .inner .wrap article a .svg-inline--fa {
   font-size: 16px;
@@ -713,17 +712,20 @@ fieldset {
   #sub_footer .inner .wrap article:nth-of-type(2) {
     width: 40%;
   }
-  #sub_footer .inner .ft_txt .desc {
+  #sub_footer .ft_txt {
+    width: 100%;
+  }
+  #sub_footer .ft_txt .desc {
     flex-direction: column;
   }
-  #sub_footer .inner .ft_txt .desc .sns {
+  #sub_footer .ft_txt .desc .sns {
     margin-bottom: 30px;
   }
-  #sub_footer .inner .ft_txt .desc span {
+  #sub_footer .ft_txt .desc span {
     margin-bottom: 30px;
     font: 13px/1.5 "Montserrat";
   }
-  #sub_footer .inner .ft_txt .desc > p {
+  #sub_footer .ft_txt .desc > p {
     width: 100%;
     margin-bottom: 30px;
     font: 13px/1.5 "Montserrat";
@@ -1078,11 +1080,11 @@ fieldset {
   margin-right: 70px;
 }
 .youtube .sub_con .inner .vids article .con h2 {
-  font-size: 20px;
-  font-family: "Poppins";
+  font-size: 30px;
+  font-family: "El Messiri";
 }
 .youtube .sub_con .inner .vids article .con p {
-  font-size: 18px;
+  font-size: 15px;
   font-weight: 300;
   line-height: 1.5;
   font-family: "Poppins";
@@ -1090,7 +1092,7 @@ fieldset {
   word-break: keep-all;
 }
 .youtube .sub_con .inner .vids article .con span {
-  font-size: 15px;
+  font-size: 16px;
   display: block;
   color: #333;
   font-weight: bold;
@@ -1214,74 +1216,102 @@ figure.popup .closeBtn i {
 .brand .sub_con .inner .member {
   margin-top: 80px;
 }
-.brand .sub_con .inner .member .member_wrap {
-  display: flex;
-}
 .brand .sub_con .inner .member .member_wrap article {
-  position: relative;
-  width: calc((100% - 90px) / 4);
-  margin-right: 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  margin-right: 20px;
+  padding: 50px;
+  border-top: 1px solid #333;
 }
-.brand .sub_con .inner .member .member_wrap article:last-child {
-  margin-right: 0;
+.brand .sub_con .inner .member .member_wrap article:nth-of-type(2n) {
+  display: flex;
+  flex-direction: row-reverse;
+}
+.brand .sub_con .inner .member .member_wrap article:nth-of-type(4) {
+  border-bottom: 1px solid #333;
 }
 .brand .sub_con .inner .member .member_wrap article .pic {
-  width: 100%;
-  height: 350px;
+  width: 20vw;
+  height: 20vw;
   transition: 1s;
   filter: saturate(30%) brightness(80%);
+  transition: 0.5s;
+}
+.brand .sub_con .inner .member .member_wrap article .pic:hover {
+  filter: saturate(100%) brightness(80%);
 }
 .brand .sub_con .inner .member .member_wrap article .pic img {
+  border-radius: 50%;
   width: 100%;
   height: 100%;
   object-fit: cover;
 }
-.brand .sub_con .inner .member .member_wrap article .pic:hover {
-  filter: saturate(100%) brightness(100%);
-}
 .brand .sub_con .inner .member .member_wrap article .txt {
-  position: absolute;
-  bottom: 20px;
-  left: 20px;
+  width: 55%;
   letter-spacing: 1px;
-  opacity: 0.8;
-  color: #fff;
 }
 .brand .sub_con .inner .member .member_wrap article .txt h2 {
+  font-size: 35px;
+  font-family: "Poppins";
   line-height: 1.2;
-  text-shadow: 2px 5px 12px rgba(0, 0, 0, 0.9);
   margin-bottom: 5px;
+  color: #445870;
+}
+.brand .sub_con .inner .member .member_wrap article .txt em {
+  font-style: normal;
+  font-size: 15px;
+  font-weight: 300;
+  font-family: "Montserrat";
 }
 .brand .sub_con .inner .member .member_wrap article .txt span {
-  font-size: 12px;
-  font-weight: 300;
+  display: block;
+  text-align: right;
+  margin-top: 120px;
+  margin-bottom: 30px;
+  font-family: "Montserrat";
+  font-size: 14px;
+}
+.brand .sub_con .inner .member .member_wrap article .txt p {
+  font: 16px/1.3 "Montserrat";
+  text-align: right;
+  letter-spacing: 0.5px;
 }
 
 @media screen and (max-width: 1179px) {
   .brand .sub_con .inner .member {
     margin-top: 80px;
   }
-  .brand .sub_con .inner .member .member_wrap {
-    flex-wrap: wrap;
-    justify-content: space-between;
+  .brand .sub_con .inner .member .member_wrap article .pic {
+    width: 32vw;
+    height: 32vw;
   }
-  .brand .sub_con .inner .member .member_wrap article {
-    width: 49%;
-    margin-bottom: 20px;
-    margin-right: 0;
-  }
-  .brand .sub_con .inner .member .member_wrap article img {
-    object-position: top;
+  .brand .sub_con .inner .member .member_wrap article .txt {
+    width: 45%;
+    text-align: right;
   }
   .brand .sub_con .inner .member .member_wrap article .txt h2 {
-    font-size: 5vmax;
+    font-size: 4vw;
+  }
+  .brand .sub_con .inner .member .member_wrap article .txt em {
+    font-style: normal;
+    font-size: 15px;
+    font-weight: 300;
+    font-family: "Montserrat";
   }
   .brand .sub_con .inner .member .member_wrap article .txt span {
-    font-size: 2vw;
-    font-weight: 300;
+    margin-top: 80px;
+  }
+  .brand .sub_con .inner .member .member_wrap article .txt p {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
   }
 }
-@media screen and (max-width: 539px) {
+@media screen and (max-width: 630px) {
   .brand .sub_con .inner .about > h1 {
     font-size: 14vmin;
     text-align: center;
@@ -1294,19 +1324,36 @@ figure.popup .closeBtn i {
     margin-top: 50px;
   }
   .brand .sub_con .inner .member .member_wrap article {
-    width: 100%;
-    margin-bottom: 30px;
+    flex-direction: column;
   }
-  .brand .sub_con .inner .member .member_wrap article img {
-    object-position: top;
+  .brand .sub_con .inner .member .member_wrap article:nth-of-type(2n) {
+    flex-direction: column;
+  }
+  .brand .sub_con .inner .member .member_wrap article:nth-of-type(4) {
+    flex-direction: column;
+  }
+  .brand .sub_con .inner .member .member_wrap article .pic {
+    width: 350px;
+    height: 350px;
+  }
+  .brand .sub_con .inner .member .member_wrap article .txt {
+    width: 100%;
+    margin-top: 30px;
+    text-align: center;
   }
   .brand .sub_con .inner .member .member_wrap article .txt h2 {
-    font-size: 5vmax;
-    line-height: 1.2;
-    text-shadow: 2px 5px 12px rgba(0, 0, 0, 0.9);
+    font-size: 6vw;
+  }
+  .brand .sub_con .inner .member .member_wrap article .txt em {
+    display: inline-block;
+    margin-right: 10px;
   }
   .brand .sub_con .inner .member .member_wrap article .txt span {
-    font-size: 3vw;
+    display: inline-block;
+    text-align: center;
+  }
+  .brand .sub_con .inner .member .member_wrap article .txt p {
+    text-align: center;
   }
 }
 .mypage .visual_box {
@@ -2895,7 +2942,7 @@ figure.popup .closeBtn i {
   text-align: right;
   line-height: 1.5;
   word-break: keep-all;
-  font-family: "Noto Sans KR";
+  font-family: "Montserrat";
   color: #666;
 }
 
