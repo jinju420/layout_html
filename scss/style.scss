@@ -13,7 +13,7 @@ $mobile: 789px;
 @import 'brand.scss';
 @import 'myPage.scss';
 @import 'notice.scss';
-@import 'contactUs.scss';
+@import 'contact.scss';
 
 #skipNavi {
 	li {
@@ -1373,7 +1373,7 @@ $mobile: 789px;
 					width: 100%;
 				}
 				&.on {
-					width: 100%;
+					width: 60%;
 				}
 			}
 		}
