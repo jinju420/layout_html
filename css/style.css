@@ -3189,9 +3189,6 @@ figure.popup .closeBtn i {
     top: 30px;
     left: 50px;
   }
-  #header .inner > h1 a {
-    color: rgba(0, 0, 0, 0.3);
-  }
   #header .inner .menuWeb {
     display: none;
   }
