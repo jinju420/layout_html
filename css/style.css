@@ -730,7 +730,7 @@ fieldset {
     font: 13px/1.5 "Montserrat";
   }
 }
-@media screen and (max-width: 539px) {
+@media screen and (max-width: 789px) {
   #sub_header .inner > h1 {
     left: 30px;
   }
@@ -992,7 +992,7 @@ fieldset {
     width: 100%;
   }
 }
-@media screen and (max-width: 539px) {
+@media screen and (max-width: 789px) {
   .gallery .sub_con .inner #gallery #wrap #list li {
     width: 100%;
     margin-top: 25px;
@@ -1140,7 +1140,7 @@ figure.popup .closeBtn i {
   color: #fff;
 }
 
-@media screen and (max-width: 539px) {
+@media screen and (max-width: 789px) {
   .youtube .sub_con .inner .vids article {
     width: 100%;
     flex-direction: column-reverse;
@@ -1527,7 +1527,7 @@ figure.popup .closeBtn i {
     font-size: 16px;
   }
 }
-@media screen and (max-width: 539px) {
+@media screen and (max-width: 789px) {
   .mypage .sub_con > .inner {
     padding: 80px 30px;
   }
@@ -1712,7 +1712,7 @@ figure.popup .closeBtn i {
     align-items: center;
   }
 }
-@media screen and (max-width: 539px) {
+@media screen and (max-width: 789px) {
   .notice .sub_con > .inner .wrap article table tbody > tr {
     height: 0;
   }
@@ -2035,7 +2035,7 @@ figure.popup .closeBtn i {
     margin-bottom: 30px;
   }
 }
-@media screen and (max-width: 539px) {
+@media screen and (max-width: 789px) {
   .contactUs .sub_con > .inner {
     width: 100%;
     padding: 50px 30px;
@@ -3357,7 +3357,7 @@ figure.popup .closeBtn i {
     font: 13px/1.5 "Montserrat";
   }
 }
-@media screen and (max-width: 539px) {
+@media screen and (max-width: 789px) {
   #header .inner > h1 {
     left: 30px;
   }
