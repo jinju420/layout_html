@@ -107,7 +107,6 @@ fieldset {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 20px 0;
 }
 #sub_header .inner > h1 {
   font-family: "Poppins";
@@ -164,7 +163,7 @@ fieldset {
   text-align: center;
   color: #333;
   position: relative;
-  font: bold 17px/60px "Montserrat";
+  font: bold 14px/60px "Montserrat";
 }
 #sub_header .inner .menuWeb #gnb > li > a::after {
   content: "";
@@ -2134,7 +2133,6 @@ figure.popup .closeBtn i {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 20px 0;
 }
 #header .inner > h1 {
   font-family: "Poppins";
@@ -2188,7 +2186,7 @@ figure.popup .closeBtn i {
   display: block;
   position: relative;
   color: #666;
-  font: bold 17px/60px "Montserrat";
+  font: bold 14px/60px "Montserrat";
   letter-spacing: 1px;
   text-align: center;
 }
@@ -2442,7 +2440,7 @@ figure.popup .closeBtn i {
   position: relative;
   width: 100%;
   height: 100vh;
-  padding: 100px 10vw;
+  padding: 70px 10vw;
   overflow: hidden;
 }
 #visual .panel {

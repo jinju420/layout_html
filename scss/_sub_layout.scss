@@ -10,7 +10,6 @@
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
-		padding: 20px 0;
 		> h1 {
 			font-family: $titleFont;
 			height: 100%;
@@ -63,7 +62,7 @@
 						text-align: center;
 						color: #333;
 						position: relative;
-						font: bold 17px/60px $contentFont;
+						font: bold 14px/60px $contentFont;
 						&::after {
 							content: '';
 							display: block;

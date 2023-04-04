@@ -48,7 +48,6 @@ $mobile: 539px;
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
-		padding: 20px 0;
 		> h1 {
 			font-family: $titleFont;
 			height: 100%;
@@ -98,7 +97,7 @@ $mobile: 539px;
 						display: block;
 						position: relative;
 						color: #666;
-						font: bold 17px/60px $contentFont;
+						font: bold 14px/60px $contentFont;
 						letter-spacing: 1px;
 						text-align: center;
 						&::after {
@@ -370,7 +369,7 @@ $mobile: 539px;
 	position: relative;
 	width: 100%;
 	height: 100vh;
-	padding: 100px 10vw;
+	padding: 70px 10vw;
 	overflow: hidden;
 	.panel {
 		width: 100%;
