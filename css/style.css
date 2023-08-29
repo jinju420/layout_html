@@ -2113,7 +2113,7 @@ figure.popup .closeBtn i {
   color: #f8f8f8;
   text-align: center;
   font: bold 16px/50px "Poppins";
-  z-index: 2;
+  z-index: 12;
 }
 #skipNavi li a.skip {
   top: 0;
